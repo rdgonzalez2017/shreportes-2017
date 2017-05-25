@@ -63,37 +63,45 @@ if($VariableURL<50){
                         $estatus =  $columna['nombrestatus'];
                         //Panel que muestra el Reporte Final:
                         echo'
-                         <div class="panel panel-primary">
-                                <div class="panel-heading" style="background: orange">
-                                    <p class="text-center">Reporte</p>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <label for="titulo" class="col-md-3 col-md-offset-2 control-label">Titulo:</label>
-                                           <div class="col-md-3 col-md-pull-1">'; echo  $titulo; echo' </div>            
+                        <div class="container-fluid">
+                         
+                             <div class="panel panel-primary">
+            
+                                    <div class="panel-heading" style="background: orange">
+                                        <p class="text-center">Reporte</p>
                                     </div>
-                                    <div class="row">
-                                        <label for="categoria" class="col-md-3 col-md-offset-2 control-label">Categoría:</label>
-                                           <div class="col-md-3 col-md-pull-1">'; echo  $categoria; echo' </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <label for="titulo" class="col-md-3 col-md-offset-2 control-label">Titulo:</label>
+                                               <div class="col-md-3 col-md-pull-1">'; echo  $titulo; echo' </div>            
+                                        </div>
+                                        <div class="row">
+                                            <label for="categoria" class="col-md-3 col-md-offset-2 control-label">Categoría:</label>
+                                               <div class="col-md-3 col-md-pull-1">'; echo  $categoria; echo' </div>
+                                        </div>
+                                        <div class="row">
+                                            <label for="fecha" class="col-md-3 col-md-offset-2 control-label">Fecha:</label>
+                                                <div class="col-md-3 col-md-pull-1">'; echo $fecha; echo' </div>
+                                        </div>
+                                        <div class="row">
+                                            <label for="autor" class="col-md-3 col-md-offset-2 control-label">Autor:</label>
+                                                 <div class="col-md-3 col-md-pull-1">'; echo $autor; echo' </div>
+                                        </div>
+                                        <div class="row">
+                                            <label for="estado" class="col-md-3 col-md-offset-2 control-label">Estado:</label>
+                                                 <div class="col-md-3 col-md-pull-1">'; echo $estatus; echo' </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <label for="observacion" class="col-md-3 col-md-offset-2 control-label">Observacion:</label><br>
+                                                 <div class="col-md-12" style="max-width:100%; overflow-y:auto;"  >'; echo $observacion; echo' </div>
+                                        </div>
+                                        
                                     </div>
-                                    <div class="row">
-                                        <label for="fecha" class="col-md-3 col-md-offset-2 control-label">Fecha:</label>
-                                            <div class="col-md-3 col-md-pull-1">'; echo $fecha; echo' </div>
-                                    </div>
-                                    <div class="row">
-                                        <label for="autor" class="col-md-3 col-md-offset-2 control-label">Autor:</label>
-                                             <div class="col-md-3 col-md-pull-1">'; echo $autor; echo' </div>
-                                    </div>
-                                    <div class="row">
-                                        <label for="estado" class="col-md-3 col-md-offset-2 control-label">Estado:</label>
-                                             <div class="col-md-3 col-md-pull-1">'; echo $estatus; echo' </div>
-                                    </div>
-                                    <div class="row">
-                                        <label for="observacion" class="col-md-3 col-md-offset-2 control-label">Observacion:</label><br>
-                                             <div class="col-md-9 col-md-offset-2">'; echo $observacion; echo' </div>
-                                    </div>
-                                </div>
-                         </div>
+                            
+                           </div>
+                        </div>
+                          
                                             ';
                         if ($idestatus <> 1) {
                             echo '
@@ -151,7 +159,7 @@ if($VariableURL<50){
         else
         {
             include("botonInicio.php");
-            $select = "SELECT *, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc";
+            $select = "SELECT *, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc limit 1";
             $query_reportes = mysql_query("$select"); // Ejecutamos la consulta
             $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"
             $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";

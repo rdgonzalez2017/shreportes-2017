@@ -80,7 +80,8 @@ while($resultados = mysql_fetch_array($consulta)) {
                                     </div>
                                     <div class="row">
                                         <label for="observacion" class="col-md-3 col-md-offset-2 control-label">Observacion:</label><br>
-                                             <div class="col-md-9 col-md-offset-2">'; echo $observacion; echo' </div>
+                                             <div class="col-md-12" style="max-width:100%; overflow-y:auto;">'; echo $observacion; echo' </div>
+
                                     </div>
                                 </div>
                          </div>
