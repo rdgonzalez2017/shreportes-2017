@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <title>	SH Reportes	</title>
 </head>
-<body>
 <?php include('validarmuestra.php'); ?>
 <?php
 include('conexi.php');
@@ -25,46 +24,21 @@ while($resultados = mysql_fetch_array($consulta)) {
     $fecha = $resultados['fecha'];
 }
 ?>
+<?php
+//Mostrar botón de modificar Reporte, al estar el el reporte de Muestra y esconder al estar en el reporte publicado.
+$url= $_SERVER["REQUEST_URI"];
+ob_start();
+echo strlen($url);
+$VariableURL = ob_get_contents();
+ob_end_clean();
+if($VariableURL<50){
+    include ("modificareporte.php");
+}
+?>
+<body class="col-md-8 col-md-offset-2">
 <!-- Muestra Previa del Reporte -->
-<div class="col-md-8 col-md-offset-2">
-    <br>
-    <div class="panel panel-primary">
-        <div class="panel-heading" style="background: orange">
-            <p class="text-center">Reporte</p>
-        </div>
-        <div class="panel-body">
-            <div class="form-group row">
-                <label for="titulo" class="col-md-2 col-md-offset-2 control-label">Titulo:</label>
-                <div class="col-md-8">
-                    <div> <?php echo $titulo;?> </div>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="titulo" class="col-md-2 col-md-offset-2 control-label">Categoria:</label>
-                <div class="col-md-8">
-                    <div> <?php echo $categoria;?> </div>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="fecha" class="col-md-2 col-md-offset-2 control-label">Fecha:</label>
-                <div class="col-md-8" >
-                    <div>  <?php echo $fecha;?> </div>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="autor" class="col-md-2 col-md-offset-2 control-label">Autor:</label>
-                <div class="col-md-8">
-                    <div> <?php echo $autor;?> </div>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="observacion" class="col-md-2 col-md-offset-2 control-label">Observacion:</label>
-                <div class="col-md-8" >
-                    <div> <?php echo $observacion;?> </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
     <section>
         <!-- Seccion que muestra la publicacion final del reporte-->
         <?php
@@ -75,13 +49,54 @@ while($resultados = mysql_fetch_array($consulta)) {
             {
                 $idreporte = $_GET["reporte"];
                 $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-                $query_reportes = mysql_query("SELECT * FROM reporte WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1"); // Ejecutamos la consulta
+                $select = "SELECT *, estatus.nombre as nombrestatus, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1";
+                $query_reportes = mysql_query("$select"); // Ejecutamos la consulta
+                //$query_reportes = mysql_query("SELECT * FROM reporte WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1"); // Ejecutamos la consulta
                 if(mysql_num_rows($query_reportes) > 0) // Si existe la noticia, la muestra
                 {
                     while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
                     {
+                        $categoria =  $columna['nombrecategoria'];
+                        $autor =  $columna['autor'];
+                        $fecha =  $columna['fecha'];
+                        $observacion =  $columna['observacion'];
                         $idreplicacion =  $columna['idreplicacion'];
                         $idestatus =  $columna['idestatus'];
+                        $estatus =  $columna['nombrestatus'];
+                        //Panel que muestra el Reporte Final:
+                        echo'
+                         <div class="panel panel-primary">
+                                <div class="panel-heading" style="background: orange">
+                                    <p class="text-center">Reporte</p>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <label for="titulo" class="col-md-3 col-md-offset-2 control-label">Titulo:</label>
+                                           <div class="col-md-3 col-md-pull-1">'; echo  $titulo; echo' </div>            
+                                    </div>
+                                    <div class="row">
+                                        <label for="categoria" class="col-md-3 col-md-offset-2 control-label">Categoría:</label>
+                                           <div class="col-md-3 col-md-pull-1">'; echo  $categoria; echo' </div>
+                                    </div>
+                                    <div class="row">
+                                        <label for="fecha" class="col-md-3 col-md-offset-2 control-label">Fecha:</label>
+                                            <div class="col-md-3 col-md-pull-1">'; echo $fecha; echo' </div>
+                                    </div>
+                                    <div class="row">
+                                        <label for="autor" class="col-md-3 col-md-offset-2 control-label">Autor:</label>
+                                             <div class="col-md-3 col-md-pull-1">'; echo $autor; echo' </div>
+                                    </div>
+                                    <div class="row">
+                                        <label for="estado" class="col-md-3 col-md-offset-2 control-label">Estado:</label>
+                                             <div class="col-md-3 col-md-pull-1">'; echo $estatus; echo' </div>
+                                    </div>
+                                    <div class="row">
+                                        <label for="observacion" class="col-md-3 col-md-offset-2 control-label">Observacion:</label>
+                                             <div class="col-md-3 col-md-pull-1">'; echo $observacion; echo' </div>
+                                    </div>
+                                </div>
+                         </div>
+                                            ';
                         if ($idestatus <> 1) {
                             echo '
                             <BR> 
@@ -137,29 +152,35 @@ while($resultados = mysql_fetch_array($consulta)) {
         }
         else
         {
-            $select = "SELECT * FROM reporte LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc limit 1";
+            $select = "SELECT *, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc";
             $query_reportes = mysql_query("$select"); // Ejecutamos la consulta
             $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"
             $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
             while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
             {
+                include("botonInicio.php");
+                echo'<div class="row well">';
                 $idprotegido=md5($clave.$columna['idreplicacion']);
                 echo 'Id de Reporte: '; echo $columna['idreporte']; echo'<br>';
-                echo 'Estado: '; echo $columna['nombre'];echo'<br><br>';
-                echo ' 
-             <br> <br>
-            Si todo está bien, presione el botón "Publicar":
-           <br>
+                echo 'Estado: '; echo $columna['nombre'];echo'<br>';
+                echo 'Titulo: '; echo $columna['titulo'];echo'<br>';
+                echo 'Fecha: '; echo $columna['fecha'];echo'<br>';
+                echo 'Autor: '; echo $columna['autor'];echo'<br>';
+                echo 'Categoria: '; echo $columna['nombrecategoria'];echo'<br>';
+                echo 'Observación: '; echo $columna['observacion'];echo'</div>
                 <div class="row text-center">
+                Si todo está bien, presione el botón:
+                <br>
                 <a class="btn btn-success" href="?reporte=' .$idprotegido.'">Publicar</a><br><br>
                  </div>
+                 
+                 <br>';
+                echo ' 
+             <br> <br>
+            
+           
                  <!-- Incluimos un enlace para leer la noticia entera --> 
-            <!-- Botòn que lleva a la tabla de reportes-->
-            <div style="float: right">
-                <input type="submit" class="btn btn-primary btn-sm" value="Regresar al Inicio" onclick = "location=\'sistema.php\'"/>
-         <br> <br>
-         <div style="float: right">
-         <br><br>
+           
          ';
                 //echo 'Titulo del reporte: ';
                 // echo $columna['titulo'];
@@ -167,6 +188,8 @@ while($resultados = mysql_fetch_array($consulta)) {
 
         }
         ?>
+        <!-- Botòn que lleva al inicio-->
+
     </section>
 </body>
 <footer>
@@ -205,26 +228,7 @@ while($resultados = mysql_fetch_array($consulta)) {
     }
     ?>
 
-    <?php
 
-
-
-
-    //echo "$url  ";'<br>';
-    //echo "http://" . $host . $url;
-
-    $url= $_SERVER["REQUEST_URI"];
-    ob_start();
-    echo strlen($url);
-    $VariableURL = ob_get_contents();
-    ob_end_clean();
-    
-    if($VariableURL<50){
-
-        include ("modificareporte.php");
-    }
-
-    ?>
 </footer>
 
 </html>

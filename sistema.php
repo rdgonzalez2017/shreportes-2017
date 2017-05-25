@@ -9,6 +9,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap.js"></script>
+    <script type=”text/javascript” src=”ckeditor/ckeditor.js”></script>
     <title>	SH Reportes	</title>
 </head>
 <!-- Botòn que lleva a la tabla de reportes-->
@@ -77,6 +80,9 @@ session_start();
                         <label for="observacion" class="col-md-2 control-label">Observacion</label>
                         <div class="col-md-10 col-md-offset-1" >
                             <textarea name="observacion" style="resize:none" required class="form-control" id="observacion" rows="10"></textarea>
+                            <script type=”text/javascript”>
+                                CKEDITOR.replace('observacion');
+                                </script>
                         </div>
                     </div>
 
