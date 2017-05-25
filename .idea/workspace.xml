@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fed4b37c-0726-4f2b-ab0b-f6c0c71d7a9a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/agregar.php" afterPath="$PROJECT_DIR$/agregar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/botonInicio.php" afterPath="$PROJECT_DIR$/botonInicio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modificacionreportes.php" afterPath="$PROJECT_DIR$/modificacionreportes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema.php" afterPath="$PROJECT_DIR$/sistema.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,14 +27,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sistema.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sistema.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sistema.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+            <state relative-caret-position="96">
+              <caret line="90" column="92" lean-forward="false" selection-start-line="90" selection-start-column="92" selection-end-line="90" selection-end-column="92" />
               <folding>
                 <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1495732915728" expanded="true" signature="2913:2954" ph="select idcat... categorias" />
+                <marker date="1495738231709" expanded="true" signature="2896:2937" ph="select idcat... categorias" />
               </folding>
             </state>
           </provider>
@@ -114,7 +112,7 @@
         <entry file="file://$PROJECT_DIR$/muestra.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
-              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding>
                 <marker date="1495727164764" expanded="true" signature="459:626" ph="SELECT * FRO... reporte" />
                 <marker date="1495727164764" expanded="true" signature="1424:1524" ph="..." />
@@ -179,7 +177,7 @@
         <entry file="file://$PROJECT_DIR$/botonInicio.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="32">
-              <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+              <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
               </folding>
@@ -187,11 +185,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agregar.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="agregar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/agregar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
+            <state relative-caret-position="960">
+              <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -218,7 +216,7 @@
         <entry file="file://$PROJECT_DIR$/modificareporte.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="184">
-              <caret line="49" column="42" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <caret line="49" column="42" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding>
                 <marker date="1495726802775" expanded="true" signature="481:570" ph="SELECT idrep... reporte" />
                 <marker date="1495726802775" expanded="true" signature="1525:1715" ph="UPDATE repor... " />
@@ -316,12 +314,12 @@
         <option value="$PROJECT_DIR$/editaReportes.php" />
         <option value="$PROJECT_DIR$/modificareporte.php" />
         <option value="$PROJECT_DIR$/muestra.php" />
-        <option value="$PROJECT_DIR$/sistema.php" />
         <option value="$PROJECT_DIR$/modificacionreportes.php" />
         <option value="$PROJECT_DIR$/reportes.php" />
         <option value="$PROJECT_DIR$/botonModificar.php" />
         <option value="$PROJECT_DIR$/botonInicio.php" />
         <option value="$PROJECT_DIR$/agregar.php" />
+        <option value="$PROJECT_DIR$/sistema.php" />
       </list>
     </option>
   </component>
@@ -470,12 +468,12 @@
       <workItem from="1495194607587" duration="23052000" />
       <workItem from="1495455036099" duration="26080000" />
       <workItem from="1495541517086" duration="20731000" />
-      <workItem from="1495714106576" duration="15799000" />
+      <workItem from="1495714106576" duration="16969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208987000" />
+    <option name="totallyTimeSpent" value="210157000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -596,7 +594,7 @@
           <caret line="35" column="37" lean-forward="false" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1495732915728" expanded="true" signature="2913:2954" ph="select idcat... categorias" />
+            <marker date="1495738231709" expanded="true" signature="2896:2937" ph="select idcat... categorias" />
           </folding>
         </state>
       </provider>
@@ -642,7 +640,7 @@
           <caret line="34" column="86" lean-forward="false" selection-start-line="34" selection-start-column="86" selection-end-line="34" selection-end-column="86" />
           <folding>
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1495732915728" expanded="true" signature="2913:2954" ph="select idcat... categorias" />
+            <marker date="1495738231709" expanded="true" signature="2896:2937" ph="select idcat... categorias" />
           </folding>
         </state>
       </provider>
@@ -808,17 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sistema.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1495732915728" expanded="true" signature="2913:2954" ph="select idcat... categorias" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modificacionreportes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -841,7 +828,7 @@
     <entry file="file://$PROJECT_DIR$/muestra.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding>
             <marker date="1495727164764" expanded="true" signature="459:626" ph="SELECT * FRO... reporte" />
             <marker date="1495727164764" expanded="true" signature="1424:1524" ph="..." />
@@ -904,7 +891,7 @@
     <entry file="file://$PROJECT_DIR$/modificareporte.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
-          <caret line="49" column="42" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <caret line="49" column="42" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
             <marker date="1495726802775" expanded="true" signature="481:570" ph="SELECT idrep... reporte" />
             <marker date="1495726802775" expanded="true" signature="1525:1715" ph="UPDATE repor... " />
@@ -932,6 +919,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/botonInicio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agregar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="30" column="22" lean-forward="false" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -971,21 +976,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/botonInicio.php">
+    <entry file="file://$PROJECT_DIR$/sistema.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        <state relative-caret-position="96">
+          <caret line="90" column="92" lean-forward="false" selection-start-line="90" selection-start-column="92" selection-end-line="90" selection-end-column="92" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1495738231709" expanded="true" signature="2896:2937" ph="select idcat... categorias" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agregar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="47" column="10" lean-forward="false" selection-start-line="47" selection-start-column="10" selection-end-line="47" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>

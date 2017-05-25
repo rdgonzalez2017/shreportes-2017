@@ -7,12 +7,14 @@ session_start();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>	SH Reportes	</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="bootstrap.js"></script>
-    <script type=”text/javascript” src=”ckeditor/ckeditor.js”></script>
-    <title>	SH Reportes	</title>
+
+
+    <script src="js/ckeditor/ckeditor.js"></script>
 </head>
 <!-- Botòn que lleva a modificar los reportes-->
 <div style="float: right">
@@ -38,7 +40,7 @@ session_start();
 <body>
 <!-- Formulario para envío de datos del sistema-->
 <form class="form" method = "post" action="muestra.php">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-10 col-md-offset-1">
         <br>
         <div class="panel panel-primary">
 
@@ -86,10 +88,10 @@ session_start();
                     </div>
                     <!-- Ingreso de la observacion-->
                     <div class="form-group row">
-                        <label for="observacion" class="col-md-2 control-label">Observacion</label>
-                        <div class="col-md-10 col-md-offset-1" >
+                        <label for="observacion" class="col-md-2 control-label">Observacion:</label>
+                        <div class="col-md-12" >
                             <textarea name="observacion" style="resize:none" required class="form-control" id="observacion" rows="10"></textarea>
-                            <script type=”text/javascript”>
+                            <script>
                                 CKEDITOR.replace('observacion');
                                 </script>
                         </div>
