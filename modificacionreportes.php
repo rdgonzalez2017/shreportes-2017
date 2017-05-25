@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <title>	SH Reportes	</title>
 </head>
+<body class="col-md-8 col-md-offset-2">
 <?php
 include("botonInicio.php");
 include("conexi.php"); // Incluimos nuestro archivo de conexión con la base de datos
@@ -85,4 +86,5 @@ while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Rea
     echo '</div>';
 }
 ?>
+</body>
 </html>

@@ -16,15 +16,19 @@ session_start();
 </head>
 <!-- Botòn que lleva a modificar los reportes-->
 <div style="float: right">
-    <input type="submit" class="btn btn-warning btn-sm" value="Modificar Reportes" onclick = "location='modificacionreportes.php'"/>
+    <input type="submit" class="btn btn-info btn-sm" value="Modificar Reportes" onclick = "location='modificacionreportes.php'"/>
 </div>
 <!-- Botòn que lleva a la tabla de reportes-->
 <div style="float: right">
-    <input type="submit" class="btn btn-success btn-sm" value="Tabla de Reportes" onclick = "location='tabla2.php'"/>
+    <input type="submit" class="btn btn-info btn-sm" value="Tabla de Reportes" onclick = "location='tabla2.php'"/>
 </div>
 <!-- Botòn que lleva al ingreso de categorías-->
 <div style="float: right">
-    <input type="submit" class="btn btn-warning btn-sm" value="Agregar Categorias" onclick = "location='agregar.php'"/>
+    <input type="submit" class="btn btn-info btn-sm" value="Agregar Categorias" onclick = "location='agregar.php'"/>
+</div>
+<!-- Botòn que muestra todos los reportes-->
+<div style="float: right">
+    <input type="submit" class="btn btn-info btn-sm" value="Ver todos los reportes" onclick = "location='reportes.php'"/>
 </div>
 
 

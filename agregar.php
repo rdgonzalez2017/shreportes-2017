@@ -43,6 +43,8 @@
 <!-- Formulario para envío de datos del sistema-->
 </body>
 <footer class="row text-center">
-<input type="submit" class="btn btn-warning btn-sm" value="Regresar al Inicio" onclick = "location='sistema.php'"/>
+    <div class="col-md-2">
+<?php include("botonInicio.php");?>
+    </div>
 </footer>
 </html>
