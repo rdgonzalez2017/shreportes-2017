@@ -37,8 +37,6 @@ if($VariableURL<50){
 ?>
 <body class="col-md-8 col-md-offset-2">
 <!-- Muestra Previa del Reporte -->
-
-
     <section>
         <!-- Seccion que muestra la publicacion final del reporte-->
         <?php
@@ -91,8 +89,8 @@ if($VariableURL<50){
                                              <div class="col-md-3 col-md-pull-1">'; echo $estatus; echo' </div>
                                     </div>
                                     <div class="row">
-                                        <label for="observacion" class="col-md-3 col-md-offset-2 control-label">Observacion:</label>
-                                             <div class="col-md-3 col-md-pull-1">'; echo $observacion; echo' </div>
+                                        <label for="observacion" class="col-md-3 col-md-offset-2 control-label">Observacion:</label><br>
+                                             <div class="col-md-9 col-md-offset-2">'; echo $observacion; echo' </div>
                                     </div>
                                 </div>
                          </div>
@@ -141,7 +139,7 @@ if($VariableURL<50){
                 }
                 else
                 {
-                    echo 'La noticia que solicitas, no existe.'; // Si no, muestra un error
+                    echo ''; // Si no, muestra un error
                 }
             }
             else
@@ -152,43 +150,42 @@ if($VariableURL<50){
         }
         else
         {
+            include("botonInicio.php");
             $select = "SELECT *, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc";
             $query_reportes = mysql_query("$select"); // Ejecutamos la consulta
             $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"
             $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
             while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
             {
-                include("botonInicio.php");
+                echo'Vista Previa del Reporte:';
                 echo'<div class="row well">';
                 $idprotegido=md5($clave.$columna['idreplicacion']);
+
                 echo 'Id de Reporte: '; echo $columna['idreporte']; echo'<br>';
                 echo 'Estado: '; echo $columna['nombre'];echo'<br>';
                 echo 'Titulo: '; echo $columna['titulo'];echo'<br>';
                 echo 'Fecha: '; echo $columna['fecha'];echo'<br>';
                 echo 'Autor: '; echo $columna['autor'];echo'<br>';
                 echo 'Categoria: '; echo $columna['nombrecategoria'];echo'<br>';
-                echo 'Observación: '; echo $columna['observacion'];echo'</div>
+                echo'Observacion:<textarea class="form-control" name="observacion" rows="2">'; echo $columna['observacion'];
+                echo '</textarea> </div>';
+
+               echo '
                 <div class="row text-center">
                 Si todo está bien, presione el botón:
                 <br>
                 <a class="btn btn-success" href="?reporte=' .$idprotegido.'">Publicar</a><br><br>
                  </div>
-                 
                  <br>';
                 echo ' 
-             <br> <br>
-            
-           
-                 <!-- Incluimos un enlace para leer la noticia entera --> 
-           
+              
+                 
          ';
                 //echo 'Titulo del reporte: ';
                 // echo $columna['titulo'];
             }
-
         }
         ?>
-        <!-- Botòn que lleva al inicio-->
 
     </section>
 </body>
@@ -227,8 +224,5 @@ if($VariableURL<50){
         <?php
     }
     ?>
-
-
 </footer>
-
 </html>

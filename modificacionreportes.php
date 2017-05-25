@@ -9,15 +9,9 @@
     <title>	SH Reportes	</title>
 </head>
 <?php
+include("botonInicio.php");
 include("conexi.php"); // Incluimos nuestro archivo de conexión con la base de datos
-$query_MostrarTitulos = mysql_query("SELECT idreporte, titulo, observacion, fecha FROM reporte ORDER by idreporte DESC limit 1"); // Ejecutamos la consulta
-while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
-{
-    echo '<a href="?reporte='.$columna_MostrarTitulos['idreporte'].'">
-    Modificar este reporte:</a> ';   // Mostramos un enlace para modificar cada noticia
-    //$idreporte = $columna_MostrarTitulos['idreporte'];
-    //echo $idreporte;
-}
+
 if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado ejecuta el resto del código
 {
 
@@ -53,22 +47,22 @@ if(isset($_GET['reporte']))
         
         Cambiar Estado a: <select class="form-control" name="estatus">
            ';
-            $conexion=mysqli_connect("localhost","root","","shreportes") or die("Problemas con la conexión");
-            $registros=mysqli_query($conexion,"select idestatus,nombre from estatus ORDER BY idestatus DESC") or die("Problemas en el select:".mysqli_error($conexion));
-            while ($reg=mysqli_fetch_array($registros)) {
-                echo "<option value=\"$reg[idestatus]\">$reg[nombre]</option>";
-            }
-            echo '
+    $conexion=mysqli_connect("localhost","root","","shreportes") or die("Problemas con la conexión");
+    $registros=mysqli_query($conexion,"select idestatus,nombre from estatus ORDER BY idestatus DESC") or die("Problemas en el select:".mysqli_error($conexion));
+    while ($reg=mysqli_fetch_array($registros)) {
+        echo "<option value=\"$reg[idestatus]\">$reg[nombre]</option>";
+    }
+    echo '
             </select>
             Estado: '.$columna_MostrarNoticia['idestatus'].' <br/>
            Cambiar Categoria a: <select class="form-control" name="categoria">
            ';
-            $conexion=mysqli_connect("localhost","root","","shreportes") or die("Problemas con la conexión");
-            $registros=mysqli_query($conexion,"select idcategoria,nombre from categorias ORDER BY idcategoria DESC") or die("Problemas en el select:".mysqli_error($conexion));
-            while ($reg=mysqli_fetch_array($registros)) {
-                echo "<option value=\"$reg[idcategoria]\">$reg[nombre]</option>";
-            }
-            echo '
+    $conexion=mysqli_connect("localhost","root","","shreportes") or die("Problemas con la conexión");
+    $registros=mysqli_query($conexion,"select idcategoria,nombre from categorias ORDER BY idcategoria DESC") or die("Problemas en el select:".mysqli_error($conexion));
+    while ($reg=mysqli_fetch_array($registros)) {
+        echo "<option value=\"$reg[idcategoria]\">$reg[nombre]</option>";
+    }
+    echo '
             </select>
         Observacion:  <textarea name="observacion" class="form-control">'.$columna_MostrarNoticia['observacion'].'</textarea> <br/>    
         <input type="hidden" name="idreporte" value="'.$columna_MostrarNoticia['idreporte'].'" /> <!-- Creamos un campo de texto oculto para pasar el id de la noticia -->
@@ -77,7 +71,18 @@ if(isset($_GET['reporte']))
         <input class="btn btn-warning" type="submit" name="modificar" value="Modificar Reporte" />
         </div>
     </form> 
+    <br>
     ';
+}
+$query_MostrarTitulos = mysql_query("SELECT idreporte, titulo, observacion, fecha FROM reporte ORDER by idreporte DESC"); // Ejecutamos la consulta
+while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
+{
+    echo '<div class="row well text-center">';
+    echo '<a href="?reporte='.$columna_MostrarTitulos['idreporte'].'">
+    Modificar este reporte:</a> ';   // Mostramos un enlace para modificar cada noticia
+    $idreporte = $columna_MostrarTitulos['idreporte'];
+    echo $idreporte;
+    echo '</div>';
 }
 ?>
 </html>

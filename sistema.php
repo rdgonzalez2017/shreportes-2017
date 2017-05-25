@@ -14,14 +14,19 @@ session_start();
     <script type=”text/javascript” src=”ckeditor/ckeditor.js”></script>
     <title>	SH Reportes	</title>
 </head>
+<!-- Botòn que lleva a modificar los reportes-->
+<div style="float: right">
+    <input type="submit" class="btn btn-warning btn-sm" value="Modificar Reportes" onclick = "location='modificacionreportes.php'"/>
+</div>
 <!-- Botòn que lleva a la tabla de reportes-->
 <div style="float: right">
     <input type="submit" class="btn btn-success btn-sm" value="Tabla de Reportes" onclick = "location='tabla2.php'"/>
 </div>
+<!-- Botòn que lleva al ingreso de categorías-->
 <div style="float: right">
     <input type="submit" class="btn btn-warning btn-sm" value="Agregar Categorias" onclick = "location='agregar.php'"/>
 </div>
-<!-- Botòn que lleva a la tabla de reportes-->
+
 
 <!-- Conexión con base de datos-->
 <?php include('conexi.php');?>
