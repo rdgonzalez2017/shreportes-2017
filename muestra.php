@@ -21,8 +21,6 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-
-                <li><a href='index.php'><span class="glyphicon glyphicon-log-in"></span> Inicio de Sesión</a></li>
                 <li><button class="btn btn-sm btn-info navbar-btn" onclick = "location='https://www.servicioshosting.com/sitio/contactanos-2/'">Contactos</button>-</li>
                 <li><button class="btn btn-sm btn-warning navbar-btn" onclick = "location='http://blog.servicioshosting.com/'">Blog ServiciosHosting</button></li>
 

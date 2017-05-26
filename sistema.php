@@ -28,9 +28,9 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li><button class="btn btn-warning navbar-btn" onclick = "location='modificacionreportes.php'">Modificar Reportes</button>-</li>
-
                 <li><button class="btn btn-warning navbar-btn" onclick = "location='agregar.php'">Agregar Categorias</button>-</li>
                 <li><button class="btn btn-info navbar-btn" onclick = "location='reportes.php'">Ver Reportes</button></li>
+                <li><a href='index.php'><span class="glyphicon glyphicon-log-in"></span> Cierre de Sesión</a></li>
             </ul>
         </div>
     </div>
