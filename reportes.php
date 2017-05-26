@@ -6,9 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script src="js/ckeditor/ckeditor.js"></script>
     <title>	SH Reportes	</title>
 </head>
+<nav class="navbar navbar-inverse" style="background: darkblue;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="img-responsive" href="https://www.servicioshosting.com/sitio/"><img src="images/logo_desktop.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
 
+                <li><a href='index.php'><span class="glyphicon glyphicon-log-in"></span> Inicio de Sesión</a></li>
+                <li><button class="btn btn-sm btn-info navbar-btn" onclick = "location='https://www.servicioshosting.com/sitio/contactanos-2/'">Contactos</button>-</li>
+                <li><button class="btn btn-sm btn-warning navbar-btn" onclick = "location='http://blog.servicioshosting.com/'">Blog ServiciosHosting</button></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
 <?php include('validarmuestra.php'); ?>
 <?php
 include('conexi.php');
@@ -25,66 +46,72 @@ while($resultados = mysql_fetch_array($consulta)) {
     $fecha = $resultados['fecha'];
 }
 ?>
-<body class="col-md-8 col-md-offset-2">
-<!-- Muestra Previa del Reporte -->
-<section>
-    <!-- Seccion que muestra la publicacion final del reporte-->
-    <?php
-    include("conexi.php"); // Incluimos nuestro archivo de conexión con la base de datos
-    if(isset($_GET['reporte']))
-    {
-        if(!empty($_GET['reporte'])) // Si el valor de "noticia" no es NULL, continua con el proceso
+<div class="row col-md-10 col-md-offset-1">
+    <!-- Muestra Previa del Reporte -->
+    <section>
+        <!-- Seccion que muestra la publicacion final del reporte-->
+        <?php
+        include("conexi.php"); // Incluimos nuestro archivo de conexión con la base de datos
+        if(isset($_GET['reporte']))
         {
-            $idreporte = $_GET["reporte"];
-            $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-            $select = "SELECT *, estatus.nombre as nombrestatus, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1";
-            $query_reportes = mysql_query("$select"); // Ejecutamos la consulta
-            //$query_reportes = mysql_query("SELECT * FROM reporte WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1"); // Ejecutamos la consulta
-            if(mysql_num_rows($query_reportes) > 0) // Si existe la noticia, la muestra
+            if(!empty($_GET['reporte'])) // Si el valor de "noticia" no es NULL, continua con el proceso
             {
-                while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
+                $idreporte = $_GET["reporte"];
+                $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
+                $select = "SELECT *, estatus.nombre as nombrestatus, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1";
+                $query_reportes = mysql_query("$select"); // Ejecutamos la consulta
+                //$query_reportes = mysql_query("SELECT * FROM reporte WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1"); // Ejecutamos la consulta
+                if(mysql_num_rows($query_reportes) > 0) // Si existe la noticia, la muestra
                 {
-                    $categoria =  $columna['nombrecategoria'];
-                    $autor =  $columna['autor'];
-                    $fecha =  $columna['fecha'];
-                    $observacion =  $columna['observacion'];
-                    $idreplicacion =  $columna['idreplicacion'];
-                    $idestatus =  $columna['idestatus'];
-                    $estatus =  $columna['nombrestatus'];
-                    //Panel que muestra el Reporte Final:
-                    echo'
-                         <div class="panel panel-primary">
-                                <div class="panel-heading" style="background: orange">
-                                    <p class="text-center">Reporte</p>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <label for="titulo" class="col-md-3 col-md-offset-2 control-label">Titulo:</label>
-                                           <div class="col-md-3 col-md-pull-1">'; echo  $titulo; echo' </div>            
+                    while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
+                    {
+                        $categoria =  $columna['nombrecategoria'];
+                        $autor =  $columna['autor'];
+                        $fecha =  $columna['fecha'];
+                        $observacion =  $columna['observacion'];
+                        $idreplicacion =  $columna['idreplicacion'];
+                        $idestatus =  $columna['idestatus'];
+                        $estatus =  $columna['nombrestatus'];
+                        //Panel que muestra el Reporte Final:
+                        echo'
+                        
+                             <div class="panel panel-primary container col-md-8 col-md-offset-2 ">
+                                
+                                    <div class="panel-heading row" style="background: orange">
+                                        <p class="text-center">Reporte</p>
                                     </div>
-                                    <div class="row">
-                                        <label for="categoria" class="col-md-3 col-md-offset-2 control-label">Categoría:</label>
-                                           <div class="col-md-3 col-md-pull-1">'; echo  $categoria; echo' </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <label for="titulo" class="col-md-3 col-md-offset-2 control-label">Titulo:</label>
+                                               <div class="col-md-3 col-md-pull-1">'; echo  $titulo; echo' </div>            
+                                        </div>
+                                        <div class="row">
+                                            <label for="categoria" class="col-md-3 col-md-offset-2 control-label">Categoría:</label>
+                                               <div class="col-md-3 col-md-pull-1">'; echo  $categoria; echo' </div>
+                                        </div>
+                                        <div class="row">
+                                            <label for="fecha" class="col-md-3 col-md-offset-2 control-label">Fecha:</label>
+                                                <div class="col-md-3 col-md-pull-1">'; echo $fecha; echo' </div>
+                                        </div>
+                                        <div class="row">
+                                            <label for="autor" class="col-md-3 col-md-offset-2 control-label">Autor:</label>
+                                                 <div class="col-md-3 col-md-pull-1">'; echo $autor; echo' </div>
+                                        </div>
+                                        <div class="row">
+                                            <label for="estado" class="col-md-3 col-md-offset-2 control-label">Estado:</label>
+                                                 <div class="col-md-3 col-md-pull-1">'; echo $estatus; echo' </div>
+                                        </div>
+                                        
+                                        
                                     </div>
-                                    <div class="row">
-                                        <label for="fecha" class="col-md-3 col-md-offset-2 control-label">Fecha:</label>
-                                            <div class="col-md-3 col-md-pull-1">'; echo $fecha; echo' </div>
-                                    </div>
-                                    <div class="row">
-                                        <label for="autor" class="col-md-3 col-md-offset-2 control-label">Autor:</label>
-                                             <div class="col-md-3 col-md-pull-1">'; echo $autor; echo' </div>
-                                    </div>
-                                    <div class="row">
-                                        <label for="estado" class="col-md-3 col-md-offset-2 control-label">Estado:</label>
-                                             <div class="col-md-3 col-md-pull-1">'; echo $estatus; echo' </div>
-                                    </div>
-                                    <div class="row">
-                                        <label for="observacion" class="col-md-3 col-md-offset-2 control-label">Observacion:</label><br>
-                                             <div class="col-md-12" style="max-width:100%; overflow-y:auto;">'; echo $observacion; echo' </div>
-
-                                    </div>
-                                </div>
-                         </div>
+                           
+                           </div>
+                           
+                                        <div class="row">
+                                            <label for="observacion" class="col-md-10 col-md-offset-1 control-label">Observacion:</label><br>
+                                                 <div class="col-md-10 col-md-offset-1" style="max-width:100%; overflow-y:auto;"  >'; echo $observacion; echo' </div>
+                                        </div>
+                       
                                             ';
                     if ($idestatus <> 1) {
                         echo '
@@ -93,7 +120,7 @@ while($resultados = mysql_fetch_array($consulta)) {
                                 <form class="form" name="miFormu" method="post" action="nuevocomentario.php">
                                     <INPUT TYPE="hidden" NAME="id" VALUE="' . $idreplicacion . '">
                                     <INPUT TYPE="hidden" NAME="idprotegido" VALUE="' . $idreporte . '">
-                                    <div class="col-md-8 col-md-offset-2">
+                                    <div class="col-md-6 col-md-offset-3">
                                         <div class="panel panel-primary">
                                             <div class="panel-heading">
                                                 <p class="text-center">Formulario de Comentarios</p>
@@ -161,7 +188,8 @@ while($resultados = mysql_fetch_array($consulta)) {
             echo 'Autor: '; echo $columna['autor'];echo'<br>';
             echo 'Categoria: '; echo $columna['nombrecategoria'];echo'<br>';
             echo'Observacion:<textarea class="form-control" name="observacion" rows="2">'; echo $columna['observacion'];
-            echo '</textarea> </div>';
+            echo '</textarea><script>CKEDITOR.replace("observacion");</script> 
+            </div>';
 
             echo '
                 <div class="row text-center">
@@ -190,25 +218,26 @@ while($resultados = mysql_fetch_array($consulta)) {
     while($rowComen = mysql_fetch_assoc($resultComen))
     {
         ?>
-        <div class="col-md-12">
+        <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-danger">
                 <!-- Muestra Autor del comentario-->
                 <div class="panel-heading text-center">
                     <div> Autor: <?php echo $rowComen["nick"]; ?> </div>
                 </div>
                 <div class="panel-body">
-                    <!-- Muestra descripción del comentario-->
-                    <div class="form-group row">
-                        <label for="comentario" class="col-md-2 col-md-offset-2 control-label">Comentario:</label>
-                        <div class="col-md-8">
-                            <div> <?php echo $rowComen["comentario"]; ?> </div>
-                        </div>
-                    </div>
+
                     <!-- Muestra fecha del comentario-->
                     <div class="form-group row">
                         <label for="fecha" class="col-md-2 col-md-offset-2 control-label">Fecha:</label>
                         <div class="col-md-8">
                             <div> <?php echo $rowComen["fecha"]; ?> </div>
+                        </div>
+                    </div>
+                    <!-- Muestra descripción del comentario-->
+                    <div class="form-group row">
+                        <label for="comentario" class="col-md-2 col-md-offset-2 control-label">Comentario:</label>
+                        <div class="col-md-12 row">
+                            <textarea class="form-control" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
                         </div>
                     </div>
                 </div>

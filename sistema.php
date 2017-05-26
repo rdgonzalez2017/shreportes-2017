@@ -1,6 +1,5 @@
-<?php
-session_start();
-?>
+<?php session_start(); ?>
+<?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,31 +11,34 @@ session_start();
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="bootstrap.js"></script>
-
-
     <script src="js/ckeditor/ckeditor.js"></script>
 </head>
-<!-- Botòn que lleva a modificar los reportes-->
-<div style="float: right">
-    <input type="submit" class="btn btn-info btn-sm" value="Modificar Reportes" onclick = "location='modificacionreportes.php'"/>
-</div>
-<!-- Botòn que lleva a la tabla de reportes-->
-<div style="float: right">
-    <input type="submit" class="btn btn-info btn-sm" value="Tabla de Reportes" onclick = "location='tabla2.php'"/>
-</div>
-<!-- Botòn que lleva al ingreso de categorías-->
-<div style="float: right">
-    <input type="submit" class="btn btn-info btn-sm" value="Agregar Categorias" onclick = "location='agregar.php'"/>
-</div>
-<!-- Botòn que muestra todos los reportes-->
-<div style="float: right">
-    <input type="submit" class="btn btn-info btn-sm" value="Ver todos los reportes" onclick = "location='reportes.php'"/>
-</div>
+<nav class="navbar navbar-inverse" style="background: darkblue;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="img-responsive" href="#"><img src="images/logo_desktop.png"></a>
 
+
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><button class="btn btn-warning navbar-btn" onclick = "location='modificacionreportes.php'">Modificar Reportes</button>-</li>
+
+                <li><button class="btn btn-warning navbar-btn" onclick = "location='agregar.php'">Agregar Categorias</button>-</li>
+                <li><button class="btn btn-info navbar-btn" onclick = "location='reportes.php'">Ver Reportes</button></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
 <!-- Conexión con base de datos-->
 <?php include('conexi.php');?>
-<?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
+
 <body>
 <!-- Formulario para envío de datos del sistema-->
 <form class="form" method = "post" action="muestra.php">
@@ -114,4 +116,5 @@ session_start();
 <!-- Formulario para envío de datos del sistema-->
 
 </body>
+
 </html>
