@@ -124,7 +124,7 @@ if($VariableURL<50){
                            
                                         <div class="row">
                                             <label for="observacion" class="col-md-10 col-md-offset-1 control-label">Observacion:</label><br>
-                                                 <div class="col-md-10 col-md-offset-1 wow flash animated animated" data-wow-duration="5000ms" style="max-width:100%; overflow-y:auto;"  >'; echo $observacion; echo' </div>
+                                                 <div class="col-md-10 col-md-offset-1 wow fadeInDownBig animated animated" data-wow-duration="5000ms" style="max-width:100%; overflow-y:auto;"  >'; echo $observacion; echo' </div>
                                         </div>
                        
                           
