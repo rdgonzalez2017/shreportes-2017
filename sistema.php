@@ -9,8 +9,9 @@
     <title>	SH Reportes	</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="bootstrap.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/ckeditor/ckeditor.js"></script>
 </head>
 <nav class="navbar navbar-inverse" style="background: darkblue;">

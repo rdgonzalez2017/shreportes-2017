@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <script src="bootstrap.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/ckeditor/ckeditor.js"></script>
+    <script src="js/wow.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/animate.css"><!-- Bootstrap -->
     <title>	SH Reportes	</title>
 </head>
 <nav class="navbar navbar-inverse" style="background: darkblue;">
@@ -17,14 +22,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="img-responsive" href="https://www.servicioshosting.com/sitio/"><img src="images/logo_desktop.png"></a>
+            <a class="img-responsive wow flipInX animated animated" href="https://www.servicioshosting.com/sitio/"><img src="images/logo_desktop.png"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
 
-                
-                <li><button class="btn btn-sm btn-info navbar-btn" onclick = "location='https://www.servicioshosting.com/sitio/contactanos-2/'">Contactos</button>-</li>
-                <li><button class="btn btn-sm btn-warning navbar-btn" onclick = "location='http://blog.servicioshosting.com/'">Blog ServiciosHosting</button></li>
+
+                <li><button class="btn btn-sm btn-info navbar-btn bounceInUp animated animated" data-wow-duration="3000ms"" onclick = "location='https://www.servicioshosting.com/sitio/contactanos-2/'">Contactos</button>-</li>
+                <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="3000ms"" onclick = "location='http://blog.servicioshosting.com/'">Blog ServiciosHosting</button></li>
 
             </ul>
         </div>
@@ -75,7 +80,7 @@ while($resultados = mysql_fetch_array($consulta)) {
                         //Panel que muestra el Reporte Final:
                         echo'
                         
-                             <div class="panel panel-primary container col-md-8 col-md-offset-2 ">
+                             <div class="panel panel-primary container col-md-8 col-md-offset-2 flipInX animated animated" data-wow-duration="3000ms"">
                                 
                                     <div class="panel-heading row" style="background: orange">
                                         <p class="text-center">Reporte</p>
@@ -83,23 +88,23 @@ while($resultados = mysql_fetch_array($consulta)) {
                                     <div class="panel-body">
                                         <div class="row">
                                             <label for="titulo" class="col-md-3 col-md-offset-2 control-label">Titulo:</label>
-                                               <div class="col-md-3 col-md-pull-1">'; echo  $titulo; echo' </div>            
+                                               <div class="col-md-7 col-md-pull-1">'; echo  $titulo; echo' </div>            
                                         </div>
                                         <div class="row">
                                             <label for="categoria" class="col-md-3 col-md-offset-2 control-label">Categoría:</label>
-                                               <div class="col-md-3 col-md-pull-1">'; echo  $categoria; echo' </div>
+                                               <div class="col-md-7 col-md-pull-1">'; echo  $categoria; echo' </div>
                                         </div>
                                         <div class="row">
                                             <label for="fecha" class="col-md-3 col-md-offset-2 control-label">Fecha:</label>
-                                                <div class="col-md-3 col-md-pull-1">'; echo $fecha; echo' </div>
+                                                <div class="col-md-7 col-md-pull-1">'; echo $fecha; echo' </div>
                                         </div>
                                         <div class="row">
                                             <label for="autor" class="col-md-3 col-md-offset-2 control-label">Autor:</label>
-                                                 <div class="col-md-3 col-md-pull-1">'; echo $autor; echo' </div>
+                                                 <div class="col-md-7 col-md-pull-1">'; echo $autor; echo' </div>
                                         </div>
                                         <div class="row">
                                             <label for="estado" class="col-md-3 col-md-offset-2 control-label">Estado:</label>
-                                                 <div class="col-md-3 col-md-pull-1">'; echo $estatus; echo' </div>
+                                                 <div class="col-md-7 col-md-pull-1">'; echo $estatus; echo' </div>
                                         </div>
                                         
                                         
@@ -109,7 +114,7 @@ while($resultados = mysql_fetch_array($consulta)) {
                            
                                         <div class="row">
                                             <label for="observacion" class="col-md-10 col-md-offset-1 control-label">Observacion:</label><br>
-                                                 <div class="col-md-10 col-md-offset-1" style="max-width:100%; overflow-y:auto;"  >'; echo $observacion; echo' </div>
+                                                 <div class="col-md-10 col-md-offset-1 bounceIn animated animated" data-wow-duration="3000ms"" style="max-width:100%; overflow-y:auto;"  >'; echo $observacion; echo' </div>
                                         </div>
                        
                                             ';
