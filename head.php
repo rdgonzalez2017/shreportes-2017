@@ -12,5 +12,5 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/ckeditor/ckeditor.js"></script>
     <script src="js/wow.min.js"></script>
-    <title>	Inicio de sesion	</title>
+    <title>	Reportes SH	</title>
 </head>

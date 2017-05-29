@@ -13,7 +13,6 @@ $consulta = mysql_query("SELECT idreporte FROM reporte ORDER BY idreporte DESC L
 while($resultados = mysql_fetch_array($consulta)) {
     $idreporte = $resultados['idreporte'];
 }
-
 ob_start();
 echo $idreporte + 1;
 $idreplica = ob_get_contents();
@@ -40,9 +39,7 @@ if($idreplica>0){
                $idreplica = ob_get_contents();
                ob_end_clean();
                echo $idreplica;
-
            ?>
-
             "/>
     <div class="container">
         <div class="col-md-10 col-md-offset-1">
