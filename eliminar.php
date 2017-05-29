@@ -21,7 +21,7 @@ if(isset($_GET['reporte']))
     }
         if($query_eliminar)
     {
-       
+        $query_insertar = mysql_query("insert into reporte (idreplicacion) select idreporte from reporte order by idreporte DESC limit 1")
         echo 'La noticia se eliminó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
     }
     else

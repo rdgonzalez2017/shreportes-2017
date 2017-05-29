@@ -23,9 +23,8 @@ echo "Se ingresaron los datos.";
 //Mostrar Datos Guardados
 
 $select = "titulo,autor,observacion,fecha";//Campos de la tabla
-$idreporte = "idreporte";
 $sql_tabla = "reporte";
-$consulta = mysql_query("SELECT $select FROM $sql_tabla ORDER BY $idreporte DESC LIMIT 1") or die("error mysql");
+$consulta = mysql_query("SELECT $select FROM $sql_tabla ORDER BY idreporte DESC LIMIT 1") or die("error mysql");
 while($resultados = mysql_fetch_array($consulta)) {
 
     $titulo = $resultados['titulo'];

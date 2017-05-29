@@ -4,18 +4,30 @@
 <html>
 <?php include("head.php")?>
 <?php include("navbarsistema.php")?>
-
 <!-- Conexión con base de datos-->
 <?php include('conexi.php');?>
 
 <body>
 <!-- Formulario para envío de datos del sistema-->
-<form class="form" method = "post" action="muestra.php">
+<form class="form" method = "post" action="validarmuestra.php">
+    <input type="hidden" class="form-control" name="idreporte" id="idreporte"
+           value="<?php
+           include("conexi.php");
+           $consulta = mysql_query("SELECT idreporte FROM reporte ORDER BY idreporte DESC LIMIT 1") or die("error mysql");
+           while($resultados = mysql_fetch_array($consulta)) {
+               $idreporte = $resultados['idreporte'];
+           }
+           ob_start();
+           echo $idreporte+1;
+           $idreplica = ob_get_contents();
+           ob_end_clean();
+           echo $idreplica;
+           ?>
+            "/>
     <div class="container">
         <div class="col-md-10 col-md-offset-1">
             <br>
             <div class="panel panel-primary">
-
                 <div class="panel-heading">
                     <p class="text-center">Ingresar Datos</p>
                 </div>
