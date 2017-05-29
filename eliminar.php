@@ -12,16 +12,10 @@ if(isset($_GET['reporte']))
 {
     $idreporte = (int) mysql_real_escape_string($_GET['reporte']);
 
-    $query_eliminar = mysql_query("select idreplicacion FROM reporte WHERE idreporte = '".$idreporte."'"); // Ejecutamos la consulta para eliminar el registro de la base de datos
-    //$query_eliminar = mysql_query("DELETE FROM reporte WHERE idreporte = '".$idreporte."'"); // Ejecutamos la consulta para eliminar el registro de la base de datos
-    while($columna = mysql_fetch_assoc($query_eliminar)) // Realizamos un bucle que muestre los títulos de las noticias, utilizando while.
+    $query_eliminar = mysql_query("DELETE FROM reporte WHERE idreporte = '".$idreporte."'"); // Ejecutamos la consulta para eliminar el registro de la base de datos
+
+    if($query_eliminar)
     {
-        $idreplicacion = $columna['idreplicacion'];
-        echo $idreplicacion;
-    }
-        if($query_eliminar)
-    {
-        $query_insertar = mysql_query("insert into reporte (idreplicacion) select idreporte from reporte order by idreporte DESC limit 1")
         echo 'La noticia se eliminó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
     }
     else
