@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/animate.css"><!-- Bootstrap -->
     <title>	SH Reportes	</title>
 </head>
-<nav class="navbar navbar-inverse" style="background: darkblue;">
+<nav class="navbar navbar-inverse" style="background: #2A63A2;">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -22,15 +22,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="img-responsive wow flipInX animated animated" href="https://www.servicioshosting.com/sitio/"><img src="images/logo_desktop.png"></a>
+            <a class="img-responsive wow bounceInUp animated animated" href="https://www.servicioshosting.com/sitio/"><img src="images/logo_desktop.png"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-
-
-                <li><button class="btn btn-sm btn-info navbar-btn bounceInUp animated animated" data-wow-duration="3000ms"" onclick = "location='https://www.servicioshosting.com/sitio/contactanos-2/'">Contactos</button>-</li>
-                <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="3000ms"" onclick = "location='http://blog.servicioshosting.com/'">Blog ServiciosHosting</button></li>
-
+                <li class="dropdown">
+                    <a class="dropdown-toggle wow bounceInDown animated animated" data-toggle="dropdown" href="#">Nosotros <span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="text-align: center" >
+                        <li><button class="btn btn-sm btn-info navbar-btn bounceInUp animated animated" data-wow-duration="3000ms" onclick = "location='https://www.servicioshosting.com/sitio/contactanos-2/'">Contactos</button></li>
+                        <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="3000ms"" onclick = "location='http://blog.servicioshosting.com/'">Blog ServiciosHosting</button></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="#">Page 2</a></li>-->
             </ul>
         </div>
     </div>
@@ -113,8 +116,8 @@ while($resultados = mysql_fetch_array($consulta)) {
                            </div>
                            
                                         <div class="row">
-                                            <label for="observacion" class="col-md-10 col-md-offset-1 control-label">Observacion:</label><br>
-                                                 <div class="col-md-10 col-md-offset-1 bounceIn animated animated" data-wow-duration="3000ms"" style="max-width:100%; overflow-y:auto;"  >'; echo $observacion; echo' </div>
+                                            <label for="observacion" class="col-md-10 control-label">Observacion:</label><br>
+                                                 <div class="col-md-12 bounceIn animated animated" data-wow-duration="3000ms"" style="max-width:100%; overflow-y:auto;"  >'; echo $observacion; echo' </div>
                                         </div>
                        
                                             ';

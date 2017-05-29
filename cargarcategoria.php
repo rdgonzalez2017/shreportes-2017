@@ -6,6 +6,6 @@ if(!empty($_REQUEST['nombre'])){ // Comprobamos que los valores recibidos no son
                      ('$_REQUEST[nombre]') ")
         or die("Problemas en el insert principal" . mysqli_error($conexion));
         mysqli_close($conexion);
-    header("Location:agregar.php");
+    header("Location:agregarcategoria.php");
 }
 ?>

@@ -2,40 +2,8 @@
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>	SH Reportes	</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <script src="bootstrap.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/ckeditor/ckeditor.js"></script>
-</head>
-<nav class="navbar navbar-inverse" style="background: darkblue;">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="img-responsive" href="#"><img src="images/logo_desktop.png"></a>
-
-
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav navbar-right">
-                <li><button class="btn btn-warning navbar-btn" onclick = "location='modificacionreportes.php'">Modificar Reportes</button>-</li>
-                <li><button class="btn btn-warning navbar-btn" onclick = "location='agregar.php'">Agregar Categorias</button>-</li>
-                <li><button class="btn btn-info navbar-btn" onclick = "location='reportes.php'">Ver Reportes</button></li>
-                <li><a href='index.php'><span class="glyphicon glyphicon-log-in"></span> Cierre de Sesión</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
+<?php include("head.php")?>
+<?php include("navbarsistema.php")?>
 
 <!-- Conexión con base de datos-->
 <?php include('conexi.php');?>

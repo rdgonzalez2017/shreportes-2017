@@ -1,20 +1,8 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <title>	Inicio de sesion	</title>
-</head>
-
-<nav class="navbar navbar-inverse" style="background: darkblue;">
+<?php include("head.php")?>
+<nav class="navbar navbar-inverse" style="background: #2A63A2;">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -22,32 +10,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
-            <a class="img-responsive" href="https://www.servicioshosting.com/sitio/"><img src="images/logo_desktop.png"></a>
-
+            <a class="img-responsive wow bounceInUp animated animated" href="https://www.servicioshosting.com/sitio/"><img src="images/logo_desktop.png"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-            <!--  <ul class="nav navbar-nav">
-
-                 <li class="dropdown">
-
-                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
-                     <ul class="dropdown-menu">
-                         <li><a href="#">Page 1-1</a></li>
-                         <li><a href="#">Page 1-2</a></li>
-                         <li><a href="#">Page 1-3</a></li>
-                     </ul>
-                 </li>
-                 <li><a href="#">Page 2</a></li>
-                 <li><a href="#">Page 3</a></li>
-             </ul>
-             <button class="btn btn-danger navbar-btn">Button</button>-->
             <ul class="nav navbar-nav navbar-right">
-
-                <li><button class="btn btn-sm btn-info navbar-btn" onclick = "location='https://www.servicioshosting.com/sitio/contactanos-2/'">Contactos</button>-</li>
-                <li><button class="btn btn-sm btn-warning navbar-btn" onclick = "location='http://blog.servicioshosting.com/'">Blog ServiciosHosting</button></li>
-                <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrarse</a></li>-->
-
+                <li class="dropdown">
+                    <a class="dropdown-toggle wow bounceInDown animated animated" data-toggle="dropdown" href="#">Nosotros <span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="text-align: center" >
+                        <li><button class="btn btn-sm btn-info navbar-btn bounceInUp animated animated" data-wow-duration="3000ms" onclick = "location='https://www.servicioshosting.com/sitio/contactanos-2/'">Contactos</button></li>
+                        <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="3000ms"" onclick = "location='http://blog.servicioshosting.com/'">Blog ServiciosHosting</button></li>
+                    </ul>
+                </li>
+                <!-- <li><a href="#">Page 2</a></li>-->
             </ul>
         </div>
     </div>
@@ -76,7 +50,7 @@
                 </div>
 
             <div class="panel-footer text-center">
-                <input type="submit" class="btn btn-success btn-lg" value="Entrar"></input>
+                <input type="submit" class="btn btn-success" value="Entrar"></input>
             </div>
                 <?php
                 if(isset($_SESSION['bienvenido'])){
