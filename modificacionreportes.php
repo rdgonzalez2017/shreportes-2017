@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <title>	SH Reportes	</title>
-</head>
+<?php include("head.php");?>
 <body class="col-md-8 col-md-offset-2">
 <?php
 include("botonInicio.php");
@@ -65,7 +58,9 @@ if(isset($_GET['reporte']))
     }
     echo '
             </select>
-        Observacion:  <textarea name="observacion" class="form-control">'.$columna_MostrarNoticia['observacion'].'</textarea> <br/>    
+        Observacion:  <textarea name="observacion" class="form-control">'.$columna_MostrarNoticia['observacion'].'</textarea>
+          <script>CKEDITOR.replace("observacion");</script>
+         <br/>    
         <input type="hidden" name="idreporte" value="'.$columna_MostrarNoticia['idreporte'].'" /> <!-- Creamos un campo de texto oculto para pasar el id de la noticia -->
         <br>
         <div class="row text-center">

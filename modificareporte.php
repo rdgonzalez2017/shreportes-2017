@@ -14,7 +14,7 @@ $query_MostrarTitulos = mysql_query("SELECT idreporte, titulo, observacion, fech
 while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
 {
     echo '<a href="?reporte='.$columna_MostrarTitulos['idreporte'].'">
-    Modificar este reporte:</a> ';   // Mostramos un enlace para modificar cada noticia
+    Modificar reporte</a> ';   // Mostramos un enlace para modificar cada noticia
     //$idreporte = $columna_MostrarTitulos['idreporte'];
     //echo $idreporte;
 }
@@ -70,7 +70,8 @@ if(isset($_GET['reporte']))
             }
             echo '
             </select>
-        Observacion:  <textarea name="observacion" class="form-control">'.$columna_MostrarNoticia['observacion'].'</textarea> <br/>    
+        Observacion:  <textarea name="observacion" class="form-control">'.$columna_MostrarNoticia['observacion'].'</textarea>
+         <script>CKEDITOR.replace("observacion");</script> <br/>    
         <input type="hidden" name="idreporte" value="'.$columna_MostrarNoticia['idreporte'].'" /> <!-- Creamos un campo de texto oculto para pasar el id de la noticia -->
         <br>
         <div class="row text-center">
