@@ -3,7 +3,7 @@
 <?php include("head.php");?>
 <?php include("navbar/navbarmodificar.php");?>
 <body>
-<div class="col-md-6 col-md-offset-3 flipInY animated animated" data-wow-duration="1500ms"">
+<div class="col-md-6 col-md-offset-3">
 <?php
 include("conexi.php"); // Incluimos nuestro archivo de conexión con la base de datos
 

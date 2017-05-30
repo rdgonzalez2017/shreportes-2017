@@ -56,7 +56,7 @@ while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Rea
 {
     echo '<div class="row well text-center">';
     echo '<a href="?usuario='.$columna_MostrarTitulos['idusuario'].'">
-    Modificar este Usuario:</a> ';   // Mostramos un enlace para modificar cada noticia
+    Modificar mi Usuario:</a> ';   // Mostramos un enlace para modificar cada noticia
     $nombreusuario = $columna_MostrarTitulos['nombre'];
 
     echo $nombreusuario;

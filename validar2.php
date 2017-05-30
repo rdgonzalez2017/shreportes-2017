@@ -1,5 +1,4 @@
 <?php
-
 $usuario = $_POST['nombre'];
 $pass = $_POST['clave'];
 
@@ -15,6 +14,7 @@ $result = mysql_query("SELECT * from usuarios where nombre='" . $usuario . "'");
 if($row = mysql_fetch_array($result)){
     if($row['clave'] == $pass){
         session_start();
+        $_SESSION['tipo'] = $row['idtipodeusuario'];
         $_SESSION['nombre'] = $usuario;
         header("Location: sistema.php");
         }else{

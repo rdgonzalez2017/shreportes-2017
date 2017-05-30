@@ -1,5 +1,4 @@
 <?php session_start(); ?>
-
 <!DOCTYPE html>
 <html>
 <?php include("head.php")?>
@@ -7,7 +6,7 @@
 <?php include("navbar/navbarsistema.php") ?>
 <p class="bounceInRight animated animated" data-wow-duration="1500ms"">
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
-</p>
+    </p>
 <!-- Conexión con base de datos-->
 <?php include('conexi.php');?>
 <?php
