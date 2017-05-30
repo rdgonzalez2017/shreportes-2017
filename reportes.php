@@ -41,10 +41,11 @@ while($resultados = mysql_fetch_array($consulta)) {
                     while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
                     {
                         $categoria =  $columna['nombrecategoria'];
+                        $titulo =  $columna['titulo'];
                         $autor =  $columna['autor'];
                         $fecha =  $columna['fecha'];
                         $observacion =  $columna['observacion'];
-                        $idreplicacion =  $columna['idreplicacion'];
+                        $idreplicacion =  $columna['idreporte'];
                         $idestatus =  $columna['idestatus'];
                         $estatus =  $columna['nombrestatus'];
                         //Panel que muestra el Reporte Final:
@@ -154,8 +155,7 @@ while($resultados = mysql_fetch_array($consulta)) {
         {
 
             echo'<div class="row well">';
-            $idprotegido=md5($clave.$columna['idreplicacion']);
-
+            $idprotegido=md5($clave.$columna['idreporte']);
             echo 'Id de Reporte: '; echo $columna['idreporte']; echo'<br>';
             echo 'Estado: '; echo $columna['nombre'];echo'<br>';
             echo 'Titulo: '; echo $columna['titulo'];echo'<br>';

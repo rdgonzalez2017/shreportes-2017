@@ -164,7 +164,7 @@ if($VariableURL<50){
             {
 
                 echo'<div class="row well col-md-10 col-md-offset-1">';
-                $idprotegido=md5($clave.$columna['idreplicacion']);
+                $idprotegido=md5($clave.$columna['idreporte']);
                 echo'<div style="text-align: center">';echo'Vista Previa del Reporte:';echo'</div>';
                 echo 'Id de Reporte: '; echo $columna['idreporte']; echo'<br>';
                 echo 'Estado: '; echo $columna['nombre'];echo'<br>';
