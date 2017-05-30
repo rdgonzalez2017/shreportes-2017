@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <?php include("head.php");?>
-<body class="col-md-8 col-md-offset-2">
+<?php include("navbar/navbarmodificar.php");?>
+<body>
+<div class="col-md-8 col-md-offset-2">
 <?php
-include("botonInicio.php");
 include("conexi.php"); // Incluimos nuestro archivo de conexión con la base de datos
 
 if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado ejecuta el resto del código
@@ -81,5 +82,6 @@ while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Rea
     echo '</div>';
 }
 ?>
+</div>
 </body>
 </html>

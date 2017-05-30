@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php include("head.php");?>
-<?php include("navbarmodificar.php");?>
+<?php include("navbar/navbarmodificar.php");?>
 <body>
 <div class="col-md-6 col-md-offset-3 flipInY animated animated" data-wow-duration="1500ms"">
 <?php

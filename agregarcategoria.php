@@ -1,14 +1,8 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <title>	Agregar </title>
-</head>
+<?php include ("head.php");?>
+<?php include ("navbar/navbarmodificar.php");?>
 <!-- Conexión con base de datos-->
 <?php include('conexi.php');?>
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
@@ -44,7 +38,6 @@
 </body>
 <footer class="row text-center">
     <div class="col-md-2">
-<?php include("botonInicio.php");?>
     </div>
 </footer>
 </html>

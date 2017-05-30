@@ -1,9 +1,11 @@
 <?php session_start(); ?>
-<?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
 <!DOCTYPE html>
 <html>
 <?php include("head.php")?>
-<?php include("navbarsistema.php")?>
+<?php include("navbar/navbarsistema.php") ?>
+<p class="bounceInRight animated animated" data-wow-duration="1500ms"">
+<?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
+</p>
 <!-- Conexión con base de datos-->
 <?php include('conexi.php');?>
 <?php
@@ -13,19 +15,20 @@ $consulta = mysql_query("SELECT idreporte FROM reporte ORDER BY idreporte DESC L
 while($resultados = mysql_fetch_array($consulta)) {
     $idreporte = $resultados['idreporte'];
 }
-ob_start();
-echo $idreporte + 1;
-$idreplica = ob_get_contents();
-ob_end_clean();
-if($idreplica>0){
-    echo $idreplica;
-}else{
-    echo 'No hay reportes';
-}
+
+//ob_start();
+//echo $idreporte + 1;
+//$idreplica = ob_get_contents();
+//ob_end_clean();
+//if($idreplica>0){
+//  echo $idreplica;
+//}else{
+//  echo 'No hay reportes';
+//}
 ?>
 <body>
 <!-- Formulario para envío de datos del sistema-->
-<form class="form" method = "post" action="validarmuestra.php">
+<form class="form" method = "post" action="controles/validarmuestra.php">
     <input type="hidden" class="form-control" name="idreplica" id="idreplica"
            value="<?php
            include("conexi.php");
@@ -41,7 +44,7 @@ if($idreplica>0){
                echo $idreplica;
            ?>
             "/>
-    <div class="container">
+    <div class="container flipInY animated animated" data-wow-duration="1500ms"">
         <div class="col-md-10 col-md-offset-1">
             <br>
             <div class="panel panel-primary">

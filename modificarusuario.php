@@ -1,10 +1,10 @@
 <?php session_start(); ?>
-<?php if (isset($_SESSION['nombre'])) {echo "Sesión: ".$_SESSION['nombre'];} ?>
 <!DOCTYPE html>
 <html>
 <?php include("head.php");?>
 <div class="container-fluid row">
-<?php include("navbarmodificar.php");?>
+<?php include("navbar/navbarmodificar.php");?>
+<?php if (isset($_SESSION['nombre'])) {echo "Sesión: ".$_SESSION['nombre'];} ?>
 </div>
 <body>
 <div class="container col-md-6 col-md-offset-3">
