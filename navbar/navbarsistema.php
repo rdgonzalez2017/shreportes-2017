@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <li><button class="btn btn-warning btn-sm navbar-btn" onclick = "location='reportes.php'">Ver Reportes</button></li>
-                <li><a href='index.php'><span class="glyphicon glyphicon-log-in"></span> Cierre de Sesión</a></li>
+                <li><a href='logout.php'><span class="glyphicon glyphicon-log-in"></span> Cierre de Sesión</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">

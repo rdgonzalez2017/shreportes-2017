@@ -1,7 +1,9 @@
 <?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <?php include("head.php")?>
+<?php if (isset($_SESSION['nombre'])):?>
 <?php include("navbar/navbarsistema.php") ?>
 <p class="bounceInRight animated animated" data-wow-duration="1500ms"">
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
@@ -118,4 +120,8 @@ while($resultados = mysql_fetch_array($consulta)) {
 
 </body>
 
+<?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
+    <br><button class="btn btn-info btn-sm navbar-btn col-md-offset-1" onclick = "location='Index.php'">Iniciar Sesión</button>
+<?php endif; ?>
 </html>
+

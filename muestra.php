@@ -1,20 +1,9 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <script src="js/ckeditor/ckeditor.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/ckeditor/ckeditor.js"></script>
-    <script src="js/wow.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/animate.css">
-    <title>	SH Reportes	</title>
-</head>
+<?php include ("head.php")?>
 <?php include("navbar/navbarmuestra.php");?>
+<?php if (isset($_SESSION['nombre'])):?>
 <?php include('controles/validarmuestra.php'); ?>
 <?php
 include('conexi.php');
@@ -115,7 +104,7 @@ if($VariableURL<50){
                             echo '
                             <BR> 
                             <!-- Formulario para envío de comentarios-->
-                                <form class="form" name="miFormu" method="post" action="nuevocomentario.php">
+                                <form class="form" name="miFormu" method="post" action="controles/cargarcomentario.php">
                                     <INPUT TYPE="hidden" NAME="id" VALUE="' . $idreplicacion . '">
                                     <INPUT TYPE="hidden" NAME="idprotegido" VALUE="' . $idreporte . '">
                                     <div class="col-md-6 col-md-offset-3">
@@ -195,7 +184,7 @@ if($VariableURL<50){
                  </div>
                  ';
                 echo '<div class="row col-md-2">';
-                include("botoninicio.php");
+                include("botonInicio.php");
                  echo'</div>
                  ';
                 echo ' 
@@ -248,4 +237,8 @@ if($VariableURL<50){
     }
     ?>
 </footer>
+ <?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
+        <br><button class="btn btn-info btn-sm navbar-btn col-md-offset-1" onclick = "location='Index.php'">Iniciar Sesión</button>
+<?php endif; ?>
+
 </html>

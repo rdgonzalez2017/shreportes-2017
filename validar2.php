@@ -1,27 +1,30 @@
 <?php
-session_start();
-//echo $_POST['correo'];
-if(!empty($_POST['correo']) and !empty($_POST['clave'])){
-    //echo 'entro';
-    include('conexi.php');
-    $correo  = $_POST['correo'];
-    $clave  = $_POST['clave'];
-    $wsqli="select * from usuarios where correo = '$correo' and clave = '$clave'";
-    //echo $wsqli;
-    $result=$conexion->query($wsqli);
-    if($conexion->errno) die($conexion->error);
-    $row=$result->fetch_array();
-    if($row==0){
-        $_SESSION['bienvenido']="El usuario no esta registrado";
-        unset($_SESSION['idu']);
-        $url='location:index.php';
-    }
-    else{
 
-        $_SESSION['bienvenido']=$row['nombre'];
-        $_SESSION['idu']=$row['idusuario'];
-        $url='location:sistema.php';
-    }
+$usuario = $_POST['nombre'];
+$pass = $_POST['clave'];
+
+if(empty($usuario) || empty($pass)){
+header("Location: index.php");
+exit();
 }
-header($url);
+mysql_connect('localhost','root','') or die("Error al conectar " . mysql_error());
+mysql_select_db('shreportes') or die ("Error al seleccionar la Base de datos: " . mysql_error());
+
+$result = mysql_query("SELECT * from usuarios where nombre='" . $usuario . "'");
+
+if($row = mysql_fetch_array($result)){
+    if($row['clave'] == $pass){
+        session_start();
+        $_SESSION['nombre'] = $usuario;
+        header("Location: sistema.php");
+        }else{
+        header("Location: index.php");
+        echo 'Usuario Incorrecto';
+    exit();
+    }
+}else{
+    header("Location: index.php");
+    echo 'Usuario Incorrecto';
+    exit();
+}
 ?>

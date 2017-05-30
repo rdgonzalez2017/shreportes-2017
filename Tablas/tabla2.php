@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>Listado de reportes</title>
-    <link rel="stylesheet" type="text/css" href="css/estilotabla.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/estilotabla.css">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 </head>
 <div style="float: left">
-    <input type="submit" class="btn btn-success btn-sm" value="Regresar" onclick = "location='sistema.php'"/>
+    <input type="submit" class="btn btn-success btn-sm" value="Regresar" onclick = "location='../sistema.php'"/>
 </div>
 <body>
 

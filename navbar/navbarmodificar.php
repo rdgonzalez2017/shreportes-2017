@@ -12,7 +12,7 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li><button class="btn btn-sm btn-info navbar-btn" onclick="location='sistema.php'">Regresar al inicio</button> </li>
-                <li><a href='index.php'><span class="glyphicon glyphicon-log-in"></span> Cierre de Sesión</a></li>
+                <li><a href='logout.php'><span class="glyphicon glyphicon-log-in"></span> Cierre de Sesión</a></li>
             </ul>
         </div>
     </div>

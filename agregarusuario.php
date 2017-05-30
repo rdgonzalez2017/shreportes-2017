@@ -8,7 +8,7 @@
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
 <body>
 <!-- Formulario para envío de datos del sistema-->
-<form class="form" method = "post" action="controles/cargarcategoria.php">
+<form class="form" method = "post" action="controles/cargarusuario.php">
     <div class="col-md-8 col-md-offset-2">
         <br>
         <div class="panel panel-success">
