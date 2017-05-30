@@ -189,37 +189,40 @@ while($resultados = mysql_fetch_array($consulta)) {
     <br><br>
     <!-- Seccion de comentarios-->
     <?php
-    $resultComen = mysql_query("SELECT *  FROM comentarios WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' ORDER BY id DESC");
-    while($rowComen = mysql_fetch_assoc($resultComen))
-    {
-        ?>
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-danger">
-                <!-- Muestra Autor del comentario-->
-                <div class="panel-heading text-center">
-                    <div> Autor: <?php echo $rowComen["nick"]; ?> </div>
-                </div>
-                <div class="panel-body">
-
-                    <!-- Muestra fecha del comentario-->
-                    <div class="form-group row">
-                        <label for="fecha" class="col-md-2 col-md-offset-2 control-label">Fecha:</label>
-                        <div class="col-md-8">
-                            <div> <?php echo $rowComen["fecha"]; ?> </div>
-                        </div>
+    if(!empty($idreporte)):
+        $resultComen = mysql_query("SELECT *  FROM comentarios WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' ORDER BY id DESC");
+        while($rowComen = mysql_fetch_assoc($resultComen))
+        {
+            ?>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-danger">
+                    <!-- Muestra Autor del comentario-->
+                    <div class="panel-heading text-center">
+                        <div> Autor: <?php echo $rowComen["nick"]; ?> </div>
                     </div>
-                    <!-- Muestra descripción del comentario-->
-                    <div class="form-group row">
-                        <label for="comentario" class="col-md-2 col-md-offset-2 control-label">Comentario:</label>
-                        <div class="col-md-12 row">
-                            <textarea class="form-control" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
+                    <div class="panel-body">
+
+                        <!-- Muestra fecha del comentario-->
+                        <div class="form-group row">
+                            <label for="fecha" class="col-md-2 col-md-offset-2 control-label">Fecha:</label>
+                            <div class="col-md-8">
+                                <div> <?php echo $rowComen["fecha"]; ?> </div>
+                            </div>
+                        </div>
+                        <!-- Muestra descripción del comentario-->
+                        <div class="form-group row">
+                            <label for="comentario" class="col-md-2 col-md-offset-2 control-label">Comentario:</label>
+                            <div class="col-md-12 row">
+                                <textarea class="form-control" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <?php
-    }
+            <?php
+        }
+    else: echo 'No se han creado reportes';
+    endif;
     ?>
 </footer>
     <?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>

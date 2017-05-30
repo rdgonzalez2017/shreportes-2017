@@ -7,7 +7,7 @@
 <?php
 include("conexi.php"); // Incluimos nuestro archivo de conexión con la base de datos
 
-$query_MostrarTitulos = mysql_query("SELECT idreporte, titulo, fecha, autor FROM reporte"); // Ejecutamos la consulta
+$query_MostrarTitulos = mysql_query("SELECT COUNT(*) as cantidad, idreporte, titulo, fecha, autor FROM reporte GROUP BY 2"); // Ejecutamos la consulta
 
 while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre los títulos de las noticias, utilizando while.
 {
@@ -15,9 +15,13 @@ while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Rea
     echo'Id de reporte: '; echo $columna_MostrarTitulos['idreporte'].'<br/>';
     echo'Autor: '; echo $columna_MostrarTitulos['autor'].'<br/> ';
     echo'Fecha: '; echo $columna_MostrarTitulos['fecha'].'<br/> ';
-    echo'Titulo: ';echo $columna_MostrarTitulos['titulo'].'  <br>
-    <a class="btn btn-danger bounce animated animated" data-wow-duration="1500ms"" href="?reporte='.$columna_MostrarTitulos['idreporte'].'">Eliminar</a> <br/>';  // Mostramos el titulo y un enlace para eliminar la noticia
+    echo'Titulo: ';echo $columna_MostrarTitulos['titulo'].'  <br>';
+    $cantidad =  $columna_MostrarTitulos['cantidad'].'<br>';
+    if ($cantidad>1):
+   echo ' <a class="btn btn-danger bounce animated animated" data-wow-duration="1500ms"" href="?reporte='.$columna_MostrarTitulos['idreporte'].'">Eliminar</a> <br/>';  // Mostramos el titulo y un enlace para eliminar la noticia
     echo '</div>';
+    else: echo 'Nota: No se deben Eliminar todos los reportes.  ';
+    endif;
 }
 
 if(isset($_GET['reporte']))
@@ -29,7 +33,7 @@ if(isset($_GET['reporte']))
     if($query_eliminar)
     {
 
-        header("Location:eliminareportes.php");
+        //header("Location:eliminareportes.php");
         echo 'El reporte se eliminó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
     }
     else
