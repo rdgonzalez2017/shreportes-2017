@@ -4,7 +4,6 @@
 <html>
 <?php include ("head.php")?>
 <?php include ("navbar/navbarreportes.php")?>
-<?php if (isset($_SESSION['nombre'])):?>
 <?php include('controles/validarmuestra.php'); ?>
 <?php
 include('conexi.php');
@@ -22,6 +21,17 @@ while($resultados = mysql_fetch_array($consulta)) {
 }
 ?>
 <div class="row col-md-10 col-md-offset-1">
+    <?php
+    //Mostrar botón de modificar Reporte, al estar el el reporte de Muestra y esconder al estar en el reporte publicado.
+    $url= $_SERVER["REQUEST_URI"];
+    ob_start();
+    echo strlen($url);
+    $VariableURL = ob_get_contents();
+    ob_end_clean();
+    if($VariableURL<50){
+        include ("modificareporte.php");
+    }
+    ?>
     <!-- Muestra Previa del Reporte -->
     <section>
         <!-- Seccion que muestra la publicacion final del reporte-->
@@ -41,10 +51,11 @@ while($resultados = mysql_fetch_array($consulta)) {
                     while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
                     {
                         $categoria =  $columna['nombrecategoria'];
+                        $titulo =  $columna['titulo'];
                         $autor =  $columna['autor'];
                         $fecha =  $columna['fecha'];
                         $observacion =  $columna['observacion'];
-                        $idreplicacion =  $columna['idreplicacion'];
+                        $idreplicacion =  $columna['idreporte'];
                         $idestatus =  $columna['idestatus'];
                         $estatus =  $columna['nombrestatus'];
                         //Panel que muestra el Reporte Final:
@@ -127,7 +138,7 @@ while($resultados = mysql_fetch_array($consulta)) {
                                     </div>
                                 </form>
                         ';
-                    }else echo 'Este caso está resuelto';
+                    }else echo '';
                 }
             }
             else
@@ -143,19 +154,16 @@ while($resultados = mysql_fetch_array($consulta)) {
     }
     else
     {
+        if (isset($_SESSION['nombre'])):
 
-        include("botonInicio.php");
-        include("botonModificar.php");
         $select = "SELECT *, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc";
         $query_reportes = mysql_query("$select"); // Ejecutamos la consulta
         $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"
         $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
         while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
         {
-
             echo'<div class="row well">';
-            $idprotegido=md5($clave.$columna['idreplicacion']);
-
+            $idprotegido=md5($clave.$columna['idreporte']);
             echo 'Id de Reporte: '; echo $columna['idreporte']; echo'<br>';
             echo 'Estado: '; echo $columna['nombre'];echo'<br>';
             echo 'Titulo: '; echo $columna['titulo'];echo'<br>';
@@ -176,9 +184,12 @@ while($resultados = mysql_fetch_array($consulta)) {
               
                  
          ';
+
             //echo 'Titulo del reporte: ';
             // echo $columna['titulo'];
         }
+        else: echo"Debe iniciar sesión para ingresar a esta página";
+        endif;
     }
     ?>
     <!-- Botòn que lleva a modificar los reportes-->
@@ -189,40 +200,41 @@ while($resultados = mysql_fetch_array($consulta)) {
     <br><br>
     <!-- Seccion de comentarios-->
     <?php
-    $resultComen = mysql_query("SELECT *  FROM comentarios WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' ORDER BY id DESC");
-    while($rowComen = mysql_fetch_assoc($resultComen))
-    {
-        ?>
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-danger">
-                <!-- Muestra Autor del comentario-->
-                <div class="panel-heading text-center">
-                    <div> Autor: <?php echo $rowComen["nick"]; ?> </div>
-                </div>
-                <div class="panel-body">
-
-                    <!-- Muestra fecha del comentario-->
-                    <div class="form-group row">
-                        <label for="fecha" class="col-md-2 col-md-offset-2 control-label">Fecha:</label>
-                        <div class="col-md-8">
-                            <div> <?php echo $rowComen["fecha"]; ?> </div>
-                        </div>
+    $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
+    if(!empty($idreporte)):
+        $resultComen = mysql_query("SELECT *  FROM comentarios WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' ORDER BY id DESC");
+        while($rowComen = mysql_fetch_assoc($resultComen))
+        {
+            ?>
+            <div class="col-md-8 col-md-offset-2">
+                <div class="panel panel-danger">
+                    <!-- Muestra Autor del comentario-->
+                    <div class="panel-heading text-center">
+                        <div> Autor: <?php echo $rowComen["nick"]; ?> </div>
                     </div>
-                    <!-- Muestra descripción del comentario-->
-                    <div class="form-group row">
-                        <label for="comentario" class="col-md-2 col-md-offset-2 control-label">Comentario:</label>
-                        <div class="col-md-12 row">
-                            <textarea class="form-control" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
+                    <div class="panel-body">
+
+                        <!-- Muestra fecha del comentario-->
+                        <div class="form-group row">
+                            <label for="fecha" class="col-md-2 control-label">Fecha:</label>
+                            <div class="col-md-8">
+                                <div> <?php echo $rowComen["fecha"]; ?> </div>
+                            </div>
+                        </div>
+                        <!-- Muestra descripción del comentario-->
+                        <div class="form-group row">
+                            <label for="comentario" class="col-md-2 control-label">Comentario:</label>
+                            <div class="col-md-12 row">
+                                <textarea class="form-control" style="resize: none" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <?php
-    }
+            <?php
+        }
+    else: echo 'No se han creado reportes';
+    endif;
     ?>
 </footer>
-    <?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
-    <br><button class="btn btn-info btn-sm navbar-btn col-md-offset-1" onclick = "location='Index.php'">Iniciar Sesión</button>
-    <?php endif; ?>
 </html>

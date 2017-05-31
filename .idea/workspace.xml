@@ -2,9 +2,260 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fed4b37c-0726-4f2b-ab0b-f6c0c71d7a9a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/agregarcategoria.php" afterPath="$PROJECT_DIR$/agregarcategoria.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/agregarusuario.php" afterPath="$PROJECT_DIR$/agregarusuario.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/navbar/navbarsistema.php" afterPath="$PROJECT_DIR$/navbar/navbarsistema.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/clipboard/dialogs/paste.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/dialog.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/dialog_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/dialog_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/dialog_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/dialog_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/editor.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/editor_gecko.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/editor_ie.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/editor_ie7.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/editor_ie8.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/editor_iequirks.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/icons.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/icons_hidpi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/images/arrow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/images/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/images/hidpi/close.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/images/hidpi/lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/images/hidpi/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/images/hidpi/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/images/lock-open.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/images/lock.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/images/refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/images/spinner.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono/readme.md" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/icons.png" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/icons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/icons_hidpi.png" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/icons_hidpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/icons.png" afterPath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/icons.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/icons_hidpi.png" afterPath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/icons_hidpi.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/CHANGES.md" afterPath="$PROJECT_DIR$/js/ckeditor/CHANGES.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/README.md" afterPath="$PROJECT_DIR$/js/ckeditor/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/adapters/jquery.js" afterPath="$PROJECT_DIR$/js/ckeditor/adapters/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/build-config.js" afterPath="$PROJECT_DIR$/js/ckeditor/build-config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/ckeditor.js" afterPath="$PROJECT_DIR$/js/ckeditor/ckeditor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/config.js" afterPath="$PROJECT_DIR$/js/ckeditor/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/af.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/af.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ar.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/ar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/az.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/bg.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/bn.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/bn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/bs.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/bs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ca.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/cs.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/cs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/cy.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/cy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/da.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/da.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/de-ch.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/de-ch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/de.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/el.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/el.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/en-au.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/en-au.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/en-ca.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/en-ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/en-gb.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/en-gb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/en.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/eo.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/eo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/es.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/et.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/et.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/eu.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/eu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/fa.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/fa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/fi.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/fi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/fo.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/fo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/fr-ca.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/fr-ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/fr.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/gl.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/gu.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/gu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/he.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/he.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/hi.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/hi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/hr.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/hr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/hu.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/hu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/id.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/is.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/is.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/it.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/it.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ja.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/ja.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ka.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/ka.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/km.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/km.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ko.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/ko.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ku.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/ku.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/lt.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/lt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/lv.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/mk.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/mk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/mn.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/mn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ms.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/ms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/nb.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/nb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/nl.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/no.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/no.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/oc.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/oc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/pl.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/pl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/pt-br.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/pt-br.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/pt.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ro.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/ro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ru.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/si.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/si.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/sk.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/sk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/sl.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/sl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/sq.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/sq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/sr-latn.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/sr-latn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/sr.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/sr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/sv.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/th.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/th.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/tr.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/tr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/tt.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/tt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ug.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/ug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/uk.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/uk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/vi.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/vi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/zh-cn.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/zh-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/lang/zh.js" afterPath="$PROJECT_DIR$/js/ckeditor/lang/zh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/about/dialogs/about.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/about/dialogs/about.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/dialog/dialogDefinition.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/dialog/dialogDefinition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/image/dialogs/image.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/image/dialogs/image.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/link/dialogs/anchor.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/link/dialogs/anchor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/link/dialogs/link.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/link/dialogs/link.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/pastefromword/filter/default.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/pastefromword/filter/default.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/scayt/dialogs/options.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/scayt/dialogs/options.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/af.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/af.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ar.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/az.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/bg.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ca.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/cs.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/cs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/cy.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/cy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/da.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/da.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/de.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/el.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/el.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/en.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/eo.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/eo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/es.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/et.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/et.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/eu.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/eu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/fa.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/fa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/fi.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/fi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/fr.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/gl.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/he.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/he.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/hr.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/hr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/hu.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/hu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/id.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/it.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/it.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ja.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ja.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/km.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/km.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ko.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ko.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ku.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ku.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/lt.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/lt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/lv.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/nb.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/nb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/nl.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/no.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/no.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/oc.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/oc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/pl.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/pl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/pt.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ru.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/si.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/si.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/sk.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/sk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/sl.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/sl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/sq.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/sq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/sv.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/th.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/th.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/tr.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/tr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/tt.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/tt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ug.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ug.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/uk.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/uk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/vi.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/vi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/zh.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/zh.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/specialchar.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/specialchar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/table/dialogs/table.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/table/dialogs/table.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/tabletools/dialogs/tableCell.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/tabletools/dialogs/tableCell.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/wsc/dialogs/wsc.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/wsc/dialogs/wsc.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/wsc/dialogs/wsc_ie.js" afterPath="$PROJECT_DIR$/js/ckeditor/plugins/wsc/dialogs/wsc_ie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/js/sf.js" afterPath="$PROJECT_DIR$/js/ckeditor/samples/js/sf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/assets/uilanguages/languages.js" afterPath="$PROJECT_DIR$/js/ckeditor/samples/old/assets/uilanguages/languages.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js" afterPath="$PROJECT_DIR$/js/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/index.html" afterPath="$PROJECT_DIR$/js/ckeditor/samples/old/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/font/config.json" afterPath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/font/config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/font/fontello.svg" afterPath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/font/fontello.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" afterPath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" afterPath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" afterPath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" afterPath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" afterPath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" afterPath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" afterPath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" afterPath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor.css" afterPath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor_gecko.css" afterPath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor_gecko.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor_ie.css" afterPath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor_ie.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor_ie8.css" afterPath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor_ie8.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor_iequirks.css" afterPath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor_iequirks.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,40 +279,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="muestra.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/muestra.php">
+      <file leaf-file-name="navbarreportes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/navbar/navbarreportes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="239" column="1" lean-forward="false" selection-start-line="239" selection-start-column="1" selection-end-line="241" selection-end-column="15" />
+            <state relative-caret-position="0">
+              <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estilos.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/estilos.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/head.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modificarusuario.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/modificarusuario.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="58" column="16" lean-forward="false" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
               <folding>
-                <marker date="1496156798442" expanded="true" signature="280:447" ph="SELECT * FRO... reporte" />
-                <marker date="1496156798442" expanded="true" signature="1840:2129" ph="SELECT *, es... categorias" />
-                <marker date="1496156798442" expanded="true" signature="3475:3493" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="3494:3612" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="3673:3942" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="3731:3942" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="4089:4306" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="4444:4654" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="4787:4998" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="5131:5344" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="5612:5949" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="5914:5946" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="6406:9007" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="6438:9007" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="6716:8967" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="6790:8924" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="6862:7014" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="7154:8881" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="7231:7666" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="7422:7611" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="7886:8478" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="7963:8427" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="8166:8372" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="8637:8834" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="9488:9708" ph="SELECT *, ca... categorias" />
-                <marker date="1496156798442" expanded="true" signature="10279:10297" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="11148:11345" ph="..." />
-                <marker date="1496156798442" expanded="true" signature="11804:11908" ph="SELECT * FRO... comentarios" />
+                <marker date="1496169928854" expanded="true" signature="806:929" ph="UPDATE repor... " />
+                <marker date="1496169928854" expanded="true" signature="1467:1481" ph="SELECT * FRO... reporte" />
+                <marker date="1496169928854" expanded="true" signature="1467:1489" ph="SELECT * FRO... usuarios" />
+                <marker date="1496169928854" expanded="true" signature="1467:1524" ph="SELECT * FRO... usuarios" />
+                <marker date="1496169928854" expanded="true" signature="1712:2274" ph="..." />
+                <marker date="1496169928854" expanded="true" signature="1712:2538" ph="..." />
+                <marker date="1496169928854" expanded="true" signature="2413:2526" ph="..." />
+                <marker date="1496169928854" expanded="true" signature="2670:2677" ph="SELECT idrep... reporte" />
+                <marker date="1496169928854" expanded="true" signature="2670:2683" ph="SELECT * fro... " />
+                <marker date="1496169928854" expanded="true" signature="2670:2692" ph="SELECT * fro... usuarios" />
+                <marker date="1496169928854" expanded="true" signature="2670:2707" ph="SELECT * fro... usuarios" />
+                <marker date="1496169928854" expanded="true" signature="2670:2729" ph="SELECT * fro... usuarios" />
               </folding>
             </state>
           </provider>
@@ -70,12 +345,12 @@
       <file leaf-file-name="sistema.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sistema.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="81" column="30" lean-forward="true" selection-start-line="65" selection-start-column="24" selection-end-line="81" selection-end-column="30" />
+            <state relative-caret-position="132">
+              <caret line="65" column="88" lean-forward="false" selection-start-line="65" selection-start-column="88" selection-end-line="65" selection-end-column="88" />
               <folding>
-                <marker date="1496156883269" expanded="true" signature="461:522" ph="SELECT idrep... reporte" />
-                <marker date="1496156883269" expanded="true" signature="1151:1212" ph="SELECT idrep... reporte" />
-                <marker date="1496156883269" expanded="true" signature="2999:3040" ph="select idcat... categorias" />
+                <marker date="1496242971028" expanded="true" signature="464:525" ph="SELECT idrep... reporte" />
+                <marker date="1496242971028" expanded="true" signature="1154:1215" ph="SELECT idrep... reporte" />
+                <marker date="1496242971028" expanded="true" signature="3008:3049" ph="select idcat... categorias" />
               </folding>
             </state>
           </provider>
@@ -84,126 +359,99 @@
       <file leaf-file-name="reportes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reportes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="184">
+              <caret line="140" column="32" lean-forward="false" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
               <folding>
-                <marker date="1496159145365" expanded="true" signature="282:449" ph="SELECT * FRO... reporte" />
-                <marker date="1496159145365" expanded="true" signature="1456:1745" ph="SELECT *, es... categorias" />
-                <marker date="1496159145365" expanded="true" signature="2976:3552" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="3085:3103" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="3104:3222" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="3283:3552" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="3341:3552" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="3699:3916" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="4054:4264" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="4397:4608" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="4741:4954" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="5304:5601" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="5566:5598" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="6023:8624" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="6055:8624" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="6333:8584" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="6407:8541" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="6479:6631" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="6771:8498" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="6848:7283" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="7039:7228" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="7503:8095" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="7580:8044" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="7783:7989" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="8254:8451" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="9116:9328" ph="SELECT *, ca... categorias" />
-                <marker date="1496159145365" expanded="true" signature="10508:10654" ph="..." />
-                <marker date="1496159145365" expanded="true" signature="11023:11127" ph="SELECT * FRO... comentarios" />
+                <marker date="1496243091914" expanded="true" signature="241:408" ph="SELECT * FRO... reporte" />
+                <marker date="1496243091914" expanded="true" signature="1757:2046" ph="SELECT *, es... categorias" />
+                <marker date="1496243091914" expanded="true" signature="3328:3904" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="3437:3455" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="3456:3574" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="3635:3904" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="3693:3904" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="4051:4268" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="4406:4616" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="4749:4960" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="5093:5306" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="5656:5953" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="5918:5950" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="6375:8976" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="6407:8976" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="6685:8936" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="6759:8893" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="6831:6983" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="7123:8850" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="7200:7635" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="7391:7580" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="7855:8447" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="7932:8396" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="8135:8341" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="8606:8803" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="9411:9623" ph="SELECT *, ca... categorias" />
+                <marker date="1496243091914" expanded="true" signature="10797:10943" ph="..." />
+                <marker date="1496243091914" expanded="true" signature="11499:11603" ph="SELECT * FRO... comentarios" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modificarusuario.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modificarusuario.php">
+      <file leaf-file-name="muestra.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/muestra.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
-              <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+            <state relative-caret-position="293">
+              <caret line="141" column="36" lean-forward="false" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
               <folding>
-                <marker date="1496149629875" expanded="true" signature="806:929" ph="UPDATE repor... " />
-                <marker date="1496149629875" expanded="true" signature="1467:1481" ph="SELECT * FRO... reporte" />
-                <marker date="1496149629875" expanded="true" signature="1467:1489" ph="SELECT * FRO... usuarios" />
-                <marker date="1496149629875" expanded="true" signature="1467:1524" ph="SELECT * FRO... usuarios" />
-                <marker date="1496149629875" expanded="true" signature="1712:2274" ph="..." />
-                <marker date="1496149629875" expanded="true" signature="1712:2538" ph="..." />
-                <marker date="1496149629875" expanded="true" signature="2413:2526" ph="..." />
-                <marker date="1496149629875" expanded="true" signature="2670:2677" ph="SELECT idrep... reporte" />
-                <marker date="1496149629875" expanded="true" signature="2670:2683" ph="SELECT * fro... " />
-                <marker date="1496149629875" expanded="true" signature="2670:2692" ph="SELECT * fro... usuarios" />
-                <marker date="1496149629875" expanded="true" signature="2670:2707" ph="SELECT * fro... usuarios" />
-                <marker date="1496149629875" expanded="true" signature="2670:2729" ph="SELECT * fro... usuarios" />
+                <marker date="1496243068952" expanded="true" signature="240:407" ph="SELECT * FRO... reporte" />
+                <marker date="1496243068952" expanded="true" signature="1797:2086" ph="SELECT *, es... categorias" />
+                <marker date="1496243068952" expanded="true" signature="3428:3446" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="3447:3565" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="3626:3895" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="3684:3895" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="4042:4259" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="4397:4607" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="4740:4951" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="5084:5297" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="5565:5902" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="5867:5899" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="6359:8960" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="6391:8960" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="6669:8920" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="6743:8877" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="6815:6967" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="7107:8834" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="7184:7619" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="7375:7564" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="7839:8431" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="7916:8380" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="8119:8325" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="8590:8787" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="9462:9682" ph="SELECT *, ca... categorias" />
+                <marker date="1496243068952" expanded="true" signature="10249:10267" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="11118:11315" ph="..." />
+                <marker date="1496243068952" expanded="true" signature="11854:11958" ph="SELECT * FRO... comentarios" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agregarcategoria.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agregarcategoria.php">
+      <file leaf-file-name="navbarindex.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/navbar/navbarindex.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="agregarusuario.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agregarusuario.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="224">
+              <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
               <folding>
-                <marker date="1496166391105" expanded="true" signature="1228:1255" ph="select * fro... tipodeusuario" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#nav#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cargarusuario.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controles/cargarusuario.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="4" column="96" lean-forward="false" selection-start-line="4" selection-start-column="96" selection-end-line="4" selection-end-column="96" />
-              <folding>
-                <marker date="1496166141005" expanded="true" signature="250:415" ph="insert into usuarios... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cargarcategoria.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controles/cargarcategoria.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="8" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="2" />
-              <folding>
-                <marker date="1496151728191" expanded="true" signature="262:343" ph="insert into categorias... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbarsistema.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="navbarsistema.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/navbar/navbarsistema.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbarreportes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/navbar/navbarreportes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="8" column="101" lean-forward="false" selection-start-line="8" selection-start-column="101" selection-end-line="8" selection-end-column="101" />
+              <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -220,17 +468,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>publi</find>
-      <find>odifi</find>
-      <find>modifi</find>
-      <find>publicar</find>
-      <find>inic</find>
-      <find>modificar</find>
-      <find>ID DE RE</find>
-      <find>obser</find>
-      <find>observac</find>
-      <find>modific</find>
-      <find>botoni</find>
       <find>entra</find>
       <find>modifica</find>
       <find>vista</find>
@@ -241,15 +478,26 @@
       <find>titulo</find>
       <find>&lt;li&gt;&lt;a href='index.php'&gt;&lt;span class=&quot;glyphicon glyphicon-log-in&quot;&gt;&lt;/span&gt; Inicio de Sesión&lt;/a&gt;&lt;/li&gt;</find>
       <find>logo</find>
-      <find>observacion</find>
       <find>inicio de</find>
       <find>inicio</find>
       <find>modificar es</find>
-      <find>btn</find>
       <find>$idreporte</find>
       <find>agregar</find>
       <find>bot</find>
       <find>botonin</find>
+      <find>idreplica</find>
+      <find>no se</find>
+      <find>observacion</find>
+      <find>modifi</find>
+      <find>botoni</find>
+      <find>location</find>
+      <find>endi</find>
+      <find>btn</find>
+      <find>modi</find>
+      <find>index</find>
+      <find>body</find>
+      <find>b</find>
+      <find>resuelt</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -261,9 +509,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/indexinicio.php" />
-        <option value="$PROJECT_DIR$/indexPrueba.php" />
-        <option value="$PROJECT_DIR$/c7288fb603ca69bcd28.php" />
         <option value="$PROJECT_DIR$/.php" />
         <option value="$PROJECT_DIR$/coment.php" />
         <option value="$PROJECT_DIR$/comentarios.php" />
@@ -274,44 +519,47 @@
         <option value="$PROJECT_DIR$/botonInicio.php" />
         <option value="$PROJECT_DIR$/css/estilotabla.css" />
         <option value="$PROJECT_DIR$/main.css" />
-        <option value="$PROJECT_DIR$/css/estilos.css" />
         <option value="$PROJECT_DIR$/agregar.php" />
         <option value="$PROJECT_DIR$/navbarmodificar.php" />
         <option value="$PROJECT_DIR$/insertar.php" />
         <option value="$PROJECT_DIR$/prueba.php" />
         <option value="$PROJECT_DIR$/eliminar.php" />
         <option value="$PROJECT_DIR$/validarmuestra.php" />
-        <option value="$PROJECT_DIR$/head.php" />
         <option value="$PROJECT_DIR$/validar.php" />
         <option value="$PROJECT_DIR$/validarlogin.php" />
         <option value="$PROJECT_DIR$/navbarsistema.php" />
         <option value="$PROJECT_DIR$/navbarindex.php" />
         <option value="$PROJECT_DIR$/navbarmuestra.php" />
-        <option value="$PROJECT_DIR$/navbar/navbarmuestra.php" />
-        <option value="$PROJECT_DIR$/modificareporte.php" />
-        <option value="$PROJECT_DIR$/modificarusuario.php" />
-        <option value="$PROJECT_DIR$/eliminareportes.php" />
         <option value="$PROJECT_DIR$/modificacionreportes.php" />
         <option value="$PROJECT_DIR$/controles/validarlogin.php" />
-        <option value="$PROJECT_DIR$/controles/validarmuestra.php" />
         <option value="$PROJECT_DIR$/controles/cargarcategoria.php" />
         <option value="$PROJECT_DIR$/enviar.php" />
         <option value="$PROJECT_DIR$/nuevocomentario.php" />
         <option value="$PROJECT_DIR$/cargarcomentario.php" />
-        <option value="$PROJECT_DIR$/controles/cargarcomentario.php" />
         <option value="$PROJECT_DIR$/navbarreportes.php" />
-        <option value="$PROJECT_DIR$/navbar/navbarreportes.php" />
-        <option value="$PROJECT_DIR$/validar2.php" />
         <option value="$PROJECT_DIR$/logout.php" />
-        <option value="$PROJECT_DIR$/navbar/navbarmodificar.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/muestra.php" />
-        <option value="$PROJECT_DIR$/sistema.php" />
-        <option value="$PROJECT_DIR$/reportes.php" />
         <option value="$PROJECT_DIR$/controles/cargarusuario.php" />
         <option value="$PROJECT_DIR$/agregarusuario.php" />
         <option value="$PROJECT_DIR$/agregarcategoria.php" />
+        <option value="$PROJECT_DIR$/modificarusuario.php" />
+        <option value="$PROJECT_DIR$/eliminareportes.php" />
+        <option value="$PROJECT_DIR$/controles/cargarcomentario.php" />
+        <option value="$PROJECT_DIR$/modificareporte.php" />
+        <option value="$PROJECT_DIR$/controles/validarmuestra.php" />
+        <option value="$PROJECT_DIR$/modificarmuestra.php" />
+        <option value="$PROJECT_DIR$/validar2.php" />
+        <option value="$PROJECT_DIR$/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/navbar/navbarindex.php" />
+        <option value="$PROJECT_DIR$/css/estilos.css" />
+        <option value="$PROJECT_DIR$/navbar/navbarreportes.php" />
+        <option value="$PROJECT_DIR$/navbar/navbarmuestra.php" />
+        <option value="$PROJECT_DIR$/navbar/navbarmodificar.php" />
         <option value="$PROJECT_DIR$/navbar/navbarsistema.php" />
+        <option value="$PROJECT_DIR$/sistema.php" />
+        <option value="$PROJECT_DIR$/muestra.php" />
+        <option value="$PROJECT_DIR$/reportes.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/head.php" />
       </list>
     </option>
   </component>
@@ -368,20 +616,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Tablas" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shreportes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shreportes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Respaldo SQL" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -396,7 +630,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="navbar" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -546,12 +780,13 @@
       <workItem from="1495714106576" duration="22874000" />
       <workItem from="1495799203514" duration="23799000" />
       <workItem from="1496059306958" duration="27127000" />
-      <workItem from="1496145194093" duration="18340000" />
+      <workItem from="1496145194093" duration="29441000" />
+      <workItem from="1496232249994" duration="12850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="285328000" />
+    <option name="totallyTimeSpent" value="309279000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -564,13 +799,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1500732" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14787701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.034700315" sideWeight="0.50293684" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33123028" sideWeight="0.49706313" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -582,6 +815,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33123028" sideWeight="0.49706313" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -594,7 +828,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15051395" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14860907" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33123028" sideWeight="0.49706313" order="1" side_tool="false" content_ui="tabs" />
@@ -617,9 +851,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index2.php" />
-    <entry file="file://$PROJECT_DIR$/presistema.php" />
-    <entry file="file://$PROJECT_DIR$/iniciosesion.php" />
     <entry file="file://$PROJECT_DIR$/cabecera.php" />
     <entry file="file://$PROJECT_DIR$/indexinicio.php" />
     <entry file="file://$PROJECT_DIR$/Tablas/tabla2.php">
@@ -655,71 +886,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/estilotabla.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <marker date="1496087879723" expanded="true" signature="140:259" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css" />
-    <entry file="file://$PROJECT_DIR$/css/estilos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controles/cargarcategoria.php" />
-    <entry file="file://$PROJECT_DIR$/prueba.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validarlogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navbarindex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="8" column="120" lean-forward="false" selection-start-line="8" selection-start-column="120" selection-end-line="8" selection-end-column="120" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/prueba.php" />
+    <entry file="file://$PROJECT_DIR$/validarlogin.php" />
+    <entry file="file://$PROJECT_DIR$/navbarindex.php" />
     <entry file="file://$PROJECT_DIR$/navbar/logo_desktop.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eliminareportes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="3" column="22" lean-forward="false" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding>
-            <marker date="1496150117498" expanded="true" signature="328:379" ph="SELECT idrep... reporte" />
-            <marker date="1496150117498" expanded="true" signature="1270:1324" ph="DELETE FROM " />
-          </folding>
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modificacionreportes.php">
@@ -742,14 +916,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/validarmuestra.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/validarmuestra.php" />
     <entry file="file://$PROJECT_DIR$/cargarcomentario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
@@ -761,32 +928,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controles/validarlogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <marker date="1496151294902" expanded="true" signature="156:269" ph="select nombr... usuarios" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Respaldo SQL.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ingreso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Respaldo SQL.php" />
+    <entry file="file://$PROJECT_DIR$/ingreso.php" />
     <entry file="file://$PROJECT_DIR$/insertar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -798,99 +941,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controles/validarmuestra.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <marker date="1496151405210" expanded="true" signature="251:483" ph="insert into reporte... " />
-            <marker date="1496151405210" expanded="true" signature="342:483" ph="select '${$_... reporte" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modificareporte.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-          <folding>
-            <marker date="1496148615731" expanded="true" signature="181:270" ph="SELECT idrep... reporte" />
-            <marker date="1496148615731" expanded="true" signature="1219:1409" ph="UPDATE repor... " />
-            <marker date="1496148615731" expanded="true" signature="1986:2109" ph="SELECT * FRO... reporte" />
-            <marker date="1496148615731" expanded="true" signature="2276:2863" ph="..." />
-            <marker date="1496148615731" expanded="false" signature="2435:2453" ph="..." />
-            <marker date="1496148615731" expanded="true" signature="2851:2863" ph="..." />
-            <marker date="1496148615731" expanded="true" signature="3024:3084" ph="select idest... estatus" />
-            <marker date="1496148615731" expanded="true" signature="3483:3495" ph="..." />
-            <marker date="1496148615731" expanded="true" signature="3656:3723" ph="select idcat... categorias" />
-            <marker date="1496148615731" expanded="true" signature="4163:4521" ph="..." />
-            <marker date="1496148615731" expanded="true" signature="4163:4532" ph="{...}" />
-            <marker date="1496148615731" expanded="true" signature="4395:4509" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controles/cargarcomentario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <marker date="1496152268693" expanded="true" signature="334:530" ph="insert into comentarios... " />
-            <marker date="1496152268693" expanded="true" signature="399:514" ph="SELECT NULL,... reporte" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enviar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="896">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/validar2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="26" column="30" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="26" selection-end-column="30" />
-          <folding>
-            <marker date="1496155161028" expanded="true" signature="345:399" ph="SELECT * fro... usuarios" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navbar/navbarindex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="5" column="83" lean-forward="false" selection-start-line="5" selection-start-column="83" selection-end-line="5" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navbar/navbarmuestra.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="641">
-          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navbar/navbarmodificar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/enviar.php" />
     <entry file="file://$PROJECT_DIR$/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -899,99 +950,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/muestra.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="239" column="1" lean-forward="false" selection-start-line="239" selection-start-column="1" selection-end-line="241" selection-end-column="15" />
-          <folding>
-            <marker date="1496156798442" expanded="true" signature="280:447" ph="SELECT * FRO... reporte" />
-            <marker date="1496156798442" expanded="true" signature="1840:2129" ph="SELECT *, es... categorias" />
-            <marker date="1496156798442" expanded="true" signature="3475:3493" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="3494:3612" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="3673:3942" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="3731:3942" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="4089:4306" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="4444:4654" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="4787:4998" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="5131:5344" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="5612:5949" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="5914:5946" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="6406:9007" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="6438:9007" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="6716:8967" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="6790:8924" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="6862:7014" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="7154:8881" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="7231:7666" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="7422:7611" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="7886:8478" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="7963:8427" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="8166:8372" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="8637:8834" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="9488:9708" ph="SELECT *, ca... categorias" />
-            <marker date="1496156798442" expanded="true" signature="10279:10297" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="11148:11345" ph="..." />
-            <marker date="1496156798442" expanded="true" signature="11804:11908" ph="SELECT * FRO... comentarios" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reportes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <marker date="1496159145365" expanded="true" signature="282:449" ph="SELECT * FRO... reporte" />
-            <marker date="1496159145365" expanded="true" signature="1456:1745" ph="SELECT *, es... categorias" />
-            <marker date="1496159145365" expanded="true" signature="2976:3552" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="3085:3103" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="3104:3222" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="3283:3552" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="3341:3552" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="3699:3916" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="4054:4264" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="4397:4608" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="4741:4954" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="5304:5601" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="5566:5598" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="6023:8624" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="6055:8624" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="6333:8584" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="6407:8541" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="6479:6631" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="6771:8498" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="6848:7283" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="7039:7228" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="7503:8095" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="7580:8044" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="7783:7989" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="8254:8451" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="9116:9328" ph="SELECT *, ca... categorias" />
-            <marker date="1496159145365" expanded="true" signature="10508:10654" ph="..." />
-            <marker date="1496159145365" expanded="true" signature="11023:11127" ph="SELECT * FRO... comentarios" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controles/cargarcategoria.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
           <caret line="8" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="2" />
-          <folding>
-            <marker date="1496151728191" expanded="true" signature="262:343" ph="insert into categorias... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sistema.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="81" column="30" lean-forward="true" selection-start-line="65" selection-start-column="24" selection-end-line="81" selection-end-column="30" />
-          <folding>
-            <marker date="1496156883269" expanded="true" signature="461:522" ph="SELECT idrep... reporte" />
-            <marker date="1496156883269" expanded="true" signature="1151:1212" ph="SELECT idrep... reporte" />
-            <marker date="1496156883269" expanded="true" signature="2999:3040" ph="select idcat... categorias" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -999,30 +961,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="4" column="96" lean-forward="false" selection-start-line="4" selection-start-column="96" selection-end-line="4" selection-end-column="96" />
-          <folding>
-            <marker date="1496166141005" expanded="true" signature="250:415" ph="insert into usuarios... " />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modificarusuario.php">
+    <entry file="file://$PROJECT_DIR$/agregarcategoria.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="47" column="8" lean-forward="true" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
-          <folding>
-            <marker date="1496149629875" expanded="true" signature="806:929" ph="UPDATE repor... " />
-            <marker date="1496149629875" expanded="true" signature="1467:1481" ph="SELECT * FRO... reporte" />
-            <marker date="1496149629875" expanded="true" signature="1467:1489" ph="SELECT * FRO... usuarios" />
-            <marker date="1496149629875" expanded="true" signature="1467:1524" ph="SELECT * FRO... usuarios" />
-            <marker date="1496149629875" expanded="true" signature="1712:2274" ph="..." />
-            <marker date="1496149629875" expanded="true" signature="1712:2538" ph="..." />
-            <marker date="1496149629875" expanded="true" signature="2413:2526" ph="..." />
-            <marker date="1496149629875" expanded="true" signature="2670:2677" ph="SELECT idrep... reporte" />
-            <marker date="1496149629875" expanded="true" signature="2670:2683" ph="SELECT * fro... " />
-            <marker date="1496149629875" expanded="true" signature="2670:2692" ph="SELECT * fro... usuarios" />
-            <marker date="1496149629875" expanded="true" signature="2670:2707" ph="SELECT * fro... usuarios" />
-            <marker date="1496149629875" expanded="true" signature="2670:2729" ph="SELECT * fro... usuarios" />
-          </folding>
+        <state relative-caret-position="320">
+          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1036,18 +982,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agregarcategoria.php">
+    <entry file="file://$PROJECT_DIR$/eliminareportes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1216">
+          <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+          <folding>
+            <marker date="1496177975601" expanded="true" signature="275:315" ph="SELECT COUNT... reporte" />
+            <marker date="1496177975601" expanded="true" signature="604:677" ph="SELECT idrep... reporte" />
+            <marker date="1496177975601" expanded="true" signature="604:688" ph="SELECT COUNT... reporte" />
+            <marker date="1496177975601" expanded="true" signature="1717:1771" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controles/cargarcomentario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="13" column="32" lean-forward="false" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding>
+            <marker date="1496234012230" expanded="true" signature="334:530" ph="insert into comentarios... " />
+            <marker date="1496234012230" expanded="true" signature="399:514" ph="SELECT NULL,... reporte" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modificareporte.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
-          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+          <caret line="10" column="28" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding>
+            <marker date="1496236482583" expanded="true" signature="181:270" ph="SELECT idrep... reporte" />
+            <marker date="1496236482583" expanded="true" signature="1224:1414" ph="UPDATE repor... " />
+            <marker date="1496236482583" expanded="true" signature="1992:2115" ph="SELECT * FRO... reporte" />
+            <marker date="1496236482583" expanded="true" signature="2282:2869" ph="..." />
+            <marker date="1496236482583" expanded="false" signature="2441:2459" ph="..." />
+            <marker date="1496236482583" expanded="true" signature="2857:2869" ph="..." />
+            <marker date="1496236482583" expanded="true" signature="3030:3090" ph="select idest... estatus" />
+            <marker date="1496236482583" expanded="true" signature="3489:3501" ph="..." />
+            <marker date="1496236482583" expanded="true" signature="3662:3729" ph="select idcat... categorias" />
+            <marker date="1496236482583" expanded="true" signature="4169:4527" ph="..." />
+            <marker date="1496236482583" expanded="true" signature="4169:4538" ph="{...}" />
+            <marker date="1496236482583" expanded="true" signature="4401:4515" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modificarmuestra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="40" column="34" lean-forward="false" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+          <folding>
+            <marker date="1496236849519" expanded="true" signature="181:270" ph="SELECT idrep... reporte" />
+            <marker date="1496236849519" expanded="true" signature="1224:1414" ph="UPDATE repor... " />
+            <marker date="1496236849519" expanded="true" signature="1991:2114" ph="SELECT * FRO... reporte" />
+            <marker date="1496236849519" expanded="true" signature="2282:2869" ph="..." />
+            <marker date="1496236849519" expanded="false" signature="2441:2459" ph="..." />
+            <marker date="1496236849519" expanded="true" signature="2857:2869" ph="..." />
+            <marker date="1496236849519" expanded="true" signature="3014:3074" ph="select idest... estatus" />
+            <marker date="1496236849519" expanded="true" signature="3441:3453" ph="..." />
+            <marker date="1496236849519" expanded="true" signature="3598:3665" ph="select idcat... categorias" />
+            <marker date="1496236849519" expanded="true" signature="4305:4419" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controles/validarmuestra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="3" column="37" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="3" selection-end-column="37" />
+          <folding>
+            <marker date="1496236679750" expanded="true" signature="250:445" ph="insert into reporte... " />
+            <marker date="1496236679750" expanded="true" signature="327:445" ph="select '${$_... reporte" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/validar2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding>
+            <marker date="1496239581264" expanded="true" signature="352:406" ph="SELECT * fro... usuarios" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/animate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controles/validarlogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <marker date="1496151294902" expanded="true" signature="156:269" ph="select nombr... usuarios" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/estilotabla.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <marker date="1496087879723" expanded="true" signature="140:259" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navbar/navbarmodificar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navbar/navbarmuestra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/navbar/navbarreportes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="8" column="101" lean-forward="false" selection-start-line="8" selection-start-column="101" selection-end-line="8" selection-end-column="101" />
+        <state relative-caret-position="0">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
           <folding />
         </state>
       </provider>
@@ -1055,8 +1130,150 @@
     <entry file="file://$PROJECT_DIR$/navbar/navbarsistema.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="33" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navbar/navbarindex.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#nav#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#li#0;n#ul#0;n#div#2;n#div#0;n#nav#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sistema.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="65" column="88" lean-forward="false" selection-start-line="65" selection-start-column="88" selection-end-line="65" selection-end-column="88" />
+          <folding>
+            <marker date="1496242971028" expanded="true" signature="464:525" ph="SELECT idrep... reporte" />
+            <marker date="1496242971028" expanded="true" signature="1154:1215" ph="SELECT idrep... reporte" />
+            <marker date="1496242971028" expanded="true" signature="3008:3049" ph="select idcat... categorias" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/muestra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="141" column="36" lean-forward="false" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
+          <folding>
+            <marker date="1496243068952" expanded="true" signature="240:407" ph="SELECT * FRO... reporte" />
+            <marker date="1496243068952" expanded="true" signature="1797:2086" ph="SELECT *, es... categorias" />
+            <marker date="1496243068952" expanded="true" signature="3428:3446" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="3447:3565" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="3626:3895" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="3684:3895" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="4042:4259" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="4397:4607" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="4740:4951" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="5084:5297" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="5565:5902" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="5867:5899" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="6359:8960" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="6391:8960" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="6669:8920" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="6743:8877" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="6815:6967" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="7107:8834" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="7184:7619" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="7375:7564" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="7839:8431" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="7916:8380" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="8119:8325" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="8590:8787" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="9462:9682" ph="SELECT *, ca... categorias" />
+            <marker date="1496243068952" expanded="true" signature="10249:10267" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="11118:11315" ph="..." />
+            <marker date="1496243068952" expanded="true" signature="11854:11958" ph="SELECT * FRO... comentarios" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reportes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="140" column="32" lean-forward="false" selection-start-line="140" selection-start-column="32" selection-end-line="140" selection-end-column="32" />
+          <folding>
+            <marker date="1496243091914" expanded="true" signature="241:408" ph="SELECT * FRO... reporte" />
+            <marker date="1496243091914" expanded="true" signature="1757:2046" ph="SELECT *, es... categorias" />
+            <marker date="1496243091914" expanded="true" signature="3328:3904" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="3437:3455" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="3456:3574" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="3635:3904" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="3693:3904" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="4051:4268" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="4406:4616" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="4749:4960" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="5093:5306" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="5656:5953" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="5918:5950" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="6375:8976" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="6407:8976" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="6685:8936" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="6759:8893" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="6831:6983" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="7123:8850" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="7200:7635" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="7391:7580" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="7855:8447" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="7932:8396" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="8135:8341" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="8606:8803" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="9411:9623" ph="SELECT *, ca... categorias" />
+            <marker date="1496243091914" expanded="true" signature="10797:10943" ph="..." />
+            <marker date="1496243091914" expanded="true" signature="11499:11603" ph="SELECT * FRO... comentarios" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/estilos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modificarusuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="58" column="16" lean-forward="false" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
+          <folding>
+            <marker date="1496169928854" expanded="true" signature="806:929" ph="UPDATE repor... " />
+            <marker date="1496169928854" expanded="true" signature="1467:1481" ph="SELECT * FRO... reporte" />
+            <marker date="1496169928854" expanded="true" signature="1467:1489" ph="SELECT * FRO... usuarios" />
+            <marker date="1496169928854" expanded="true" signature="1467:1524" ph="SELECT * FRO... usuarios" />
+            <marker date="1496169928854" expanded="true" signature="1712:2274" ph="..." />
+            <marker date="1496169928854" expanded="true" signature="1712:2538" ph="..." />
+            <marker date="1496169928854" expanded="true" signature="2413:2526" ph="..." />
+            <marker date="1496169928854" expanded="true" signature="2670:2677" ph="SELECT idrep... reporte" />
+            <marker date="1496169928854" expanded="true" signature="2670:2683" ph="SELECT * fro... " />
+            <marker date="1496169928854" expanded="true" signature="2670:2692" ph="SELECT * fro... usuarios" />
+            <marker date="1496169928854" expanded="true" signature="2670:2707" ph="SELECT * fro... usuarios" />
+            <marker date="1496169928854" expanded="true" signature="2670:2729" ph="SELECT * fro... usuarios" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -6,7 +6,7 @@
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
 <body>
     <form class="form-horizontal row bounceInDown animated animated" data-wow-duration="1500ms"" method = "post" action="validar2.php">
-        <div class="col-md-8 col-md-offset-2 container">
+        <div class="col-md-6 col-md-offset-3 container">
             <div class="panel panel-primary" >
                 <div class="panel-heading">
                     <p class="text-center">Inicio de Sesion</p>
@@ -52,6 +52,4 @@
         </div>
     </form>
 </body>
-
-
 </html>

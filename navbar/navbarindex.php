@@ -1,13 +1,10 @@
-<nav class="navbar navbar-inverse" style="background: #2A63A2;">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
+        <div class="navbar-header col-md-4">
             <a class="img-responsive" href="https://www.servicioshosting.com/sitio/"><img src="images/logo_desktop.png"></a>
-
+        </div>
+        <div class="navbar-header col-md-4">
+            <p style="color: white; text-align: center">Reportes SH</p>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">

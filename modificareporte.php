@@ -7,7 +7,7 @@ $query_MostrarTitulos = mysql_query("SELECT idreporte, titulo, observacion, fech
 while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
 {
     echo '<a href="?reporte='.$columna_MostrarTitulos['idreporte'].'">
-    Modificar reporte</a> ';   // Mostramos un enlace para modificar cada noticia
+    Modificar este reporte</a> ';   // Mostramos un enlace para modificar cada noticia
     //$idreporte = $columna_MostrarTitulos['idreporte'];
     //echo $idreporte;
 }
@@ -24,7 +24,7 @@ if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado eje
     if($query_modificar)
     {
         echo 'La noticia se modificó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
-        header("Location:muestra.php");
+        header("Location:reportes.php");
     }
     else
     {
