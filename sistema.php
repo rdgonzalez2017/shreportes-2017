@@ -55,7 +55,7 @@ while($resultados = mysql_fetch_array($consulta)) {
                 <!-- Ingreso del titulo-->
                 <div class="panel-body">
                     <div class="form-group row">
-                        <label for="titulo" class="col-md-2 control-label">Titulo</label>
+                        <label for="titulo" class="col-md-2 control-label">Titulo:</label>
                         <div class="col-md-8">
                             <input class="form-control" type="text" name="titulo" id="titulo"  required/>
                         </div>
@@ -63,7 +63,7 @@ while($resultados = mysql_fetch_array($consulta)) {
                     <!-- Ingreso de la categoria (Tipo de caso) -->
                     <div class="panel-body">
                         <div class="form-group row">
-                            <label for="nombre" class="col-md-2 control-label">Tipo:</label>
+                            <label for="nombre" class="col-md-2 control-label">Categoria:</label>
                             <div class="col-md-8">
                                 <select class="form-control" name="categoria">
                                     <?php

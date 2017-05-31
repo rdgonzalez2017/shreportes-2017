@@ -11,7 +11,7 @@ if(!empty($_REQUEST['id'])) { // Comprobamos que los valores recibidos no son NU
     or die("Problemas al insertar los datos del comentario" . mysqli_error($conexion));
     mysqli_close($conexion);
 
-    header("Location:../muestra.php?reporte=" . $idprotegido);
+    header("Location:../reportes.php?reporte=" . $idprotegido);
 }
 ?>
 

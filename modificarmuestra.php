@@ -24,7 +24,7 @@ if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado eje
     if($query_modificar)
     {
         echo 'La noticia se modificó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
-        header("Location:reportes.php");
+        header("Location:muestra.php");
     }
     else
     {
@@ -38,7 +38,7 @@ if(isset($_GET['reporte']))
     $query_NoticiaCompleta = mysql_query("SELECT * FROM reporte LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus WHERE idreporte = '".$idreporte."' LIMIT 1"); // Ejecutamos la consulta
     $columna_MostrarNoticia = mysql_fetch_assoc($query_NoticiaCompleta);
     echo ' 
-    <form action="modificareporte.php" method="post"> <!-- Creamos el formulario, utilizando la etiqueta form, cuyo atributo action="" indicará donde se procesará el formulario --> 
+    <form action="modificarmuestra.php" method="post"> <!-- Creamos el formulario, utilizando la etiqueta form, cuyo atributo action="" indicará donde se procesará el formulario --> 
         
         <div style="text-align: center">Id: '.$columna_MostrarNoticia['idreporte'].'</div>
         Título: <input class="form-control" name="titulo" type="text" value="'.$columna_MostrarNoticia['titulo'].'" /> <br/>
@@ -46,22 +46,22 @@ if(isset($_GET['reporte']))
         
         Cambiar Estado a: <select class="form-control" name="estatus">
            ';
-            $conexion=mysqli_connect("localhost","root","","shreportes") or die("Problemas con la conexión");
-            $registros=mysqli_query($conexion,"select idestatus,nombre from estatus ORDER BY idestatus DESC") or die("Problemas en el select:".mysqli_error($conexion));
-            while ($reg=mysqli_fetch_array($registros)) {
-                echo "<option value=\"$reg[idestatus]\">$reg[nombre]</option>";
-            }
-            echo '
+    $conexion=mysqli_connect("localhost","root","","shreportes") or die("Problemas con la conexión");
+    $registros=mysqli_query($conexion,"select idestatus,nombre from estatus ORDER BY idestatus DESC") or die("Problemas en el select:".mysqli_error($conexion));
+    while ($reg=mysqli_fetch_array($registros)) {
+        echo "<option value=\"$reg[idestatus]\">$reg[nombre]</option>";
+    }
+    echo '
             </select>
             Estado: '.$columna_MostrarNoticia['idestatus'].' <br/>
            Cambiar Categoria a: <select class="form-control" name="categoria">
            ';
-            $conexion=mysqli_connect("localhost","root","","shreportes") or die("Problemas con la conexión");
-            $registros=mysqli_query($conexion,"select idcategoria,nombre from categorias ORDER BY idcategoria DESC") or die("Problemas en el select:".mysqli_error($conexion));
-            while ($reg=mysqli_fetch_array($registros)) {
-                echo "<option value=\"$reg[idcategoria]\">$reg[nombre]</option>";
-            }
-            echo '
+    $conexion=mysqli_connect("localhost","root","","shreportes") or die("Problemas con la conexión");
+    $registros=mysqli_query($conexion,"select idcategoria,nombre from categorias ORDER BY idcategoria DESC") or die("Problemas en el select:".mysqli_error($conexion));
+    while ($reg=mysqli_fetch_array($registros)) {
+        echo "<option value=\"$reg[idcategoria]\">$reg[nombre]</option>";
+    }
+    echo '
             </select>
         Observacion:  <textarea name="observacion" class="form-control">'.$columna_MostrarNoticia['observacion'].'</textarea>
          <script>CKEDITOR.replace("observacion");</script> <br/>    

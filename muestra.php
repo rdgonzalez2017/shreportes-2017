@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 <html>
 <?php include ("head.php")?>
-<?php include("navbar/navbarmuestra.php");?>
-<?php if (isset($_SESSION['nombre'])):?>
+<?php include("navbar/navbarreportes.php");?>
 <?php include('controles/validarmuestra.php'); ?>
 <?php
 include('conexi.php');
@@ -20,6 +19,7 @@ while($resultados = mysql_fetch_array($consulta)) {
     $fecha = $resultados['fecha'];
 }
 ?>
+<body>
 <div class="col-md-8 col-md-offset-2">
 <?php
 //Mostrar botón de modificar Reporte, al estar el el reporte de Muestra y esconder al estar en el reporte publicado.
@@ -29,12 +29,12 @@ echo strlen($url);
 $VariableURL = ob_get_contents();
 ob_end_clean();
 if($VariableURL<50){
-    include ("modificareporte.php");
+    include ("modificarmuestra.php");
 }
 ?>
 </div>
-<body">
- <div class="row col-md-12 flipInY animated animated" data-wow-duration="500ms"">
+
+ <div class="col-md-12 flipInY animated animated" data-wow-duration="500ms"">
 <!-- Muestra Previa del Reporte -->
     <section>
         <!-- Seccion que muestra la publicacion final del reporte-->
@@ -107,7 +107,7 @@ if($VariableURL<50){
                                 <form class="form" name="miFormu" method="post" action="controles/cargarcomentario.php">
                                     <INPUT TYPE="hidden" NAME="id" VALUE="' . $idreplicacion . '">
                                     <INPUT TYPE="hidden" NAME="idprotegido" VALUE="' . $idreporte . '">
-                                    <div class="col-md-6 col-md-offset-3">
+                                    <div class="col-md-4 col-md-offset-4">
                                         <div class="panel panel-primary">
                                             <div class="panel-heading">
                                                 <p class="text-center">Formulario de Comentarios</p>
@@ -125,8 +125,8 @@ if($VariableURL<50){
                                             <div class="panel-body">
                                                 <div class="form-group row">
                                                     <label for="comentario" class="col-md-3 control-label">Comentario:</label>
-                                                    <div class="col-md-10">
-                                                        <textarea name="comentario" type="text" required class="form-control" rows="5"></textarea>
+                                                    <div class="col-md-12">
+                                                        <textarea name="comentario" type="text" required class="form-control" rows="3"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -139,7 +139,7 @@ if($VariableURL<50){
                                     </div>
                                 </form>
                         ';
-                        }else echo 'Este caso está resuelto';
+                        }else echo '';
                     }
                 }
                 else
@@ -155,7 +155,7 @@ if($VariableURL<50){
         }
         else
         {
-
+            if (isset($_SESSION['nombre'])):
             $select = "SELECT *, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc limit 1";
             $query_reportes = mysql_query("$select"); // Ejecutamos la consulta
             $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"
@@ -184,7 +184,6 @@ if($VariableURL<50){
                  </div>
                  ';
                 echo '<div class="row col-md-2">';
-                include("botonInicio.php");
                  echo'</div>
                  ';
                 echo ' 
@@ -192,6 +191,8 @@ if($VariableURL<50){
                 //echo 'Titulo del reporte: ';
                 // echo $columna['titulo'];
             }
+            else: echo"Debe iniciar sesión para ingresar a esta página";
+            endif;
         }
         ?>
 
@@ -207,7 +208,7 @@ if($VariableURL<50){
         while($rowComen = mysql_fetch_assoc($resultComen))
         {
             ?>
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-6 col-md-offset-3">
                 <div class="panel panel-danger">
                     <!-- Muestra Autor del comentario-->
                     <div class="panel-heading text-center">
@@ -226,7 +227,7 @@ if($VariableURL<50){
                         <div class="form-group row">
                             <label for="comentario" class="col-md-2 control-label">Comentario:</label>
                             <div class="col-md-12 row">
-                                <textarea class="form-control" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
+                                <textarea class="form-control" style="resize: none;" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
                             </div>
                         </div>
 
@@ -240,8 +241,4 @@ if($VariableURL<50){
         endif;
     ?>
 </footer>
- <?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
-        <br><button class="btn btn-info btn-sm navbar-btn col-md-offset-1" onclick = "location='Index.php'">Iniciar Sesión</button>
-<?php endif; ?>
-
 </html>
