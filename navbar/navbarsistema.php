@@ -1,11 +1,6 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
             <a class="img-responsive" href="#"><img src="navbar/logo_desktop.png"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
@@ -32,6 +27,8 @@
                     <ul class="dropdown-menu" style="text-align: center" >
                         <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarcategoria.php'">Agregar Categoria</button></li>
                         <li><button class="btn btn-sm btn-info navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarusuario.php'">Agregar Usuario</button></li>
+                        <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarestado.php'">Agregar Estatus</button></li>
+
                         <?php endif;?>
 
                     </ul>

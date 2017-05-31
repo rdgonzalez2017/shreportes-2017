@@ -5,7 +5,7 @@
 <?php include("navbar/navbarindex.php")?>
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
 <body>
-    <form class="form-horizontal row bounceInDown animated animated" data-wow-duration="1500ms"" method = "post" action="validar2.php">
+    <form class="form-horizontal row bounceInDown animated animated" data-wow-duration="1500ms"" method = "post" action="controles/login.php">
         <div class="col-md-6 col-md-offset-3 container">
             <div class="panel panel-primary" >
                 <div class="panel-heading">

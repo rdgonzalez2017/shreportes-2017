@@ -8,17 +8,17 @@
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
 <body>
 <!-- Formulario para envío de datos del sistema-->
-<form class="form bounceInDown animated" method = "post" action="../controles/cargarcategoria.php">
+<form class="form bounceInDown animated" method = "post" action="controles/cargarestado.php">
     <div class="col-md-8 col-md-offset-2">
         <br>
         <div class="panel panel-success">
             <div class="panel-heading">
-                <p class="text-center">Ingresar Categoria</p>
+                <p class="text-center">Nuevo Estatus</p>
             </div>
             <!-- Ingreso del titulo-->
             <div class="panel-body">
                 <div class="form-group row">
-                    <label for="nombre" class="col-md-2 control-label">Nombre de Categoría</label>
+                    <label for="nombre" class="col-md-2 control-label">Nombre de Estatus:</label>
                     <div class="col-md-8">
                         <input class="form-control" type="text" name="nombre" id="nombre"  required/>
                     </div>
