@@ -64,7 +64,8 @@ if(isset($_GET['reporte']))
     echo '
             </select>
         Observacion:  <textarea name="observacion" class="form-control">'.$columna_MostrarNoticia['observacion'].'</textarea>
-         <script>CKEDITOR.replace("observacion");</script> <br/>    
+                     <script>tinyMCE.init({selector: "textarea",plugins: "image,paste",paste_data_images: true});</script>
+  
         <input type="hidden" name="idreporte" value="'.$columna_MostrarNoticia['idreporte'].'" /> <!-- Creamos un campo de texto oculto para pasar el id de la noticia -->
         <br>
         <div class="row text-center">
