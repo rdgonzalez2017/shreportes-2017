@@ -2,419 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fed4b37c-0726-4f2b-ab0b-f6c0c71d7a9a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Respaldo SQL/shreportes(10).sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/CHANGES.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/adapters/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/build-config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/ckeditor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/contents.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/af.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/az.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/bn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/bs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/cy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/de-ch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/en-au.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/en-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/en-gb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/eo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/et.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/eu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/fo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/fr-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/gl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/gu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/hi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/is.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ka.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/km.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ku.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/mk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/mn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/nb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/oc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/pt-br.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/si.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/sq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/sr-latn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/sr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/tt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/ug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/zh-cn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/lang/zh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/af.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/az.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/de-ch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/en-gb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/eu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/km.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/oc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/tt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/about/dialogs/about.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/about/dialogs/logo_ckeditor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/colordialog/dialogs/colordialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/colordialog/dialogs/colordialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/copyformatting/cursors/cursor-disabled.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/copyformatting/cursors/cursor.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/copyformatting/styles/copyformatting.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/dialog/dialogDefinition.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/div/dialogs/div.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/find/dialogs/find.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/flash/dialogs/flash.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/flash/images/placeholder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/forms/dialogs/button.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/forms/dialogs/checkbox.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/forms/dialogs/form.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/forms/dialogs/hiddenfield.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/forms/dialogs/radio.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/forms/dialogs/select.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/forms/dialogs/textarea.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/forms/dialogs/textfield.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/forms/images/hiddenfield.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/icons_hidpi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/iframe/dialogs/iframe.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/iframe/images/placeholder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/image/dialogs/image.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/image/images/noimage.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/link/dialogs/anchor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/link/dialogs/link.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/link/images/anchor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/link/images/hidpi/anchor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/liststyle/dialogs/liststyle.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/magicline/images/hidpi/icon-rtl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/magicline/images/hidpi/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/magicline/images/icon-rtl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/magicline/images/icon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/pagebreak/images/pagebreak.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/pastefromword/filter/default.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/preview/preview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/scayt/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/scayt/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/scayt/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/scayt/dialogs/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/scayt/dialogs/options.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/scayt/dialogs/toolbar.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/scayt/skins/moono-lisa/scayt.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/showblocks/images/block_address.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/showblocks/images/block_blockquote.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/showblocks/images/block_div.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/showblocks/images/block_h1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/showblocks/images/block_h2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/showblocks/images/block_h3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/showblocks/images/block_h4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/showblocks/images/block_h5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/showblocks/images/block_h6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/showblocks/images/block_p.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/showblocks/images/block_pre.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/dialogs/smiley.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/angel_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/angel_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/angry_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/angry_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/broken_heart.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/broken_heart.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/confused_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/confused_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/cry_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/cry_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/devil_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/devil_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/embaressed_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/embarrassed_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/embarrassed_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/envelope.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/envelope.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/heart.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/heart.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/kiss.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/kiss.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/lightbulb.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/lightbulb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/omg_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/omg_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/regular_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/regular_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/sad_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/sad_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/shades_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/shades_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/teeth_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/teeth_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/thumbs_down.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/thumbs_down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/thumbs_up.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/thumbs_up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/tongue_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/tongue_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/tounge_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/wink_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/smiley/images/wink_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/af.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/az.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/bg.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/cs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/cy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/da.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/de-ch.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/de.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/el.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/en-au.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/en-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/en-gb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/en.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/eo.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/es.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/et.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/eu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/fa.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/fi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/fr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/gl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/he.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/hr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/hu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/id.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/it.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ja.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/km.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ko.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ku.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/lt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/lv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/nb.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/nl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/no.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/oc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/pl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/pt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ru.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/si.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/sk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/sl.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/sq.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/sv.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/th.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/tr.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/tt.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/ug.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/uk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/vi.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/lang/zh.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/specialchar/dialogs/specialchar.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/table/dialogs/table.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/tableselection/styles/tableselection.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/tabletools/dialogs/tableCell.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/templates/dialogs/templates.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/templates/dialogs/templates.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/templates/templates/default.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/templates/templates/images/template1.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/templates/templates/images/template2.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/templates/templates/images/template3.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/wsc/LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/wsc/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/wsc/dialogs/ciframe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/wsc/dialogs/wsc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/wsc/dialogs/wsc.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/wsc/dialogs/wsc_ie.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/plugins/wsc/skins/moono-lisa/wsc.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/css/samples.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/img/github-top.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/img/header-bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/img/header-separator.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/img/navigation-tip.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/js/sample.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/js/sf.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/ajax.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/api.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/appendto.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/assets/inlineall/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/assets/outputxhtml/outputxhtml.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/assets/posteddata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/assets/sample.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/assets/uilanguages/languages.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/datafiltering.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/dialog/assets/my_dialog.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/dialog/dialog.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/divreplace.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/enterkey/enterkey.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.fla" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/htmlwriter/assets/outputforflash/outputforflash.swf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/htmlwriter/assets/outputforflash/swfobject.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/htmlwriter/outputforflash.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/htmlwriter/outputhtml.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/inlineall.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/inlinebycode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/inlinetextarea.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/jquery.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/magicline/magicline.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/readonly.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/replacebyclass.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/replacebycode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/sample.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/sample.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/sample_posteddata.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/tabindex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/toolbar/toolbar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/uicolor.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/uilanguages.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/wysiwygarea/fullpage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/old/xhtmlstyle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/css/fontello.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/font/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/font/config.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/font/fontello.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/font/fontello.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/font/fontello.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/font/fontello.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/js/abstracttoolbarmodifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/js/fulltoolbareditor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/js/toolbarmodifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/js/toolbartextmodifier.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/codemirror.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/javascript.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/neo.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/samples/toolbarconfigurator/lib/codemirror/show-hint.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/dialog_ie.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/dialog_ie8.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/dialog_iequirks.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor_gecko.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor_ie.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor_ie8.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/editor_iequirks.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/icons.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/icons_hidpi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/images/arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/images/close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/images/hidpi/close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/images/hidpi/lock-open.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/images/hidpi/lock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/images/hidpi/refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/images/lock-open.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/images/lock.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/images/refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/images/spinner.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/skins/moono-lisa/readme.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/ckeditor/styles.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/estilos.css" afterPath="$PROJECT_DIR$/css/estilos.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/head.php" afterPath="$PROJECT_DIR$/head.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modificacionreportes.php" afterPath="$PROJECT_DIR$/modificacionreportes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modificareporte.php" afterPath="$PROJECT_DIR$/modificareporte.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modificarmuestra.php" afterPath="$PROJECT_DIR$/modificarmuestra.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/muestra.php" afterPath="$PROJECT_DIR$/muestra.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reportes.php" afterPath="$PROJECT_DIR$/reportes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sistema.php" afterPath="$PROJECT_DIR$/sistema.php" />
     </list>
@@ -440,96 +33,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
+      <file leaf-file-name="navbarsistema.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/navbar/navbarsistema.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="7" column="136" lean-forward="false" selection-start-line="7" selection-start-column="136" selection-end-line="7" selection-end-column="136" />
+            <state relative-caret-position="480">
+              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modificarmuestra.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modificarmuestra.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding>
-                <marker date="1496331389304" expanded="true" signature="181:270" ph="SELECT idrep... reporte" />
-                <marker date="1496331389304" expanded="true" signature="1224:1414" ph="UPDATE repor... " />
-                <marker date="1496331389304" expanded="true" signature="1991:2114" ph="SELECT * FRO... reporte" />
-                <marker date="1496331389304" expanded="true" signature="2282:2869" ph="..." />
-                <marker date="1496331389304" expanded="false" signature="2441:2459" ph="..." />
-                <marker date="1496331389304" expanded="true" signature="2857:2869" ph="..." />
-                <marker date="1496331389304" expanded="true" signature="3014:3074" ph="select idest... estatus" />
-                <marker date="1496331389304" expanded="true" signature="3441:3453" ph="..." />
-                <marker date="1496331389304" expanded="true" signature="3598:3665" ph="select idcat... categorias" />
-                <marker date="1496331389304" expanded="true" signature="4362:4476" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modificarusuario.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modificarusuario.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding>
-                <marker date="1496250907902" expanded="true" signature="806:929" ph="UPDATE repor... " />
-                <marker date="1496250907902" expanded="true" signature="1467:1481" ph="SELECT * FRO... reporte" />
-                <marker date="1496250907902" expanded="true" signature="1467:1489" ph="SELECT * FRO... usuarios" />
-                <marker date="1496250907902" expanded="true" signature="1467:1524" ph="SELECT * FRO... usuarios" />
-                <marker date="1496250907902" expanded="true" signature="1712:2274" ph="..." />
-                <marker date="1496250907902" expanded="true" signature="1712:2538" ph="..." />
-                <marker date="1496250907902" expanded="true" signature="2413:2526" ph="..." />
-                <marker date="1496250907902" expanded="true" signature="2670:2677" ph="SELECT idrep... reporte" />
-                <marker date="1496250907902" expanded="true" signature="2670:2683" ph="SELECT * fro... " />
-                <marker date="1496250907902" expanded="true" signature="2670:2692" ph="SELECT * fro... usuarios" />
-                <marker date="1496250907902" expanded="true" signature="2670:2707" ph="SELECT * fro... usuarios" />
-                <marker date="1496250907902" expanded="true" signature="2670:2729" ph="SELECT * fro... usuarios" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sistema.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sistema.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="98" column="33" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1496330904998" expanded="true" signature="464:525" ph="SELECT idrep... reporte" />
-                <marker date="1496330904998" expanded="true" signature="1154:1215" ph="SELECT idrep... reporte" />
-                <marker date="1496330904998" expanded="true" signature="3008:3049" ph="select idcat... categorias" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="modificareporte.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modificareporte.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2080">
-              <caret line="65" column="89" lean-forward="false" selection-start-line="65" selection-start-column="78" selection-end-line="65" selection-end-column="89" />
-              <folding>
-                <marker date="1496330789395" expanded="true" signature="181:270" ph="SELECT idrep... reporte" />
-                <marker date="1496330789395" expanded="true" signature="1224:1414" ph="UPDATE repor... " />
-                <marker date="1496330789395" expanded="true" signature="1992:2115" ph="SELECT * FRO... reporte" />
-                <marker date="1496330789395" expanded="true" signature="2282:2869" ph="..." />
-                <marker date="1496330789395" expanded="false" signature="2441:2459" ph="..." />
-                <marker date="1496330789395" expanded="true" signature="2857:2869" ph="..." />
-                <marker date="1496330789395" expanded="true" signature="3030:3090" ph="select idest... estatus" />
-                <marker date="1496330789395" expanded="true" signature="3489:3501" ph="..." />
-                <marker date="1496330789395" expanded="true" signature="3662:3729" ph="select idcat... categorias" />
-                <marker date="1496330789395" expanded="true" signature="4120:4406" ph="..." />
-                <marker date="1496330789395" expanded="true" signature="4134:4363" ph="{&quot;selector&quot;: &quot;textarea&quot;...}" />
-                <marker date="1496330789395" expanded="true" signature="4407:4754" ph="..." />
-                <marker date="1496330789395" expanded="true" signature="4407:4765" ph="{...}" />
-                <marker date="1496330789395" expanded="true" signature="4628:4742" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -537,30 +46,30 @@
       <file leaf-file-name="modificacionreportes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/modificacionreportes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1984">
-              <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+            <state relative-caret-position="216">
+              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding>
-                <marker date="1496330993998" expanded="true" signature="772:962" ph="UPDATE repor... " />
-                <marker date="1496330993998" expanded="true" signature="1539:1662" ph="SELECT * FRO... reporte" />
-                <marker date="1496330993998" expanded="true" signature="1829:2416" ph="..." />
-                <marker date="1496330993998" expanded="false" signature="1988:2006" ph="..." />
-                <marker date="1496330993998" expanded="true" signature="2404:2416" ph="..." />
-                <marker date="1496330993998" expanded="true" signature="2561:2621" ph="select idest... estatus" />
-                <marker date="1496330993998" expanded="true" signature="2988:3000" ph="..." />
-                <marker date="1496330993998" expanded="true" signature="3145:3212" ph="select idcat... categorias" />
-                <marker date="1496330993998" expanded="true" signature="3654:3664" ph="..." />
-                <marker date="1496330993998" expanded="true" signature="3905:4019" ph="..." />
-                <marker date="1496330993998" expanded="true" signature="4089:4170" ph="SELECT idrep... reporte" />
+                <marker date="1496332563096" expanded="true" signature="772:962" ph="UPDATE repor... " />
+                <marker date="1496332563096" expanded="true" signature="1539:1662" ph="SELECT * FRO... reporte" />
+                <marker date="1496332563096" expanded="true" signature="1829:2416" ph="..." />
+                <marker date="1496332563096" expanded="false" signature="1988:2006" ph="..." />
+                <marker date="1496332563096" expanded="true" signature="2404:2416" ph="..." />
+                <marker date="1496332563096" expanded="true" signature="2561:2621" ph="select idest... estatus" />
+                <marker date="1496332563096" expanded="true" signature="2988:3000" ph="..." />
+                <marker date="1496332563096" expanded="true" signature="3145:3212" ph="select idcat... categorias" />
+                <marker date="1496332563096" expanded="true" signature="3656:3666" ph="..." />
+                <marker date="1496332563096" expanded="true" signature="3907:4021" ph="..." />
+                <marker date="1496332563096" expanded="true" signature="4091:4172" ph="SELECT idrep... reporte" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="head.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="head.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/head.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="13" column="76" lean-forward="false" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
+            <state relative-caret-position="224">
+              <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -569,38 +78,38 @@
       <file leaf-file-name="muestra.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/muestra.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+            <state relative-caret-position="184">
+              <caret line="106" column="114" lean-forward="false" selection-start-line="106" selection-start-column="104" selection-end-line="106" selection-end-column="114" />
               <folding>
-                <marker date="1496330089581" expanded="true" signature="240:407" ph="SELECT * FRO... reporte" />
-                <marker date="1496330089581" expanded="true" signature="1797:2086" ph="SELECT *, es... categorias" />
-                <marker date="1496330089581" expanded="true" signature="3428:3446" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="3447:3565" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="3626:3895" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="3684:3895" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="4042:4259" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="4397:4607" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="4740:4951" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="5084:5297" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="5565:5902" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="5867:5899" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="6359:8938" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="6391:8938" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="6669:8898" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="6743:8855" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="6815:6967" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="7107:8812" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="7184:7619" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="7375:7564" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="7839:8409" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="7916:8358" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="8119:8303" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="8568:8765" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="9440:9660" ph="SELECT *, ca... categorias" />
-                <marker date="1496330089581" expanded="true" signature="10144:10160" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="10262:10280" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="11011:11208" ph="..." />
-                <marker date="1496330089581" expanded="true" signature="11747:11851" ph="SELECT * FRO... comentarios" />
+                <marker date="1496332011500" expanded="true" signature="240:407" ph="SELECT * FRO... reporte" />
+                <marker date="1496332011500" expanded="true" signature="1797:2086" ph="SELECT *, es... categorias" />
+                <marker date="1496332011500" expanded="true" signature="3428:3446" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="3447:3565" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="3626:3895" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="3684:3895" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="4042:4259" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="4397:4607" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="4740:4951" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="5084:5297" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="5565:5902" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="5867:5899" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="6359:8938" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="6391:8938" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="6669:8898" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="6743:8855" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="6815:6967" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="7107:8812" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="7184:7619" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="7375:7564" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="7839:8409" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="7916:8358" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="8119:8303" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="8568:8765" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="9440:9660" ph="SELECT *, ca... categorias" />
+                <marker date="1496332011500" expanded="true" signature="10144:10160" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="10262:10280" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="11011:11208" ph="..." />
+                <marker date="1496332011500" expanded="true" signature="11747:11851" ph="SELECT * FRO... comentarios" />
               </folding>
             </state>
           </provider>
@@ -609,47 +118,90 @@
       <file leaf-file-name="reportes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/reportes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5568">
-              <caret line="174" column="24" lean-forward="false" selection-start-line="174" selection-start-column="24" selection-end-line="174" selection-end-column="24" />
+            <state relative-caret-position="288">
+              <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
               <folding>
-                <marker date="1496329379126" expanded="true" signature="241:408" ph="SELECT * FRO... reporte" />
-                <marker date="1496329379126" expanded="true" signature="1757:2046" ph="SELECT *, es... categorias" />
-                <marker date="1496329379126" expanded="true" signature="3328:3904" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="3437:3455" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="3456:3574" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="3635:3904" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="3693:3904" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="4051:4268" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="4406:4616" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="4749:4960" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="5093:5306" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="5656:5953" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="5918:5950" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="6375:8976" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="6407:8976" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="6685:8936" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="6759:8893" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="6831:6983" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="7123:8850" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="7200:7635" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="7391:7580" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="7855:8447" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="7932:8396" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="8135:8341" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="8606:8803" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="9411:9623" ph="SELECT *, ca... categorias" />
-                <marker date="1496329379126" expanded="true" signature="10681:10827" ph="..." />
-                <marker date="1496329379126" expanded="true" signature="11383:11487" ph="SELECT * FRO... comentarios" />
+                <marker date="1496337859873" expanded="true" signature="241:408" ph="SELECT * FRO... reporte" />
+                <marker date="1496337859873" expanded="true" signature="1810:2099" ph="SELECT *, es... categorias" />
+                <marker date="1496337859873" expanded="true" signature="3381:3957" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="3490:3508" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="3509:3627" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="3688:3957" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="3746:3957" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="4104:4321" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="4459:4669" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="4802:5013" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="5146:5359" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="5709:6006" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="5971:6003" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="6428:9029" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="6460:9029" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="6738:8989" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="6812:8946" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="6884:7036" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="7176:8903" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="7253:7688" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="7444:7633" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="7908:8500" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="7985:8449" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="8188:8394" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="8659:8856" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="9464:9676" ph="SELECT *, ca... categorias" />
+                <marker date="1496337859873" expanded="true" signature="10099:10115" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="10759:10905" ph="..." />
+                <marker date="1496337859873" expanded="true" signature="11407:11511" ph="SELECT * FRO... comentarios" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="agregarestado.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/agregarestado.php">
+      <file leaf-file-name="estilos.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/estilos.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="10" column="65" lean-forward="false" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
+            <state relative-caret-position="96">
+              <caret line="3" column="8" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estilo.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/estilo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="4486" column="18" lean-forward="false" selection-start-line="4486" selection-start-column="18" selection-end-line="4486" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estilotabla.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/estilotabla.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+              <folding>
+                <marker date="1496087879723" expanded="true" signature="140:259" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="animate.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/animate.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="102" column="7" lean-forward="false" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -666,10 +218,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>reporte</find>
-      <find>previa</find>
-      <find>comentar</find>
-      <find>inicio s</find>
       <find>titulo</find>
       <find>&lt;li&gt;&lt;a href='index.php'&gt;&lt;span class=&quot;glyphicon glyphicon-log-in&quot;&gt;&lt;/span&gt; Inicio de Sesión&lt;/a&gt;&lt;/li&gt;</find>
       <find>logo</find>
@@ -693,9 +241,13 @@
       <find>agregar</find>
       <find>b</find>
       <find>texta</find>
-      <find>comentario</find>
-      <find>obse</find>
       <find>observacion</find>
+      <find>obse</find>
+      <find>tiny</find>
+      <find>comentario</find>
+      <find>modifica</find>
+      <find>padding-top</find>
+      <find>pad</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -707,7 +259,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/editaReportes.php" />
         <option value="$PROJECT_DIR$/botonModificar.php" />
         <option value="$PROJECT_DIR$/botonInicio.php" />
         <option value="$PROJECT_DIR$/css/estilotabla.css" />
@@ -736,9 +287,7 @@
         <option value="$PROJECT_DIR$/controles/cargarcomentario.php" />
         <option value="$PROJECT_DIR$/controles/validarmuestra.php" />
         <option value="$PROJECT_DIR$/validar2.php" />
-        <option value="$PROJECT_DIR$/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/navbar/navbarindex.php" />
-        <option value="$PROJECT_DIR$/css/estilos.css" />
         <option value="$PROJECT_DIR$/navbar/navbarreportes.php" />
         <option value="$PROJECT_DIR$/navbar/navbarmuestra.php" />
         <option value="$PROJECT_DIR$/navbar/navbarmodificar.php" />
@@ -751,13 +300,16 @@
         <option value="$PROJECT_DIR$/navbar/navbarsistema.php" />
         <option value="$PROJECT_DIR$/controles/cargarestado.php" />
         <option value="$PROJECT_DIR$/agregarestado.php" />
-        <option value="$PROJECT_DIR$/reportes.php" />
         <option value="$PROJECT_DIR$/muestra.php" />
-        <option value="$PROJECT_DIR$/head.php" />
-        <option value="$PROJECT_DIR$/modificareporte.php" />
-        <option value="$PROJECT_DIR$/sistema.php" />
-        <option value="$PROJECT_DIR$/modificacionreportes.php" />
         <option value="$PROJECT_DIR$/modificarmuestra.php" />
+        <option value="$PROJECT_DIR$/sistema.php" />
+        <option value="$PROJECT_DIR$/modificareporte.php" />
+        <option value="$PROJECT_DIR$/modificacionreportes.php" />
+        <option value="$PROJECT_DIR$/reportes.php" />
+        <option value="$PROJECT_DIR$/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/css/estilos.css" />
+        <option value="$PROJECT_DIR$/css/estilo.css" />
+        <option value="$PROJECT_DIR$/head.php" />
       </list>
     </option>
   </component>
@@ -999,7 +551,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="325499000" />
+    <option name="totallyTimeSpent" value="329684000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1014,7 +566,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14787701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14787701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.034700315" sideWeight="0.50293684" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1042,7 +594,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14787701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14787701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33123028" sideWeight="0.49706313" order="1" side_tool="false" content_ui="tabs" />
@@ -1065,9 +617,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/c7288fb603ca69bcd28.php" />
-    <entry file="file://$PROJECT_DIR$/comentarios.php" />
-    <entry file="file://$PROJECT_DIR$/leercoment.php" />
     <entry file="file://$PROJECT_DIR$/conexi.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -1154,13 +703,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/eliminareportes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1216">
-          <caret line="38" column="8" lean-forward="true" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
+        <state relative-caret-position="384">
+          <caret line="24" column="3" lean-forward="false" selection-start-line="24" selection-start-column="3" selection-end-line="24" selection-end-column="18" />
           <folding>
-            <marker date="1496250903821" expanded="true" signature="275:315" ph="SELECT COUNT... reporte" />
-            <marker date="1496250903821" expanded="true" signature="604:677" ph="SELECT idrep... reporte" />
-            <marker date="1496250903821" expanded="true" signature="604:688" ph="SELECT COUNT... reporte" />
-            <marker date="1496250903821" expanded="true" signature="1717:1771" ph="DELETE FROM " />
+            <marker date="1496332010408" expanded="true" signature="275:315" ph="SELECT COUNT... reporte" />
+            <marker date="1496332010408" expanded="true" signature="604:677" ph="SELECT idrep... reporte" />
+            <marker date="1496332010408" expanded="true" signature="604:688" ph="SELECT COUNT... reporte" />
+            <marker date="1496332010408" expanded="true" signature="1736:1790" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1179,36 +728,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/animate.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controles/validarlogin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
           <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/estilotabla.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <marker date="1496087879723" expanded="true" signature="140:259" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1244,14 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/estilos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="9" column="1" lean-forward="false" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controles/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -1277,14 +792,6 @@
           <folding>
             <marker date="1496151728191" expanded="true" signature="262:343" ph="insert into categorias... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/navbar/navbarsistema.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="928">
-          <caret line="29" column="167" lean-forward="false" selection-start-line="29" selection-start-column="167" selection-end-line="29" selection-end-column="167" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1342,128 +849,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/head.php">
+    <entry file="file://$PROJECT_DIR$/modificarmuestra.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="13" column="76" lean-forward="false" selection-start-line="13" selection-start-column="76" selection-end-line="13" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modificacionreportes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1984">
-          <caret line="62" column="21" lean-forward="false" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+        <state relative-caret-position="32">
+          <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
           <folding>
-            <marker date="1496330993998" expanded="true" signature="772:962" ph="UPDATE repor... " />
-            <marker date="1496330993998" expanded="true" signature="1539:1662" ph="SELECT * FRO... reporte" />
-            <marker date="1496330993998" expanded="true" signature="1829:2416" ph="..." />
-            <marker date="1496330993998" expanded="false" signature="1988:2006" ph="..." />
-            <marker date="1496330993998" expanded="true" signature="2404:2416" ph="..." />
-            <marker date="1496330993998" expanded="true" signature="2561:2621" ph="select idest... estatus" />
-            <marker date="1496330993998" expanded="true" signature="2988:3000" ph="..." />
-            <marker date="1496330993998" expanded="true" signature="3145:3212" ph="select idcat... categorias" />
-            <marker date="1496330993998" expanded="true" signature="3654:3664" ph="..." />
-            <marker date="1496330993998" expanded="true" signature="3905:4019" ph="..." />
-            <marker date="1496330993998" expanded="true" signature="4089:4170" ph="SELECT idrep... reporte" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/muestra.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding>
-            <marker date="1496330089581" expanded="true" signature="240:407" ph="SELECT * FRO... reporte" />
-            <marker date="1496330089581" expanded="true" signature="1797:2086" ph="SELECT *, es... categorias" />
-            <marker date="1496330089581" expanded="true" signature="3428:3446" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="3447:3565" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="3626:3895" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="3684:3895" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="4042:4259" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="4397:4607" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="4740:4951" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="5084:5297" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="5565:5902" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="5867:5899" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="6359:8938" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="6391:8938" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="6669:8898" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="6743:8855" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="6815:6967" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="7107:8812" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="7184:7619" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="7375:7564" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="7839:8409" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="7916:8358" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="8119:8303" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="8568:8765" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="9440:9660" ph="SELECT *, ca... categorias" />
-            <marker date="1496330089581" expanded="true" signature="10144:10160" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="10262:10280" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="11011:11208" ph="..." />
-            <marker date="1496330089581" expanded="true" signature="11747:11851" ph="SELECT * FRO... comentarios" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/reportes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5568">
-          <caret line="174" column="24" lean-forward="false" selection-start-line="174" selection-start-column="24" selection-end-line="174" selection-end-column="24" />
-          <folding>
-            <marker date="1496329379126" expanded="true" signature="241:408" ph="SELECT * FRO... reporte" />
-            <marker date="1496329379126" expanded="true" signature="1757:2046" ph="SELECT *, es... categorias" />
-            <marker date="1496329379126" expanded="true" signature="3328:3904" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="3437:3455" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="3456:3574" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="3635:3904" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="3693:3904" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="4051:4268" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="4406:4616" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="4749:4960" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="5093:5306" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="5656:5953" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="5918:5950" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="6375:8976" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="6407:8976" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="6685:8936" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="6759:8893" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="6831:6983" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="7123:8850" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="7200:7635" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="7391:7580" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="7855:8447" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="7932:8396" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="8135:8341" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="8606:8803" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="9411:9623" ph="SELECT *, ca... categorias" />
-            <marker date="1496329379126" expanded="true" signature="10681:10827" ph="..." />
-            <marker date="1496329379126" expanded="true" signature="11383:11487" ph="SELECT * FRO... comentarios" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modificareporte.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2080">
-          <caret line="65" column="89" lean-forward="false" selection-start-line="65" selection-start-column="78" selection-end-line="65" selection-end-column="89" />
-          <folding>
-            <marker date="1496330789395" expanded="true" signature="181:270" ph="SELECT idrep... reporte" />
-            <marker date="1496330789395" expanded="true" signature="1224:1414" ph="UPDATE repor... " />
-            <marker date="1496330789395" expanded="true" signature="1992:2115" ph="SELECT * FRO... reporte" />
-            <marker date="1496330789395" expanded="true" signature="2282:2869" ph="..." />
-            <marker date="1496330789395" expanded="false" signature="2441:2459" ph="..." />
-            <marker date="1496330789395" expanded="true" signature="2857:2869" ph="..." />
-            <marker date="1496330789395" expanded="true" signature="3030:3090" ph="select idest... estatus" />
-            <marker date="1496330789395" expanded="true" signature="3489:3501" ph="..." />
-            <marker date="1496330789395" expanded="true" signature="3662:3729" ph="select idcat... categorias" />
-            <marker date="1496330789395" expanded="true" signature="4120:4406" ph="..." />
-            <marker date="1496330789395" expanded="true" signature="4134:4363" ph="{&quot;selector&quot;: &quot;textarea&quot;...}" />
-            <marker date="1496330789395" expanded="true" signature="4407:4754" ph="..." />
-            <marker date="1496330789395" expanded="true" signature="4407:4765" ph="{...}" />
-            <marker date="1496330789395" expanded="true" signature="4628:4742" ph="..." />
+            <marker date="1496332282909" expanded="true" signature="181:270" ph="SELECT idrep... reporte" />
+            <marker date="1496332282909" expanded="true" signature="1224:1414" ph="UPDATE repor... " />
+            <marker date="1496332282909" expanded="true" signature="1991:2114" ph="SELECT * FRO... reporte" />
+            <marker date="1496332282909" expanded="true" signature="2282:2859" ph="..." />
+            <marker date="1496332282909" expanded="false" signature="2441:2459" ph="..." />
+            <marker date="1496332282909" expanded="true" signature="2847:2859" ph="..." />
+            <marker date="1496332282909" expanded="true" signature="3004:3064" ph="select idest... estatus" />
+            <marker date="1496332282909" expanded="true" signature="3353:3365" ph="..." />
+            <marker date="1496332282909" expanded="true" signature="3510:3577" ph="select idcat... categorias" />
+            <marker date="1496332282909" expanded="true" signature="4284:4398" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1471,32 +871,204 @@
     <entry file="file://$PROJECT_DIR$/sistema.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
-          <caret line="98" column="33" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <caret line="98" column="52" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1496330904998" expanded="true" signature="464:525" ph="SELECT idrep... reporte" />
-            <marker date="1496330904998" expanded="true" signature="1154:1215" ph="SELECT idrep... reporte" />
-            <marker date="1496330904998" expanded="true" signature="3008:3049" ph="select idcat... categorias" />
+            <marker date="1496332478709" expanded="true" signature="464:525" ph="SELECT idrep... reporte" />
+            <marker date="1496332478709" expanded="true" signature="1154:1215" ph="SELECT idrep... reporte" />
+            <marker date="1496332478709" expanded="true" signature="3008:3049" ph="select idcat... categorias" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modificarmuestra.php">
+    <entry file="file://$PROJECT_DIR$/modificareporte.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state relative-caret-position="168">
+          <caret line="66" column="30" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding>
-            <marker date="1496331389304" expanded="true" signature="181:270" ph="SELECT idrep... reporte" />
-            <marker date="1496331389304" expanded="true" signature="1224:1414" ph="UPDATE repor... " />
-            <marker date="1496331389304" expanded="true" signature="1991:2114" ph="SELECT * FRO... reporte" />
-            <marker date="1496331389304" expanded="true" signature="2282:2869" ph="..." />
-            <marker date="1496331389304" expanded="false" signature="2441:2459" ph="..." />
-            <marker date="1496331389304" expanded="true" signature="2857:2869" ph="..." />
-            <marker date="1496331389304" expanded="true" signature="3014:3074" ph="select idest... estatus" />
-            <marker date="1496331389304" expanded="true" signature="3441:3453" ph="..." />
-            <marker date="1496331389304" expanded="true" signature="3598:3665" ph="select idcat... categorias" />
-            <marker date="1496331389304" expanded="true" signature="4362:4476" ph="..." />
+            <marker date="1496332541461" expanded="true" signature="181:270" ph="SELECT idrep... reporte" />
+            <marker date="1496332541461" expanded="true" signature="1224:1414" ph="UPDATE repor... " />
+            <marker date="1496332541461" expanded="true" signature="1992:2115" ph="SELECT * FRO... reporte" />
+            <marker date="1496332541461" expanded="true" signature="2282:2869" ph="..." />
+            <marker date="1496332541461" expanded="false" signature="2441:2459" ph="..." />
+            <marker date="1496332541461" expanded="true" signature="2857:2869" ph="..." />
+            <marker date="1496332541461" expanded="true" signature="3030:3090" ph="select idest... estatus" />
+            <marker date="1496332541461" expanded="true" signature="3489:3501" ph="..." />
+            <marker date="1496332541461" expanded="true" signature="3662:3729" ph="select idcat... categorias" />
+            <marker date="1496332541461" expanded="true" signature="4217:4564" ph="..." />
+            <marker date="1496332541461" expanded="true" signature="4217:4575" ph="{...}" />
+            <marker date="1496332541461" expanded="true" signature="4438:4552" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modificacionreportes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding>
+            <marker date="1496332563096" expanded="true" signature="772:962" ph="UPDATE repor... " />
+            <marker date="1496332563096" expanded="true" signature="1539:1662" ph="SELECT * FRO... reporte" />
+            <marker date="1496332563096" expanded="true" signature="1829:2416" ph="..." />
+            <marker date="1496332563096" expanded="false" signature="1988:2006" ph="..." />
+            <marker date="1496332563096" expanded="true" signature="2404:2416" ph="..." />
+            <marker date="1496332563096" expanded="true" signature="2561:2621" ph="select idest... estatus" />
+            <marker date="1496332563096" expanded="true" signature="2988:3000" ph="..." />
+            <marker date="1496332563096" expanded="true" signature="3145:3212" ph="select idcat... categorias" />
+            <marker date="1496332563096" expanded="true" signature="3656:3666" ph="..." />
+            <marker date="1496332563096" expanded="true" signature="3907:4021" ph="..." />
+            <marker date="1496332563096" expanded="true" signature="4091:4172" ph="SELECT idrep... reporte" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/muestra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="106" column="114" lean-forward="false" selection-start-line="106" selection-start-column="104" selection-end-line="106" selection-end-column="114" />
+          <folding>
+            <marker date="1496332011500" expanded="true" signature="240:407" ph="SELECT * FRO... reporte" />
+            <marker date="1496332011500" expanded="true" signature="1797:2086" ph="SELECT *, es... categorias" />
+            <marker date="1496332011500" expanded="true" signature="3428:3446" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="3447:3565" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="3626:3895" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="3684:3895" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="4042:4259" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="4397:4607" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="4740:4951" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="5084:5297" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="5565:5902" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="5867:5899" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="6359:8938" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="6391:8938" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="6669:8898" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="6743:8855" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="6815:6967" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="7107:8812" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="7184:7619" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="7375:7564" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="7839:8409" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="7916:8358" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="8119:8303" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="8568:8765" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="9440:9660" ph="SELECT *, ca... categorias" />
+            <marker date="1496332011500" expanded="true" signature="10144:10160" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="10262:10280" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="11011:11208" ph="..." />
+            <marker date="1496332011500" expanded="true" signature="11747:11851" ph="SELECT * FRO... comentarios" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/_types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="683">
+          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navbar/navbarsistema.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/reportes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="30" column="26" lean-forward="true" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="26" />
+          <folding>
+            <marker date="1496337859873" expanded="true" signature="241:408" ph="SELECT * FRO... reporte" />
+            <marker date="1496337859873" expanded="true" signature="1810:2099" ph="SELECT *, es... categorias" />
+            <marker date="1496337859873" expanded="true" signature="3381:3957" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="3490:3508" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="3509:3627" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="3688:3957" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="3746:3957" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="4104:4321" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="4459:4669" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="4802:5013" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="5146:5359" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="5709:6006" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="5971:6003" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="6428:9029" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="6460:9029" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="6738:8989" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="6812:8946" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="6884:7036" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="7176:8903" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="7253:7688" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="7444:7633" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="7908:8500" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="7985:8449" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="8188:8394" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="8659:8856" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="9464:9676" ph="SELECT *, ca... categorias" />
+            <marker date="1496337859873" expanded="true" signature="10099:10115" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="10759:10905" ph="..." />
+            <marker date="1496337859873" expanded="true" signature="11407:11511" ph="SELECT * FRO... comentarios" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/estilotabla.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <marker date="1496087879723" expanded="true" signature="140:259" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="4486" column="18" lean-forward="false" selection-start-line="4486" selection-start-column="18" selection-end-line="4486" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/animate.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="102" column="7" lean-forward="false" selection-start-line="102" selection-start-column="5" selection-end-line="102" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/estilos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="3" column="8" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>

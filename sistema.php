@@ -96,7 +96,7 @@ while($resultados = mysql_fetch_array($consulta)) {
                             <label for="observacion" class="col-md-2 control-label">Observacion:</label>
                             <div class="col-md-12" >
                                 <textarea id="textarea" name="observacion" style="resize:none"  rows="10" aria-required="true"></textarea>
-                                <script>tinyMCE.init({selector: "textarea",plugins: "image,paste",paste_data_images: true});</script>
+                                <script>tinyMCE.init({selector: "textarea",branding: false,plugins: "image,paste",paste_data_images: true});</script>
                             </div>
                         </div>
 

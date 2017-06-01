@@ -28,8 +28,9 @@ while($resultados = mysql_fetch_array($consulta)) {
     echo strlen($url);
     $VariableURL = ob_get_contents();
     ob_end_clean();
-    if($VariableURL<50){
-        include ("modificareporte.php");
+    //if($VariableURL<50){
+    if (isset($_SESSION['nombre'])and$VariableURL<50){
+    include ("modificareporte.php");
     }
     ?>
     <!-- Muestra Previa del Reporte -->
@@ -162,7 +163,7 @@ while($resultados = mysql_fetch_array($consulta)) {
         $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
         while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
         {
-            echo'<div class="row well">';
+            echo'<div class="row well" style="overflow-y: auto">';
             $idprotegido=md5($clave.$columna['idreporte']);
             echo 'Id de Reporte: '; echo $columna['idreporte']; echo'<br>';
             echo 'Estado: '; echo $columna['nombre'];echo'<br>';
@@ -192,8 +193,6 @@ while($resultados = mysql_fetch_array($consulta)) {
         endif;
     }
     ?>
-    <!-- Botòn que lleva a modificar los reportes-->
-
 </section>
 </body>
 <footer>
