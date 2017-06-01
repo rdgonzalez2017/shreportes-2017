@@ -21,17 +21,18 @@ while($resultados = mysql_fetch_array($consulta)) {
 ?>
 <body>
 <div class="col-md-8 col-md-offset-2">
-<?php
-//Mostrar botón de modificar Reporte, al estar el el reporte de Muestra y esconder al estar en el reporte publicado.
-$url= $_SERVER["REQUEST_URI"];
-ob_start();
-echo strlen($url);
-$VariableURL = ob_get_contents();
-ob_end_clean();
-if($VariableURL<50){
-    include ("modificarmuestra.php");
-}
-?>
+    <?php
+    //Mostrar botón de modificar Reporte, al estar el el reporte de Muestra y esconder al estar en el reporte publicado.
+    $url= $_SERVER["REQUEST_URI"];
+    ob_start();
+    echo strlen($url);
+    $VariableURL = ob_get_contents();
+    ob_end_clean();
+    //if($VariableURL<50){
+    if (isset($_SESSION['nombre'])and$VariableURL<50){
+        include ("modificareporte.php");
+    }
+    ?>
 </div>
 
  <div class="col-md-12 flipInY animated animated" data-wow-duration="500ms"">

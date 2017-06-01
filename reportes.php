@@ -20,6 +20,7 @@ while($resultados = mysql_fetch_array($consulta)) {
     $fecha = $resultados['fecha'];
 }
 ?>
+<body>
 <div class="row col-md-10 col-md-offset-1">
     <?php
     //Mostrar botón de modificar Reporte, al estar el el reporte de Muestra y esconder al estar en el reporte publicado.
@@ -194,6 +195,7 @@ while($resultados = mysql_fetch_array($consulta)) {
     }
     ?>
 </section>
+</div>
 </body>
 <footer>
     <br><br>
