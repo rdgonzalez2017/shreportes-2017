@@ -22,6 +22,7 @@ while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Rea
     echo'Titulo: ';echo $columna_MostrarTitulos['titulo'].'  <br>';
     echo ' <a class="btn btn-danger bounce animated animated" data-wow-duration="1500ms"" href="?reporte='.$columna_MostrarTitulos['idreporte'].'">Eliminar</a> <br/>';  // Mostramos el titulo y un enlace para eliminar la noticia
     //else: echo 'Nota: No se deben Eliminar todos los reportes.';
+    echo '</div>';
 }
 else: echo 'Nota: No se deben eliminar todos los reportes y solo queda 1.';
 endif;

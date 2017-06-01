@@ -126,7 +126,7 @@ if($VariableURL<50){
                                                 <div class="form-group row">
                                                     <label for="comentario" class="col-md-3 control-label">Comentario:</label>
                                                     <div class="col-md-12">
-                                                        <textarea name="comentario" type="text" required class="form-control" rows="3"></textarea>
+                                                        <input class="form-control" type="text" name="comentario" required/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -163,7 +163,7 @@ if($VariableURL<50){
             while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
             {
 
-                echo'<div class="row well col-md-10 col-md-offset-1">';
+                echo'<div class="row well col-md-10 col-md-offset-1 container" style="overflow-y: auto">';
                 $idprotegido=md5($clave.$columna['idreporte']);
                 echo'<div style="text-align: center">';echo'Vista Previa del Reporte:';echo'</div>';
                 echo 'Id de Reporte: '; echo $columna['idreporte']; echo'<br>';
@@ -172,8 +172,8 @@ if($VariableURL<50){
                 echo 'Fecha: '; echo $columna['fecha'];echo'<br>';
                 echo 'Autor: '; echo $columna['autor'];echo'<br>';
                 echo 'Categoria: '; echo $columna['nombrecategoria'];echo'<br>';
-                echo'Observacion:<textarea class="form-control" name="observacion" rows="5">'; echo $columna['observacion'];
-                echo '</textarea><script>CKEDITOR.replace("observacion");</script> 
+                echo'Observacion:'; echo $columna['observacion'];
+                echo '
                 </div>';
                 echo'<div class="row  col-md-10 col-md-offset-1">';
                echo '

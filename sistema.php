@@ -95,10 +95,8 @@ while($resultados = mysql_fetch_array($consulta)) {
                         <div class="form-group row">
                             <label for="observacion" class="col-md-2 control-label">Observacion:</label>
                             <div class="col-md-12" >
-                                <textarea name="observacion" style="resize:none" required class="form-control" id="observacion" rows="10"></textarea>
-                                <script>
-                                    CKEDITOR.replace('observacion');
-                                    </script>
+                                <textarea id="textarea" name="observacion" style="resize:none"  rows="10" aria-required="true"></textarea>
+                                <script>tinyMCE.init({selector: "textarea",plugins: "image,paste",paste_data_images: true});</script>
                             </div>
                         </div>
 

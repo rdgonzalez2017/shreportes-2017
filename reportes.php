@@ -170,9 +170,9 @@ while($resultados = mysql_fetch_array($consulta)) {
             echo 'Fecha: '; echo $columna['fecha'];echo'<br>';
             echo 'Autor: '; echo $columna['autor'];echo'<br>';
             echo 'Categoria: '; echo $columna['nombrecategoria'];echo'<br>';
-            echo'Observacion:<textarea class="form-control" name="observacion" rows="2">'; echo $columna['observacion'];
-            echo '</textarea><script>CKEDITOR.replace("observacion");</script> 
-            </div>';
+            echo'Observacion:'; echo $columna['observacion'];
+            echo '
+                </div>';
 
             echo '
                 <div class="row text-center">
