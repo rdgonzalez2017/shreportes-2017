@@ -1,10 +1,8 @@
 <?php session_start(); ?>
-
 <!DOCTYPE html>
 <html>
 <?php include ("head.php")?>
 <?php include ("navbar/navbarreportes.php")?>
-<?php include('controles/validarmuestra.php'); ?>
 <?php
 include('conexi.php');
 //Mostrar Datos Guardados
@@ -62,7 +60,6 @@ while($resultados = mysql_fetch_array($consulta)) {
                         $estatus =  $columna['nombrestatus'];
                         //Panel que muestra el Reporte Final:
                         echo'
-                        
                              <div class="panel panel-primary container col-md-8 col-md-offset-2 flipInX animated animated" data-wow-duration="3000ms"">
                                 
                                     <div class="panel-heading row" style="background: orange">
@@ -89,10 +86,7 @@ while($resultados = mysql_fetch_array($consulta)) {
                                             <label for="estado" class="col-md-3 col-md-offset-2 control-label">Estado:</label>
                                                  <div class="col-md-7 col-md-pull-1">'; echo $estatus; echo' </div>
                                         </div>
-                                        
-                                        
                                     </div>
-                           
                            </div>
                            
                                         <div class="row">

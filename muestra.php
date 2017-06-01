@@ -3,22 +3,6 @@
 <html>
 <?php include ("head.php")?>
 <?php include("navbar/navbarreportes.php");?>
-<?php include('controles/validarmuestra.php'); ?>
-<?php
-include('conexi.php');
-//Mostrar Datos Guardados
-$select = "SELECT * FROM reporte inner join categorias on reporte.idcategoria = categorias.idcategoria 
-where idreporte = (SELECT idreporte FROM reporte ORDER BY 1 desc LIMIT 1 )";//Campos de la tabla
-$consulta = mysql_query("$select") or die("Error en el select en Muestra previa del reporte");
-while($resultados = mysql_fetch_array($consulta)) {
-    $idreporte = $resultados['idreporte'];
-    $categoria = $resultados['nombre'];
-    $titulo = $resultados['titulo'];
-    $autor = $resultados['autor'];
-    $observacion = $resultados['observacion'];
-    $fecha = $resultados['fecha'];
-}
-?>
 <body>
 <div class="col-md-8 col-md-offset-2">
     <?php
@@ -29,7 +13,7 @@ while($resultados = mysql_fetch_array($consulta)) {
     $VariableURL = ob_get_contents();
     ob_end_clean();
     //if($VariableURL<50){
-    if (isset($_SESSION['nombre'])and$VariableURL<50){
+    if (isset($_SESSION['nombre'])and $VariableURL<50){
         include ("modificareporte.php");
     }
     ?>
@@ -57,6 +41,7 @@ while($resultados = mysql_fetch_array($consulta)) {
                         $categoria =  $columna['nombrecategoria'];
                         $autor =  $columna['autor'];
                         $fecha =  $columna['fecha'];
+                        $titulo =  $columna['titulo'];
                         $observacion =  $columna['observacion'];
                         $idreplicacion =  $columna['idreporte'];
                         $idestatus =  $columna['idestatus'];
@@ -127,7 +112,7 @@ while($resultados = mysql_fetch_array($consulta)) {
                                                 <div class="form-group row">
                                                     <label for="comentario" class="col-md-3 control-label">Comentario:</label>
                                                     <div class="col-md-12">
-                                                        <input class="form-control" type="text" name="comentario" required/>
+                                                        <textarea name="comentario" type="text" required class="form-control" rows="3"></textarea>
                                                     </div>
                                                 </div>
                                             </div>
@@ -145,7 +130,7 @@ while($resultados = mysql_fetch_array($consulta)) {
                 }
                 else
                 {
-                    echo ''; // Si no, muestra un error
+                    echo 'Error'; // Si no, muestra un error
                 }
             }
             else
@@ -159,13 +144,11 @@ while($resultados = mysql_fetch_array($consulta)) {
             if (isset($_SESSION['nombre'])):
             $select = "SELECT *, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc limit 1";
             $query_reportes = mysql_query("$select"); // Ejecutamos la consulta
-            $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"
             $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
             while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
             {
-
-                echo'<div class="row well col-md-10 col-md-offset-1 container" style="overflow-y: auto">';
                 $idprotegido=md5($clave.$columna['idreporte']);
+                echo'<div class="row well col-md-10 col-md-offset-1 container" style="overflow-y: auto">';
                 echo'<div style="text-align: center">';echo'Vista Previa del Reporte:';echo'</div>';
                 echo 'Id de Reporte: '; echo $columna['idreporte']; echo'<br>';
                 echo 'Estado: '; echo $columna['nombre'];echo'<br>';
@@ -238,7 +221,7 @@ while($resultados = mysql_fetch_array($consulta)) {
             </div>
             <?php
         }
-        else: echo'No hay comentarios';
+
         endif;
     ?>
 </footer>

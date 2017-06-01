@@ -8,25 +8,6 @@
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
     </p>
 <!-- Conexión con base de datos-->
-<?php include('conexi.php');?>
-<?php
-include("conexi.php");
-$idreporte = 0;
-$consulta = mysql_query("SELECT idreporte FROM reporte ORDER BY idreporte DESC LIMIT 1") or die("error mysql");
-while($resultados = mysql_fetch_array($consulta)) {
-    $idreporte = $resultados['idreporte'];
-}
-
-//ob_start();
-//echo $idreporte + 1;
-//$idreplica = ob_get_contents();
-//ob_end_clean();
-//if($idreplica>0){
-//  echo $idreplica;
-//}else{
-//  echo 'No hay reportes';
-//}
-?>
 <body>
 <!-- Formulario para envío de datos del sistema-->
 <form class="form" method = "post" action="controles/validarmuestra.php">
