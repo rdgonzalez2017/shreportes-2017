@@ -1,7 +1,14 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <?php include("head.php");?>
-<?php include("navbar/navbarmodificar.php");?>
+<?php
+if (isset($_SESSION['nombre'])):
+    include ("navbar/navbarsistema.php");
+else:
+    include ("navbar/navbarindex.php");
+endif;
+?>
 <body>
 <div class="col-md-8 col-md-offset-2">
 <?php
@@ -71,6 +78,8 @@ if(isset($_GET['reporte']))
     <br>
     ';
 }
+if (isset($_SESSION['nombre'])):
+
 $query_MostrarTitulos = mysql_query("SELECT idreporte, titulo, observacion, fecha FROM reporte ORDER by idreporte DESC"); // Ejecutamos la consulta
 while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
 {
@@ -84,4 +93,6 @@ while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Rea
 ?>
 </div>
 </body>
+<?php else: echo"Debe iniciar sesión para ingresar a esta página";
+endif;?>
 </html>

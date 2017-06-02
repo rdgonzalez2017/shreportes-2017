@@ -3,8 +3,16 @@
 <html>
 <?php include("head.php");?>
 <div class="container-fluid row">
-<?php include("navbar/navbarmodificar.php");?>
-<?php if (isset($_SESSION['nombre'])) {echo "Sesión: ".$_SESSION['nombre'];} ?>
+    <?php
+    if (isset($_SESSION['nombre'])):
+        include ("navbar/navbarsistema.php");
+    else:
+        include ("navbar/navbarindex.php");
+    endif;
+    ?>
+    <?php if (isset($_SESSION['nombre'])):?>
+    <?php if (isset($_SESSION['nombre'])) {echo "Sesión Abierta: ".$_SESSION['nombre'];} ?>
+
 </div>
 <body>
 <div class="container col-md-6 col-md-offset-3">
@@ -65,4 +73,8 @@ while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Rea
 ?>
 </div>
 </body>
+<?php
+else: echo 'Debe Iniciar Sesión para entrar a esta página';
+endif;
+?>
 </html>

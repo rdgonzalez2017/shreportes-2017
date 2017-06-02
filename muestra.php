@@ -2,7 +2,13 @@
 <!DOCTYPE html>
 <html>
 <?php include ("head.php")?>
-<?php include("navbar/navbarreportes.php");?>
+<?php
+if (isset($_SESSION['nombre'])):
+    include ("navbar/navbarsistema.php");
+else:
+    include ("navbar/navbarindex.php");
+endif;
+?>
 <body>
 <div class="col-md-8 col-md-offset-2">
     <?php
@@ -81,7 +87,8 @@
                            
                                         <div class="row">
                                             <label for="observacion" class="col-md-10 col-md-offset-1 control-label">Observacion:</label><br>
-                                                 <div class="col-md-10 col-md-offset-1 wow fadeInLeftBig animated animated" data-wow-duration="5000ms" style="max-width:100%; overflow-y:auto;"  >'; echo $observacion; echo' </div>
+                                            <div class="col-md-10 col-md-offset-1 well" style="overflow-y: auto;">'; echo $observacion; echo' </div>
+
                                         </div>
                        
                           
@@ -209,13 +216,12 @@
                         </div>
                         <!-- Muestra descripción del comentario-->
                         <div class="form-group row">
-                            <label for="comentario" class="col-md-2 control-label">Comentario:</label>
-                            <div class="col-md-12 row">
-                                <textarea class="form-control" style="resize: none;" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
+                            <label for="comentario" class="col-md-3 control-label">Comentario:</label>
+                            <div class="col-md-8">
+                                <textarea class=" col-md-8 form-control" style="resize: none" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
                             </div>
                         </div>
 
-                   </textarea>
                     </div>
                 </div>
             </div>

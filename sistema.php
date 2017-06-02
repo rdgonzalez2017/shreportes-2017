@@ -2,11 +2,11 @@
 <!DOCTYPE html>
 <html>
 <?php include("head.php")?>
+<?php include("navbar/navbarinicio.php") ?>
 <?php if (isset($_SESSION['nombre'])):?>
-<?php include("navbar/navbarsistema.php") ?>
 <p class="bounceInRight animated animated" data-wow-duration="1500ms"">
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
-    </p>
+</p>
 <!-- Conexión con base de datos-->
 <body>
 <!-- Formulario para envío de datos del sistema-->

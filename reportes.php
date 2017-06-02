@@ -97,7 +97,8 @@ while($resultados = mysql_fetch_array($consulta)) {
                            
                                         <div class="row">
                                             <label for="observacion" class="col-md-10 control-label">Observacion:</label><br>
-                                                 <div class="col-md-12 bounceIn animated animated" data-wow-duration="3000ms"" style="max-width:100%; overflow-y:auto;"  >'; echo $observacion; echo' </div>
+                                        <div class="col-md-12 well bounceIn animated animated" data-wow-duration="3000ms" " style="overflow-y: auto;">'; echo $observacion; echo' </div>
+
                                         </div>
                        
                                             ';
@@ -172,8 +173,10 @@ while($resultados = mysql_fetch_array($consulta)) {
             echo 'Fecha: '; echo $columna['fecha'];echo'<br>';
             echo 'Autor: '; echo $columna['autor'];echo'<br>';
             echo 'Categoria: '; echo $columna['nombrecategoria'];echo'<br>';
-            echo'Observacion:'; echo $columna['observacion'];
-            echo '
+            echo'Observacion:<textarea class="form-control" style="resize: none" readonly="readonly" rows="5">'; echo $columna['observacion']; echo'</textarea>';
+
+
+        echo '
                 </div>';
 
             echo '
@@ -199,7 +202,7 @@ while($resultados = mysql_fetch_array($consulta)) {
 </body>
 <footer>
     <br><br>
-    <!-- Seccion de comentarios-->
+    <!-- Seccion que muestra los comentarios-->
     <?php
     $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
     if(!empty($idreporte)):
@@ -207,8 +210,8 @@ while($resultados = mysql_fetch_array($consulta)) {
         while($rowComen = mysql_fetch_assoc($resultComen))
         {
             ?>
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-danger">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-info">
                     <!-- Muestra Autor del comentario-->
                     <div class="panel-heading text-center">
                         <div> Autor: <?php echo $rowComen["nick"]; ?> </div>
@@ -217,15 +220,15 @@ while($resultados = mysql_fetch_array($consulta)) {
 
                         <!-- Muestra fecha del comentario-->
                         <div class="form-group row">
-                            <label for="fecha" class="col-md-2 control-label">Fecha:</label>
-                            <div class="col-md-8">
+                            <label for="fecha" class="col-md-4 control-label">Fecha:</label>
+                                <div class="col-md-4 col-md-pull-3">
                                 <div> <?php echo $rowComen["fecha"]; ?> </div>
                             </div>
                         </div>
                         <!-- Muestra descripción del comentario-->
                         <div class="form-group row">
-                            <label for="comentario" class="col-md-2 control-label">Comentario:</label>
-                            <div class="col-md-12 row">
+                            <label for="comentario" class="col-md-3 control-label">Comentario:</label>
+                            <div class="col-md-12">
                                 <textarea class="form-control" style="resize: none" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
                             </div>
                         </div>

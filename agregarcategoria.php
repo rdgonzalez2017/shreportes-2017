@@ -2,7 +2,14 @@
 <!DOCTYPE html>
 <html>
 <?php include("head.php");?>
-<?php include("navbar/navbarmodificar.php");?>
+<?php
+if (isset($_SESSION['nombre'])):
+    include ("navbar/navbarsistema.php");
+else:
+    include ("navbar/navbarindex.php");
+endif;
+?>
+<?php if (isset($_SESSION['nombre'])):?>
 <!-- Conexión con base de datos-->
 <?php include('conexi.php');?>
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
@@ -40,4 +47,7 @@
     <div class="col-md-2">
     </div>
 </footer>
+<?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
+    <br><button class="btn btn-info btn-sm navbar-btn col-md-offset-1" onclick = "location='Index.php'">Iniciar Sesión</button>
+<?php endif; ?>
 </html>
