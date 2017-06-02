@@ -3,7 +3,7 @@
 <html>
 <?php include("head.php")?>
 <?php include("navbar/navbarindex.php")?>
-<?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
+<?php if (isset($_SESSION['nombre'])) {echo "Sesión Abierta: ".$_SESSION['nombre'];} ?>
 <body>
     <form class="form-horizontal row bounceInDown animated animated" data-wow-duration="1500ms"" method = "post" action="controles/login.php">
         <div class="col-md-6 col-md-offset-3 container">
@@ -24,7 +24,18 @@
                     <div class="form-group row">
                         <label for="nombre" class="col-md-2 control-label">Usuario:</label>
                         <div class="col-md-8">
-                            <input class="form-control" type="text" name="nombre" id="nombre"  required/>
+                            <select class="form-control" name="nombre">
+                                <?php
+                                $conexion=mysqli_connect("localhost","root","","shreportes") or
+                                die("Problemas con la conexión");
+                                $registros=mysqli_query($conexion,"select nombre from usuarios") or
+                                die("Problemas en el select:".mysqli_error($conexion));
+                                while ($reg=mysqli_fetch_array($registros))
+                                {
+                                    echo "<option value=\"$reg[nombre]\">$reg[nombre]</option>";
+                                }
+                                ?>
+                            </select>
                         </div>
                     </div>
 

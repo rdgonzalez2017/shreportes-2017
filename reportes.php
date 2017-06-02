@@ -2,7 +2,13 @@
 <!DOCTYPE html>
 <html>
 <?php include ("head.php")?>
-<?php include ("navbar/navbarreportes.php")?>
+<?php
+if (isset($_SESSION['nombre'])):
+    include ("navbar/navbarsistema.php");
+else:
+    include ("navbar/navbarindex.php");
+endif;
+?>
 <?php
 include('conexi.php');
 //Mostrar Datos Guardados

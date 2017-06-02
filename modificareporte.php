@@ -24,7 +24,7 @@ if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado eje
     if($query_modificar)
     {
         echo 'La noticia se modificó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
-        header("Location:reportes.php");
+        header("Location:muestra.php");
     }
     else
     {

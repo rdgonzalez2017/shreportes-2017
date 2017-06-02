@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="img-responsive" href="#"><img src="navbar/logo_desktop.png"></a>
+            <img  style="width: 30%" src="images/logo_SHreportes.png"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">

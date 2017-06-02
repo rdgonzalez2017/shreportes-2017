@@ -1,12 +1,7 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="img-responsive" href="https://www.servicioshosting.com/sitio/"><img src="navbar/logo_desktop.png"></a>
+            <img style="width: 30%" src="images/logo_SHreportes.png">
         </div>
         <?php if (isset($_SESSION['nombre'])):?>
         <div class="collapse navbar-collapse" id="myNavbar">

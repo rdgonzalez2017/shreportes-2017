@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="img-responsive" href="#"><img src="images/logo_desktop.png"></a>
+            <a class="img-responsive" href="#"><img  style="width: 50%" src="images/logo_SHreportes.png"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
