@@ -20,7 +20,7 @@ endif;
     ob_end_clean();
     //if($VariableURL<50){
     if (isset($_SESSION['nombre'])and $VariableURL<50){
-        include ("modificareporte.php");
+        include ("modificarmuestra.php");
     }
     ?>
 </div>
