@@ -36,7 +36,7 @@ if(isset($_GET['reporte']))
 
     if($query_eliminar)
     {
-        header("Location:eliminareportes.php");
+        //header("Location:eliminareportes.php");
         echo 'El reporte se eliminó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
     }
     else

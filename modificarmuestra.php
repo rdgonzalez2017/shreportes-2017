@@ -46,7 +46,7 @@ if(isset($_GET['reporte']))
         
         Estado: <select class="form-control" name="estatus">
            ';
-    $conexion=mysqli_connect("localhost","root","","shreportes") or die("Problemas con la conexión");
+    include ("conexion.php");
     $registros=mysqli_query($conexion,"select idestatus,nombre from estatus ORDER BY idestatus DESC") or die("Problemas en el select:".mysqli_error($conexion));
     while ($reg=mysqli_fetch_array($registros)) {
         echo "<option value=\"$reg[idestatus]\">$reg[nombre]</option>";
@@ -55,8 +55,7 @@ if(isset($_GET['reporte']))
             </select>
           Categoria: <select class="form-control" name="categoria">
            ';
-    $conexion=mysqli_connect("localhost","root","","shreportes") or die("Problemas con la conexión");
-    $registros=mysqli_query($conexion,"select idcategoria,nombre from categorias ORDER BY idcategoria DESC") or die("Problemas en el select:".mysqli_error($conexion));
+    include ("conexion.php");
     while ($reg=mysqli_fetch_array($registros)) {
         echo "<option value=\"$reg[idcategoria]\">$reg[nombre]</option>";
     }

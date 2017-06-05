@@ -2,7 +2,13 @@
 <!DOCTYPE html>
 <html>
 <?php include("head.php")?>
-<?php include("navbar/navbarinicio.php") ?>
+<?php
+if (isset($_SESSION['nombre'])):
+    include ("navbar/navbarinicio.php");
+else:
+    include ("navbar/navbarindex.php");
+endif;
+?>
 <?php if (isset($_SESSION['nombre'])):?>
 <p class="bounceInRight animated animated" data-wow-duration="1500ms"">
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
@@ -34,8 +40,7 @@
                             <div class="col-md-8">
                                 <select class="form-control" name="categoria">
                                     <?php
-                                    $conexion=mysqli_connect("localhost","root","","shreportes") or
-                                    die("Problemas con la conexión");
+                                    include ("conexion.php");
                                     $registros=mysqli_query($conexion,"select idcategoria,nombre from categorias") or
                                     die("Problemas en el select:".mysqli_error($conexion));
                                     while ($reg=mysqli_fetch_array($registros))

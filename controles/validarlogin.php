@@ -1,7 +1,6 @@
 <?php
 session_start();
-$conexion=mysqli_connect("localhost","root","","shreportes") or
-die("Problemas con la conexión");
+include ("../conexion.php");
 $registros=mysqli_query($conexion,"select nombre,correo, clave from usuarios
           where correo='$_REQUEST[correo]' and clave='$_REQUEST[clave]' ") or
             die("Problemas en el select:".mysqli_error($conexion));

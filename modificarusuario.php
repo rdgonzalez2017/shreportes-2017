@@ -18,7 +18,6 @@
 <div class="container col-md-6 col-md-offset-3">
 <?php
 include("conexi.php"); // Incluimos nuestro archivo de conexión con la base de datos
-
 if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado ejecuta el resto del código
 {
 
@@ -26,7 +25,6 @@ if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado eje
     $nombre = mysql_real_escape_string($_POST['nombre']);
     $correo = mysql_real_escape_string($_POST['correo']);
     $clave = (int) mysql_real_escape_string($_POST['clave']);
-    echo $idusuario;
     $query_modificar = mysql_query("UPDATE usuarios SET nombre = '".$nombre."', correo = '".$correo."', clave = '".$clave."' WHERE idusuario = '".$idusuario."'"); // Ejecutamos la consulta para actualizar el registro en la base de datos
     if($query_modificar)
     {

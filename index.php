@@ -26,8 +26,7 @@
                         <div class="col-md-8">
                             <select class="form-control" name="nombre">
                                 <?php
-                                $conexion=mysqli_connect("localhost","root","","shreportes") or
-                                die("Problemas con la conexión");
+                                include ("conexion.php");
                                 $registros=mysqli_query($conexion,"select nombre from usuarios") or
                                 die("Problemas en el select:".mysqli_error($conexion));
                                 while ($reg=mysqli_fetch_array($registros))

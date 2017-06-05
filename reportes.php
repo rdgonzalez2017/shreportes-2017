@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
-<?php include ("head.php")?>
+<?php include ("head.php");?>
 <?php
 if (isset($_SESSION['nombre'])):
     include ("navbar/navbarsistema.php");
@@ -9,35 +9,9 @@ else:
     include ("navbar/navbarindex.php");
 endif;
 ?>
-<?php
-include('conexi.php');
-//Mostrar Datos Guardados
-$select = "SELECT * FROM reporte inner join categorias on reporte.idcategoria = categorias.idcategoria 
-where idreporte = (SELECT idreporte FROM reporte ORDER BY 1 desc LIMIT 1 )";//Campos de la tabla
-$consulta = mysql_query("$select") or die("Error en el select en Muestra previa del reporte");
-while($resultados = mysql_fetch_array($consulta)) {
-    $idreporte = $resultados['idreporte'];
-    $categoria = $resultados['nombre'];
-    $titulo = $resultados['titulo'];
-    $autor = $resultados['autor'];
-    $observacion = $resultados['observacion'];
-    $fecha = $resultados['fecha'];
-}
-?>
+
 <body>
 <div class="row col-md-10 col-md-offset-1">
-    <?php
-    //Mostrar botón de modificar Reporte, al estar el el reporte de Muestra y esconder al estar en el reporte publicado.
-    $url= $_SERVER["REQUEST_URI"];
-    ob_start();
-    echo strlen($url);
-    $VariableURL = ob_get_contents();
-    ob_end_clean();
-    //if($VariableURL<50){
-    if (isset($_SESSION['nombre'])and$VariableURL<50){
-    include ("modificareporte.php");
-    }
-    ?>
     <!-- Muestra Previa del Reporte -->
     <section>
         <!-- Seccion que muestra la publicacion final del reporte-->
@@ -173,7 +147,7 @@ while($resultados = mysql_fetch_array($consulta)) {
             echo 'Fecha: '; echo $columna['fecha'];echo'<br>';
             echo 'Autor: '; echo $columna['autor'];echo'<br>';
             echo 'Categoria: '; echo $columna['nombrecategoria'];echo'<br>';
-            echo'Observacion:<textarea class="form-control" style="resize: none" readonly="readonly" rows="5">'; echo $columna['observacion']; echo'</textarea>';
+            echo'Observacion:'; echo $columna['observacion'];
 
 
         echo '
@@ -193,8 +167,8 @@ while($resultados = mysql_fetch_array($consulta)) {
             //echo 'Titulo del reporte: ';
             // echo $columna['titulo'];
         }
-        else: echo"Debe iniciar sesión para ingresar a esta página";
-        endif;
+             else: echo"Debe iniciar sesión para ingresar a esta página";
+            endif;
     }
     ?>
 </section>
@@ -237,8 +211,8 @@ while($resultados = mysql_fetch_array($consulta)) {
             </div>
             <?php
         }
-    else: echo 'No se han creado reportes';
     endif;
     ?>
 </footer>
+
 </html>

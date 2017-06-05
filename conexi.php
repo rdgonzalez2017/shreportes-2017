@@ -3,7 +3,7 @@
 $servidor = "localhost";
 $usuario = "root";
 $contrasena ="";
-$db = "shreportes";
+$db = "multiser_shreportes";
 $conexion = @mysql_connect($servidor, $usuario, $contrasena);
 if (!$conexion) {
     die("No Conecto a servir por " .mysql_error());
