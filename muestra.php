@@ -1,44 +1,32 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <title>	SH Reportes	</title>
-</head>
-<?php include('validarmuestra.php'); ?>
+<?php include ("head.php")?>
 <?php
-include('conexi.php');
-//Mostrar Datos Guardados
-$select = "SELECT * FROM reporte inner join categorias on reporte.idcategoria = categorias.idcategoria 
-where idreporte = (SELECT idreporte FROM reporte ORDER BY 1 desc LIMIT 1 )";//Campos de la tabla
-$consulta = mysql_query("$select") or die("Error en el select en Muestra previa del reporte");
-while($resultados = mysql_fetch_array($consulta)) {
-    $idreporte = $resultados['idreporte'];
-    $categoria = $resultados['nombre'];
-    $titulo = $resultados['titulo'];
-    $autor = $resultados['autor'];
-    $observacion = $resultados['observacion'];
-    $fecha = $resultados['fecha'];
-}
+if (isset($_SESSION['nombre'])):
+    include ("navbar/navbarsistema.php");
+else:
+    include ("navbar/navbarindex.php");
+endif;
 ?>
-<?php
-//Mostrar botón de modificar Reporte, al estar el el reporte de Muestra y esconder al estar en el reporte publicado.
-$url= $_SERVER["REQUEST_URI"];
-ob_start();
-echo strlen($url);
-$VariableURL = ob_get_contents();
-ob_end_clean();
-if($VariableURL<50){
-    include ("modificareporte.php");
-}
-?>
-<body class="col-md-8 col-md-offset-2">
+<body>
+<div class="col-md-8 col-md-offset-2">
+    <?php
+    //Mostrar botón de modificar Reporte, al estar el el reporte de Muestra y esconder al estar en el reporte publicado.
+    $url= $_SERVER["REQUEST_URI"];
+    ob_start();
+    echo strlen($url);
+    $VariableURL = ob_get_contents();
+    ob_end_clean();
+    //if($VariableURL<50){
+    if (isset($_SESSION['nombre'])and $VariableURL<50){
+        include ("modificareporte.php");
+    }
+    ?>
+</div>
+
+ <div class="col-md-12 flipInY animated animated" data-wow-duration="500ms"">
 <!-- Muestra Previa del Reporte -->
-
-
     <section>
         <!-- Seccion que muestra la publicacion final del reporte-->
         <?php
@@ -59,52 +47,60 @@ if($VariableURL<50){
                         $categoria =  $columna['nombrecategoria'];
                         $autor =  $columna['autor'];
                         $fecha =  $columna['fecha'];
+                        $titulo =  $columna['titulo'];
                         $observacion =  $columna['observacion'];
-                        $idreplicacion =  $columna['idreplicacion'];
+                        $idreplicacion =  $columna['idreporte'];
                         $idestatus =  $columna['idestatus'];
                         $estatus =  $columna['nombrestatus'];
                         //Panel que muestra el Reporte Final:
                         echo'
-                         <div class="panel panel-primary">
-                                <div class="panel-heading" style="background: orange">
-                                    <p class="text-center">Reporte</p>
-                                </div>
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <label for="titulo" class="col-md-3 col-md-offset-2 control-label">Titulo:</label>
-                                           <div class="col-md-3 col-md-pull-1">'; echo  $titulo; echo' </div>            
+                        
+                             <div class="panel panel-primary container col-md-6 col-md-offset-3 bounceInRight animated animated" data-wow-duration="3000ms"">
+                                
+                                    <div class="panel-heading row" style="background: orange">
+                                        <p class="text-center">Reporte</p>
                                     </div>
-                                    <div class="row">
-                                        <label for="categoria" class="col-md-3 col-md-offset-2 control-label">Categoría:</label>
-                                           <div class="col-md-3 col-md-pull-1">'; echo  $categoria; echo' </div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <label for="titulo" class="col-md-3 col-md-offset-2 control-label">Titulo:</label>
+                                               <div class="col-md-7 col-md-pull-1">'; echo  $titulo; echo' </div>            
+                                        </div>
+                                        <div class="row">
+                                            <label for="categoria" class="col-md-3 col-md-offset-2 control-label">Categoría:</label>
+                                               <div class="col-md-7 col-md-pull-1">'; echo  $categoria; echo' </div>
+                                        </div>
+                                        <div class="row">
+                                            <label for="fecha" class="col-md-3 col-md-offset-2 control-label">Fecha:</label>
+                                                <div class="col-md-7 col-md-pull-1">'; echo $fecha; echo' </div>
+                                        </div>
+                                        <div class="row">
+                                            <label for="autor" class="col-md-3 col-md-offset-2 control-label">Autor:</label>
+                                                 <div class="col-md-7 col-md-pull-1">'; echo $autor; echo' </div>
+                                        </div>
+                                        <div class="row">
+                                            <label for="estado" class="col-md-3 col-md-offset-2 control-label">Estado:</label>
+                                                 <div class="col-md-7 col-md-pull-1">'; echo $estatus; echo' </div>
+                                        </div>
                                     </div>
-                                    <div class="row">
-                                        <label for="fecha" class="col-md-3 col-md-offset-2 control-label">Fecha:</label>
-                                            <div class="col-md-3 col-md-pull-1">'; echo $fecha; echo' </div>
-                                    </div>
-                                    <div class="row">
-                                        <label for="autor" class="col-md-3 col-md-offset-2 control-label">Autor:</label>
-                                             <div class="col-md-3 col-md-pull-1">'; echo $autor; echo' </div>
-                                    </div>
-                                    <div class="row">
-                                        <label for="estado" class="col-md-3 col-md-offset-2 control-label">Estado:</label>
-                                             <div class="col-md-3 col-md-pull-1">'; echo $estatus; echo' </div>
-                                    </div>
-                                    <div class="row">
-                                        <label for="observacion" class="col-md-3 col-md-offset-2 control-label">Observacion:</label>
-                                             <div class="col-md-3 col-md-pull-1">'; echo $observacion; echo' </div>
-                                    </div>
-                                </div>
-                         </div>
+                           
+                           </div>
+                           
+                                        <div class="row">
+                                            <label for="observacion" class="col-md-10 col-md-offset-1 control-label">Observacion:</label><br>
+                                            <div class="col-md-10 col-md-offset-1 well" style="overflow-y: auto;">'; echo $observacion; echo' </div>
+
+                                        </div>
+                       
+                          
                                             ';
                         if ($idestatus <> 1) {
                             echo '
                             <BR> 
                             <!-- Formulario para envío de comentarios-->
-                                <form class="form" name="miFormu" method="post" action="nuevocomentario.php">
+                                <form class="form" name="miFormu" method="post" action="controles/cargarcomentario.php">
                                     <INPUT TYPE="hidden" NAME="id" VALUE="' . $idreplicacion . '">
                                     <INPUT TYPE="hidden" NAME="idprotegido" VALUE="' . $idreporte . '">
-                                    <div class="col-md-8 col-md-offset-2">
+                                    <div class="col-md-4 col-md-offset-4">
                                         <div class="panel panel-primary">
                                             <div class="panel-heading">
                                                 <p class="text-center">Formulario de Comentarios</p>
@@ -122,7 +118,7 @@ if($VariableURL<50){
                                             <div class="panel-body">
                                                 <div class="form-group row">
                                                     <label for="comentario" class="col-md-3 control-label">Comentario:</label>
-                                                    <div class="col-md-10">
+                                                    <div class="col-md-12">
                                                         <textarea name="comentario" type="text" required class="form-control" rows="3"></textarea>
                                                     </div>
                                                 </div>
@@ -136,12 +132,12 @@ if($VariableURL<50){
                                     </div>
                                 </form>
                         ';
-                        }else echo 'Este caso está resuelto';
+                        }else echo '';
                     }
                 }
                 else
                 {
-                    echo 'La noticia que solicitas, no existe.'; // Si no, muestra un error
+                    echo 'Error'; // Si no, muestra un error
                 }
             }
             else
@@ -152,83 +148,87 @@ if($VariableURL<50){
         }
         else
         {
-            $select = "SELECT *, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc";
+            if (isset($_SESSION['nombre'])):
+            $select = "SELECT *, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc limit 1";
             $query_reportes = mysql_query("$select"); // Ejecutamos la consulta
-            $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"
             $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
             while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
             {
-                include("botonInicio.php");
-                echo'<div class="row well">';
-                $idprotegido=md5($clave.$columna['idreplicacion']);
+                $idprotegido=md5($clave.$columna['idreporte']);
+                echo'<div class="row well col-md-10 col-md-offset-1 container" style="overflow-y: auto">';
+                echo'<div style="text-align: center">';echo'Vista Previa del Reporte:';echo'</div>';
                 echo 'Id de Reporte: '; echo $columna['idreporte']; echo'<br>';
                 echo 'Estado: '; echo $columna['nombre'];echo'<br>';
                 echo 'Titulo: '; echo $columna['titulo'];echo'<br>';
                 echo 'Fecha: '; echo $columna['fecha'];echo'<br>';
                 echo 'Autor: '; echo $columna['autor'];echo'<br>';
                 echo 'Categoria: '; echo $columna['nombrecategoria'];echo'<br>';
-                echo 'Observación: '; echo $columna['observacion'];echo'</div>
+                echo'Observacion:'; echo $columna['observacion'];
+                echo '
+                </div>';
+                echo'<div class="row  col-md-10 col-md-offset-1">';
+               echo '
                 <div class="row text-center">
                 Si todo está bien, presione el botón:
                 <br>
                 <a class="btn btn-success" href="?reporte=' .$idprotegido.'">Publicar</a><br><br>
                  </div>
-                 
-                 <br>';
+                 ';
+                echo '<div class="row col-md-2">';
+                 echo'</div>
+                 ';
                 echo ' 
-             <br> <br>
-            
-           
-                 <!-- Incluimos un enlace para leer la noticia entera --> 
-           
          ';
                 //echo 'Titulo del reporte: ';
                 // echo $columna['titulo'];
             }
-
+            else: echo"Debe iniciar sesión para ingresar a esta página";
+            endif;
         }
         ?>
-        <!-- Botòn que lleva al inicio-->
 
     </section>
+ </div>
 </body>
 <footer>
     <br><br>
     <!-- Seccion de comentarios-->
     <?php
-    $resultComen = mysql_query("SELECT *  FROM comentarios WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' ORDER BY id DESC");
-    while($rowComen = mysql_fetch_assoc($resultComen))
-    {
-        ?>
-        <div class="col-md-12">
-            <div class="panel panel-danger">
-                <!-- Muestra Autor del comentario-->
-                <div class="panel-heading text-center">
-                    <div> Autor: <?php echo $rowComen["nick"]; ?> </div>
-                </div>
-                <div class="panel-body">
-                    <!-- Muestra descripción del comentario-->
-                    <div class="form-group row">
-                        <label for="comentario" class="col-md-2 col-md-offset-2 control-label">Comentario:</label>
-                        <div class="col-md-8">
-                            <div> <?php echo $rowComen["comentario"]; ?> </div>
-                        </div>
+    if(!empty($idreporte)):
+        $resultComen = mysql_query("SELECT *  FROM comentarios WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' ORDER BY id DESC");
+        while($rowComen = mysql_fetch_assoc($resultComen))
+        {
+            ?>
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-danger">
+                    <!-- Muestra Autor del comentario-->
+                    <div class="panel-heading text-center">
+                        <div> Autor: <?php echo $rowComen["nick"]; ?> </div>
                     </div>
-                    <!-- Muestra fecha del comentario-->
-                    <div class="form-group row">
-                        <label for="fecha" class="col-md-2 col-md-offset-2 control-label">Fecha:</label>
-                        <div class="col-md-8">
-                            <div> <?php echo $rowComen["fecha"]; ?> </div>
+                    <div class="panel-body">
+
+                        <!-- Muestra fecha del comentario-->
+                        <div class="form-group row">
+                            <label for="fecha" class="col-md-2 control-label">Fecha:</label>
+                            <div class="col-md-8">
+                                <div> <?php echo $rowComen["fecha"]; ?> </div>
+                            </div>
                         </div>
+                        <!-- Muestra descripción del comentario-->
+                        <div class="form-group row">
+                            <label for="comentario" class="col-md-3 control-label">Comentario:</label>
+                            <div class="col-md-8">
+                                <textarea class=" col-md-8 form-control" style="resize: none" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
-        <?php
-    }
+            <?php
+        }
+
+        endif;
     ?>
-
-
 </footer>
-
 </html>
