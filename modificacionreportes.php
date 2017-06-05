@@ -13,53 +13,52 @@ endif;
 <body>
 <div class="col-md-8 col-md-offset-2">
 <?php
-include("conexi.php"); // Incluimos nuestro archivo de conexión con la base de datos
+include("conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
 if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado ejecuta el resto del código
 {
-
-    $idreporte = (int) mysql_real_escape_string($_POST['idreporte']);
-    $titulo = mysql_real_escape_string($_POST['titulo']);
-    $observacion = mysql_real_escape_string($_POST['observacion']);
-    $idestatus = (int) mysql_real_escape_string($_POST['estatus']);
-    $idcategoria = (int) mysql_real_escape_string($_POST['categoria']);
-    $autor = mysql_real_escape_string($_POST['autor']);
-    $query_modificar = mysql_query("UPDATE reporte SET titulo = '".$titulo."', observacion = '".$observacion."', idestatus = '".$idestatus."', idcategoria = '".$idcategoria."',  fecha = NOW() WHERE idreporte = '".$idreporte."'"); // Ejecutamos la consulta para actualizar el registro en la base de datos
+    $idreporte = ($_POST['idreporte']);
+    $titulo = ($_POST['titulo']);
+    $observacion = ($_POST['observacion']);
+    $idestatus = ($_POST['estatus']);
+    $idcategoria = ($_POST['categoria']);
+    $autor = ($_POST['autor']);
+    $query_modificar = mysqli_query($conexion,"UPDATE reporte SET titulo = '".$titulo."', observacion = '".$observacion."', idestatus = '".$idestatus."', idcategoria = '".$idcategoria."',  fecha = NOW() WHERE idreporte = '".$idreporte."'"); // Ejecutamos la consulta para actualizar el registro en la base de datos
     if($query_modificar)
     {
-        echo 'La noticia se modificó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
-        header("Location:muestra.php");
+        echo 'El reporte se modificó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
+        //header("Location:reportes.php");
     }
     else
     {
-        echo 'La noticia no se modificó'; // Si la consulta no se ejecutó bien, muestra este mensaje
+        echo 'El reporte no se modificó'; // Si la consulta no se ejecutó bien, muestra este mensaje
     }
 }
 
 if(isset($_GET['reporte']))
 {
-    $idreporte = (int) mysql_real_escape_string($_GET['reporte']); // Recibimos el id de la noticia por medio de GET
-    $query_NoticiaCompleta = mysql_query("SELECT * FROM reporte LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus WHERE idreporte = '".$idreporte."' LIMIT 1"); // Ejecutamos la consulta
-    $columna_MostrarNoticia = mysql_fetch_assoc($query_NoticiaCompleta);
+    $idreporte = ($_GET['reporte']); // Recibimos el id de la noticia por medio de GET
+    $query_NoticiaCompleta = mysqli_query($conexion,"SELECT * FROM reporte LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus WHERE idreporte = '".$idreporte."' LIMIT 1");// Ejecutamos la consulta
+    $columna_MostrarNoticia = mysqli_fetch_assoc($query_NoticiaCompleta);
     echo ' 
-    <form action="modificareporte.php" method="post"> <!-- Creamos el formulario, utilizando la etiqueta form, cuyo atributo action="" indicará donde se procesará el formulario --> 
+    <form action="modificacionreportes.php" method="post"> <!-- Creamos el formulario, utilizando la etiqueta form, cuyo atributo action="" indicará donde se procesará el formulario --> 
         <div style="text-align: center">Id: '.$columna_MostrarNoticia['idreporte'].'</div>
         Título: <input class="form-control" name="titulo" type="text" value="'.$columna_MostrarNoticia['titulo'].'" /> <br/>
         Autor: <input class="form-control" readonly="readonly" name="autor" type="text" value="'.$columna_MostrarNoticia['autor'].'" /> <br/>
         
-        Cambiar Estado a: <select class="form-control" name="estatus">
-           ';
+        Estado: <select class="form-control" name="estatus">';
     include ("conexion.php");
-    $registros=mysqli_query($conexion,"select idestatus,nombre from estatus ORDER BY idestatus DESC") or die("Problemas en el select:".mysqli_error($conexion));
+    $registros=mysqli_query($conexion,"select idestatus,nombre from estatus ORDER BY idestatus DESC")
+    or die("Problemas en el select:".mysqli_error($conexion));
     while ($reg=mysqli_fetch_array($registros)) {
         echo "<option value=\"$reg[idestatus]\">$reg[nombre]</option>";
     }
     echo '
             </select>
-            Estado: '.$columna_MostrarNoticia['idestatus'].' <br/>
-           Cambiar Categoria a: <select class="form-control" name="categoria">
+           Categoria: <select class="form-control" name="categoria">
            ';
     include("conexion.php");
-    $registros=mysqli_query($conexion,"select idcategoria,nombre from categorias ORDER BY idcategoria DESC") or die("Problemas en el select:".mysqli_error($conexion));
+    $registros=mysqli_query($conexion,"select idcategoria,nombre from categorias ORDER BY idcategoria DESC")
+    or die("Problemas en el select:".mysqli_error($conexion));
     while ($reg=mysqli_fetch_array($registros)) {
         echo "<option value=\"$reg[idcategoria]\">$reg[nombre]</option>";
     }
@@ -78,8 +77,9 @@ if(isset($_GET['reporte']))
     ';
 }
 
-$query_MostrarTitulos = mysql_query("SELECT idreporte, titulo, observacion, fecha FROM reporte ORDER by idreporte DESC"); // Ejecutamos la consulta
-while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
+$query_MostrarTitulos = mysqli_query($conexion,"SELECT idreporte, titulo, observacion, fecha FROM reporte ORDER by idreporte DESC")
+or die("Problemas en el select:".mysqli_error($conexion));// Ejecutamos la consulta
+while($columna_MostrarTitulos = mysqli_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
 {
     echo '<div class="row well text-center">';
     echo '<a href="?reporte='.$columna_MostrarTitulos['idreporte'].'">

@@ -17,15 +17,15 @@
 <body>
 <div class="container col-md-6 col-md-offset-3">
 <?php
-include("conexi.php"); // Incluimos nuestro archivo de conexión con la base de datos
+include("conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
 if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado ejecuta el resto del código
 {
 
-    $idusuario = (int) mysql_real_escape_string($_POST['idusuario']);
-    $nombre = mysql_real_escape_string($_POST['nombre']);
-    $correo = mysql_real_escape_string($_POST['correo']);
-    $clave = (int) mysql_real_escape_string($_POST['clave']);
-    $query_modificar = mysql_query("UPDATE usuarios SET nombre = '".$nombre."', correo = '".$correo."', clave = '".$clave."' WHERE idusuario = '".$idusuario."'"); // Ejecutamos la consulta para actualizar el registro en la base de datos
+    $idusuario = ($_POST['idusuario']);
+    $nombre = ($_POST['nombre']);
+    $correo = ($_POST['correo']);
+    $clave = ($_POST['clave']);
+    $query_modificar = mysqli_query($conexion,"UPDATE usuarios SET nombre = '".$nombre."', correo = '".$correo."', clave = '".$clave."' WHERE idusuario = '".$idusuario."'"); // Ejecutamos la consulta para actualizar el registro en la base de datos
     if($query_modificar)
     {
         echo 'El usuario se modificó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
@@ -39,9 +39,9 @@ if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado eje
 
 if(isset($_GET['usuario']))
 {
-    $idusuario = (int) mysql_real_escape_string($_GET['usuario']); // Recibimos el id de la noticia por medio de GET
-    $query_NoticiaCompleta = mysql_query("SELECT * FROM usuarios WHERE idusuario = '".$idusuario."'"); // Ejecutamos la consulta
-    $columna_MostrarNoticia = mysql_fetch_assoc($query_NoticiaCompleta);
+    $idusuario = $_GET['usuario']; // Recibimos el id de la noticia por medio de GET
+    $query_NoticiaCompleta = mysqli_query($conexion,"SELECT * FROM usuarios WHERE idusuario = '".$idusuario."'"); // Ejecutamos la consulta
+    $columna_MostrarNoticia = mysqli_fetch_assoc($query_NoticiaCompleta);
     echo ' 
     <form class="text-center" action="modificarusuario.php" method="post"> <!-- Creamos el formulario, utilizando la etiqueta form, cuyo atributo action="" indicará donde se procesará el formulario --> 
         ID: <input class="form-control text-center" readonly="readonly" name="idusuario" type="text" value="'.$columna_MostrarNoticia['idusuario'].'" /> <br/>
@@ -57,8 +57,9 @@ if(isset($_GET['usuario']))
 
 if (isset($_SESSION['nombre']))
 {$sessionusuario = $_SESSION['nombre'];}
-$query_MostrarTitulos = mysql_query("SELECT * from usuarios WHERE nombre = '".$sessionusuario."'"); // Ejecutamos la consulta
-while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
+$query_MostrarTitulos = mysqli_query($conexion,"SELECT * from usuarios WHERE nombre = '".$sessionusuario."'")
+or die("Problemas en el select:".mysqli_error($conexion));
+while($columna_MostrarTitulos = mysqli_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
 {
     echo '<div class="row well text-center">';
     echo '<a href="?usuario='.$columna_MostrarTitulos['idusuario'].'">
