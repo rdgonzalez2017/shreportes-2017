@@ -5,6 +5,7 @@ if(!empty($_REQUEST['nombre'])){ // Comprobamos que los valores recibidos no son
                      ('$_REQUEST[nombre]','$_REQUEST[correo]','$_REQUEST[clave]','$_REQUEST[tipo]') ")
     or die("Problemas en el insert principal" . mysqli_error($conexion));
     mysqli_close($conexion);
-    header("Location:../agregarusuario.php");
+    echo "<script>location.href='../agregarusuario.php';</script>";
+    //header("Location:../agregarusuario.php");
 }
 ?>

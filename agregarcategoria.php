@@ -10,8 +10,6 @@ else:
 endif;
 ?>
 <?php if (isset($_SESSION['nombre'])):?>
-<!-- Conexión con base de datos-->
-<?php include('conexi.php');?>
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
 <body>
 <!-- Formulario para envío de datos del sistema-->

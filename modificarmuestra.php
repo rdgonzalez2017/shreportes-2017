@@ -59,7 +59,8 @@ if(isset($_GET['reporte']))
            Categoria: <select class="form-control" name="categoria">
            ';
              include ("conexion.php");
-            $registros=mysqli_query($conexion,"select idcategoria,nombre from categorias ORDER BY idcategoria DESC") or die("Problemas en el select:".mysqli_error($conexion));
+            $registros=mysqli_query($conexion,"select idcategoria,nombre from categorias ORDER BY idcategoria DESC")
+            or die("Problemas en el select:".mysqli_error($conexion));
             while ($reg=mysqli_fetch_array($registros)) {
                 echo "<option value=\"$reg[idcategoria]\">$reg[nombre]</option>";
             }

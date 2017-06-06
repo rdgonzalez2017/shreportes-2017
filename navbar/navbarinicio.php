@@ -26,7 +26,6 @@
                         <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarcategoria.php'">Agregar Categoria</button></li>
                         <li><button class="btn btn-sm btn-info navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarusuario.php'">Agregar Usuario</button></li>
                         <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarestado.php'">Agregar Estatus</button></li>
-
                         <?php endif;?>
 
                     </ul>
