@@ -175,8 +175,8 @@ endif;
     ?>
 </section>
 </div>
-</body>
-<footer>
+
+<section>
     <br><br>
     <!-- Seccion que muestra los comentarios-->
     <?php
@@ -215,6 +215,6 @@ endif;
         }
     endif;
     ?>
-</footer>
-
+</section>
+</body>
 </html>
