@@ -203,7 +203,7 @@ endif;
         {
             ?>
             <div class="col-md-6 col-md-offset-3">
-                <div class="panel panel-danger">
+                <div class="panel panel-info">
                     <!-- Muestra Autor del comentario-->
                     <div class="panel-heading text-center">
                         <div> Autor: <?php echo $rowComen["nick"]; ?> </div>
@@ -220,8 +220,8 @@ endif;
                         <!-- Muestra descripción del comentario-->
                         <div class="form-group row">
                             <label for="comentario" class="col-md-3 control-label">Comentario:</label>
-                            <div class="col-md-8">
-                                <textarea class=" col-md-8 form-control" style="resize: none" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
+                            <div class="col-md-12">
+                                <textarea class="form-control" style="resize: none" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
                             </div>
                         </div>
 

@@ -11,7 +11,7 @@
                                 <div class="col-md-4">
                                     <h4>Contactos:</h4>
                                     <h5>Teléfonos: 0241-8253266/8246437</h5>
-                                    <h5>Dirección: Urb. Sabana Larga, C.C. Mediterranean Plaza, Piso 3, Ofic. No. P5-L01-OF08.</h5>
+                                    <h5>Dirección: Urb. Sabana Larga, C.C. Mediterranean Plaza, Piso 3, Ofic. No. P5-L01-OF08, Valencia Edo. Carabobo, Venezuela.</h5>
 
                                 </div><!--end .col-md-4 .contact-email-->
                                 <div class="col-md-4">
