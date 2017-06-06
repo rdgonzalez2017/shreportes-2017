@@ -5,11 +5,11 @@ body {
     margin: 0px;
     padding-top: 0px;
 }
-
+/* Cabecera Del Panel */
 .panel-primary .panel-heading {
     background: #2A63A2;
 }
-
+/* Menú Superior */
 .navbar-inverse {
     background: #2A63A2;
 }
@@ -24,13 +24,12 @@ body {
 
     width: auto;
     height: 150px;
-    margin-top:90px;
+    margin-top:130px;
     border-radius: 10px;
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
     border: 5px solid orange;
-
 }
 .fa{
     font-size:24px;

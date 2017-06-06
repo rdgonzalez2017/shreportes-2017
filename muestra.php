@@ -191,8 +191,8 @@ endif;
 
     </section>
  </div>
-</body>
-<footer>
+
+<section>
     <br><br>
     <!-- Seccion de comentarios-->
     <?php
@@ -233,5 +233,7 @@ endif;
 
         endif;
     ?>
-</footer>
+</section>
+</body>
+<?php include("footer.php");?>
 </html>

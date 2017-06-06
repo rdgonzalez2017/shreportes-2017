@@ -4,9 +4,9 @@
 <?php include("head.php");?>
 <?php
 if (isset($_SESSION['nombre'])):
-    include ("navbar/navbarsistema.php");
+    include("navbar/navbarsistema.php");
 else:
-    include ("navbar/navbarindex.php");
+    include("navbar/navbarindex.php");
 endif;
 ?>
 <?php if (isset($_SESSION['nombre'])):?>
@@ -46,6 +46,6 @@ endif;
     </div>
 </footer>
 <?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
-    <br><button class="btn btn-info btn-sm navbar-btn col-md-offset-1" onclick = "location='Index.php'">Iniciar Sesión</button>
+    <br><button class="btn btn-info btn-sm navbar-btn col-md-offset-1" onclick = "location='index.php'">Iniciar Sesión</button>
 <?php endif; ?>
 </html>

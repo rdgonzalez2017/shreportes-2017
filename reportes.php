@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <?php include ("head.php");?>
+<header>
 <?php
 if (isset($_SESSION['nombre'])):
     include ("navbar/navbarsistema.php");
@@ -9,9 +10,10 @@ else:
     include ("navbar/navbarindex.php");
 endif;
 ?>
-
+</header>
 <body>
 <div class="row col-md-10 col-md-offset-1">
+
     <!-- Muestra Previa del Reporte -->
     <section>
         <!-- Seccion que muestra la publicacion final del reporte-->
@@ -217,4 +219,5 @@ endif;
     ?>
 </section>
 </body>
+<?php include("footer.php");?>
 </html>
