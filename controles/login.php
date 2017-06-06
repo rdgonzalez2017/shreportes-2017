@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-//FUNCIÓN PARA LIMPIAR LOS COMENTARIOS DE INYECCIÓN SQL
+//FUNCIÓN PARA LIMPIAR CAMPO CLAVE DE INYECCIÓN SQL
 $valorC = $_REQUEST['clave'];
 $valorC = array();
 foreach ($_POST as $keyClave => $valorC)
@@ -37,6 +37,7 @@ if(empty($usuario) || empty($pass)){
 header("Location: ../index.php");
 exit();
 }
+//CONSULTA SQL
 include ("../conexion.php");
 $result = mysqli_query($conexion,"SELECT * from usuarios where nombre='" . $usuario . "'");
 if($row = mysqli_fetch_array($result)):

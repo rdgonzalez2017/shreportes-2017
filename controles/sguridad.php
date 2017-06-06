@@ -20,7 +20,6 @@ function limpiarComentario($valor)
     $valor = str_ireplace("[", "", $valor);
     $valor = str_ireplace("!","",$valor);
     $valor = str_ireplace("¡","",$valor);
-    $valor = str_ireplace("?","",$valor);
     $valor = str_ireplace("=","",$valor);
     $valor = str_ireplace("&","",$valor);
     return $valor;
