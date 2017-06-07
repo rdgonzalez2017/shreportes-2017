@@ -135,6 +135,7 @@ endif;
     else
     {
         ?>
+        <!-- Tabla de Reportes -->
             <div class="row">
                 <div class="col-md-12 table-responsive">
                     <table id="example"  class="table table-bordered table-hover table-striped">
@@ -154,7 +155,7 @@ endif;
                         <tbody>
                         <?php
                         if (isset($_SESSION['nombre'])):
-                        $select = "SELECT *, categorias.nombre as nombrecategoria, categorias.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc";
+                        $select = "SELECT *, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc";
                         $query_reportes = mysqli_query($conexion,"$select")
                         or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
                         $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"

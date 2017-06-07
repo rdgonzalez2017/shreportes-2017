@@ -1,7 +1,7 @@
 <div class="row">
-    <div class="col-md-8 col-md-offset-2 table-responsive">
+    <div class="col-md-12 table-responsive">
         <table id="example"  class="table table-bordered table-hover table-striped">
-            <caption class="text-center"><h3>Listado de Usuarios</h3></caption>
+            <caption class="text-center"><h3>Listado de Reportes</h3></caption>
             <thead>
             <tr class="bg-primary text-center">
                 <td><h4>ID</h4></td>
@@ -29,7 +29,7 @@
                     <td><h4><?php echo $columna['nombrecategoria'] ?></h4></td>
                     <td><h4><?php echo $columna['nombrestatus'] ?></h4></td>
                     <td><h4><?php echo $columna['fecha'] ?></h4></td>
-                    <td><a class="btn btn-warning" href="?reporte=<?php echo $idprotegido;?>"></td>
+                    <td><a class="btn btn-warning" href="?reporte=<?php echo $columna['idreporte']?>">Modificar</a></td>
                     <!--
                     <td class="text-center">
                         <div class="btn-group">

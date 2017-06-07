@@ -11,7 +11,7 @@ endif;
 ?>
 <?php if (isset($_SESSION['nombre'])):?>
 <body>
-<div class="col-md-8 col-md-offset-2">
+<div class="col-md-10 col-md-offset-1">
 <?php
 include("conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
 if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado ejecuta el resto del código
@@ -113,28 +113,7 @@ if(isset($_GET['reporte'])):
         </div>
     </form>
 <?php endif;?>
-    <div class="col-md-8 col-md-offset-2">
-
-    <?php
-$query_MostrarTitulos = mysqli_query($conexion,"SELECT *, categorias.nombre as nombrecategoria, estatus.nombre as nombreestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc")
-or die("Problemas en el select:".mysqli_error($conexion));// Ejecutamos la consulta
-while($columna_MostrarTitulos = mysqli_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
-{
-    echo '<div class="row well text-center">';
-    echo '<a href="?reporte='.$columna_MostrarTitulos['idreporte'].'">
-    Modificar esta incidencia:</a> ';   // Mostramos un enlace para modificar cada noticia
-    echo'ID '; $idreporte = $columna_MostrarTitulos['idreporte']; echo $idreporte;echo'<br>';
-    echo'Titulo: '; $titulo = $columna_MostrarTitulos['titulo']; echo $titulo;echo'<br>';
-    echo'Categoría: '; $categoria = $columna_MostrarTitulos['nombrecategoria']; echo $categoria;echo'<br>';
-    echo'Estado: '; $categoria = $columna_MostrarTitulos['nombreestatus']; echo $categoria;echo'<br>';
-    echo'Autor: '; $autor = $columna_MostrarTitulos['autor']; echo $autor;echo'<br>';
-    echo'Fecha: '; $fecha = $columna_MostrarTitulos['fecha']; echo $fecha;echo'<br>';
-
-
-    echo '</div>';
-}
-?>
-</div>
+        <?php include("tablas/tablareportes.php")?>
 </div>
 </body>
 <?php else: echo"Debe iniciar sesión para ingresar a esta página";
