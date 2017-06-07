@@ -14,17 +14,17 @@ endif;
 <body>
 <!-- Formulario para envío de datos del sistema-->
 <form class="form bounceInDown animated" method = "post" action="controles/cargarestado.php">
-    <div class="col-md-8 col-md-offset-2">
+    <div class="col-md-6 col-md-offset-3">
         <br>
-        <div class="panel panel-success">
+        <div class="panel panel-primary">
             <div class="panel-heading">
-                <p class="text-center">Nuevo Estatus</p>
+                <h4 class="text-center">Nuevo Estado</h4>
             </div>
             <!-- Ingreso del titulo-->
             <div class="panel-body">
                 <div class="form-group row">
-                    <label for="nombre" class="col-md-2 control-label">Nombre de Estatus:</label>
-                    <div class="col-md-8">
+                    <label for="nombre" class="col-md-3 control-label">Nombre:</label>
+                    <div class="col-md-8 col-md-pull-1">
                         <input class="form-control" type="text" name="nombre" id="nombre"  required/>
                     </div>
                 </div>
@@ -41,11 +41,8 @@ endif;
 </form>
 <!-- Formulario para envío de datos del sistema-->
 </body>
-<footer class="row text-center">
-    <div class="col-md-2">
-    </div>
-</footer>
 <?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
     <br><button class="btn btn-info btn-sm navbar-btn col-md-offset-1" onclick = "location='Index.php'">Iniciar Sesión</button>
 <?php endif; ?>
+<?php include("tablas/tablaestados.php") ?>
 </html>

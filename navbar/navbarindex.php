@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header col-md-4">
-            <a class="img-responsive" href="https://www.servicioshosting.com/sitio/"><img src="images/logo_desktop.png"></a>
+            <a href="https://www.servicioshosting.com/sitio/"><img class="img-responsive" id="img-logosh" src="images/logo_desktop.png"></a>
         </div>
         <div class="col-md-4 col-md-offset-1">
             <img  style="width: 50%" src="images/logo_shincidencias.png">

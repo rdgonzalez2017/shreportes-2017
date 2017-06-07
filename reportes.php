@@ -134,47 +134,67 @@ endif;
     }
     else
     {
-        if (isset($_SESSION['nombre'])):
+        ?>
+            <div class="row">
+                <div class="col-md-12 table-responsive">
+                    <table id="example"  class="table table-bordered table-hover table-striped">
+                        <caption class="text-center"><h3>Reportes de Incidencias</h3></caption>
+                        <thead>
+                        <tr class="bg-primary text-center">
+                            <td><h4>ID</h4></td>
+                            <td><h4>Titulo</h4></td>
+                            <td><h4>Autor</h4></td>
+                            <td><h4>Categoria</h4></td>
+                            <td><h4>Estado</h4></td>
+                            <td><h4>Fecha</h4></td>
+                            <td><h4>Acción</h4></td>
+                            <!--<td><h4>Aciones</h4></td>-->
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        if (isset($_SESSION['nombre'])):
+                        $select = "SELECT *, categorias.nombre as nombrecategoria, categorias.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc";
+                        $query_reportes = mysqli_query($conexion,"$select")
+                        or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
+                        $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"
+                        $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
+                        while($columna = mysqli_fetch_assoc($query_reportes)):?>
+                            <?php $idprotegido=md5($clave.$columna['idreporte']);?>
+                            <tr class="text-center">
+                                <td><h4><?php echo $columna['idreporte']?></h4></td>
+                                <td><h4><?php echo $columna['titulo'] ?></h4></td>
+                                <td><h4><?php echo $columna['autor'] ?></h4></td>
+                                <td><h4><?php echo $columna['nombrecategoria'] ?></h4></td>
+                                <td><h4><?php echo $columna['nombrestatus'] ?></h4></td>
+                                <td><h4><?php echo $columna['fecha'] ?></h4></td>
+                                <td><a class="btn btn-warning" href="?reporte=<?php echo $idprotegido;?>">Mostrar Reporte</a><br><br></td>
 
-        $select = "SELECT *, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc";
-        $query_reportes = mysqli_query($conexion,"$select")
-        or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
-        $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"
-        $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-        while($columna = mysqli_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
-        {
-            echo'<div class="row well" style="overflow-y: auto">';
-            $idprotegido=md5($clave.$columna['idreporte']);
-            echo 'ID de Incidencia: '; echo $columna['idreporte']; echo'<br>';
-            echo 'Estado: '; echo $columna['nombre'];echo'<br>';
-            echo 'Titulo: '; echo $columna['titulo'];echo'<br>';
-            echo 'Fecha: '; echo $columna['fecha'];echo'<br>';
-            echo 'Autor: '; echo $columna['autor'];echo'<br>';
-            echo 'Categoria: '; echo $columna['nombrecategoria'];echo'<br>';
-            echo'Observacion:'; echo $columna['observacion'];
-
-
-        echo '
-                </div>';
-
-            echo '
-                <div class="row text-center">
-                
-                <a class="btn btn-warning" href="?reporte=' .$idprotegido.'">Mostrar Incidencia</a><br><br>
-                 </div>
-                 <br>';
-            echo ' 
-              
-                 
-         ';
-
-            //echo 'Titulo del reporte: ';
-            // echo $columna['titulo'];
-        }
+                                <!--
+                    <td class="text-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="sistema.php?pag=marcas&idc=<?php// echo base64_encode($columna['idcategoria'])?>">Modificar</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="sistema.php?pag=marcas">Eliminar</a></li>
+                            </ul>
+                        </div>
+                    </td>-->
+                            </tr>
+                        </tbody>
+                        <?php endwhile;?>
+                    </table>
+                </div>
+            </div>
+            <?php
              else: echo"Debe iniciar sesión para ingresar a esta página";
             endif;
+
     }
-    ?>
+        ?>
+
 </section>
 </div>
 

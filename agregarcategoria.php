@@ -16,9 +16,9 @@ endif;
 <form class="form bounceInDown animated" method = "post" action="controles/cargarcategoria.php">
     <div class="col-md-8 col-md-offset-2">
         <br>
-        <div class="panel panel-success">
+        <div class="panel panel-primary">
             <div class="panel-heading">
-                <p class="text-center">Ingresar Categoria</p>
+                <h4 class="text-center">Ingresar Categoria</h4>
             </div>
             <!-- Ingreso del titulo-->
             <div class="panel-body">
@@ -41,11 +41,8 @@ endif;
 </form>
 <!-- Formulario para envío de datos del sistema-->
 </body>
-<footer class="row text-center">
-    <div class="col-md-2">
-    </div>
-</footer>
 <?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
     <br><button class="btn btn-info btn-sm navbar-btn col-md-offset-1" onclick = "location='index.php'">Iniciar Sesión</button>
 <?php endif; ?>
+<?php include("tablas/tablacategorias.php") ?>
 </html>

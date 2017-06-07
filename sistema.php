@@ -86,7 +86,6 @@ endif;
 </body>
 
 <?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
-    <br><button class="btn btn-info btn-sm navbar-btn col-md-offset-1" onclick = "location='Index.php'">Iniciar Sesión</button>
 <?php endif; ?>
 </html>
 

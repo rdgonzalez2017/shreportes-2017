@@ -1,9 +1,9 @@
 <footer class="col-md-12 container">
-<section id="footer" style="background-color:#2A63A2;">
+<section id="footer">
     <div class="container">
         <center style="color:#fff;">
             <div class="container">
-                <div class="well well-sm main-footer"  style="background-color:#2A63A2; height: 30px; border:0px">
+                <div id="Containerfooter" class="well well-sm main-footer">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="row">
@@ -21,7 +21,7 @@
                                     <h5 style="margin-top: 20px">
                                         © Copyright: Servitepuy, C.A. 2017</h5>
                                 </div><!--end .col-md-4-->
-                                <div class="col-md-4">
+                                <div class="col-sm-8 col-md-4">
                                     <div class="row contact row-first">
                                         <div class="col-md-4 col-md-offset-2">
                                             <a href="https://t.me/servicioshostingvzla" class="skype"><i class="fa fa-skype"></i>Telegram</a>
@@ -47,8 +47,9 @@
         </center>
     </div><!--end .container-->
 </section><!--end #footer-->
-<!-- Sticky Footer -->
+<!-- Sticky Footer
 <script type="text/javascript" src="js/footer.js"></script>
-<!-- Fade Contact Footer -->
+<!-- Fade Contact Footer
 <script type="text/javascript" src="js/contactFade.js"></script>
+     -->
 </footer>

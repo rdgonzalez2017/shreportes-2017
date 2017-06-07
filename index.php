@@ -2,9 +2,13 @@
 <!DOCTYPE html>
 <html>
 <?php include("head.php")?>
+<header
 <?php include("navbar/navbarindex.php")?>
+</header>
 <?php if (isset($_SESSION['nombre'])) {echo "Sesión Abierta: ".$_SESSION['nombre'];} ?>
 <body>
+<div class="container">
+<section>
     <form class="form-horizontal row bounceInDown animated animated" data-wow-duration="1500ms"" method = "post" action="controles/login.php">
         <div class="col-md-6 col-md-offset-3 container">
             <div class="panel panel-primary" >
@@ -61,6 +65,8 @@
 
         </div>
     </form>
+</section>
+</div>
 </body>
 <?php include("footer.php");?>
 </html>
