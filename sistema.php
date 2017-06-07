@@ -23,7 +23,7 @@ endif;
             <br>
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <p class="text-center">Ingresar Datos</p>
+                    <h4 class="text-center">Ingresar Datos</h4>
                 </div>
                 <!-- Ingreso del titulo-->
                 <div class="panel-body">

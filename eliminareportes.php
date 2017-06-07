@@ -19,7 +19,7 @@ or die("Problemas en el select:".mysqli_error($conexion));
 while($columna_MostrarTitulos = mysqli_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre los títulos de las noticias, utilizando while.
 {
     echo '<div class="row well text-center">';
-    echo'Id de reporte: '; echo $columna_MostrarTitulos['idreporte'].'<br/>';
+    echo'Id de Incidencia: '; echo $columna_MostrarTitulos['idreporte'].'<br/>';
     echo'Autor: '; echo $columna_MostrarTitulos['autor'].'<br/> ';
     echo'Fecha: '; echo $columna_MostrarTitulos['fecha'].'<br/> ';
     echo'Titulo: ';echo $columna_MostrarTitulos['titulo'].'  <br>';
@@ -37,11 +37,11 @@ if(isset($_GET['reporte']))
     if($query_eliminar)
     {
         //header("Location:eliminareportes.php");
-        echo 'El reporte se eliminó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
+        echo 'La incidencia se eliminó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
     }
     else
     {
-        echo 'El reporte no se eliminó'; // Si la consulta no se ejecutó bien, muestra este mensaje
+        echo 'La incidencia no se eliminó'; // Si la consulta no se ejecutó bien, muestra este mensaje
     }
 }
 ?>

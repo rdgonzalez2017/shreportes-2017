@@ -48,7 +48,7 @@
                 </div>
 
             <div class="panel-footer text-center">
-                <input type="submit" class="btn btn-success" value="Entrar"></input>
+                <input type="submit" class="btn btn-info" value="Entrar"></input>
             </div>
                 <?php
                 if(isset($_SESSION['bienvenido'])){

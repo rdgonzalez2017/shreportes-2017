@@ -46,7 +46,7 @@ endif;
                              <div class="panel panel-primary container col-md-8 col-md-offset-2 flipInX animated animated" data-wow-duration="3000ms"">
                                 
                                     <div class="panel-heading row" style="background: orange">
-                                        <p class="text-center">Reporte</p>
+                                        <h4 class="text-center">Incidencia</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
@@ -145,7 +145,7 @@ endif;
         {
             echo'<div class="row well" style="overflow-y: auto">';
             $idprotegido=md5($clave.$columna['idreporte']);
-            echo 'Id de Reporte: '; echo $columna['idreporte']; echo'<br>';
+            echo 'ID de Incidencia: '; echo $columna['idreporte']; echo'<br>';
             echo 'Estado: '; echo $columna['nombre'];echo'<br>';
             echo 'Titulo: '; echo $columna['titulo'];echo'<br>';
             echo 'Fecha: '; echo $columna['fecha'];echo'<br>';
@@ -160,7 +160,7 @@ endif;
             echo '
                 <div class="row text-center">
                 
-                <a class="btn btn-success" href="?reporte=' .$idprotegido.'">Mostrar Reporte</a><br><br>
+                <a class="btn btn-warning" href="?reporte=' .$idprotegido.'">Mostrar Incidencia</a><br><br>
                  </div>
                  <br>';
             echo ' 

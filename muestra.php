@@ -4,7 +4,7 @@
 <?php include ("head.php")?>
 <?php
 if (isset($_SESSION['nombre'])):
-    include ("navbar/navbarsistema.php");
+    include ("navbar/navbarmuestra.php");
 else:
     include ("navbar/navbarindex.php");
 endif;
@@ -173,7 +173,7 @@ endif;
                 <div class="row text-center">
                 Si todo está bien, presione el botón:
                 <br>
-                <a class="btn btn-success" href="?reporte=' .$idprotegido.'">Publicar</a><br><br>
+                <a class="btn btn-info" href="?reporte=' .$idprotegido.'">Publicar</a><br><br>
                  </div>
                  ';
                 echo '<div class="row col-md-2">';
