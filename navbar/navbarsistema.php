@@ -31,7 +31,7 @@
                 </li>
                 <!-- <li><a href="#">Page 2</a></li>-->
             </ul>
-            <ul class="nav navbar-nav navbar-right">
+            <!--<ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <?php if ($_SESSION['tipo']==1):?>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Eliminar <span class="caret"></span></a>
@@ -40,8 +40,8 @@
                         <?php endif;?>
                     </ul>
                 </li>
-                <!-- <li><a href="#">Page 2</a></li>-->
-            </ul>
+                <!-- <li><a href="#">Page 2</a></li>
+            </ul>-->
         </div>
     </div>
 </nav>

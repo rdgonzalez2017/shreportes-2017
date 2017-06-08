@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-8 col-md-offset-2 table-responsive">
+    <div class="col-md-8 col-md-offset-2 table-responsive rotateIn animated" data-wow-duration="500ms"">
         <table id="example"  class="table table-bordered table-hover table-striped">
             <caption class="text-center"><h3>Listado de Categorías</h3></caption>
             <thead>

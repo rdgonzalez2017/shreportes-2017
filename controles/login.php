@@ -43,6 +43,7 @@ $result = mysqli_query($conexion,"SELECT * from usuarios where nombre='" . $usua
 if($row = mysqli_fetch_array($result)):
     if($row['clave'] == $pass):
         session_start();
+        $_SESSION['idusuario'] = $row['idusuario'];
         $_SESSION['tipo'] = $row['idtipodeusuario'];
         $_SESSION['nombre'] = $usuario;
         //header("Location:../sistema.php");

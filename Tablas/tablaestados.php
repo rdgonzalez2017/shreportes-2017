@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-6 col-md-offset-3 table-responsive">
+    <div class="col-md-6 col-md-offset-3 table-responsive rotateIn animated" data-wow-duration="500ms"">
         <table id="example"  class="table table-bordered table-hover table-striped">
             <caption class="text-center"><h3>Listado de Estados</h3></caption>
             <thead>

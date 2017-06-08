@@ -13,5 +13,5 @@
     <!--<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>-->
     <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
     <script src="js/wow.min.js"></script>
-    <title>	Reportes SH	</title>
+    <title>	SH Incidencias </title>
 </head>
