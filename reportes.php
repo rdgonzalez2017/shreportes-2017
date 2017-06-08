@@ -148,8 +148,8 @@ endif;
                             <td><h4>Categoria</h4></td>
                             <td><h4>Estado</h4></td>
                             <td><h4>Fecha</h4></td>
-                            <td><h4>Acción</h4></td>
-                            <!--<td><h4>Aciones</h4></td>-->
+                            <td><h4>Mostrar</h4></td>
+                            <td><h4>Eliminar</h4></td>
                         </tr>
                         </thead>
                         <tbody>
@@ -169,20 +169,24 @@ endif;
                                 <td><h4><?php echo $columna['nombrecategoria'] ?></h4></td>
                                 <td><h4><?php echo $columna['nombrestatus'] ?></h4></td>
                                 <td><h4><?php echo $columna['fecha'] ?></h4></td>
-                                <td><a class="btn btn-warning" href="?reporte=<?php echo $idprotegido;?>">Mostrar Reporte</a><br><br></td>
+                                <td><a class="btn btn-warning alert-warning" href="?reporte=<?php echo $idprotegido;?>">Mostrar</a>
 
-                                <!--
+
+
                     <td class="text-center">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
+                            <!--<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
                             </button>
-                            <ul class="dropdown-menu">
+                            <!--<ul class="dropdown-menu">
                                 <li><a href="sistema.php?pag=marcas&idc=<?php// echo base64_encode($columna['idcategoria'])?>">Modificar</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="sistema.php?pag=marcas">Eliminar</a></li>
-                            </ul>
-                        </div>
-                    </td>-->
+                                <li role="separator" class="divider"></li>-->
+                                <form action="controles/eliminareporte.php" method="post">
+                                    <input class="hidden" name="idreporte" value="<?php echo $columna['idreporte']?>">
+                                    <input onclick="return confirm('Estás seguro que deseas eliminar el registro?');" class="btn btn-danger alert-danger" type="submit" name="eliminar" value="Eliminar" />
+                                </form>
+                                <!--</ul>-->
+            </div>
+        </td>
                             </tr>
                         </tbody>
                         <?php endwhile;?>

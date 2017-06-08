@@ -90,7 +90,7 @@ if(isset($_GET['reporte'])):
                     <div class="form-group row">
                         <label for="observacion" class="col-md-2 control-label">Observacion:</label>
                         <div class="col-md-12">
-                            <textarea name="observacion" rows="10"><?php echo $columna_MostrarNoticia['observacion'];?></textarea>
+                            <textarea name="observacion"  rows="10"><?php echo $columna_MostrarNoticia['observacion'];?></textarea>
                             <script>tinyMCE.init({selector: "textarea",branding: false,plugins: "image,paste",paste_data_images: true});</script>
                         </div>
                     </div>

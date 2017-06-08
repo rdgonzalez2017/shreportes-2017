@@ -18,9 +18,8 @@ endif;
     echo strlen($url);
     $VariableURL = ob_get_contents();
     ob_end_clean();
-    //if($VariableURL<50){
     if (isset($_SESSION['nombre'])and $VariableURL<50){
-        include ("modificarmuestra.php");
+       include ("modificarmuestra.php");
     }
     ?>
 </div>
@@ -31,13 +30,11 @@ endif;
         <!-- Seccion que muestra la publicacion final del reporte-->
         <?php
         include("conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
-        if(isset($_GET['reporte']))
-        {
-            if(!empty($_GET['reporte'])) // Si el valor de "noticia" no es NULL, continua con el proceso
-            {
-                $idreporte = $_GET["reporte"];
+
+
+
                 $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-                $select = "SELECT *, estatus.nombre as nombrestatus, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1";
+                $select = "SELECT *, estatus.nombre as nombrestatus, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order BY idreporte desc LIMIT 1";
                 $query_reportes = mysqli_query($conexion,"$select")
                 or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
                 //$query_reportes = mysql_query("SELECT * FROM reporte WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1"); // Ejecutamos la consulta
@@ -50,7 +47,8 @@ endif;
                         $fecha =  $columna['fecha'];
                         $titulo =  $columna['titulo'];
                         $observacion =  $columna['observacion'];
-                        $idreplicacion =  $columna['idreporte'];
+                        $idprotegido=md5($clave.$columna['idreporte']);
+                        $idreporte =  $columna['idreporte'];
                         $idestatus =  $columna['idestatus'];
                         $estatus =  $columna['nombrestatus'];
                         //Panel que muestra el Reporte Final:
@@ -99,8 +97,8 @@ endif;
                             <BR> 
                             <!-- Formulario para envío de comentarios-->
                                 <form class="form fadeInRightBig animated" name="miFormu" method="post" action="controles/cargarcomentario.php">
-                                    <INPUT TYPE="hidden" NAME="id" VALUE="' . $idreplicacion . '">
-                                    <INPUT TYPE="hidden" NAME="idprotegido" VALUE="' . $idreporte . '">
+                                    <INPUT type="hidden" NAME="id" VALUE="' . $idreporte . '">
+                                    <INPUT type="hidden" NAME="idprotegido" VALUE="' . $idprotegido . '">
                                     <div class="col-md-4 col-md-offset-4">
                                         <div class="panel panel-primary">
                                             <div class="panel-heading">
@@ -135,84 +133,11 @@ endif;
                         ';
                         }else echo '';
                     }
-                }
-                else
-                {
-                    echo ''; // Si no, muestra un error
-                }
+
             }
-            else
-            {
-                echo 'Debes seleccionar una noticia.'; // Si GET no recibe ningún valor, muestra un error
-            }
+
 //Comentarios:
-        }
-        else
-        {?>
-            <!-- Tabla de Reportes -->
-            <div class="row">
-            <div class="col-md-12 table-responsive">
-            <table id="example"  class="table table-bordered table-hover table-striped">
-            <caption class="text-center"><h3>Vista Previa:</h3></caption>
-            <thead>
-            <tr class="bg-primary text-center">
-                <td><h4>ID</h4></td>
-                <td><h4>Titulo</h4></td>
-                <td><h4>Autor</h4></td>
-                <td><h4>Categoria</h4></td>
-                <td><h4>Estado</h4></td>
-                <td><h4>Fecha</h4></td>
-                <td><h4>Acción</h4></td>
-                <!--<td><h4>Aciones</h4></td>-->
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            if (isset($_SESSION['nombre'])):
-                $select = "SELECT *, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc limit 1";
-                $query_reportes = mysqli_query($conexion,"$select")
-                or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
-                $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"
-                $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-                while($columna = mysqli_fetch_assoc($query_reportes)):?>
-                    <?php $idprotegido=md5($clave.$columna['idreporte']);?>
-                    <tr class="text-center">
-                        <td><h4><?php echo $columna['idreporte']?></h4></td>
-                        <td><h4><?php echo $columna['titulo'] ?></h4></td>
-                        <td><h4><?php echo $columna['autor'] ?></h4></td>
-                        <td><h4><?php echo $columna['nombrecategoria'] ?></h4></td>
-                        <td><h4><?php echo $columna['nombrestatus'] ?></h4></td>
-                        <td><h4><?php echo $columna['fecha'] ?></h4></td>
-                        <td><a class="btn btn-warning" href="?reporte=<?php echo $idprotegido;?>">Mostrar Incidencia</a><br><br></td>
 
-                        <!--
-                    <td class="text-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="sistema.php?pag=marcas&idc=<?php// echo base64_encode($columna['idcategoria'])?>">Modificar</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="sistema.php?pag=marcas">Eliminar</a></li>
-                            </ul>
-                        </div>
-                    </td>-->
-                    </tr>
-                    </tbody>
-
-
-                    </table>
-                    </div>
-                    </div>
-                    <div class="row well col-md-10 col-md-offset-1 container" style="overflow-y: auto">
-                        <h4 style="text-align: center"><?php echo'Observacion:';?></h4> <?php echo $columna['observacion'];?>
-                    </div>
-                <?php endwhile;?>
-                <?php
-            else: echo"Debe iniciar sesión para ingresar a esta página";
-            endif;
-
-        }
         ?>
     </section>
 </div>

@@ -6,7 +6,7 @@ $idreporte = ($_REQUEST['idreporte']);
     if($query_eliminar)
         {
         //header("Location:eliminareportes.php");
-            echo "<script>location.href='../modificacionreportes.php';</script>";
+            echo "<script>location.href='../reportes.php';</script>";
 
             echo 'La incidencia se eliminó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
         }

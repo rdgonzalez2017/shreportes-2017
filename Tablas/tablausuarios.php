@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-8 col-md-offset-2 table-responsive rotateIn animated" data-wow-duration="500ms"">
+    <div class="col-md-12 table-responsive rotateIn animated" data-wow-duration="500ms"">
         <table id="example"  class="table table-bordered table-hover table-striped">
             <caption class="text-center"><h3>Listado de Usuarios</h3></caption>
             <thead>
@@ -7,7 +7,7 @@
                 <td><h4>ID</h4></td>
                 <td><h4>Nombre</h4></td>
                 <td><h4>Correo</h4></td>
-                <!--<td><h4>Aciones</h4></td>-->
+                <td><h4>Aciones</h4></td>
             </tr>
             </thead>
             <tbody>
@@ -22,18 +22,21 @@
                     <td><h4><?php echo $columna['nombre'] ?></h4></td>
                     <td><h4><?php echo $columna['correo'] ?></h4></td>
 
-                    <!--
+
                     <td class="text-center">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
+                            <!--<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a href="sistema.php?pag=marcas&idc=<?php// echo base64_encode($columna['idcategoria'])?>">Modificar</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="sistema.php?pag=marcas">Eliminar</a></li>
-                            </ul>
+                                <li role="separator" class="divider"></li>-->
+                                <form action="controles/eliminausuario.php" method="post">
+                                    <input class="hidden" name="idusuario" value="<?php echo $columna['idusuario']?>">
+                                    <input onclick="return confirm('Estás seguro que deseas eliminar el usuario?');" class="btn btn-danger alert-danger" type="submit" name="eliminar" value="Eliminar" />
+                                </form>
+                             <!--</ul>-->
                         </div>
-                    </td>-->
+                    </td>
                 </tr>
                 <?php endwhile;?>
             </tbody>

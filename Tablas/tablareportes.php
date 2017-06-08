@@ -1,7 +1,11 @@
+
+
+
+
 <div class="row">
     <div class="col-md-12 table-responsive flipInX animated animated" data-wow-duration="500ms"">
         <table id="example"  class="table table-bordered table-hover table-striped">
-            <caption class="text-center"><h3>Reportes de Incidencias</h3></caption>
+            <caption class="text-center"><h3>Modificación de Incidencias</h3></caption>
             <thead>
             <tr class="bg-primary text-center">
                 <td><h4>ID</h4></td>
@@ -11,7 +15,7 @@
                 <td><h4>Estado</h4></td>
                 <td><h4>Fecha</h4></td>
                 <td><h4>Modificar</h4></td>
-                <td><h4>Eliminar</h4></td>
+                <!--<td><h4>Eliminar</h4></td>-->
             </tr>
             </thead>
             <tbody>
@@ -29,23 +33,22 @@
                     <td><h4><?php echo $columna['nombrecategoria'] ?></h4></td>
                     <td><h4><?php echo $columna['nombrestatus'] ?></h4></td>
                     <td><h4><?php echo $columna['fecha'] ?></h4></td>
-                    <td><a class="btn btn-warning" href="?reporte=<?php echo $columna['idreporte']?>">Modificar</a></td>
+                    <td><a class="btn btn-warning alert-warning" href="?reporte=<?php echo $columna['idreporte']?>">Modificar</a></td>
 
-                    <td class="text-center">
+                    <!--<td class="text-center">
                         <div class="btn-group">
                             <!--<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
                             </button>
                             <!--<ul class="dropdown-menu">
                                 <li><a href="sistema.php?pag=marcas&idc=<?php// echo base64_encode($columna['idcategoria'])?>">Modificar</a></li>
-                                <li role="separator" class="divider"></li>-->
+                                <li role="separator" class="divider"></li>
                                 <form action="controles/eliminareporte.php" method="post">
-                                    <input class="hidden" name="idreporte" value="<?php echo $columna['idreporte']?>">
-                                    <input class="btn btn-danger rotate animated" type="submit" name="eliminar" value="Eliminar" />
+                                    <input class="hidden" name="idreporte" value="<?php// echo $columna['idreporte']?>">
+                                    <input onclick="return confirm('Estás seguro que deseas eliminar el registro?');" class="btn btn-danger alert-danger" type="submit" name="eliminar" value="Eliminar" />
                                 </form>
-
-                            <!--</ul>-->
+                            <!--</ul>
                         </div>
-                    </td>
+                    </td>-->
                 </tr>
             <?php endwhile;?>
             </tbody>

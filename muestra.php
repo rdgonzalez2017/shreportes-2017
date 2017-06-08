@@ -24,7 +24,6 @@ endif;
     }
     ?>
 </div>
-
  <div class="col-md-12">
 <!-- Muestra Previa del Reporte -->
     <section>
@@ -148,7 +147,10 @@ endif;
 //Comentarios:
         }
         else
-        {?>
+        {
+            if (isset($_SESSION['nombre'])):
+
+            ?>
             <!-- Tabla de Reportes -->
             <div class="row">
             <div class="col-md-12 table-responsive">
@@ -168,7 +170,6 @@ endif;
             </thead>
             <tbody>
             <?php
-            if (isset($_SESSION['nombre'])):
                 $select = "SELECT *, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc limit 1";
                 $query_reportes = mysqli_query($conexion,"$select")
                 or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
@@ -204,9 +205,7 @@ endif;
                 </table>
                 </div>
                 </div>
-                    <div class="row well col-md-10 col-md-offset-1 container" style="overflow-y: auto">
-                        <h4 style="text-align: center"><?php echo'Observacion:';?></h4> <?php echo $columna['observacion'];?>
-                    </div>
+
                 <?php endwhile;?>
                 <?php
             else: echo"Debe iniciar sesión para ingresar a esta página";
