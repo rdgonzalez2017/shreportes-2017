@@ -25,8 +25,8 @@ endif;
     ?>
 </div>
 
- <div class="col-md-12">
-<!-- Muestra Previa del Reporte -->
+<div class="col-md-12">
+    <!-- Muestra Previa del Reporte -->
     <section>
         <!-- Seccion que muestra la publicacion final del reporte-->
         <?php
@@ -201,9 +201,9 @@ endif;
                     </tbody>
 
 
-                </table>
-                </div>
-                </div>
+                    </table>
+                    </div>
+                    </div>
                     <div class="row well col-md-10 col-md-offset-1 container" style="overflow-y: auto">
                         <h4 style="text-align: center"><?php echo'Observacion:';?></h4> <?php echo $columna['observacion'];?>
                     </div>
@@ -214,8 +214,8 @@ endif;
 
         }
         ?>
-   </section>
- </div>
+    </section>
+</div>
 
 <section>
     <br><br>
@@ -256,7 +256,7 @@ endif;
             <?php
         }
 
-        endif;
+    endif;
     ?>
 </section>
 </body>

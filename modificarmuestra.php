@@ -3,15 +3,7 @@
 <?php include ("head.php");?>
 <?php
 include("conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
-$query_MostrarTitulos = mysqli_query($conexion,"SELECT idreporte, titulo, observacion, fecha FROM reporte ORDER by idreporte DESC limit 1")
-or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
-while($columna_MostrarTitulos = mysqli_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
-{
-    echo '<a href="?reporte='.$columna_MostrarTitulos['idreporte'].'">
-    Modificar este reporte</a> ';   // Mostramos un enlace para modificar cada noticia
-    //$idreporte = $columna_MostrarTitulos['idreporte'];
-    //echo $idreporte;
-}
+
 if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado ejecuta el resto del código
 {
 
@@ -34,48 +26,95 @@ if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado eje
     }
 }
 
-if(isset($_GET['reporte']))
-{
+if(isset($_GET['reporte'])):
     $idreporte = ($_GET['reporte']); // Recibimos el id de la noticia por medio de GET
     $query_NoticiaCompleta = mysqli_query($conexion,"SELECT * FROM reporte LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus WHERE idreporte = '".$idreporte."' LIMIT 1")
     or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
-    $columna_MostrarNoticia = mysqli_fetch_assoc($query_NoticiaCompleta);
-    echo ' 
-    <form action="modificarmuestra.php" method="post"> <!-- Creamos el formulario, utilizando la etiqueta form, cuyo atributo action="" indicará donde se procesará el formulario --> 
-        <div style="text-align: center">Id: ' .$columna_MostrarNoticia['idreporte'].'</div>
-        Título: <input class="form-control" name="titulo" type="text" value="'.$columna_MostrarNoticia['titulo'].'" /> <br/>
-        Autor: <input class="form-control" readonly="readonly" name="autor" type="text" value="'.$columna_MostrarNoticia['autor'].'" /> <br/>
-        
-        Estado: <select class="form-control" name="estatus">
-           ';
-            include ("conexion.php");
-            $registros=mysqli_query($conexion,"select idestatus,nombre from estatus ORDER BY idestatus DESC")
-            or die("Problemas en el select:".mysqli_error($conexion));
-            while ($reg=mysqli_fetch_array($registros)) {
-                echo "<option value=\"$reg[idestatus]\">$reg[nombre]</option>";
-            }
-            echo '
-            </select>
-           Categoria: <select class="form-control" name="categoria">
-           ';
-             include ("conexion.php");
-            $registros=mysqli_query($conexion,"select idcategoria,nombre from categorias ORDER BY idcategoria DESC")
-            or die("Problemas en el select:".mysqli_error($conexion));
-            while ($reg=mysqli_fetch_array($registros)) {
-                echo "<option value=\"$reg[idcategoria]\">$reg[nombre]</option>";
-            }
-            echo '
-            </select>
-        Observacion:  <textarea name="observacion">'.$columna_MostrarNoticia['observacion'].'</textarea>
-        <script>tinyMCE.init({selector: "textarea",branding: false,plugins: "image,paste",paste_data_images: true});</script>
+    $columna_MostrarNoticia = mysqli_fetch_assoc($query_NoticiaCompleta);?>
 
-        <input type="hidden" name="idreporte" value="'.$columna_MostrarNoticia['idreporte'].'" /> <!-- Creamos un campo de texto oculto para pasar el id de la noticia -->
-        <br>
-        <div class="row text-center">
-        <input class="btn btn-warning" type="submit" name="modificar" value="Modificar Reporte" />
+    <!-- Formulario para envío de modificaciones al sistema-->
+    <form class="form" method = "post" action="modificarmuestra.php">
+        <input class="hidden" name="idreporte" id="idreporte" value="<?php echo $columna_MostrarNoticia['idreporte'];?>"/>
+        <div class="col-md-12">
+            <br>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="text-center">Incidencia ID: <?php echo $columna_MostrarNoticia['idreporte'];?></h4>
+                </div>
+                <div class="panel-body">
+                    <!-- Ingreso del titulo-->
+                    <div class="form-group row">
+                        <label for="titulo" class="col-md-2 col-md-offset-2 control-label">Titulo:</label>
+                        <div class="col-md-6">
+                            <input class="form-control" type="text" name="titulo" id="titulo" value="<?php echo $columna_MostrarNoticia['titulo'];?>"/>
+                        </div>
+                    </div>
+                    <!-- Ingreso del autor-->
+                        <div class="form-group row">
+                            <label for="autor" class="col-md-2 col-md-offset-2 control-label">Autor:</label>
+                            <div class="col-md-6">
+                                <input class="form-control" type="text" name="autor" id="autor" value="<?php echo $columna_MostrarNoticia['autor'];?>"/>
+                            </div>
+                        </div>
+                            <!-- Ingreso de la categoría-->
+                                <div class="form-group row">
+                                    <label for="categoria" class="col-md-2 col-md-offset-2 control-label">Categoria:</label>
+                                    <div class="col-md-6">
+                                        <select class="form-control" name="categoria">
+                                        <?php
+                                        include("conexion.php");
+                                        $registros=mysqli_query($conexion,"select idcategoria,nombre from categorias ORDER BY idcategoria DESC")
+                                        or die("Problemas en el select:".mysqli_error($conexion));
+                                        while ($reg=mysqli_fetch_array($registros)) :?>
+                                         <option value="<?php echo $reg['idcategoria']?>"><?php echo $reg['nombre']?></option>
+                                        <?php endwhile;?>
+                                        </select>
+                                    </div>
+                                </div>
+                                <!-- Ingreso de la estado-->
+                    <div class="form-group row">
+                        <label for="estatus" class="col-md-2 col-md-offset-2 control-label">Estado:</label>
+                        <div class="col-md-6">
+                            <select class="form-control" name="estatus">
+                                <?php
+                                include("conexion.php");
+                                $registros=mysqli_query($conexion,"select idestatus,nombre from estatus")
+                                or die("Problemas en el select:".mysqli_error($conexion));
+                                while ($reg=mysqli_fetch_array($registros)) :?>
+                                    <option value="<?php echo $reg['idestatus']?>"><?php echo $reg['nombre']?></option>
+                                <?php endwhile;?>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Observacion-->
+                    <div class="form-group row">
+                        <label for="observacion" class="col-md-2 control-label">Observacion:</label>
+                        <div class="col-md-12">
+                            <textarea name="observacion" rows="10"><?php echo $columna_MostrarNoticia['observacion'];?></textarea>
+                            <script>tinyMCE.init({selector: "textarea",branding: false,plugins: "image,paste",paste_data_images: true});</script>
+                        </div>
+                    </div>
+                    <!-- Boton para enviar datos-->
+                    <div class="panel-footer text-center">
+                        <input class="btn btn-warning" type="submit" name="modificar" value="Modificar Incidencia" />
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-    </form> 
-    ';
+    </form>
+
+<?php endif;
+
+$query_MostrarTitulos = mysqli_query($conexion,"SELECT idreporte, titulo, observacion, fecha FROM reporte ORDER by idreporte DESC limit 1")
+or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
+while($columna_MostrarTitulos = mysqli_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
+{
+    echo '<a href="?reporte='.$columna_MostrarTitulos['idreporte'].'">
+    Modificar esta incidencia</a> ';   // Mostramos un enlace para modificar cada noticia
+    //$idreporte = $columna_MostrarTitulos['idreporte'];
+    //echo $idreporte;
 }
 ?>
 </html>

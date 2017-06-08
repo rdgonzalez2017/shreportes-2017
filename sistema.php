@@ -10,7 +10,7 @@ else:
 endif;
 ?>
 <?php if (isset($_SESSION['nombre'])):?>
-<p class="bounceInRight animated animated" data-wow-duration="1500ms"">
+<p class="bounceInRight">
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
 </p>
 <!-- Conexión con base de datos-->
