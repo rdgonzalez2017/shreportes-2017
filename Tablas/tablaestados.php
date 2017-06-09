@@ -6,7 +6,7 @@
             <tr class="bg-primary text-center">
                 <td><h4>ID</h4></td>
                 <td><h4>Nombre</h4></td>
-                <!--<td><h4>Aciones</h4></td>-->
+                <td><h4>Acción</h4></td>
             </tr>
             </thead>
             <tbody>
@@ -19,18 +19,21 @@
                 <tr class="text-center">
                     <td><h5><?php echo $columna['idestatus']?></h5></td>
                     <td><h4><?php echo $columna['nombre'] ?></h4></td>
-                    <!--
+
                     <td class="text-center">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
+                            <!--<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a href="sistema.php?pag=marcas&idc=<?php// echo base64_encode($columna['idcategoria'])?>">Modificar</a></li>
-                                <li role="separator" class="divider"></li>
-                                <li><a href="sistema.php?pag=marcas">Eliminar</a></li>
-                            </ul>
+                                <li role="separator" class="divider"></li>-->
+                    <form action="controles/eliminaestatus.php" method="post">
+                        <input class="hidden" name="idestatus" value="<?php echo $columna['idestatus']?>">
+                        <input onclick="return confirm('Estás seguro que deseas eliminar este Estatus?');" class="btn btn-danger alert-danger" type="submit" name="eliminar" value="Eliminar" />
+                    </form>
+                    <!--</ul>-->
                         </div>
-                    </td>-->
+                        </td>
                 </tr>
             <?php endwhile;?>
             </tbody>

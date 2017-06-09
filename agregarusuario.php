@@ -14,7 +14,7 @@ endif;
 <body>
 <!-- Formulario para envío de datos del sistema-->
 <form class="form bounceInDown animated" method = "post" action="controles/cargarusuario.php">
-    <div class="col-md-6 col-md-offset-3">
+    <div class="col-md-8 col-md-offset-2">
         <br>
         <div class="panel panel-primary">
             <div class="panel-heading">

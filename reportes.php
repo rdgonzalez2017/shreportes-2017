@@ -83,7 +83,7 @@ endif;
                         echo '
                             <BR> 
                             <!-- Formulario para envío de comentarios-->
-                                <form class="form" name="miFormu" method="post" action="controles/cargarcomentario.php">
+                                <form class="form fadeInRightBig animated" name="miFormu" method="post" action="controles/cargarcomentario.php">
                                     <INPUT TYPE="hidden" NAME="id" VALUE="' . $idreplicacion . '">
                                     <INPUT TYPE="hidden" NAME="idprotegido" VALUE="' . $idreporte . '">
                                     <div class="col-md-6 col-md-offset-3">
@@ -91,8 +91,8 @@ endif;
                                             <div class="panel-heading">
                                                 <p class="text-center">Formulario de Comentarios</p>
                                             </div>
-                                            <!-- Ingreso del titulo-->
                                             <div class="panel-body">
+                                               <!-- Ingreso del Autor-->
                                                 <div class="form-group row">
                                                     <label for="nick" class="col-md-2 control-label">Autor:</label>
                                                     <div class="col-md-8">
@@ -100,11 +100,16 @@ endif;
                                                     </div>
                                                 </div>
                                                 <!-- Ingreso del Autor-->
+                                                <div class="form-group row">
+                                                    <label for="correo" class="col-md-2 control-label">Correo:</label>
+                                                    <div class="col-md-8">
+                                                        <input class="form-control" type="email" name="correo"  required/>
+                                                    </div>
+                                                </div>
                                               <!-- Ingreso del comentario-->
-                                            <div class="panel-body">
                                                 <div class="form-group row">
                                                     <label for="comentario" class="col-md-3 control-label">Comentario:</label>
-                                                    <div class="col-md-10">
+                                                    <div class="col-md-12">
                                                         <textarea name="comentario" type="text" required class="form-control" rows="3"></textarea>
                                                     </div>
                                                 </div>
@@ -205,43 +210,8 @@ endif;
 
 <section>
     <br><br>
-    <!-- Seccion que muestra los comentarios-->
-    <?php
-    $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-    if(!empty($idreporte)):
-        $resultComen = mysqli_query($conexion,"SELECT *  FROM comentarios WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' ORDER BY id DESC");
-        while($rowComen = mysqli_fetch_assoc($resultComen))
-        {
-            ?>
-            <div class="col-md-6 col-md-offset-3">
-                <div class="panel panel-info">
-                    <!-- Muestra Autor del comentario-->
-                    <div class="panel-heading text-center">
-                        <div> Autor: <?php echo $rowComen["nick"]; ?> </div>
-                    </div>
-                    <div class="panel-body">
-
-                        <!-- Muestra fecha del comentario-->
-                        <div class="form-group row">
-                            <label for="fecha" class="col-md-4 control-label">Fecha:</label>
-                                <div class="col-md-4 col-md-pull-3">
-                                <div> <?php echo $rowComen["fecha"]; ?> </div>
-                            </div>
-                        </div>
-                        <!-- Muestra descripción del comentario-->
-                        <div class="form-group row">
-                            <label for="comentario" class="col-md-3 control-label">Comentario:</label>
-                            <div class="col-md-12">
-                                <textarea class="form-control" style="resize: none" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <?php
-        }
-    endif;
-    ?>
+    <!-- Muestra los comentarios-->
+    <?php include ("muestracomentario.php")?>
 </section>
 </body>
 <?php include("footer.php");?>

@@ -6,7 +6,7 @@ if(isset($_POST['eliminar'])):
     if($query_eliminar)
     {
         //header("Location:eliminareportes.php");
-        //echo "<script>location.href='../agregarusuario.php';</script>";
+        echo "<script>location.href='../agregarusuario.php';</script>";
 
         echo 'El usuario se eliminó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
     }

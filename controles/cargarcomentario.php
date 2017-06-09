@@ -67,8 +67,8 @@ $reporte = $_REQUEST['id'];
 $idprotegido = $_REQUEST['idprotegido'];
 if(!empty($_REQUEST['id'])):  // Comprobamos que los valores recibidos no son NULL
     include ("../conexion.php");
-    $query_comentarios = mysqli_query($conexion, "insert into comentarios(id,idreporte,nick,comentario,fecha) 
-    SELECT NULL, '$_REQUEST[id]', '$nick', '$comentario', now()
+    $query_comentarios = mysqli_query($conexion, "insert into comentarios(id,idreporte,nick,correo,comentario,fecha) 
+    SELECT NULL, '$_REQUEST[id]', '$nick', '$_REQUEST[correo]', '$comentario', now()
     FROM reporte where idreporte = $reporte LIMIT 1")
     or die("Problemas al insertar los datos del comentario" . mysqli_error($conexion));
     mysqli_close($conexion);
