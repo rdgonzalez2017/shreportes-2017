@@ -17,7 +17,7 @@ endif;
 <body>
 <!-- Formulario para envío de datos del sistema-->
 <form class="form" method = "post" action="controles/validarmuestra.php">
-
+    <input type="hidden" name="idusuario" value="<?php if (isset($_SESSION['idusuario'])) {echo $_SESSION['idusuario'];}?>"/>
     <div class="container flipInY animated animated" data-wow-duration="1500ms"">
         <div class="col-md-10 col-md-offset-1">
             <br>

@@ -63,6 +63,7 @@ $nick = ob_get_contents();
 ob_end_clean();
 
 //INSERCIÓN DE DATOS
+$correoautor = $_REQUEST['correoautor'];
 $reporte = $_REQUEST['id'];
 $idprotegido = $_REQUEST['idprotegido'];
 if(!empty($_REQUEST['id'])):  // Comprobamos que los valores recibidos no son NULL
@@ -72,6 +73,7 @@ if(!empty($_REQUEST['id'])):  // Comprobamos que los valores recibidos no son NU
     FROM reporte where idreporte = $reporte LIMIT 1")
     or die("Problemas al insertar los datos del comentario" . mysqli_error($conexion));
     mysqli_close($conexion);
+    //mail("ronny.g@servitepuy.com","asuntillo","Este es el cuerpo del mensaje")
     ?>
     <script>location.href='../reportes.php?reporte=<?php echo $idprotegido;?>'</script>
     <?php

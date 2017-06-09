@@ -25,7 +25,7 @@ endif;
             {
                 $idreporte = $_GET["reporte"];
                 $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-                $select = "SELECT *, estatus.nombre as nombrestatus, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1";
+                $select = "SELECT *, estatus.nombre as nombrestatus, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN usuarios ON reporte.idusuario = usuarios.idusuario WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1";
                 $query_reportes = mysqli_query($conexion,"$select") // Ejecutamos la consulta
                 or die("Problemas en el select:".mysqli_error($conexion));
                 //$query_reportes = mysql_query("SELECT * FROM reporte WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1"); // Ejecutamos la consulta
@@ -39,6 +39,7 @@ endif;
                         $fecha =  $columna['fecha'];
                         $observacion =  $columna['observacion'];
                         $idreplicacion =  $columna['idreporte'];
+                        $correoautor =  $columna['correo'];
                         $idestatus =  $columna['idestatus'];
                         $estatus =  $columna['nombrestatus'];
                         //Panel que muestra el Reporte Final:
@@ -82,8 +83,10 @@ endif;
                     if ($idestatus <> 1) {
                         echo '
                             <BR> 
+                                                 
                             <!-- Formulario para envío de comentarios-->
                                 <form class="form fadeInRightBig animated" name="miFormu" method="post" action="controles/cargarcomentario.php">
+                                    <INPUT TYPE="hidden" NAME="correoautor" VALUE="' . $correoautor . '">
                                     <INPUT TYPE="hidden" NAME="id" VALUE="' . $idreplicacion . '">
                                     <INPUT TYPE="hidden" NAME="idprotegido" VALUE="' . $idreporte . '">
                                     <div class="col-md-6 col-md-offset-3">
@@ -175,9 +178,6 @@ endif;
                                 <td><h4><?php echo $columna['nombrestatus'] ?></h4></td>
                                 <td><h4><?php echo $columna['fecha'] ?></h4></td>
                                 <td><a class="btn btn-warning alert-warning" href="?reporte=<?php echo $idprotegido;?>">Mostrar</a>
-
-
-
                     <td class="text-center">
                         <div class="btn-group">
                             <!--<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
