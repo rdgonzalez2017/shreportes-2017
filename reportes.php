@@ -42,9 +42,16 @@ endif;
                         $correoautor =  $columna['correo'];
                         $idestatus =  $columna['idestatus'];
                         $estatus =  $columna['nombrestatus'];
+                        //Con esto se obtiene el Link de la página:
+                        $host= $_SERVER["HTTP_HOST"];
+                        $url= $_SERVER["REQUEST_URI"];
+                        ob_start();
+                        echo $host,$url;
+                        $Link = ob_get_contents();
+                        ob_end_clean();
                         //Panel que muestra el Reporte Final:
                         echo'
-                             <div class="panel panel-primary container col-md-8 col-md-offset-2 flipInX animated animated" data-wow-duration="3000ms"">
+                             <div class="panel panel-primary container col-md-8 col-md-offset-2 rotateIn animated animated" data-wow-duration="3000ms"">
                                 
                                     <div class="panel-heading row" style="background: orange">
                                         <h4 class="text-center">Incidencia</h4>
@@ -80,15 +87,16 @@ endif;
                                         </div>
                        
                                             ';
-                    if ($idestatus <> 1) {
-                        echo '
-                            <BR> 
+                    if ($idestatus <> 1):?>
+
+                            <BR>
                                                  
                             <!-- Formulario para envío de comentarios-->
                                 <form class="form fadeInRightBig animated" name="miFormu" method="post" action="controles/cargarcomentario.php">
-                                    <INPUT TYPE="hidden" NAME="correoautor" VALUE="' . $correoautor . '">
-                                    <INPUT TYPE="hidden" NAME="id" VALUE="' . $idreplicacion . '">
-                                    <INPUT TYPE="hidden" NAME="idprotegido" VALUE="' . $idreporte . '">
+                                    <INPUT TYPE="hidden" NAME="link" VALUE="<?php echo $Link;?>">
+                                    <INPUT TYPE="hidden" NAME="correoautor" VALUE="<?php echo $correoautor?>">
+                                    <INPUT TYPE="hidden" NAME="id" VALUE="<?php echo $idreplicacion?>">
+                                    <INPUT TYPE="hidden" NAME="idprotegido" VALUE="<?php echo $idreporte?>">
                                     <div class="col-md-6 col-md-offset-3">
                                         <div class="panel panel-primary">
                                             <div class="panel-heading">
@@ -99,14 +107,14 @@ endif;
                                                 <div class="form-group row">
                                                     <label for="nick" class="col-md-2 control-label">Autor:</label>
                                                     <div class="col-md-8">
-                                                        <input class="form-control" type="text" name="nick" id="nick"  required/>
+                                                        <input class="form-control" type="text" value="<?php if (isset($_SESSION['nombre'])) {echo $_SESSION['nombre'];}?>" required/>
                                                     </div>
                                                 </div>
-                                                <!-- Ingreso del Autor-->
+                                                <!-- Ingreso del Correo-->
                                                 <div class="form-group row">
                                                     <label for="correo" class="col-md-2 control-label">Correo:</label>
                                                     <div class="col-md-8">
-                                                        <input class="form-control" type="email" name="correo"  required/>
+                                                        <input class="form-control" type="email" name="correocliente" value="<?php if (isset($_SESSION['correo'])) {echo $_SESSION['correo'];}?>" required/>
                                                     </div>
                                                 </div>
                                               <!-- Ingreso del comentario-->
@@ -125,8 +133,9 @@ endif;
                                     </div>
                                     </div>
                                 </form>
-                        ';
-                    }else echo '';
+
+                    <?php endif;?>
+<?php
                 }
             }
             else

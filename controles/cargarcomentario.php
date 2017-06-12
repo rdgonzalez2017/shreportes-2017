@@ -62,22 +62,49 @@ echo $_POST[$keyNick];
 $nick = ob_get_contents();
 ob_end_clean();
 
+//$correoautor = $_REQUEST['correoautor'];
+$link = $_REQUEST['link'];
+
+
 //INSERCIÓN DE DATOS
-$correoautor = $_REQUEST['correoautor'];
 $reporte = $_REQUEST['id'];
 $idprotegido = $_REQUEST['idprotegido'];
+$correocliente = $_REQUEST['correocliente'];
+$correoautor = $_REQUEST['correoautor'];
+session_start();
+
+
 if(!empty($_REQUEST['id'])):  // Comprobamos que los valores recibidos no son NULL
     include ("../conexion.php");
-    $query_comentarios = mysqli_query($conexion, "insert into comentarios(id,idreporte,nick,correo,comentario,fecha) 
-    SELECT NULL, '$_REQUEST[id]', '$nick', '$_REQUEST[correo]', '$comentario', now()
+    $insert_comentarios = mysqli_query($conexion, "insert into comentarios(id,idreporte,nick,correo,comentario,fecha) 
+    SELECT NULL, $reporte, '$nick', '$_REQUEST[correocliente]', '$comentario', now()
     FROM reporte where idreporte = $reporte LIMIT 1")
     or die("Problemas al insertar los datos del comentario" . mysqli_error($conexion));
-    mysqli_close($conexion);
-    //mail("ronny.g@servitepuy.com","asuntillo","Este es el cuerpo del mensaje")
-    ?>
-    <script>location.href='../reportes.php?reporte=<?php echo $idprotegido;?>'</script>
-    <?php
-    //header("Location:../reportes.php?reporte=" . $idprotegido);
 endif;
+
+
+    $select_comentarios = mysqli_query($conexion,"Select correo from comentarios where idreporte = $reporte and correo <> '$correoautor' ORDER by correo ASC limit 1  ")
+    or die("Problemas en el select del comentario" . mysqli_error($conexion));
+    mysqli_close($conexion);
+    while($columna = mysqli_fetch_array($select_comentarios)):
+    $correocliente =  $columna['correo'];
+
+    if (isset($_SESSION['nombre'])) {
+        echo $correocliente;
+    }else{
+    echo $correoautor;
+    }
+        //mail("$correocliente","SH Incidencias","Tiene un nuevo comentario en: $link")
+    //}else {
+        //mail("$correoautor","SH Incidencias","Tiene un nuevo comentario en: $link")
+    //}
+        ?>
+        <script>location.href='../reportes.php?reporte=<?php echo $idprotegido;?>'</script>
+        <?php
+
+endwhile;
+
+
+    //header("Location:../reportes.php?reporte=" . $idprotegido);
 ?>
 
