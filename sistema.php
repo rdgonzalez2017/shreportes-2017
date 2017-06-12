@@ -10,20 +10,20 @@ else:
 endif;
 ?>
 <?php if (isset($_SESSION['nombre'])):?>
-<p class="bounceInRight animated animated" data-wow-duration="1500ms"">
+<p class="bounceInRight">
 <?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
 </p>
 <!-- Conexión con base de datos-->
 <body>
 <!-- Formulario para envío de datos del sistema-->
 <form class="form" method = "post" action="controles/validarmuestra.php">
-
+    <input type="hidden" name="idusuario" value="<?php if (isset($_SESSION['idusuario'])) {echo $_SESSION['idusuario'];}?>"/>
     <div class="container flipInY animated animated" data-wow-duration="1500ms"">
         <div class="col-md-10 col-md-offset-1">
             <br>
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <p class="text-center">Ingresar Datos</p>
+                    <h4 class="text-center">Ingresar Datos</h4>
                 </div>
                 <!-- Ingreso del titulo-->
                 <div class="panel-body">
@@ -64,7 +64,7 @@ endif;
                             <label for="observacion" class="col-md-2 control-label">Observacion:</label>
                             <div class="col-md-12" >
                                 <textarea id="textarea" name="observacion" style="resize:none"  rows="10" aria-required="true"></textarea>
-                                <script>tinyMCE.init({selector: "textarea",branding: false,plugins: "image,paste",paste_data_images: true});</script>
+                                <script>tinyMCE.init({selector: "textarea",branding: false,plugins: "image,paste",paste_data_images: true,language : "es"});</script>
                             </div>
                         </div>
 
@@ -86,7 +86,6 @@ endif;
 </body>
 
 <?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
-    <br><button class="btn btn-info btn-sm navbar-btn col-md-offset-1" onclick = "location='Index.php'">Iniciar Sesión</button>
 <?php endif; ?>
 </html>
 

@@ -10,69 +10,89 @@
         include ("navbar/navbarindex.php");
     endif;
     ?>
-    <?php if (isset($_SESSION['nombre'])):?>
+    <?php //if (isset($_SESSION['nombre'])):?>
     <?php if (isset($_SESSION['nombre'])) {echo "Sesión Abierta: ".$_SESSION['nombre'];} ?>
 
 </div>
 <body>
 <div class="container col-md-6 col-md-offset-3">
-<?php
-include("conexi.php"); // Incluimos nuestro archivo de conexión con la base de datos
-if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado ejecuta el resto del código
-{
+    <?php
+    include ("conexion.php");
+     if (isset($_SESSION['nombre'])):
+         if (isset($_SESSION['idusuario'])) {
+             ob_start();
+             echo $_SESSION['idusuario'];
+             $idusuario = ob_get_contents();
+             ob_end_clean();
+         }
+     // Recibimos el id de la noticia por medio de GET
+    $query_usuarios = mysqli_query($conexion,"SELECT * FROM usuarios WHERE idusuario = '".$idusuario."'")
+    or die("Problemas en el insert principal" . mysqli_error($conexion));
+         mysqli_close($conexion);// Ejecutamos la consulta
+    while($columna = mysqli_fetch_assoc($query_usuarios)):
+    ?>
+    <!-- Formulario para envío de modificaciones al sistema-->
+    <form class="form rotateIn animated" method = "post" action="controles/actualizarusuario.php">
+        <input class="hidden" name="idusuario" value="<?php echo $columna['idusuario'];?>"/>
+        <div class="col-md-12">
+            <br>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="text-center">Id de Usuario: <?php echo $columna['idusuario'];?></h4>
+                </div>
+                <div class="panel-body">
+                    <!-- Ingreso del Nombre-->
+                    <div class="form-group row">
+                        <label for="titulo" class="col-md-2 col-md-offset-2 control-label">Nombre:</label>
+                        <div class="col-md-6">
+                            <input class="form-control" type="text" name="nombre" value="<?php echo $columna['nombre'];?>"/>
+                        </div>
+                    </div>
+                    <!-- Ingreso del Correo-->
+                    <div class="form-group row">
+                        <label for="titulo" class="col-md-2 col-md-offset-2 control-label">Correo:</label>
+                        <div class="col-md-6">
+                            <input class="form-control" type="text" name="correo" value="<?php echo $columna['correo'];?>"/>
+                        </div>
+                    </div>
+                    <!-- Ingreso del autor-->
+                    <div class="form-group row">
+                        <label for="autor" class="col-md-2 col-md-offset-2 control-label">Clave:</label>
+                        <div class="col-md-6">
+                            <input class="form-control" type="password" name="clave" value="<?php echo $columna['clave'];?>"/>
+                        </div>
+                    </div>
+                    <!-- Boton para enviar datos-->
+                    <div class="panel-footer text-center">
+                        <input class="btn btn-warning" type="submit" name="modificar" value="Modificar Usuario" />
+                    </div>
+                </div>
 
-    $idusuario = (int) mysql_real_escape_string($_POST['idusuario']);
-    $nombre = mysql_real_escape_string($_POST['nombre']);
-    $correo = mysql_real_escape_string($_POST['correo']);
-    $clave = (int) mysql_real_escape_string($_POST['clave']);
-    $query_modificar = mysql_query("UPDATE usuarios SET nombre = '".$nombre."', correo = '".$correo."', clave = '".$clave."' WHERE idusuario = '".$idusuario."'"); // Ejecutamos la consulta para actualizar el registro en la base de datos
-    if($query_modificar)
-    {
-        echo 'El usuario se modificó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
+            </div>
 
-    }
-    else
-    {
-        echo 'El usuario no se modificó'; // Si la consulta no se ejecutó bien, muestra este mensaje
-    }
-}
-
-if(isset($_GET['usuario']))
-{
-    $idusuario = (int) mysql_real_escape_string($_GET['usuario']); // Recibimos el id de la noticia por medio de GET
-    $query_NoticiaCompleta = mysql_query("SELECT * FROM usuarios WHERE idusuario = '".$idusuario."'"); // Ejecutamos la consulta
-    $columna_MostrarNoticia = mysql_fetch_assoc($query_NoticiaCompleta);
-    echo ' 
-    <form class="text-center" action="modificarusuario.php" method="post"> <!-- Creamos el formulario, utilizando la etiqueta form, cuyo atributo action="" indicará donde se procesará el formulario --> 
-        ID: <input class="form-control text-center" readonly="readonly" name="idusuario" type="text" value="'.$columna_MostrarNoticia['idusuario'].'" /> <br/>
-        Nombre: <input class="form-control text-center" name="nombre" type="text" value="'.$columna_MostrarNoticia['nombre'].'" /> <br/>
-        Correo: <input class="form-control text-center" name="correo" type="email" value="'.$columna_MostrarNoticia['correo'].'" /> <br/>
-        Clave: <input class="form-control text-center" name="clave" type="password" value="'.$columna_MostrarNoticia['clave'].'" /> <br/>
-        <input class="btn btn-warning" type="submit" name="modificar" value="Modificar Usuario" />
         </div>
-    </form> 
-    <br>
-    ';
-}
+    </form>
+        <?php endwhile?>
+    <?php endif;?>
+<?php
+include("conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
+
+if (isset($_SESSION['nombre'])) {
+    ob_start();
+    echo $_SESSION['nombre'];
+    $idusuario = ob_get_contents();
+    ob_end_clean();
+    }
+
 
 if (isset($_SESSION['nombre']))
 {$sessionusuario = $_SESSION['nombre'];}
-$query_MostrarTitulos = mysql_query("SELECT * from usuarios WHERE nombre = '".$sessionusuario."'"); // Ejecutamos la consulta
-while($columna_MostrarTitulos = mysql_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
-{
-    echo '<div class="row well text-center">';
-    echo '<a href="?usuario='.$columna_MostrarTitulos['idusuario'].'">
-    Modificar mi Usuario:</a> ';   // Mostramos un enlace para modificar cada noticia
-    $nombreusuario = $columna_MostrarTitulos['nombre'];
 
-    echo $nombreusuario;
-    echo '</div>';
-}
 ?>
 </div>
 </body>
 <?php
-else: echo 'Debe Iniciar Sesión para entrar a esta página';
-endif;
+//else: echo 'Debe Iniciar Sesión para entrar a esta página';
+//endif;
 ?>
 </html>

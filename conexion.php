@@ -1,4 +1,8 @@
 <?php
-$conexion=mysqli_connect("localhost","root","","multiser_shreportes") or
+$servidor = "localhost";
+$Usuario = "root";
+$clave = "";
+$DB  = "multiser_shreportes";
+$conexion=mysqli_connect("$servidor","$Usuario","$clave","$DB") or
 die("Problemas con la conexión");
 ?>

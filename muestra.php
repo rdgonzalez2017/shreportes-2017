@@ -4,7 +4,7 @@
 <?php include ("head.php")?>
 <?php
 if (isset($_SESSION['nombre'])):
-    include ("navbar/navbarsistema.php");
+    include ("navbar/navbarmuestra.php");
 else:
     include ("navbar/navbarindex.php");
 endif;
@@ -20,17 +20,16 @@ endif;
     ob_end_clean();
     //if($VariableURL<50){
     if (isset($_SESSION['nombre'])and $VariableURL<50){
-        include ("modificareporte.php");
+        include ("modificarmuestra.php");
     }
     ?>
 </div>
-
- <div class="col-md-12 flipInY animated animated" data-wow-duration="500ms"">
+ <div class="col-md-12">
 <!-- Muestra Previa del Reporte -->
     <section>
         <!-- Seccion que muestra la publicacion final del reporte-->
         <?php
-        include("conexi.php"); // Incluimos nuestro archivo de conexión con la base de datos
+        include("conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
         if(isset($_GET['reporte']))
         {
             if(!empty($_GET['reporte'])) // Si el valor de "noticia" no es NULL, continua con el proceso
@@ -38,11 +37,12 @@ endif;
                 $idreporte = $_GET["reporte"];
                 $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
                 $select = "SELECT *, estatus.nombre as nombrestatus, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1";
-                $query_reportes = mysql_query("$select"); // Ejecutamos la consulta
+                $query_reportes = mysqli_query($conexion,"$select")
+                or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
                 //$query_reportes = mysql_query("SELECT * FROM reporte WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1"); // Ejecutamos la consulta
-                if(mysql_num_rows($query_reportes) > 0) // Si existe la noticia, la muestra
+                if(mysqli_num_rows($query_reportes) > 0) // Si existe la noticia, la muestra
                 {
-                    while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
+                    while($columna = mysqli_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
                     {
                         $categoria =  $columna['nombrecategoria'];
                         $autor =  $columna['autor'];
@@ -55,10 +55,10 @@ endif;
                         //Panel que muestra el Reporte Final:
                         echo'
                         
-                             <div class="panel panel-primary container col-md-6 col-md-offset-3 bounceInRight animated animated" data-wow-duration="3000ms"">
+                             <div class="panel panel-primary container col-md-6 col-md-offset-3 fadeInLeftBig animated">
                                 
                                     <div class="panel-heading row" style="background: orange">
-                                        <p class="text-center">Reporte</p>
+                                        <h4 class="text-center">Reporte de Incidencia</h4>
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
@@ -87,7 +87,7 @@ endif;
                            
                                         <div class="row">
                                             <label for="observacion" class="col-md-10 col-md-offset-1 control-label">Observacion:</label><br>
-                                            <div class="col-md-10 col-md-offset-1 well" style="overflow-y: auto;">'; echo $observacion; echo' </div>
+                                            <div class="col-md-10 col-md-offset-1 well fadeInRight animated" style="overflow-y: auto;">'; echo $observacion; echo' </div>
 
                                         </div>
                        
@@ -97,16 +97,16 @@ endif;
                             echo '
                             <BR> 
                             <!-- Formulario para envío de comentarios-->
-                                <form class="form" name="miFormu" method="post" action="controles/cargarcomentario.php">
+                                <form class="form fadeInRightBig animated" name="miFormu" method="post" action="controles/cargarcomentario.php">
                                     <INPUT TYPE="hidden" NAME="id" VALUE="' . $idreplicacion . '">
                                     <INPUT TYPE="hidden" NAME="idprotegido" VALUE="' . $idreporte . '">
-                                    <div class="col-md-4 col-md-offset-4">
+                                    <div class="col-md-6 col-md-offset-3">
                                         <div class="panel panel-primary">
                                             <div class="panel-heading">
                                                 <p class="text-center">Formulario de Comentarios</p>
                                             </div>
-                                            <!-- Ingreso del titulo-->
                                             <div class="panel-body">
+                                               <!-- Ingreso del Autor-->
                                                 <div class="form-group row">
                                                     <label for="nick" class="col-md-2 control-label">Autor:</label>
                                                     <div class="col-md-8">
@@ -114,8 +114,13 @@ endif;
                                                     </div>
                                                 </div>
                                                 <!-- Ingreso del Autor-->
+                                                <div class="form-group row">
+                                                    <label for="correo" class="col-md-2 control-label">Correo:</label>
+                                                    <div class="col-md-8">
+                                                        <input class="form-control" type="email" name="correo"  required/>
+                                                    </div>
+                                                </div>
                                               <!-- Ingreso del comentario-->
-                                            <div class="panel-body">
                                                 <div class="form-group row">
                                                     <label for="comentario" class="col-md-3 control-label">Comentario:</label>
                                                     <div class="col-md-12">
@@ -137,7 +142,7 @@ endif;
                 }
                 else
                 {
-                    echo 'Error'; // Si no, muestra un error
+                    echo ''; // Si no, muestra un error
                 }
             }
             else
@@ -149,86 +154,27 @@ endif;
         else
         {
             if (isset($_SESSION['nombre'])):
-            $select = "SELECT *, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus order by idreporte desc limit 1";
-            $query_reportes = mysql_query("$select"); // Ejecutamos la consulta
-            $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-            while($columna = mysql_fetch_assoc($query_reportes)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
-            {
-                $idprotegido=md5($clave.$columna['idreporte']);
-                echo'<div class="row well col-md-10 col-md-offset-1 container" style="overflow-y: auto">';
-                echo'<div style="text-align: center">';echo'Vista Previa del Reporte:';echo'</div>';
-                echo 'Id de Reporte: '; echo $columna['idreporte']; echo'<br>';
-                echo 'Estado: '; echo $columna['nombre'];echo'<br>';
-                echo 'Titulo: '; echo $columna['titulo'];echo'<br>';
-                echo 'Fecha: '; echo $columna['fecha'];echo'<br>';
-                echo 'Autor: '; echo $columna['autor'];echo'<br>';
-                echo 'Categoria: '; echo $columna['nombrecategoria'];echo'<br>';
-                echo'Observacion:'; echo $columna['observacion'];
-                echo '
-                </div>';
-                echo'<div class="row  col-md-10 col-md-offset-1">';
-               echo '
-                <div class="row text-center">
-                Si todo está bien, presione el botón:
-                <br>
-                <a class="btn btn-success" href="?reporte=' .$idprotegido.'">Publicar</a><br><br>
-                 </div>
-                 ';
-                echo '<div class="row col-md-2">';
-                 echo'</div>
-                 ';
-                echo ' 
-         ';
-                //echo 'Titulo del reporte: ';
-                // echo $columna['titulo'];
-            }
+
+            ?>
+                <!-- Muestra la Vista Previa del Reporte-->
+            <?php include ("tablas/tablareportes2.php");?>
+
+                <!-- Final de Validación de usuario-->
+                <?php
             else: echo"Debe iniciar sesión para ingresar a esta página";
             endif;
+
         }
         ?>
-
-    </section>
+   </section>
  </div>
-</body>
-<footer>
+
+<section>
     <br><br>
-    <!-- Seccion de comentarios-->
-    <?php
-    if(!empty($idreporte)):
-        $resultComen = mysql_query("SELECT *  FROM comentarios WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' ORDER BY id DESC");
-        while($rowComen = mysql_fetch_assoc($resultComen))
-        {
-            ?>
-            <div class="col-md-6 col-md-offset-3">
-                <div class="panel panel-danger">
-                    <!-- Muestra Autor del comentario-->
-                    <div class="panel-heading text-center">
-                        <div> Autor: <?php echo $rowComen["nick"]; ?> </div>
-                    </div>
-                    <div class="panel-body">
+    <!-- Muestra los comentarios-->
+    <?php include ("muestracomentario.php")?>
 
-                        <!-- Muestra fecha del comentario-->
-                        <div class="form-group row">
-                            <label for="fecha" class="col-md-2 control-label">Fecha:</label>
-                            <div class="col-md-8">
-                                <div> <?php echo $rowComen["fecha"]; ?> </div>
-                            </div>
-                        </div>
-                        <!-- Muestra descripción del comentario-->
-                        <div class="form-group row">
-                            <label for="comentario" class="col-md-3 control-label">Comentario:</label>
-                            <div class="col-md-8">
-                                <textarea class=" col-md-8 form-control" style="resize: none" readonly="readonly" name="observacion" rows="5"> <?php echo $rowComen["comentario"]; ?>  </textarea>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <?php
-        }
-
-        endif;
-    ?>
-</footer>
+</section>
+</body>
+<?php include("footer.php");?>
 </html>

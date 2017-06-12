@@ -11,7 +11,8 @@ if ($reg=mysqli_fetch_array($registros))
     $_SESSION['clave']=$reg['clave'];
     if (isset($_SESSION['usuario']))
     {
-        header('location:../sistema.php');
+        //header('location:../sistema.php');
+        echo "<script>location.href='../sistema.php';</script>";
     } else {
         echo "No tiene permitido visitar esta página.";
     }
