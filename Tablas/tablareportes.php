@@ -3,7 +3,7 @@
 
 
 <div class="row">
-    <div class="col-md-12 table-responsive flipInX animated animated" data-wow-duration="500ms"">
+    <div class="col-md-12 table-responsive rotateIn animated" data-wow-duration="500ms"">
         <table id="example"  class="table table-bordered table-hover table-striped">
             <caption class="text-center"><h3>Modificación de Incidencias</h3></caption>
             <thead>

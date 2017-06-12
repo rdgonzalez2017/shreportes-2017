@@ -41,7 +41,7 @@ if(isset($_GET['reporte'])):
     $columna_MostrarNoticia = mysqli_fetch_assoc($query_NoticiaCompleta);
     ?>
     <!-- Formulario para envío de modificaciones al sistema-->
-    <form class="form bounceInDown animated" method = "post" action="modificacionreportes.php">
+    <form class="form" method = "post" action="modificacionreportes.php">
         <input class="hidden" name="idreporte" id="idreporte" value="<?php echo $columna_MostrarNoticia['idreporte'];?>"/>
         <div class="col-md-12">
             <br>
