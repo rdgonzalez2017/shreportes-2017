@@ -5,7 +5,7 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><button class="btn btn-info btn-sm navbar-btn" onclick = "location='reportes.php'">Ver Incidencias</button></li>
+                <li><button class="btn btn-info btn-sm navbar-btn alert-info" onclick = "location='reportes.php'">Ver Incidencias</button></li>
                 <li><a href='logout.php'><span class="glyphicon glyphicon-log-in"></span> Cierre de Sesión</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
