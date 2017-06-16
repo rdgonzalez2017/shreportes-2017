@@ -10,16 +10,13 @@
         include ("navbar/navbarindex.php");
     endif;
     ?>
-    <?php //if (isset($_SESSION['nombre'])):?>
-    <?php if (isset($_SESSION['nombre'])) {echo "Sesión Abierta: ".$_SESSION['nombre'];} ?>
-
+    <?php if (isset($_SESSION['nombre'])):?>
 </div>
 <body>
 <div class="container col-md-6 col-md-offset-3">
     <?php
     include ("conexion.php");
-     if (isset($_SESSION['nombre'])):
-         if (isset($_SESSION['idusuario'])) {
+             if (isset($_SESSION['idusuario'])) {
              ob_start();
              echo $_SESSION['idusuario'];
              $idusuario = ob_get_contents();
@@ -43,9 +40,16 @@
                 <div class="panel-body">
                     <!-- Ingreso del Nombre-->
                     <div class="form-group row">
-                        <label for="titulo" class="col-md-2 col-md-offset-2 control-label">Nombre:</label>
+                        <label for="nombre" class="col-md-2 col-md-offset-2 control-label">Usuario:</label>
                         <div class="col-md-6">
-                            <input class="form-control" type="text" name="nombre" value="<?php echo $columna['nombre'];?>"/>
+                            <input class="form-control" type="text" name="nombre" id="nombre" value="<?php echo $columna['nombre'];?>"/>
+                        </div>
+                    </div>
+                    <!-- Ingreso del Nombre-->
+                    <div class="form-group row">
+                        <label for="nombrecompleto" class="col-md-2 col-md-offset-2 control-label">Nombre:</label>
+                        <div class="col-md-6">
+                            <input class="form-control" type="text" name="nombrecompleto" value="<?php echo $columna['nombrecompleto'];?>"/>
                         </div>
                     </div>
                     <!-- Ingreso del Correo-->
@@ -64,7 +68,7 @@
                     </div>
                     <!-- Boton para enviar datos-->
                     <div class="panel-footer text-center">
-                        <input class="btn btn-warning" type="submit" name="modificar" value="Modificar Usuario" />
+                        <input class="btn btn-warning" type="submit" name="modificar" value="Modificar" />
                     </div>
                 </div>
 
@@ -73,7 +77,8 @@
         </div>
     </form>
         <?php endwhile?>
-    <?php endif;?>
+     <?php else: echo 'Debe Iniciar Sesión para entrar a esta página.';
+        endif;?>
 <?php
 include("conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
 
@@ -91,8 +96,5 @@ if (isset($_SESSION['nombre']))
 ?>
 </div>
 </body>
-<?php
-//else: echo 'Debe Iniciar Sesión para entrar a esta página';
-//endif;
-?>
+
 </html>

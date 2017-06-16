@@ -46,6 +46,7 @@ if($row = mysqli_fetch_array($result)):
         $_SESSION['idusuario'] = $row['idusuario'];
         $_SESSION['tipo'] = $row['idtipodeusuario'];
         $_SESSION['nombre'] = $usuario;
+        $_SESSION['nombrecompleto'] = $row['nombrecompleto'];
         $_SESSION['correo'] = $row['correo'];
         //header("Location:../sistema.php");
             echo "<script>location.href='../sistema.php';</script>";

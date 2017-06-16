@@ -10,7 +10,6 @@ else:
 endif;
 ?>
 <?php if (isset($_SESSION['nombre'])):?>
-<?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
 <body>
 <!-- Formulario para envío de datos del sistema-->
 <form class="form bounceInDown animated" method = "post" action="controles/cargarusuario.php">
@@ -38,15 +37,21 @@ endif;
                         </select>
                     </div>
                 </div>
-                <!-- Ingreso del nombre-->
+                <!-- Nombre de Usuario-->
                 <div class="form-group row">
-                    <label for="nombre" class="col-md-2 control-label">Nombre:</label>
+                    <label for="nombre" class="col-md-2 control-label">Usuario:</label>
                     <div class="col-md-8">
                         <input class="form-control" type="text" name="nombre" id="nombre"  required/>
                     </div>
                 </div>
-                <!-- Ingreso del nombre-->
-                <div class="panel-body">
+                <!-- Nombre Completo-->
+                <div class="form-group row">
+                    <label for="nombrecompleto" class="col-md-2 control-label">Nombre:</label>
+                    <div class="col-md-8">
+                        <input class="form-control" type="text" name="nombrecompleto" required/>
+                    </div>
+                </div>
+                <!-- Correo del usuario-->
                     <div class="form-group row">
                         <label for="correo" class="col-md-2 control-label">Correo:</label>
                         <div class="col-md-8">
@@ -54,7 +59,6 @@ endif;
                         </div>
                     </div>
                     <!-- Ingreso de la clave-->
-                    <div class="panel-body">
                         <div class="form-group row">
                             <label for="correo" class="col-md-2 control-label">Clave:</label>
                             <div class="col-md-8">

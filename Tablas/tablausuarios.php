@@ -1,25 +1,27 @@
 <div class="row">
-    <div class="col-md-12 table-responsive rotateIn animated" data-wow-duration="500ms"">
+    <div class="col-md-10 col-md-offset-1 table-responsive rotateIn animated" data-wow-duration="500ms"">
         <table id="example"  class="table table-bordered table-hover table-striped">
             <caption class="text-center"><h3>Listado de Usuarios</h3></caption>
             <thead>
             <tr class="bg-primary text-center">
                 <td><h4>ID</h4></td>
+                <td><h4>Usuario</h4></td>
                 <td><h4>Nombre</h4></td>
                 <td><h4>Correo</h4></td>
-                <td><h4>Aciones</h4></td>
+                <td><h4>Acción</h4></td>
             </tr>
             </thead>
             <tbody>
             <?php
             include("conexion.php");
-            $query_reportes = mysqli_query($conexion, "select * from usuarios ORDER BY idusuario DESC ")
+            $query_reportes = mysqli_query($conexion, "select * from usuarios ORDER BY idusuario asc ")
             or die("Problemas en el insert principal" . mysqli_error($conexion));
             mysqli_close($conexion);
             while($columna = mysqli_fetch_assoc($query_reportes)):?>
                 <tr class="text-center">
-                    <td><h5><?php echo $columna['idusuario']?></h5></td>
+                    <td><h4><?php echo $columna['idusuario']?></h4></td>
                     <td><h4><?php echo $columna['nombre'] ?></h4></td>
+                    <td><h4><?php echo $columna['nombrecompleto'] ?></h4></td>
                     <td><h4><?php echo $columna['correo'] ?></h4></td>
 
 

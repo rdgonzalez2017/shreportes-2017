@@ -10,7 +10,7 @@ else:
 endif;
 ?>
 <?php if (isset($_SESSION['nombre'])):?>
-<?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombre'];} ?>
+<?php if (isset($_SESSION['nombre'])) {echo "Sesión Abierta: ".$_SESSION['nombrecompleto'];} ?>
 <body>
 <!-- Formulario para envío de datos del sistema-->
 <form class="form bounceInDown animated" method = "post" action="controles/cargarcategoria.php">
@@ -23,8 +23,8 @@ endif;
             <!-- Ingreso del titulo-->
             <div class="panel-body">
                 <div class="form-group row">
-                    <label for="nombre" class="col-md-2 control-label">Nombre de Categoría</label>
-                    <div class="col-md-8">
+                    <label for="nombre" class="col-md-2 col-md-offset-1 control-label">Nombre:</label>
+                    <div class="col-md-8 col-md-pull-1">
                         <input class="form-control" type="text" name="nombre" id="nombre"  required/>
                     </div>
                 </div>
