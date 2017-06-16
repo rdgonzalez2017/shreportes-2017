@@ -5,8 +5,9 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><button class="btn btn-info btn-sm navbar-btn alert-info" onclick = "location='sistema.php'">Regresar al Inicio</button></li>
-                <li><a href='logout.php'><span class="glyphicon glyphicon-log-in"></span> Cierre de Sesión</a></li>
+                <li><button class="btn btn-info btn-sm navbar-btn alert-info" onclick = "location='sistema.php'">Ir a Inicio</button></li>
+                <li><button class="btn btn-warning btn-sm navbar-btn alert-warning" onclick = "location='reportes.php'">Ver incidencias</button></li>
+                <li><a href='logout.php'><span class="glyphicon glyphicon-log-in"></span> Cerrar Sesión</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -26,6 +27,7 @@
                         <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarcategoria.php'">Agregar Categoria</button></li>
                         <li><button class="btn btn-sm btn-info navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarusuario.php'">Agregar Usuario</button></li>
                         <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarestado.php'">Agregar Estatus</button></li>
+                        <li><button class="btn btn-sm btn-info navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarservidor.php'">Agregar Servidor</button></li>
                         <?php endif;?>
                     </ul>
                 </li>

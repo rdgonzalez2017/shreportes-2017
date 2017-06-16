@@ -1,39 +1,25 @@
-<!DOCTYPE html>
-<html>
-<?php include ("head.php");?>
+<?php session_start(); ?>
+    <!DOCTYPE html>
+    <html>
+<?php include("head.php");?>
 <?php
-include("conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
+if (isset($_SESSION['nombre'])):
+    include ("navbar/navbarsistema.php");
+else:
+    include ("navbar/navbarindex.php");
+endif;
+?>
 
-if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado ejecuta el resto del código
-{
-
-    $idreporte = ($_POST['idreporte']);
-    $titulo = ($_POST['titulo']);
-    $observacion = ($_POST['observacion']);
-    $idestatus = ($_POST['estatus']);
-    $idcategoria = ($_POST['categoria']);
-    $autor = ($_POST['autor']);
-    $query_modificar = mysqli_query($conexion,"UPDATE reporte SET titulo = '".$titulo."', observacion = '".$observacion."', idestatus = '".$idestatus."', idcategoria = '".$idcategoria."',  fecha = NOW() WHERE idreporte = '".$idreporte."'")
-    or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta para actualizar el registro en la base de datos
-    if($query_modificar)
-    {
-        echo "<script>location.href='muestra.php';</script>";
-        //header("Location:reportes.php");
-    }
-    else
-    {
-        echo 'La noticia no se modificó'; // Si la consulta no se ejecutó bien, muestra este mensaje
-    }
-}
-
-if(isset($_GET['reporte'])):
-
-    $idreporte = ($_GET['reporte']); // Recibimos el id de la incidencia por medio de GET
+<?php if (isset($_SESSION['nombre'])):?>
+    <body>
+<div class="col-md-12 flipInY animated">
+    <?php include "conexion.php";
+    $idreporte = ($_REQUEST['idreporte']); // Recibimos el id de la incidencia por medio de GET
     $query = mysqli_query($conexion,"SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio WHERE idreporte = '".$idreporte."' LIMIT 1");// Ejecutamos la consulta
     $columna = mysqli_fetch_assoc($query);
     ?>
     <!-- Formulario para envío de modificaciones al sistema-->
-    <form class="form" method = "post" action="muestra.php">
+    <form class="form" method = "post" action="controles/actualizarvistaprevia.php">
         <input class="hidden" name="idreporte" id="idreporte" value="<?php echo $columna['idreporte'];?>"/>
         <div class="col-md-10 col-md-offset-1">
             <br>
@@ -178,16 +164,4 @@ if(isset($_GET['reporte'])):
 
         </div>
     </form>
-<?php endif;
-
-$query_MostrarTitulos = mysqli_query($conexion,"SELECT idreporte, titulo, observacion, fecha FROM reporte ORDER by idreporte DESC limit 1")
-or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
-while($columna_MostrarTitulos = mysqli_fetch_assoc($query_MostrarTitulos)) // Realizamos un bucle que muestre todas las noticias, utilizando while.
-{
-    echo '<a href="?reporte='.$columna_MostrarTitulos['idreporte'].'">
-    Modificar esta incidencia</a> ';   // Mostramos un enlace para modificar cada noticia
-    //$idreporte = $columna_MostrarTitulos['idreporte'];
-    //echo $idreporte;
-}
-?>
-</html>
+<?php endif;?>

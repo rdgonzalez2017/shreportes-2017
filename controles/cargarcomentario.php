@@ -62,49 +62,45 @@ echo $_POST[$keyNick];
 $nick = ob_get_contents();
 ob_end_clean();
 
-//$correoautor = $_REQUEST['correoautor'];
 $link = $_REQUEST['link'];
 
 
 //INSERCIÓN DE DATOS
-$reporte = $_REQUEST['id'];
-$idprotegido = $_REQUEST['idprotegido'];
-$correocliente = $_REQUEST['correocliente'];
-$correoautor = $_REQUEST['correoautor'];
-session_start();
+$idreporte = $_REQUEST['idreporte'];
+$correo = $_REQUEST['correo'];
 
 
-if(!empty($_REQUEST['id'])):  // Comprobamos que los valores recibidos no son NULL
+if(!empty($_REQUEST['idreporte'])):  // Comprobamos que los valores recibidos no son NULL
     include ("../conexion.php");
     $insert_comentarios = mysqli_query($conexion, "insert into comentarios(id,idreporte,nick,correo,comentario,fecha) 
-    SELECT NULL, $reporte, '$nick', '$_REQUEST[correocliente]', '$comentario', now()
-    FROM reporte where idreporte = $reporte LIMIT 1")
+    SELECT NULL, '$idreporte', '$_REQUEST[nick]', '$correo', '$comentario', now()
+    FROM reporte where idreporte = $idreporte LIMIT 1")
     or die("Problemas al insertar los datos del comentario" . mysqli_error($conexion));
 endif;
 
-
-    $select_comentarios = mysqli_query($conexion,"Select correo from comentarios where idreporte = $reporte and correo <> '$correoautor' ORDER by correo ASC limit 1  ")
-    or die("Problemas en el select del comentario" . mysqli_error($conexion));
-    mysqli_close($conexion);
-    while($columna = mysqli_fetch_array($select_comentarios)):
+$correoautor = $_REQUEST['correoautor'];
+include ("../conexion.php");
+$select_comentarios = mysqli_query($conexion,"Select correo from comentarios where idreporte = $idreporte and correo <> '$correoautor' ORDER by id DESC limit 1")
+or die("Problemas en el select del comentario" . mysqli_error($conexion));
+mysqli_close($conexion);
+while($columna = mysqli_fetch_array($select_comentarios)):
     $correocliente =  $columna['correo'];
 
+session_start();
     if (isset($_SESSION['nombre'])) {
         echo $correocliente;
+        //mail("$correocliente","SH Incidencias","Tiene un nuevo comentario en: $link");
     }else{
-    echo $correoautor;
+        echo $correoautor;
+        //mail("$correoautor","SH Incidencias","Tiene un nuevo comentario en: $link");
     }
-        //mail("$correocliente","SH Incidencias","Tiene un nuevo comentario en: $link")
+    //mail("$correocliente","SH Incidencias","Tiene un nuevo comentario en: $link")
     //}else {
-        //mail("$correoautor","SH Incidencias","Tiene un nuevo comentario en: $link")
+    //mail("$correoautor","SH Incidencias","Tiene un nuevo comentario en: $link")
     //}
-        ?>
-        <script>location.href='../reportes.php?reporte=<?php echo $idprotegido;?>'</script>
-        <?php
 
 endwhile;
-
-
-    //header("Location:../reportes.php?reporte=" . $idprotegido);
+$idprotegido = $_REQUEST['idprotegido'];
+?><script>location.href='../reportes.php?reporte=<?php echo $idprotegido;?>'</script><?php
+//header("Location:../reportes.php?reporte=" . $idprotegido);
 ?>
-
