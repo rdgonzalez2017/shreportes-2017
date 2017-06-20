@@ -41,8 +41,7 @@ endif;
 </form>
 <!-- Formulario para envío de datos del sistema-->
 </body>
-<?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
-    <br><button class="btn btn-info btn-sm navbar-btn col-md-offset-1" onclick = "location='Index.php'">Iniciar Sesión</button>
-<?php endif; ?>
 <?php include("tablas/tablaestados.php") ?>
+<?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
+<?php endif; ?>
 </html>

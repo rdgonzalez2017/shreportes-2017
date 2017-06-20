@@ -11,7 +11,7 @@ endif;
 ?>
 <?php if (isset($_SESSION['nombre'])):?>
 <body>
-<div class="col-md-12 flipInY animated">
+<div class="col-md-12">
     <?php include "conexion.php";
 $idreporte = ($_REQUEST['idreporte']); // Recibimos el id de la incidencia por medio de GET
 $query = mysqli_query($conexion,"SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio WHERE idreporte = '".$idreporte."' LIMIT 1");// Ejecutamos la consulta

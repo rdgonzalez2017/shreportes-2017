@@ -1,14 +1,16 @@
 <?php
+ session_start();
+if (isset($_SESSION['nombre'])):
 include("../conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
 if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado ejecuta el resto del código
 {
     $idreporte = ($_POST['idreporte']);
     //Verificar si el Dominio obtenido se encuentra en la base de datos, antes de modificarlo en el reporte.
-    $nombredominio = $_REQUEST['dominio'];
+    $nombredominio = $_POST['dominio'];
     $nuevo_dominio=mysqli_query($conexion,"select iddominio from dominio where nombre='$nombredominio'");
     if(mysqli_num_rows($nuevo_dominio)==0):
         //Si el dominio no existe, se inserta en la base de datos:
-        $insert_dominio = mysqli_query($conexion,"insert into dominio(nombre) VALUES ('$_REQUEST[dominio]')")or die("Problemas en el insert del dominio" . mysqli_error($conexion));
+        $insert_dominio = mysqli_query($conexion,"insert into dominio(nombre) VALUES ('$_POST[dominio]')")or die("Problemas en el insert del dominio" . mysqli_error($conexion));
         //Si el dominio se insertó en la base de datos, se seleccionará para insertar en el reporte:
         if($insert_dominio):
             //Select del dominio ingresado, para incluirlo en el insert principal
@@ -50,3 +52,4 @@ if(isset($_POST['modificar'])) // Si el boton de "modificar" fúe presionado eje
         echo 'La incidencia no se modificó'; // Si la consulta no se ejecutó bien, muestra este mensaje
     }
 }
+endif;

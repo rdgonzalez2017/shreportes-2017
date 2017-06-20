@@ -1,11 +1,12 @@
 <?php
+session_start();
 include("../conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
 if(isset($_POST['modificar'])): // Si el boton de "modificar" fúe presionado ejecuta el resto del código
-    $idusuario = ($_REQUEST['idusuario']);
+    $idusuario = ($_POST['idusuario']);
     $nombre = ($_POST['nombre']);
     $nombrecompleto = ($_POST['nombrecompleto']);
     $correo = ($_POST['correo']);
-    $clave = ($_POST['clave']);
+    $clave = md5($_POST['clave']);
     $query_modificar = mysqli_query($conexion,"UPDATE usuarios SET nombre = '".$nombre."',nombrecompleto = '".$nombrecompleto."', correo = '".$correo."', clave = '".$clave."' WHERE idusuario = '".$idusuario."'"); // Ejecutamos la consulta para actualizar el registro en la base de datos
     if($query_modificar)
     {
@@ -17,4 +18,3 @@ if(isset($_POST['modificar'])): // Si el boton de "modificar" fúe presionado ej
         echo 'El usuario no se modificó'; // Si la consulta no se ejecutó bien, muestra este mensaje
         }
 endif;
-?>

@@ -96,11 +96,9 @@ endif;
                                             <div class="col-md-10 col-md-offset-1 well fadeInRight animated" style="overflow-y: auto;">'; echo $observacion; echo' </div>
 
                                         </div>
-                       
-                          
+                     
                                             ';
                         if ($idestatus <> 1):?>
-
                             <!-- Formulario para envío de comentarios-->
                                 <?php include ("formulariocomentarios.php");?>
                         <?php endif;

@@ -41,7 +41,7 @@ endif;
     </form>
     <!-- Formulario para envío de datos del sistema-->
     </body>
+<?php include("tablas/tablaservidores.php") ?>
 <?php else: echo'Debe iniciar sesión para ingresar a esta página.';?>
 <?php endif; ?>
-<?php include("tablas/tablaservidores.php") ?>
 </html>

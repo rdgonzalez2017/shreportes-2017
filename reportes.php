@@ -95,13 +95,11 @@
                                         <div class="col-md-10 col-md-offset-1 well bounceIn animated animated" data-wow-duration="3000ms" " style="overflow-y: auto;">'; echo $observacion; echo' </div>
 
                                         </div>
-                      
                                             ';
         if ($idestatus <> 1):?>
         <BR>
         <!-- Formulario para envío de comentarios-->
         <?php include ("formulariocomentarios.php");?>
-
 <?php endif;?>
 <?php
 }
@@ -119,74 +117,12 @@ else
 }
 else
 {
-    ?>
-    <!-- Tabla de Reportes -->
-    <div>
-    <div class="col-md-12 table-responsive rotateIn animated" data-wow-duration="500ms"">
-    <table id="example"  class="table table-bordered table-hover table-striped">
-    <caption class="text-center"><h3>Reporte de Incidencias</h3></caption>
-    <thead>
-    <tr class="bg-primary text-center">
-        <td><h4>ID</h4></td>
-        <td><h4>Titulo</h4></td>
-        <td><h4>Autor</h4></td>
-        <td><h4>Categoria</h4></td>
-        <td><h4>Servidor</h4></td>
-        <td><h4>Dominio</h4></td>
-        <td><h4>Ticket</h4></td>
-        <td><h4>Estado</h4></td>
-        <td><h4>Fecha</h4></td>
-        <!--<td><h4>Mostrar</h4></td>-->
-        <td><h4>Acciones</h4></td>
-    </tr>
-    </thead>
-    <tbody>
-    <?php
-    if (isset($_SESSION['nombre'])):
-        $select = "SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio order by idreporte asc";
-        $query_reportes = mysqli_query($conexion,"$select")
-        or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
-        $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"
-        $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-        while($columna = mysqli_fetch_assoc($query_reportes)):?>
-            <?php $idprotegido=md5($clave.$columna['idreporte']);?>
-            <tr class="text-center">
-                <td><h4><?php echo $columna['idreporte']?></h4></td>
-                <td><h4><?php echo $columna['titulo'] ?></h4></td>
-                <td><h4><?php echo $columna['autor'] ?></h4></td>
-                <td><h4><?php echo $columna['nombrecategoria'] ?></h4></td>
-                <td><h4><?php echo $columna['nombreservidor'] ?></h4></td>
-                <td><h4><?php echo $columna['nombredominio'] ?></h4></td>
-                <td><h4><?php echo $columna['ticket'] ?></h4></td>
-                <td><h4><?php echo $columna['nombrestatus'] ?></h4></td>
-                <td><h4><?php echo $columna['fecha'] ?></h4></td>
-                <!--<td><a class="btn btn-warning alert-warning" href="?reporte=<?php //echo $idprotegido;?>">Mostrar</a>-->
-                <td class="text-center">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-info alert-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu" style="text-align: center">
-                            <a class="btn btn-warning alert-warning" href="?reporte=<?php echo $idprotegido;?>">Mostrar</a>
-                            <li role="separator" class="divider"></li>
-                            <form action="modificarincidencia.php" method="post">
-                                <input class="hidden" name="idreporte" value="<?php echo $columna['idreporte']?>">
-                                <input class="btn btn-info alert-info" type="submit" name="modificar" value="Modificar" />
-                            </form>
-                            <li role="separator" class="divider"></li>
-                            <form action="controles/eliminareporte.php" method="post">
-                                <input class="hidden" name="idreporte" value="<?php echo $columna['idreporte']?>">
-                                <input onclick="return confirm('Estás seguro que deseas eliminar el registro?');" class="btn btn-danger alert-danger" type="submit" name="eliminar" value="Eliminar" />
-                            </form>
+        if (isset($_SESSION['nombre'])):
 
-                        </ul>
-                    </div>
-                </td>
-            </tr>
-            </tbody>
-        <?php endwhile;?>
-        </table>
-        </div>
-        </div>
+            include "tablas/tablareportes.php";
+        ?>
+
+
         <?php
     else: echo"Debe iniciar sesión para ingresar a esta página";
     endif;

@@ -1,10 +1,13 @@
 <?php
-if(!empty($_REQUEST['nombre'])){ // Comprobamos que los valores recibidos no son NULL
+session_start();
+if (isset($_SESSION['nombre'])):
+if(!empty($_POST['nombre'])){ // Comprobamos que los valores recibidos no son NULL
     include ("../conexion.php");
     $query_reportes = mysqli_query($conexion, "insert into servidor(nombre) VALUES 
-                     ('$_REQUEST[nombre]') ")
+                     ('$_POST[nombre]') ")
     or die("Problemas en el insert principal" . mysqli_error($conexion));
     mysqli_close($conexion);
     //header("Location:../agregarcategoria.php");
     echo "<script>location.href='../agregarservidor.php';</script>";
 }
+endif;

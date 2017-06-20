@@ -13,8 +13,7 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Modificaciones <span class="caret"></span></a>
                     <ul class="dropdown-menu" style="text-align: center" >
-                        <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='modificacionreportes.php'">Modificar Incidencias</button></li>
-                        <li><button class="btn btn-sm btn-info navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='modificarusuario.php'">Modificar mi Usuario</button></li>
+                        <li><button class="btn btn-sm btn-info navbar-btn rotateIn animated" data-wow-duration="10ms" onclick = "location='modificarusuario.php'">Modificar mi Usuario</button></li>
                     </ul>
                 </li>
                 <!-- <li><a href="#">Page 2</a></li>-->
@@ -24,10 +23,10 @@
                     <?php if ($_SESSION['tipo']==1):?>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Agregar <span class="caret"></span></a>
                     <ul class="dropdown-menu" style="text-align: center" >
-                        <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarcategoria.php'">Agregar Categoria</button></li>
-                        <li><button class="btn btn-sm btn-info navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarusuario.php'">Agregar Usuario</button></li>
-                        <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarestado.php'">Agregar Estatus</button></li>
-                        <li><button class="btn btn-sm btn-info navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='agregarservidor.php'">Agregar Servidor</button></li>
+                        <li><button class="btn btn-sm btn-warning navbar-btn rotateIn animated" data-wow-duration="10ms" onclick = "location='agregarcategoria.php'">Agregar Categoria</button></li>
+                        <li><button class="btn btn-sm btn-info navbar-btn rotateIn animated" data-wow-duration="10ms" onclick = "location='agregarusuario.php'">Agregar Usuario</button></li>
+                        <li><button class="btn btn-sm btn-warning navbar-btn rotateIn animated" data-wow-duration="10ms" onclick = "location='agregarestado.php'">Agregar Estatus</button></li>
+                        <li><button class="btn btn-sm btn-info navbar-btn bounceInUp rotateIn animated" data-wow-duration="10ms" onclick = "location='agregarservidor.php'">Agregar Servidor</button></li>
                         <?php endif;?>
                     </ul>
                 </li>

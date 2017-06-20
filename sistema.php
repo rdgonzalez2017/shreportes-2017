@@ -9,16 +9,24 @@ else:
     include ("navbar/navbarindex.php");
 endif;
 ?>
+<?php
+//Contador de Incidencias
+include "conexion.php";
+$contador = mysqli_query($conexion,"SELECT COUNT(*) as contador from reporte");
+while ($columna = mysqli_fetch_array($contador)):
+$cantidadincidencias = $columna['contador'];?>
+   <div class="row">
+       <div class="col-md-3"><?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombrecompleto'];} ?>       </div>
+       <div class="col-md-3 col-md-offset-2">Cantidad de Incidencias reportadas: <?php echo $cantidadincidencias;?></div>
+   </div>
+<?php endwhile; ?>
 <?php if (isset($_SESSION['nombre'])):?>
-<p class="bounceInRight">
-<?php if (isset($_SESSION['nombre'])) {echo "Bienvenido: ".$_SESSION['nombrecompleto'];} ?>
-</p>
 <!-- Conexión con base de datos-->
 <body>
 <!-- Formulario para envío de datos del sistema-->
 <form class="form" method = "post" action="controles/validarmuestra.php">
     <input type="hidden" name="idusuario" value="<?php if (isset($_SESSION['idusuario'])) {echo $_SESSION['idusuario'];}?>"/>
-    <div class="container flipInY animated animated" data-wow-duration="1500ms"">
+    <div class="container bounceInRight animated" data-wow-duration="500ms"">
         <div class="col-md-10 col-md-offset-1">
             <br>
             <div class="panel panel-primary">
