@@ -53,7 +53,7 @@ if($row = mysqli_fetch_array($result)):
         $_SESSION['nombrecompleto'] = $row['nombrecompleto'];
         $_SESSION['correo'] = $row['correo'];
         //header("Location:../sistema.php");
-            echo "<script>location.href='../sistema.php';</script>";
+            echo "<script>location.href='../inicio.php';</script>";
         else:
         //header("Location: ../index.php");
             echo "<script>location.href='../index.php';</script>";

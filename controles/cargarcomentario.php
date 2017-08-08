@@ -53,14 +53,19 @@ or die("Problemas en el select del comentario" . mysqli_error($conexion));
 mysqli_close($conexion);
 while($columna = mysqli_fetch_array($select_comentarios)):
     $correocliente =  $columna['correo'];
+//para el envío en formato HTML 
+$cabeceras = '<br>From: '.$correoautor . "\r\n" .
+    'Reply-To: no-responder@servitepuy.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
 
 session_start();
     if (isset($_SESSION['nombre'])) {
         echo $correocliente;
-        mail("$correocliente","SH Incidencias","Tiene un nuevo comentario en: $link");
+        mail("$correocliente","ServiciosHosting.com: Incidencias.","Tiene un nuevo comentario en: $link");
     }else{
         echo $correoautor;
-        mail("$correoautor","SH Incidencias","Tiene un nuevo comentario en: $link");
+        mail("$correoautor","ServiciosHosting.com: Incidencias.","Tiene un nuevo comentario en: $link");
     }
     //mail("$correocliente","SH Incidencias","Tiene un nuevo comentario en: $link")
     //}else {

@@ -96,7 +96,7 @@
 
                                         </div>
                                             ';
-        if ($idestatus <> 1):?>
+        if ($idestatus == 3):?>
         <BR>
         <!-- Formulario para envío de comentarios-->
         <?php include ("formulariocomentarios.php");?>

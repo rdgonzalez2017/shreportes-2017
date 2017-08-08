@@ -24,7 +24,7 @@ endif;
             {
                 $idreporte = $_GET["reporte"];
                 $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-                $select = "SELECT *, dominio.nombre as nombredominio, estatus.nombre as nombrestatus, categorias.nombre as nombrecategoria FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN usuarios ON reporte.idusuario = usuarios.idusuario LEFT JOIN dominio on reporte.iddominio = dominio.iddominio WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1";
+                $select = "SELECT *, e.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM multiser_shreportes.categorias as B RIGHT JOIN multiser_shreportes.reporte as A on B.idcategoria = A.idcategoria LEFT JOIN multiser_shreportes.estatus as C ON A.idestatus = C.idestatus LEFT JOIN multiser_shreportes.servidor as D on A.idservidor = D.idservidor LEFT JOIN multiser_whmcs.tbldomains as E on A.iddominio = E.id LEFT JOIN multiser_shreportes.usuarios as F ON A.idusuario = F.idusuario WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1";
                 $query_reportes = mysqli_query($conexion,"$select")
                 or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
                 //$query_reportes = mysql_query("SELECT * FROM reporte WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1"); // Ejecutamos la consulta
@@ -51,6 +51,48 @@ endif;
                         echo $host,$url;
                         $Link = ob_get_contents();
                         ob_end_clean();
+                        
+                        //Función PHP Mailer:
+                        /*require 'php_mailer/PHPMailerAutoload.php';
+                        $objetoCorreo = new PHPMailer;
+
+                        $objetoCorreo->isSMTP();
+                        $objetoCorreo->Host = 'mail.servicioshosting.com'; // El proveedor nos proporciona este dato.
+                        $objetoCorreo->SMTPAuth = true; // El proveedor nos proporciona este dato.
+                        $objetoCorreo->SMTPSecure = 'ssl'; // Puede ser tls o ssl. El proveedor nos proporciona este dato.
+                        $objetoCorreo->Port = 465; // El proveedor nos proporciona este dato.
+
+                        //$objetoCorreo->SMTPDebug = 3;
+
+                        $objetoCorreo->Username = 'cotizador@servicioshosting.com';
+                        $objetoCorreo->Password = 'Atumedida2017/';
+
+                        $objetoCorreo->setFrom('no-responder@servitepuy.com', 'ServiciosHosting.com');
+
+                        $objetoCorreo->addAddress($email, 'Destinatario');
+
+                        $objetoCorreo->addReplyTo('no-responder@servitepuy.com', 'Respuestas');
+
+                        $objetoCorreo->isHTML(true);
+
+                        $objetoCorreo->CharSet = 'UTF-8'; // El correo irá codificado en UTF-8, para evitar problemas con letras acentuadas y otros caracteres especiales.
+
+                        $objetoCorreo->Subject = 'Cotización.';
+
+                        $objetoCorreo->AddEmbeddedImage('../../img/logo_mini.jpg', 'logo_mini', 'logo_mini', 'base64', 'image/png');
+
+                        $correo = "<p><i>Este es un correo generado automáticamentte. Por favor no lo responda.</i></p><h4>Usted tiene una nueva cotización. Para ver, haga click aquí: <a target='_blank' href='$link'>Ver cotización</a></h4> <p>Saludos Cordiales.</p> ";
+
+                        $correo .= "<img src='cid:logo_mini'  />"; // OJO con la imagen. Hablaremos de esto en el próximo apartado.        
+
+
+                        //$objetoCorreo->Body = "Usted tiene una nueva cotizacion. Para ver, haga click en el siguiente link: $link";
+                        $objetoCorreo->Body = $correo;
+
+                        $objetoCorreo->AltBody = "Usted tiene una nueva cotizacion. Para ver, haga click en el siguiente link: $link";
+
+                        $objetoCorreo->send();
+                        */
                         //Panel que muestra el Reporte Final:
                         echo'                       
                              <div class="panel panel-primary container col-md-6 col-md-offset-3 rollIn animated">
@@ -98,7 +140,7 @@ endif;
                                         </div>
                      
                                             ';
-                        if ($idestatus <> 1):?>
+                        if ($idestatus == 3):?>
                             <!-- Formulario para envío de comentarios-->
                                 <?php include ("formulariocomentarios.php");?>
                         <?php endif;
@@ -142,7 +184,7 @@ endif;
                 </thead>
                 <tbody>
                 <?php
-                $select = "SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio order by idreporte desc limit 1";
+                    $select = "SELECT *, e.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM multiser_shreportes.categorias as B RIGHT JOIN multiser_shreportes.reporte as A on B.idcategoria = A.idcategoria LEFT JOIN multiser_shreportes.estatus as C ON A.idestatus = C.idestatus LEFT JOIN multiser_shreportes.servidor as D on A.idservidor = D.idservidor LEFT JOIN multiser_whmcs.tbldomains as E on A.iddominio = E.id order by idreporte desc limit 1 ";
                 $query_reportes = mysqli_query($conexion,"$select")
                 or die("Problemas en el select:".mysqli_error($conexion)); // Ejecutamos la consulta
                 $limite = 100; // Número de carácteres a mostrar antes de el "Leer más"

@@ -50,6 +50,16 @@ where dominio.iddominio = $casoDom";
 break;
 }
 }
+//Filtro por estados:
+if(isset($_POST['filtroEstados'])){
+$casoEstatus = $_REQUEST['filtroEstados'];
+switch($_POST['filtroEstados']){
+case $casoEstatus:
+$sql = "SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio
+where estatus.idestatus = $casoEstatus";
+break;
+}
+}
 ?>
 <!--Filto General:-->
 <form class="form-group col-md-2" action="reportes.php" method="post">
@@ -104,6 +114,21 @@ break;
     </select>
     <button class="btn btn-info alert-info col-md-offset-3" type="submit">Filtrar</button>
 </form>
+<!--Form por Estatus:-->
+<form class="form-group col-md-3" action="reportes.php" method="post">
+    <label for="filtroEstados">Filtro por estados:</label>
+    <select class="form-control" name="filtroEstados" id="filtroEstados">
+        <?php
+        include ("conexion.php");
+        $registros=mysqli_query($conexion,"select * from estatus") or
+        die("Problemas en el select:".mysqli_error($conexion));
+        while ($reg=mysqli_fetch_array($registros)):?>
+            <option value="<?php echo $reg['idestatus']?>"><?php echo $reg['nombre']?></option>
+        <?php endwhile;?>
+    </select>
+    <button class="btn btn-info alert-info col-md-offset-3" type="submit">Filtrar</button>
+</form>
+<!-- Comienzo de la Tabla:-->
 <div class="row">
     <div class="col-md-12 table-responsive">
         <table id="example"  class="table table-bordered table-hover table-striped">
@@ -119,7 +144,7 @@ break;
                 <td><h4>Ticket</h4></td>
                 <td><h4>Estado</h4></td>
                 <td><h4>Fecha</h4></td>
-                <td><h4>Modificar</h4></td>
+                <td><h4>Acciones</h4></td>
                 <!--<td><h4>Eliminar</h4></td>-->
             </tr>
             </thead>
