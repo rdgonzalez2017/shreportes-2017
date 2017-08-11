@@ -11,13 +11,13 @@
         </thead>
         <tbody>
         <?php
-        include("conexion.php");
-        $query = mysqli_query($conexion, "select * from servidor ORDER BY idservidor ASC ")
+        include("config/conexion.php");
+        $query = mysqli_query($conexion, "select * from servidores ORDER BY id ASC ")
         or die("Problemas en el insert principal" . mysqli_error($conexion));
         mysqli_close($conexion);
         while($columna = mysqli_fetch_assoc($query)):?>
             <tr class="text-center">
-                <td><h5><?php echo $columna['idservidor']?></h5></td>
+                <td><h5><?php echo $columna['id']?></h5></td>
                 <td><h4><?php echo $columna['nombre'] ?></h4></td>
 
                 <td class="text-center">
@@ -28,7 +28,7 @@
                                 <li><a href="sistema.php?pag=marcas&idc=<?php// echo base64_encode($columna['idcategoria'])?>">Modificar</a></li>
                                 <li role="separator" class="divider"></li>-->
                         <form action="controles/eliminaservidor.php" method="post">
-                            <input class="hidden" name="idservidor" value="<?php echo $columna['idservidor']?>">
+                            <input class="hidden" name="idservidor" value="<?php echo $columna['id']?>">
                             <input onclick="return confirm('Estás seguro que deseas eliminar este Servidor?');" class="btn btn-danger alert-danger" type="submit" name="eliminar" value="Eliminar" />
                         </form>
                         <!--</ul>-->

@@ -4,7 +4,7 @@
     <?php include("head.php") ?>
     <?php
     if (isset($_SESSION['nombre'])):
-        include ("navbar/navbarinicio.php");
+        include ("navbar/navbarsistema.php");
     else:
         include ("navbar/navbarindex.php");
     endif;
@@ -42,8 +42,8 @@
 
                 <?php
 //Contador de Incidencias
-                include "conexion.php";
-                $contador = mysqli_query($conexion, "SELECT COUNT(*) as contador from reporte");
+                include "config/conexion.php";
+                $contador = mysqli_query($conexion, "SELECT COUNT(*) as contador from reportes");
                 while ($columna = mysqli_fetch_array($contador)):
                     $cantidadincidencias = $columna['contador'];
                     ?>
@@ -94,10 +94,11 @@
                                                     <input class="form-control" type="text" name="titulo" id="titulo"  required/>
                                                 </div>
                                             </div>
+                                            <?php if (!empty($id_cliente)): ?>
                                             <!-- Selección de dominios registrados (en BD WHMCS)-->
                                             <div class="form-group row">
-                                                <label for="id_dominio_registrado" class="col-md-3 col-md-offset-1 control-label">Dominios registrados:</label>
-                                                <div class="col-md-6">
+                                                <label for="id_dominio_registrado" class="col-md-3 col-md-offset-1 control-label">Dominios internos:</label>
+                                                <div class="col-md-6 col-md-pull-1">
                                                     <select class="form-control" name="id_dominio_registrado" id="id_dominio_registrado">
                                                         <option></option>
                                                         <?php
@@ -113,24 +114,25 @@
                                             </div>
                                             <!-- Selección de dominios No registrados-->
                                             <div class="form-group row">
-                                                <label for="id_dominio_noregistrado" class="col-md-3 col-md-offset-1 control-label">Dominios no registrados:</label>
-                                                <div class="col-md-6">
+                                                <label for="id_dominio_noregistrado" class="col-md-3 col-md-offset-1 control-label">Dominios externos:</label>
+                                                <div class="col-md-6 col-md-pull-1">
                                                     <select class="form-control" name="id_dominio_noregistrado" id="id_dominio_noregistrado">
                                                         <option></option>
                                                         <?php
-                                                        require ("conexion.php");
-                                                        $registros = mysqli_query($conexion, "SELECT * FROM dominio where id_cliente = '$id_cliente'") or
+                                                        require ("config/conexion.php");
+                                                        $registros = mysqli_query($conexion, "SELECT * FROM dominios where id_cliente = '$id_cliente'") or
                                                                 die("Problemas en el select:" . mysqli_error($conexion));
                                                         while ($reg = mysqli_fetch_array($registros)) {
-                                                            echo "<option value=\"$reg[iddominio]\">$reg[nombre]</option>";
+                                                            echo "<option value=\"$reg[id]\">$reg[nombre]</option>";
                                                         }
                                                         ?>
                                                     </select>
                                                 </div>
                                             </div>
+                                            <?php endif;?>
                                             <!--Ingresar nuevo dominio-->
                                             <div class="form-group row">
-                                                <label for="nuevo_dominio" class="col-md-3 col-md-offset-1 control-label">Ingresar Dominio:</label>
+                                                <label for="nuevo_dominio" class="col-md-3 col-md-offset-1 control-label">Dominio nuevo:</label>
                                                 <div class="col-md-6 col-md-pull-1">
                                                     <input class="form-control" type="text" name="nuevo_dominio" id="nuevo_dominio"/>
                                                 </div>
@@ -141,11 +143,11 @@
                                                 <div class="col-md-8 col-md-pull-1">
                                                     <select class="form-control" name="categoria" id="categoria">
                                                         <?php
-                                                        include ("conexion.php");
-                                                        $registros = mysqli_query($conexion, "select idcategoria,nombre from categorias") or
+                                                        include ("config/conexion.php");
+                                                        $registros = mysqli_query($conexion, "select id,nombre from categorias") or
                                                                 die("Problemas en el select:" . mysqli_error($conexion));
                                                         while ($reg = mysqli_fetch_array($registros)) {
-                                                            echo "<option value=\"$reg[idcategoria]\">$reg[nombre]</option>";
+                                                            echo "<option value=\"$reg[id]\">$reg[nombre]</option>";
                                                         }
                                                         ?>
                                                     </select>
@@ -157,11 +159,11 @@
                                                 <div class="col-md-8 col-md-pull-1">
                                                     <select class="form-control" name="estado" id="estado">
                                                         <?php
-                                                        include ("conexion.php");
-                                                        $registros = mysqli_query($conexion, "select idestatus,nombre from estatus order by nombre") or
+                                                        include ("config/conexion.php");
+                                                        $registros = mysqli_query($conexion, "select id,nombre from estatus order by nombre") or
                                                                 die("Problemas en el select:" . mysqli_error($conexion));
                                                         while ($reg = mysqli_fetch_array($registros)) {
-                                                            echo "<option value=\"$reg[idestatus]\">$reg[nombre]</option>";
+                                                            echo "<option value=\"$reg[id]\">$reg[nombre]</option>";
                                                         }
                                                         ?>
                                                     </select>
@@ -173,11 +175,11 @@
                                                 <div class="col-md-8 col-md-pull-1">
                                                     <select class="form-control" name="servidor">
                                                         <?php
-                                                        include ("conexion.php");
-                                                        $registros = mysqli_query($conexion, "select idservidor,nombre from servidor") or
+                                                        include ("config/conexion.php");
+                                                        $registros = mysqli_query($conexion, "select id,nombre from servidores") or
                                                                 die("Problemas en el select:" . mysqli_error($conexion));
                                                         while ($reg = mysqli_fetch_array($registros)) {
-                                                            echo "<option value=\"$reg[idservidor]\">$reg[nombre]</option>";
+                                                            echo "<option value=\"$reg[id]\">$reg[nombre]</option>";
                                                         }
                                                         ?>
                                                     </select>

@@ -1,8 +1,10 @@
 <form class="form fadeInRightBig animated" name="miFormu" method="post" action="controles/cargarcomentario.php">
     <INPUT TYPE="hidden" NAME="link" VALUE="<?php echo $Link;?>">
-    <INPUT TYPE="hidden" NAME="idreporte" VALUE="<?php echo $idreplicacion?>">
-    <INPUT TYPE="hidden" NAME="idprotegido" VALUE="<?php echo $idreporte?>">
+    <INPUT TYPE="hidden" NAME="idreporte" VALUE="<?php echo $id_reporte?>">
+    <INPUT TYPE="hidden" NAME="idprotegido" VALUE="<?php echo $id_protegido?>">
+    <INPUT TYPE="hidden" NAME="idcliente" VALUE="<?php echo $id_cliente?>">
     <INPUT TYPE="hidden" NAME="correoautor" VALUE="<?php echo $correoautor?>">
+    
     <div class="col-md-6 col-md-offset-3">
         <div class="panel panel-primary">
             <div class="panel-heading">

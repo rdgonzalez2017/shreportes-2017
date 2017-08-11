@@ -26,12 +26,12 @@ endif;
                     <div class="col-md-8">
                         <select class="form-control" name="tipo">
                             <?php
-                            include ("conexion.php");
-                            $registros=mysqli_query($conexion,"select * from tipodeusuario") or
+                            include ("config/conexion.php");
+                            $registros=mysqli_query($conexion,"select * from tiposdeusuarios") or
                             die("Problemas en el select:".mysqli_error($conexion));
                             while ($reg=mysqli_fetch_array($registros))
                             {
-                                echo "<option value=\"$reg[idtipodeusuario]\">$reg[nombre]</option>";
+                                echo "<option value=\"$reg[id]\">$reg[nombre]</option>";
                             }
                             ?>
                         </select>

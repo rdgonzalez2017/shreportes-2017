@@ -15,7 +15,7 @@
 <body>
 <div class="container col-md-6 col-md-offset-3">
     <?php
-    include ("conexion.php");
+    include ("config/conexion.php");
              if (isset($_SESSION['idusuario'])) {
              ob_start();
              echo $_SESSION['idusuario'];
@@ -23,7 +23,7 @@
              ob_end_clean();
          }
      // Recibimos el id de la noticia por medio de GET
-    $query_usuarios = mysqli_query($conexion,"SELECT * FROM usuarios WHERE idusuario = '".$idusuario."'")
+    $query_usuarios = mysqli_query($conexion,"SELECT * FROM usuarios WHERE id = '".$idusuario."'")
     or die("Problemas en el insert principal" . mysqli_error($conexion));
          mysqli_close($conexion);// Ejecutamos la consulta
     while($columna = mysqli_fetch_assoc($query_usuarios)):
@@ -35,7 +35,7 @@
             <br>
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h4 class="text-center">Id de Usuario: <?php echo $columna['idusuario'];?></h4>
+                    <h4 class="text-center">Id de Usuario: <?php echo $columna['id'];?></h4>
                 </div>
                 <div class="panel-body">
                     <!-- Ingreso del Nombre-->
@@ -80,7 +80,7 @@
      <?php else: echo 'Debe Iniciar Sesión para entrar a esta página.';
         endif;?>
 <?php
-include("conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
+include("config/conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
 
 if (isset($_SESSION['nombre'])) {
     ob_start();

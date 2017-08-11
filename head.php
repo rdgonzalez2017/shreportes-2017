@@ -8,9 +8,8 @@
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-   <!-- <script src="js/ckeditor/ckeditor.js"></script>-->
-    <!--<script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>-->
-    <!--<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    -->
     <script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>
     <script src="js/wow.min.js"></script>
     <title>	SH Incidencias </title>

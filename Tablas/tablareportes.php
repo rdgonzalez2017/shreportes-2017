@@ -1,22 +1,26 @@
 <?php
-include("conexion.php");
+require("config/conexion.php");
+require("config/conexion2.php");
+
 //Filtro General:
 if(isset($_POST['general'])){
 switch($_POST['general']){
 case "todos":
-$sql = "SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio;";
+$sql = "SELECT *, g.nombre as nombre_nuevo_dominio, e.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM $DB.categorias as B RIGHT JOIN $DB.reportes as A on B.id = A.idcategoria LEFT JOIN $DB.estatus as C ON A.idestatus = C.id LEFT JOIN $DB.servidores as D on A.idservidor = D.id LEFT JOIN $DB_2.tbldomains as E on A.id_dominio_registrado = E.id LEFT JOIN $DB.usuarios as F ON A.idusuario = F.id LEFT JOIN $DB.dominios as G ON A.iddominio = G.id
+ORDER BY A.id asc ;";  
 break;
 case "recientes":
-$sql = "SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio
-ORDER BY fecha DESC;";
+$sql = "SELECT *, g.nombre as nombre_nuevo_dominio, e.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM $DB.categorias as B RIGHT JOIN $DB.reportes as A on B.id = A.idcategoria LEFT JOIN $DB.estatus as C ON A.idestatus = C.id LEFT JOIN $DB.servidores as D on A.idservidor = D.id LEFT JOIN $DB_2.tbldomains as E on A.id_dominio_registrado = E.id LEFT JOIN $DB.usuarios as F ON A.idusuario = F.id LEFT JOIN $DB.dominios as G ON A.iddominio = G.id
+ORDER BY A.fecha DESC;";
 break;
 case "antiguos":
-$sql = "SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio
-ORDER BY fecha ASC;";
+$sql = "SELECT *, G.nombre as nombre_nuevo_dominio, E.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM $DB.categorias as B RIGHT JOIN $DB.reportes as A on B.id = A.idcategoria LEFT JOIN $DB.estatus as C ON A.idestatus = C.id LEFT JOIN $DB.servidores as D on A.idservidor = D.id LEFT JOIN $DB_2.tbldomains as E on A.id_dominio_registrado = E.id LEFT JOIN $DB.usuarios as F ON A.idusuario = F.id LEFT JOIN $DB.dominios as G ON A.iddominio = G.id
+ORDER BY A.fecha ASC;";
 break;
 }
-}else {
-$sql = "SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio;";
+}else {   
+$sql = "SELECT *, A.id as id_cliente, G.nombre as nombre_nuevo_dominio, E.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM $DB.categorias as B RIGHT JOIN $DB.reportes as A on B.id = A.idcategoria LEFT JOIN $DB.estatus as C ON A.idestatus = C.id LEFT JOIN $DB.servidores as D on A.idservidor = D.id LEFT JOIN $DB_2.tbldomains as E on A.id_dominio_registrado = E.id LEFT JOIN $DB.usuarios as F ON A.idusuario = F.id LEFT JOIN $DB.dominios as G ON A.iddominio = G.id
+ORDER BY A.id asc ;";   
 }
 
 //Filtro por categorias:
@@ -24,8 +28,8 @@ if(isset($_POST['filtroCategoria'])){
 $caso = $_REQUEST['filtroCategoria'];
 switch($_POST['filtroCategoria']){
 case $caso:
-$sql = "SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio
-where categorias.idcategoria = $caso";
+$sql = "SELECT *, g.nombre as nombre_nuevo_dominio, e.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM $DB.categorias as B RIGHT JOIN $DB.reportes as A on B.id = A.idcategoria LEFT JOIN $DB.estatus as C ON A.idestatus = C.id LEFT JOIN $DB.servidores as D on A.idservidor = D.id LEFT JOIN $DB_2.tbldomains as E on A.id_dominio_registrado = E.id LEFT JOIN $DB.usuarios as F ON A.idusuario = F.id LEFT JOIN $DB.dominios as G ON A.iddominio = G.id
+where B.id = $caso";
 break;
 }
 }
@@ -35,8 +39,8 @@ if(isset($_POST['filtroServidores'])){
 $casoServ = $_REQUEST['filtroServidores'];
 switch($_POST['filtroServidores']){
 case $casoServ:
-$sql = "SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio
-where servidor.idservidor = $casoServ;";
+$sql = "SELECT *, g.nombre as nombre_nuevo_dominio, e.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM $DB.categorias as B RIGHT JOIN $DB.reportes as A on B.id = A.idcategoria LEFT JOIN $DB.estatus as C ON A.idestatus = C.id LEFT JOIN $DB.servidores as D on A.idservidor = D.id LEFT JOIN $DB_2.tbldomains as E on A.id_dominio_registrado = E.id LEFT JOIN $DB.usuarios as F ON A.idusuario = F.id LEFT JOIN $DB.dominios as G ON A.iddominio = G.id
+where D.id = $casoServ;";
 break;
 }
 }
@@ -45,8 +49,8 @@ if(isset($_POST['filtroDominios'])){
 $casoDom = $_REQUEST['filtroDominios'];
 switch($_POST['filtroDominios']){
 case $casoDom:
-$sql = "SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio
-where dominio.iddominio = $casoDom";
+$sql = "SELECT *, g.nombre as nombre_nuevo_dominio, e.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM $DB.categorias as B RIGHT JOIN $DB.reportes as A on B.id = A.idcategoria LEFT JOIN $DB.estatus as C ON A.idestatus = C.id LEFT JOIN $DB.servidores as D on A.idservidor = D.id LEFT JOIN $DB_2.tbldomains as E on A.id_dominio_registrado = E.id LEFT JOIN $DB.usuarios as F ON A.idusuario = F.id LEFT JOIN $DB.dominios as G ON A.iddominio = G.id
+where g.iddominio = $casoDom or e.id = $casoDom";
 break;
 }
 }
@@ -55,8 +59,8 @@ if(isset($_POST['filtroEstados'])){
 $casoEstatus = $_REQUEST['filtroEstados'];
 switch($_POST['filtroEstados']){
 case $casoEstatus:
-$sql = "SELECT *, dominio.nombre as nombredominio, servidor.nombre as nombreservidor, categorias.nombre as nombrecategoria, estatus.nombre as nombrestatus FROM categorias RIGHT JOIN reporte on categorias.idcategoria = reporte.idcategoria LEFT JOIN estatus ON reporte.idestatus = estatus.idestatus LEFT JOIN servidor on reporte.idservidor = servidor.idservidor LEFT JOIN dominio on reporte.iddominio = dominio.iddominio
-where estatus.idestatus = $casoEstatus";
+$sql = "SELECT *, g.nombre as nombre_nuevo_dominio, e.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM $DB.categorias as B RIGHT JOIN $DB.reportes as A on B.id = A.idcategoria LEFT JOIN $DB.estatus as C ON A.idestatus = C.id LEFT JOIN $DB.servidores as D on A.idservidor = D.id LEFT JOIN $DB_2.tbldomains as E on A.id_dominio_registrado = E.id LEFT JOIN $DB.usuarios as F ON A.idusuario = F.id LEFT JOIN $DB.dominios as G ON A.iddominio = G.id
+where C.id= $casoEstatus";
 break;
 }
 }
@@ -76,11 +80,11 @@ break;
     <label for="filtroCategoria">Filtro por categorias:</label>
     <select class="form-control" name="filtroCategoria" id="filtroCategoria">
         <?php
-        include ("conexion.php");
+        include ("config/conexion.php");
         $registros=mysqli_query($conexion,"select * from categorias") or
         die("Problemas en el select:".mysqli_error($conexion));
         while ($reg=mysqli_fetch_array($registros)):?>
-            <option value="<?php echo $reg['idcategoria']?>"><?php echo $reg['nombre']?></option>
+            <option value="<?php echo $reg['id']?>"><?php echo $reg['nombre']?></option>
         <?php endwhile;?>
     </select>
     <button class="btn btn-info alert-info col-md-offset-3" type="submit">Filtrar</button>
@@ -91,39 +95,39 @@ break;
     <label for="filtroServidores">Filtro por servidores:</label>
     <select class="form-control" name="filtroServidores" id="filtroServidores">
         <?php
-        include ("conexion.php");
-        $registros=mysqli_query($conexion,"select * from servidor") or
+        include ("config/conexion.php");
+        $registros=mysqli_query($conexion,"select * from servidores") or
         die("Problemas en el select:".mysqli_error($conexion));
         while ($reg=mysqli_fetch_array($registros)):?>
-            <option value="<?php echo $reg['idservidor']?>"><?php echo $reg['nombre']?></option>
+            <option value="<?php echo $reg['id']?>"><?php echo $reg['nombre']?></option>
         <?php endwhile;?>
     </select>
     <button class="btn btn-info alert-info col-md-offset-3" type="submit">Filtrar</button>
 </form>
 <!--Form por Dominios:-->
-<form class="form-group col-md-2" action="reportes.php" method="post">
+<!--form class="form-group col-md-2" action="reportes.php" method="post">
     <label for="filtroDominios">Filtro por dominios:</label>
     <select class="form-control" name="filtroDominios" id="filtroDominios">
         <?php
-        include ("conexion.php");
-        $registros=mysqli_query($conexion,"select * from dominio") or
-        die("Problemas en el select:".mysqli_error($conexion));
-        while ($reg=mysqli_fetch_array($registros)):?>
-            <option value="<?php echo $reg['iddominio']?>"><?php echo $reg['nombre']?></option>
-        <?php endwhile;?>
+        //include ("conexion.php");
+        //$registros=mysqli_query($conexion,"select * from dominio") or
+        //die("Problemas en el select:".mysqli_error($conexion));
+        //while ($reg=mysqli_fetch_array($registros)):?>
+            <option value="<?php //echo $reg['iddominio']?>"><?php //echo $reg['nombre']?></option>
+        <?php //endwhile;?>
     </select>
     <button class="btn btn-info alert-info col-md-offset-3" type="submit">Filtrar</button>
-</form>
+</form>-->
 <!--Form por Estatus:-->
-<form class="form-group col-md-3" action="reportes.php" method="post">
+<form class="form-group col-md-2" action="reportes.php" method="post">
     <label for="filtroEstados">Filtro por estados:</label>
     <select class="form-control" name="filtroEstados" id="filtroEstados">
         <?php
-        include ("conexion.php");
+        include ("config/conexion.php");
         $registros=mysqli_query($conexion,"select * from estatus") or
         die("Problemas en el select:".mysqli_error($conexion));
         while ($reg=mysqli_fetch_array($registros)):?>
-            <option value="<?php echo $reg['idestatus']?>"><?php echo $reg['nombre']?></option>
+            <option value="<?php echo $reg['id']?>"><?php echo $reg['nombre']?></option>
         <?php endwhile;?>
     </select>
     <button class="btn btn-info alert-info col-md-offset-3" type="submit">Filtrar</button>
@@ -150,20 +154,28 @@ break;
             </thead>
             <tbody>
             <?php
-            include("conexion.php");
-            $result = mysqli_query($conexion,$sql);
+            include("config/conexion.php");
+            $result = mysqli_query($conexion,$sql) or die("Problemas con la conexion " . mysqli_error($conexion));
             $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-            while($columna = mysqli_fetch_array($result)):?>
-
-                <!--while($columna = mysqli_fetch_assoc($result)):?>-->
-                <?php $idprotegido=md5($clave.$columna['idreporte']);?>
+            while($columna = mysqli_fetch_array($result)):
+                if(!empty($columna['nombredominio'])){
+                        $nombre_dominio= $columna['nombredominio'];
+                    }elseif(!empty($columna['nombre_nuevo_dominio'])){
+                         $nombre_dominio= $columna['nombre_nuevo_dominio'];
+                    }
+                    
+                ?>
+                <?php $idprotegido=md5($clave.$columna['id_cliente']);
+                $id_reporte=$columna['id_cliente'];
+                ?>
+                
                 <tr class="text-center">
-                    <td><h4><?php echo $columna['idreporte']?></h4></td>
+                    <td><h4><?php echo $columna['id_cliente']?></h4></td>
                     <td><h4><?php echo $columna['titulo'] ?></h4></td>
                     <td><h4><?php echo $columna['autor'] ?></h4></td>
                     <td><h4><?php echo $columna['nombrecategoria'] ?></h4></td>
                     <td><h4><?php echo $columna['nombreservidor'] ?></h4></td>
-                    <td><h4><?php echo $columna['nombredominio'] ?></h4></td>
+                    <td><h4><?php echo $nombre_dominio; ?></h4></td>
                     <td><h4><?php echo $columna['ticket'] ?></h4></td>
                     <td><h4><?php echo $columna['nombrestatus'] ?></h4></td>
                     <td><h4><?php echo $columna['fecha'] ?></h4></td>
@@ -176,12 +188,12 @@ break;
                                 <a class="btn btn-warning alert-warning" href="?reporte=<?php echo $idprotegido;?>">Mostrar</a>
                                 <li role="separator" class="divider"></li>
                                 <form action="modificarincidencia.php" method="post">
-                                    <input class="hidden" name="idreporte" value="<?php echo $columna['idreporte']?>">
+                                    <input class="hidden" name="idreporte" value="<?php echo $id_reporte;?>">
                                     <input class="btn btn-info alert-info" type="submit" name="modificar" value="Modificar" />
                                 </form>
                                 <li role="separator" class="divider"></li>
                                 <form action="controles/eliminareporte.php" method="post">
-                                    <input class="hidden" name="idreporte" value="<?php echo $columna['idreporte']?>">
+                                    <input class="hidden" name="idreporte" value="<?php echo $id_reporte;?>">
                                     <input onclick="return confirm('Estás seguro que deseas eliminar el registro?');" class="btn btn-danger alert-danger" type="submit" name="eliminar" value="Eliminar" />
                                 </form>
 

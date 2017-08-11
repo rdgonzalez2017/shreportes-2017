@@ -39,7 +39,7 @@ if(empty($usuario) || empty($pass)){
 exit();
 }
 //CONSULTA SQL
-include ("../conexion.php");
+include ("../config/conexion.php");
 $result = mysqli_query($conexion,"SELECT * from usuarios where nombre='" . $usuario . "'");
 if($row = mysqli_fetch_array($result)):
 //echo $pass;
@@ -47,7 +47,7 @@ if($row = mysqli_fetch_array($result)):
 //echo $row['clave'];
     if($row['clave'] == $pass):
         session_start();
-        $_SESSION['idusuario'] = $row['idusuario'];
+        $_SESSION['idusuario'] = $row['id'];
         $_SESSION['tipo'] = $row['idtipodeusuario'];
         $_SESSION['nombre'] = $usuario;
         $_SESSION['nombrecompleto'] = $row['nombrecompleto'];
