@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 if (isset($_SESSION['nombre'])):
     $id_cliente = $_POST['id_cliente'];
@@ -12,28 +11,26 @@ if (isset($_SESSION['nombre'])):
     $autor = $_POST['autor'];
     $ticket = $_POST['ticket'];
     $observacion = $_POST['observacion'];
-    
-    
-    
-    
+
+
     //Si el dominio fue seleccionado de la lista "Registrados":
-    if (!empty($_POST['id_dominio_registrado'])) { 
+    if (!empty($_POST['id_dominio_registrado'])) {
         $id_dominio = $_POST['id_dominio_registrado'];
         //Insert principal del reporte
-        $insert_reportes = mysqli_query($conexion, "insert into reportes(idusuario,idcategoria,idestatus,id_dominio_registrado,idservidor,titulo,autor,ticket,observacion,fecha)
-                               values ('$_POST[idusuario]','$_POST[categoria]','$_POST[estado]','$id_dominio','$_POST[servidor]','$_POST[titulo]','$_POST[autor]','$_POST[ticket]','$_POST[observacion]', CURDATE())")
+        $insert_reportes = mysqli_query($conexion, "insert into reportes(idusuario,id_cliente,idcategoria,idestatus,id_dominio_registrado,idservidor,titulo,autor,ticket,observacion,fecha)
+                               values ('$_POST[idusuario]','$id_cliente','$_POST[categoria]','$_POST[estado]','$id_dominio','$_POST[servidor]','$_POST[titulo]','$_POST[autor]','$_POST[ticket]','$_POST[observacion]', CURDATE())")
                 or die("Problemas en el insert principal" . mysqli_error($conexion));
     }
     //Si el dominio fue seleccionado de la lista "No Registrados":
-    if (!empty($_POST['id_dominio_noregistrado'])) {        
+    if (!empty($_POST['id_dominio_noregistrado'])) {
         $id_dominio = $_POST['id_dominio_noregistrado'];
         //Insert principal del reporte
-         $insert_reporte = mysqli_query($conexion, "insert into reportes(id, idusuario, id_cliente, idestatus, idcategoria, idservidor, iddominio, titulo, autor, ticket, observacion, fecha)
+        $insert_reporte = mysqli_query($conexion, "insert into reportes(id, idusuario, id_cliente, idestatus, idcategoria, idservidor, iddominio, titulo, autor, ticket, observacion, fecha)
                                  values (NULL,'$_POST[idusuario]','$id_cliente','$_POST[estado]','$_POST[categoria]','$_POST[servidor]','$id_dominio','$_POST[titulo]','$_POST[autor]','$_POST[ticket]','$_POST[observacion]', CURDATE())")
-                    or die("Problemas en el insert principal" . mysqli_error($conexion));
+                or die("Problemas en el insert principal" . mysqli_error($conexion));
     }
     //Si el dominio fue ingresado como nuevo:
-    if (!empty($_POST['nuevo_dominio'])) {        
+    if (!empty($_POST['nuevo_dominio'])) {
         $nuevo_dominio = $_POST['nuevo_dominio'];
         $busca_dominio = mysqli_query($conexion, "SELECT * FROM dominios where nombre ='$nuevo_dominio'");
         //Se valida que el dominio no exista en la tabla dominios de la BD shincidencias:
@@ -42,27 +39,32 @@ if (isset($_SESSION['nombre'])):
             $insert_dominio = mysqli_query($conexion, "insert into dominios(id, id_cliente, nombre) VALUES (NULL,'$id_cliente','$nuevo_dominio')")or die("Problemas en el insert del dominio" . mysqli_error($conexion));
             // Se selecciona el id del dominio que se acaba de ingresar, para insertarlo en el reporte:
             $select_dominio = mysqli_query($conexion, "select * from dominios ORDER BY id DESC limit 1")or die("Problemas en el Select del dominio" . mysqli_error($conexion));
-            while($columna = mysqli_fetch_array($select_dominio)){
+            while ($columna = mysqli_fetch_array($select_dominio)) {
                 $id_dominio = $columna['id'];
                 //Insert principal del reporte            
-            $insert_reporte = mysqli_query($conexion, "insert into reportes(id, idusuario, id_cliente, idestatus, idcategoria, idservidor, iddominio, titulo, autor, ticket, observacion, fecha)
+                $insert_reporte = mysqli_query($conexion, "insert into reportes(id, idusuario, id_cliente, idestatus, idcategoria, idservidor, iddominio, titulo, autor, ticket, observacion, fecha)
                                  values (NULL,'$_POST[idusuario]','$id_cliente','$_POST[estado]','$_POST[categoria]','$_POST[servidor]','$id_dominio','$_POST[titulo]','$_POST[autor]','$_POST[ticket]','$_POST[observacion]', CURDATE())")
-                    or die("Problemas en el insert principal" . mysqli_error($conexion));
+                        or die("Problemas en el insert principal" . mysqli_error($conexion));
             }
-            
-        }else{
-            while($columna = mysqli_fetch_array($busca_dominio)){
+        } else {
+            while ($columna = mysqli_fetch_array($busca_dominio)) {
                 $id_dominio = $columna['id'];
-                 //Insert principal del reporte            
-            $insert_reporte = mysqli_query($conexion, "insert into reportes(id, idusuario, id_cliente, idestatus, idcategoria, idservidor, iddominio, titulo, autor, ticket, observacion, fecha)
+                //Insert principal del reporte            
+                $insert_reporte = mysqli_query($conexion, "insert into reportes(id, idusuario, id_cliente, idestatus, idcategoria, idservidor, iddominio, titulo, autor, ticket, observacion, fecha)
                                  values (NULL,'$_POST[idusuario]','$id_cliente','$_POST[estado]','$_POST[categoria]','$_POST[servidor]','$id_dominio','$_POST[titulo]','$_POST[autor]','$_POST[ticket]','$_POST[observacion]', CURDATE())")
-                    or die("Problemas en el insert principal" . mysqli_error($conexion));                
+                        or die("Problemas en el insert principal" . mysqli_error($conexion));
             }
-            
         }
     }
+    //Se selecciona el último reporte para redirigir la página hacia este.
+    $select_reporte = mysqli_query($conexion, "SELECT id FROM reportes ORDER BY id DESC LIMIT 1");
+    $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
+    while ($fila = mysqli_fetch_array($select_reporte)) {
+        $id_reporte = $fila['id'];
+        $idprotegido = md5($clave . $fila['id']);
+    }
     mysqli_close($conexion);
-       echo "<script>location.href='../muestra.php';</script>";
-        //header("Location:../muestra.php");
+    echo "<script>location.href='../reportes.php?reporte=$idprotegido';</script>";
+
 endif;
 

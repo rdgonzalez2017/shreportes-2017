@@ -1,17 +1,17 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header col-md-4">
-            <a href="https://www.servicioshosting.com/sitio/"><img class="img-responsive" id="img-logosh" src="images/logo_desktop.png"></a>
+            <a href="https://www.servicioshosting.com/sitio/"><img class="img-responsive" id="img-logosh" src="../images/logo_desktop.png"></a>
         </div>
         <div class="col-md-4 col-md-offset-1">
-            <img  style="width: 50%" src="images/logo_shincidencias.png">
+            <img  style="width: 50%" src="../images/logo_shincidencias.png">
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
                 <?php if (isset($_SESSION['nombre'])):?>
-                    <li><a href='controles/logout.php'><span class="glyphicon glyphicon-log-in"></span> Cierre de Sesión</a></li>
+                    <li><a href='logout.php'><span class="glyphicon glyphicon-log-in"></span> Cierre de Sesión</a></li>
                 <?php else:?>
-                    <li><a href='index.php'><span class="glyphicon glyphicon-log-in"></span> Inicio de Sesión</a></li>
+                    <li><a href='../index.php'><span class="glyphicon glyphicon-log-in"></span> Inicio de Sesión</a></li>
                <?php endif;?>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Nosotros <span class="caret"></span></a>

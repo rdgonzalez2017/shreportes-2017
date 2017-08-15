@@ -23,7 +23,7 @@
                 if (isset($_GET['reporte']))://Si seleccionó un reporte para mostrar:
                     $id_protegido = $_GET["reporte"];
                     $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-                    $select = "SELECT *, f.correo as correo_autor, a.id as id_reporte, g.nombre as nombre_nuevo_dominio, e.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM $DB.categorias as B RIGHT JOIN $DB.reportes as A on B.id = A.idcategoria LEFT JOIN $DB.estatus as C ON A.idestatus = C.id LEFT JOIN $DB.servidores as D on A.idservidor = D.id LEFT JOIN $DB_2.tbldomains as E on A.id_dominio_registrado = E.id LEFT JOIN $DB.usuarios as F ON A.idusuario = F.id LEFT JOIN $DB.dominios as G ON A.iddominio = G.id  WHERE MD5(concat('" . $clave . "',A.id)) = '" . $id_protegido . "' LIMIT 1";
+                    $select = "SELECT *, A.id as id_reporte, A.id_cliente as idcliente, F.correo as correo_autor, G.nombre as nombre_nuevo_dominio, E.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM $DB.categorias as B RIGHT JOIN $DB.reportes as A on B.id = A.idcategoria LEFT JOIN $DB.estatus as C ON A.idestatus = C.id LEFT JOIN $DB.servidores as D on A.idservidor = D.id LEFT JOIN $DB_2.tbldomains as E on A.id_dominio_registrado = E.id LEFT JOIN $DB.usuarios as F ON A.idusuario = F.id LEFT JOIN $DB.dominios as G ON A.iddominio = G.id  WHERE MD5(concat('" . $clave . "',A.id)) = '" . $id_protegido . "' LIMIT 1";
                     $query_reportes = mysqli_query($conexion, "$select") // Ejecutamos la consulta
                             or die("Problemas en el select:" . mysqli_error($conexion));
                     //$query_reportes = mysql_query("SELECT * FROM reporte WHERE MD5(concat('".$clave."',idreporte)) = '".$idreporte."' LIMIT 1"); // Ejecutamos la consulta
@@ -34,14 +34,15 @@
                         } elseif (!empty($columna['nombre_nuevo_dominio'])) {
                             $nombre_dominio = $columna['nombre_nuevo_dominio'];
                         }
-                        $id_cliente = $columna['id_cliente'];
+                        $id_usuario = $columna['idusuario'];
+                        $id_cliente = $columna['idcliente'];
                         $categoria = $columna['nombrecategoria'];
                         $titulo = $columna['titulo'];
                         $autor = $columna['autor'];
                         $fecha = $columna['fecha'];
                         $observacion = $columna['observacion'];
                         $id_reporte = $columna['id_reporte'];
-                        $correoautor = $columna['correo_autor'];
+                        $correo_autor = $columna['correo_autor'];
                         $idestatus = $columna['idestatus'];
                         $estatus = $columna['nombrestatus'];
                         $ticket = $columna['ticket'];
@@ -58,7 +59,7 @@
                         <div class="panel panel-primary container col-md-6 col-md-offset-3 rollIn animated" data-wow-duration="3000ms">
 
                             <div class="panel-heading row" style="background: orange">
-                                <h4 class="text-center">Incidencia</h4>
+                                <div class="text-center"><h4><b>Incidencia</b></h4></div>
                             </div>
                             <div class="panel-body">
                                 <div class="row">
@@ -95,11 +96,12 @@
                         <div class="row">
                             <form method="Post" action="controles/enviar_correo.php">
                             <input TYPE="hidden" NAME="link" VALUE="<?php echo $Link;?>">
-                            <input TYPE="hidden" NAME="id_reporte" VALUE="<?php echo $id_reporte ?>">
-                            <input TYPE="hidden" NAME="id_protegido" VALUE="<?php echo $id_protegido ?>">
-                            <input TYPE="hidden" NAME="id_cliente" VALUE="<?php echo $id_cliente ?>">
-                            <input TYPE="hidden" NAME="correo_autor" VALUE="<?php echo $correoautor ?>">                                            
-                           <input  type="submit" class="btn btn-info btn-sm col-md-2 col-md-offset-5" value="Enviar Correo">
+                            <input TYPE="hidden" NAME="id_reporte" VALUE="<?php echo $id_reporte; ?>">
+                            <input TYPE="hidden" NAME="id_protegido" VALUE="<?php echo $id_protegido; ?>">
+                            <input TYPE="hidden" NAME="id_cliente" VALUE="<?php echo $id_cliente; ?>">
+                            <input TYPE="hidden" NAME="correo_autor" VALUE="<?php echo $correo_autor; ?>">
+                            <input TYPE="hidden" NAME="dominio" VALUE="<?php echo $nombre_dominio;?>">
+                            <input  type="submit" class="btn btn-info btn-sm col-md-2 col-md-offset-5" value="Enviar Correo">
                             </form>
                         </div>
                         <?php endif;?>

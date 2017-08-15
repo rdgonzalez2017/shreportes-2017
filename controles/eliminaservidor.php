@@ -1,14 +1,14 @@
 <?php
 session_start();
 if (isset($_SESSION['nombre'])):
-    include("../conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
+    include("../config/conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
     if(isset($_POST['eliminar'])):
         $idservidor = ($_POST['idservidor']);
-        $query_eliminar = mysqli_query($conexion,"DELETE FROM servidor WHERE idservidor = '".$idservidor."'"); // Ejecutamos la consulta para eliminar el registro de la base de datos
+        $query_eliminar = mysqli_query($conexion,"DELETE FROM servidores WHERE id = '".$idservidor."'"); // Ejecutamos la consulta para eliminar el registro de la base de datos
         if($query_eliminar)
         {
             //header("Location:eliminareportes.php");
-            echo "<script>location.href='../agregarservidor.php';</script>";
+            echo "<script>location.href='../complementos/agregarservidor.php';</script>";
 
             echo 'La categoría se eliminó corectamente'; // Si la consulta se ejecutó bien, muestra este mensaje
         }

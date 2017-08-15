@@ -13,13 +13,12 @@
     if (!empty($_POST['correo'])):
         $correo = $_POST['correo'];
         require ('config/conexion2.php');
-        $select_clientes = mysqli_query($conexion, "select * from tblclients where email = '$correo' ")
+        $select_clientes = mysqli_query($conexion, "select * from tblclients where email = '$correo'")
                 or die("Problemas en el select" . mysqli_error("$conexion"));
         if (mysqli_num_rows($select_clientes) == 0):
             ?>
             <div class="text-center">
-                <h3>Cliente no registrado.<h3>       
-
+                <h3>Cliente no registrado.<h3> 
                         <a class="btn btn-warning btn-lg" style="text-align: center" href="inicio.php">Regresar.</a>
                         </div>
                         <?php exit(); ?>
@@ -60,7 +59,7 @@
                     <!-- Conexión con base de datos-->
                     <body>
                         <!-- Formulario para envío de datos del sistema-->
-                        <form class="form" method = "post" action="controles/validarmuestra.php">
+                        <form class="form" method = "post" action="controles/cargar_reporte.php">
                             <!-- Envío de id de usuario (Oculto) -->
                             <input type="hidden" name="idusuario" value="<?php
                                 if (isset($_SESSION['idusuario'])) {
