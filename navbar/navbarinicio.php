@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <img  style="width: 30%" src="images/logo_shincidencias.png"></a>
+            <img  style="width: 30%" src="images/logo_shincidencias.png">
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">

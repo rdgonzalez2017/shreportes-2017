@@ -21,23 +21,22 @@
                                     <h5 style="margin-top: 20px">
                                         © Copyright: Servitepuy, C.A. 2017</h5>
                                 </div><!--end .col-md-4-->
-                                <div class="col-sm-8 col-md-4">
+                                <div class="col-md-4" style="padding-top: 3%;">
                                     <div class="row contact row-first">
-                                        <div class="col-md-4 col-md-offset-2">
-                                            <a href="https://t.me/servicioshostingvzla" class="skype"><i class="fa fa-skype"></i>Telegram</a>
+                                        <div class="col-md-3">
+                                            <a href="https://t.me/servicioshostingvzla" class="skype"><img src="images/icono_telegram.png"></a>
                                         </div><!--end .col-md-6-->
-                                        <div class="col-md-4">
-                                            <a href="http://instagram.com/servicioshosting" class="instagram"><i class="fa fa-instagram"></i>Instagram</a>
+                                        <div class="col-md-3">
+                                            <a href="http://instagram.com/servicioshosting" class="instagram"><img src="images/icono_instagram.png"></a>
+                                        </div><!--end .col-md-6-->
+                                        <div class="col-md-3">
+                                            <a href="http://facebook.com/servicioshosting" class="facebook"><img src="images/icono_facebook.png"></a>
+                                        </div><!--end .col-md-6-->
+                                        <div class="col-md-3">
+                                            <a href="https://twitter.com/servitepuy" class="twitter"><img src="images/icono_twiter.png"></a>
                                         </div><!--end .col-md-6-->
                                     </div><!--end .row .contact .row-first-->
-                                    <div class="row contact">
-                                        <div class="col-md-4 col-md-offset-2">
-                                            <a href="http://facebook.com/servicioshosting" class="facebook"><i class="fa fa-facebook"></i>Facebook</a>
-                                        </div><!--end .col-md-6-->
-                                        <div class="col-md-4">
-                                            <a href="https://twitter.com/servitepuy" class="twitter"><i class="fa fa-twitter"></i>Twitter</a>
-                                        </div><!--end .col-md-6-->
-                                    </div><!--end .row .contact-->
+                                    
                                 </div><!--end .col-md-6-->
                             </div><!--end .row-->
                         </div><!--end .col-md-12-->
@@ -47,9 +46,4 @@
         </center>
     </div><!--end .container-->
 </section><!--end #footer-->
-<!-- Sticky Footer
-<script type="text/javascript" src="js/footer.js"></script>
-<!-- Fade Contact Footer
-<script type="text/javascript" src="js/contactFade.js"></script>
-     -->
 </footer>

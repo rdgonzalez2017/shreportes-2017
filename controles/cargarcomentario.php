@@ -179,7 +179,7 @@ $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http:
 
 <p>Hola $autor_destino. </p>
 
-<p>Se ha generado un nuevo comentario en el reporte de incidencia. Dominio: <b>$nombre_dominio.</b></p>
+<p>Se ha generado un nuevo comentario en la incidencia del dominio: <b>$nombre_dominio.</b></p>
     
 <p>Invitamos a revisar los detalles, presionando aquí:
 <a target='_blank' href='$link'>Ver incidencia.</a></p>

@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 if (isset($_SESSION['nombre'])):
     include("../config/conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos

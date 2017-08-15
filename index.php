@@ -13,7 +13,7 @@
         <div class="col-md-6 col-md-offset-3 container">
             <div class="panel panel-primary" >
                 <div class="panel-heading">
-                    <p class="text-center">Inicio de Sesion</p>
+                    <h4 class="text-center">Inicio de sesión</h4>
                 </div>
                 <!-- Inicio de sesión por correo
                 <div class="panel-body">

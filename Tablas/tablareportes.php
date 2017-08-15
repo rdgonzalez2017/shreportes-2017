@@ -69,6 +69,7 @@ break;
 <form class="form-group col-md-2" action="reportes.php" method="post">
     <label for="general">Filtro General:</label>
     <select class="form-control" name="general" id="general">
+        <option value="">Seleccione</option>
         <option value="todos">Todos</option>
         <option value="recientes">Más recientes</option>
         <option value="antiguos">Más antiguos</option>
