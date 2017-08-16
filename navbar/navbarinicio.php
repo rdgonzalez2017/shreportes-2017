@@ -1,6 +1,11 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <img  style="width: 30%" src="images/logo_shincidencias.png">
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">

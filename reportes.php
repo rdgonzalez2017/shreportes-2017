@@ -58,7 +58,7 @@
 
                         <div class="panel panel-primary container col-md-6 col-md-offset-3 rollIn animated" data-wow-duration="3000ms">
 
-                            <div class="panel-heading row" style="background: orange">
+                            <div id="panel-reporte" class="panel-heading row" >
                                 <div class="text-center"><h4><b>Incidencia</b></h4></div>
                             </div>
                             <div class="panel-body">
@@ -101,8 +101,19 @@
                             <input TYPE="hidden" NAME="id_cliente" VALUE="<?php echo $id_cliente; ?>">
                             <input TYPE="hidden" NAME="correo_autor" VALUE="<?php echo $correo_autor; ?>">
                             <input TYPE="hidden" NAME="dominio" VALUE="<?php echo $nombre_dominio;?>">
-                            <input  type="submit" class="btn btn-info btn-sm col-md-2 col-md-offset-5" value="Enviar Correo">
-                            </form>
+                            <button  type="submit" class="btn btn-info col-md-2 col-md-offset-5"><b>Enviar correo</b></button>
+                            </form>                            
+                        </div>
+                        <div class="row">
+                            <form method="Post" action="controles/enviar_recordatorio.php">
+                            <input TYPE="hidden" NAME="link" VALUE="<?php echo $Link;?>">
+                            <input TYPE="hidden" NAME="id_reporte" VALUE="<?php echo $id_reporte; ?>">
+                            <input TYPE="hidden" NAME="id_protegido" VALUE="<?php echo $id_protegido; ?>">
+                            <input TYPE="hidden" NAME="id_cliente" VALUE="<?php echo $id_cliente; ?>">
+                            <input TYPE="hidden" NAME="correo_autor" VALUE="<?php echo $correo_autor; ?>">
+                            <input TYPE="hidden" NAME="dominio" VALUE="<?php echo $nombre_dominio;?>">
+                            <button  type="submit" class="btn btn-warning col-md-2 col-md-offset-5"><b>Enviar recordatorio</b></button>
+                            </form>                            
                         </div>
                         <?php endif;?>
                         <div class="row">

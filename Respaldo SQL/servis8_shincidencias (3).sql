@@ -1,10 +1,10 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 4.6.6
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 15-08-2017 a las 14:51:53
--- Versión del servidor: 10.1.21-MariaDB
+-- Servidor: localhost:3306
+-- Tiempo de generación: 15-08-2017 a las 16:14:16
+-- Versión del servidor: 5.6.35
 -- Versión de PHP: 5.6.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -51,8 +51,7 @@ INSERT INTO `categorias` (`id`, `nombre`) VALUES
 CREATE TABLE `comentarios` (
   `id` bigint(7) NOT NULL,
   `idreporte` bigint(7) DEFAULT NULL,
-  `nick` varchar(50) DEFAULT NULL,
-  `correo` varchar(50) NOT NULL,
+  `autor` varchar(50) DEFAULT NULL,
   `comentario` longtext,
   `fecha` datetime DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -61,12 +60,15 @@ CREATE TABLE `comentarios` (
 -- Volcado de datos para la tabla `comentarios`
 --
 
-INSERT INTO `comentarios` (`id`, `idreporte`, `nick`, `correo`, `comentario`, `fecha`) VALUES
-(1, 7, 'Medardo Oliveros', 'medardo.a@clasesitdevenezuela.com', 'Buenas Tardes\r\n\r\nNo entiendo que significa esto pero asumirÃ© que la pÃ¡gina tiene mucha informaciÃ³n. Dicha pÃ¡gina estÃ¡ echa en wordpress y para limpiarla y eliminar imÃ¡genes y documentos necesito poder acceder pero la cuenta estÃ¡ suspendida. Â¿Como se soluciona esta situaciÃ³n?', '2017-07-14 12:59:21'),
-(2, 7, 'Ramon Ernesto', 'ramon.n@servitepuy.com', 'Necesitamos su compromiso de revisar el cron del WP que estÃ¡ sobrecargando el servidor para poder activar su cuenta nuevamente', '2017-07-14 13:46:25'),
-(3, 7, 'jose angel', 'jose.a@clasesitdevenezuela.com', 'ok esta bien le estaremos revisando esta pagina educativa y no ocupa espacio ', '2017-07-14 14:11:04'),
-(4, 7, 'Ramon Ernesto', 'ramon.n@servitepuy.com', 'La cuenta fue activada. Estaremos esperando la revisiÃ³n.', '2017-07-14 14:14:48'),
-(5, 8, 'Ramon Ernesto', 'ramon.n@servitepuy.com', 'Fueron eliminados los archivos encontrados comprometidos y la cuenta fue activa.', '2017-07-20 07:37:14');
+INSERT INTO `comentarios` (`id`, `idreporte`, `autor`, `comentario`, `fecha`) VALUES
+(1, 7, 'Medardo Oliveros', 'Buenas Tardes\r\n\r\nNo entiendo que significa esto pero asumirÃ© que la pÃ¡gina tiene mucha informaciÃ³n. Dicha pÃ¡gina estÃ¡ echa en wordpress y para limpiarla y eliminar imÃ¡genes y documentos necesito poder acceder pero la cuenta estÃ¡ suspendida. Â¿Como se soluciona esta situaciÃ³n?', '2017-07-14 12:59:21'),
+(2, 7, 'Ramon Ernesto', 'Necesitamos su compromiso de revisar el cron del WP que estÃ¡ sobrecargando el servidor para poder activar su cuenta nuevamente', '2017-07-14 13:46:25'),
+(3, 7, 'jose angel', 'ok esta bien le estaremos revisando esta pagina educativa y no ocupa espacio ', '2017-07-14 14:11:04'),
+(4, 7, 'Ramon Ernesto', 'La cuenta fue activada. Estaremos esperando la revisiÃ³n.', '2017-07-14 14:14:48'),
+(5, 8, 'Ramon Ernesto', 'Fueron eliminados los archivos encontrados comprometidos y la cuenta fue activa.', '2017-07-20 07:37:14'),
+(6, 2, 'Diego Caliz', 'Prueba', '2017-08-15 10:57:35'),
+(7, 2, 'Diego Caliz', 'Prueba', '2017-08-15 11:09:09'),
+(8, 2, 'Ronny Gonzalez', 'Prueba', '2017-08-15 11:21:18');
 
 -- --------------------------------------------------------
 
@@ -298,7 +300,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
 ALTER TABLE `comentarios`
-  MODIFY `id` bigint(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `dominios`
 --
