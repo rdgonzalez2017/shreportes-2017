@@ -12,6 +12,7 @@
         ?>
     </header>
     <body>
+        
         <div class="row col-md-12">
             <!-- Muestra Previa del Reporte -->
             <section>
@@ -133,6 +134,7 @@
                     endwhile; //Fin de While que muestra el reporte de incidencia
 
                 else://Muestra la tabla de reportes, hasta que elija un reporte para mostrar:
+                    
                     if (isset($_SESSION['nombre'])):
                         include "tablas/tablareportes.php";
 

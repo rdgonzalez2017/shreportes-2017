@@ -49,7 +49,7 @@
                     <div class="row">
                         <div class="col-md-3"><?php
                             if (isset($_SESSION['nombre'])) {
-                                echo "Bienvenido: " . $_SESSION['nombrecompleto'];
+                                echo "Sesión abierta: " . $_SESSION['nombrecompleto'];
                             }
                             ?>       </div>
                         <div class="col-md-3 col-md-offset-2">Cantidad de Incidencias reportadas: <?php echo $cantidadincidencias; ?></div>
@@ -204,12 +204,15 @@
                                                         ?>"/>
                                                 </div>
                                             </div>
+                                            	<script src="js/ckeditor/ckeditor.js"></script>
+
                                             <!-- Ingreso de la observacion-->
                                             <div class="form-group row">
                                                 <label for="observacion" class="col-md-2 control-label">Observacion:</label>
                                                 <div class="col-md-12" >
                                                     <textarea id="textarea" name="observacion" style="resize:none"  rows="10" aria-required="true"></textarea>
-                                                    <script>tinyMCE.init({selector: "textarea", branding: false, plugins: "image,paste,autolink", paste_data_images: true, language: "es"});</script>
+                                                    <script  >CKEDITOR.replace('observacion');</script>
+                                                    <!--<script>tinyMCE.init({selector: "textarea", branding: false, plugins: "image,paste,autolink", paste_data_images: true, language: "es"});</script>-->
                                                 </div>
                                             </div>
 

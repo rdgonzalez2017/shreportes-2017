@@ -1,16 +1,16 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-        <div class="navbar-header">
+        <div class="navbar-header col-xs-6 col-md-3">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <img  style="width: 30%" src="images/logo_shincidencias.png"></a>
+            <img  style="width: 70%" src="images/logo_shincidencias.png"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">
-                <li><button class="btn btn-info btn-sm navbar-btn alert-info" onclick = "location='inicio.php'"><b>Ir a Inicio</b></button></li>
+                <li><button class="btn btn-info btn-sm navbar-btn alert-info" onclick = "location='inicio.php'"><b>Reportar incidencia</b></button></li>
                 <li><button class="btn btn-warning btn-sm navbar-btn alert-warning" onclick = "location='reportes.php'"><b>Ver incidencias</b></button></li>
                 <li><a href='controles/logout.php'><span class="glyphicon glyphicon-log-in"></span> Cerrar Sesión</a></li>
             </ul>
