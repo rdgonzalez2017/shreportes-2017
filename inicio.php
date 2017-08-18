@@ -21,7 +21,7 @@
                     ?>       
                 </div>
             </div>
-            <div class="container rotateIn animated" data-wow-duration="500ms">
+            <div class="container rollIn animated" data-wow-duration="500ms">
                 <div class="col-md-10 col-md-offset-1">
                     <br>
                     <div class="panel panel-primary">

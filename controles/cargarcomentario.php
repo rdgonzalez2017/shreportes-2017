@@ -6,17 +6,24 @@ $autor_comentario = $_POST['autor_comentario'];
 $id_reporte = $_POST['id_reporte'];
 $id_protegido = $_POST['id_protegido'];
 $correo_destino = $_POST['correo_destino'];
+$correo_autor = $_POST['correo_autor'];
 $autor_destino = $_POST['autor_destino'];
 $link = $_POST['link'];
 $nombre_dominio = $_POST['nombre_dominio'];
-
-
 // Insert en la tabla de comentarios
 require ("../config/conexion.php");
 $insert_comentarios = mysqli_query($conexion, "insert into comentarios(id,idreporte,autor,comentario,fecha) 
     SELECT NULL, '$id_reporte', '$autor_comentario', '$comentario', now()
     FROM reportes where id = '$id_reporte' LIMIT 1")
         or die("Problemas al insertar los datos del comentario" . mysqli_error($conexion));
+//Si se insertó el comentario de parte del cliente:
+if ($insert_comentarios) {
+    if (empty($_SESSION['nombre'])) {
+        //Cambiar estado de incidencia a respondido:
+        $update_estado = mysqli_query($conexion, "UPDATE reportes SET idestatus = 4 where id = $id_reporte")
+                or die("Problemas en el Update" . mysqli_error($conexion));
+    }
+}
 
 //Función PHP Mailer:
 require '../php_mailer/PHPMailerAutoload.php';
@@ -30,7 +37,10 @@ $objetoCorreo->Port = 465; // El proveedor nos proporciona este dato.
 $objetoCorreo->Username = 'cotizador@servicioshosting.com';
 $objetoCorreo->Password = 'Atumedida2017/';
 $objetoCorreo->setFrom('no-responder@servicioshosting.com', 'ServiciosHosting.com');
-$objetoCorreo->addAddress($correo_destino, 'Destinatario');
+$objetoCorreo->addAddress($correo_destino, $autor_destino);
+if (isset($_SESSION['nombre'])) {
+    $objetoCorreo->AddBCC($correo_autor); //Destinatario copia oculta
+}
 $objetoCorreo->addReplyTo('no-responder@servitepuy.com', 'Respuestas');
 $objetoCorreo->isHTML(true);
 $objetoCorreo->CharSet = 'UTF-8'; // El correo irá codificado en UTF-8, para evitar problemas con letras acentuadas y otros caracteres especiales.
@@ -179,7 +189,7 @@ $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http:
 
 <p>Hola $autor_destino. </p>
 
-<p>Se ha generado un nuevo comentario en la incidencia del dominio: <b>$nombre_dominio.</b></p>
+<p>Le han escrito un nuevo comentario en la incidencia del dominio: <b>$nombre_dominio.</b></p>
     
 <p>Invitamos a revisar los detalles, presionando aquí:
 <a target='_blank' href='$link'>Ver incidencia.</a></p>

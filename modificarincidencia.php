@@ -146,12 +146,14 @@ $id_reporte = $columna['id_reporte'];
                         <input class="form-control" type="text" name="ticket" id="ticket" value="<?php echo $columna['ticket'];?>"/>
                     </div>
                 </div>
+                <script src="js/ckeditor/ckeditor.js"></script>
                 <!-- Observacion-->
                 <div class="form-group row">
                     <label for="observacion" class="col-md-2 control-label">Observacion:</label>
                     <div class="col-md-12">
                         <textarea name="observacion" rows="10"><?php echo $columna['observacion'];?></textarea>
-                        <script>tinyMCE.init({selector: "textarea",branding: false,plugins: "image,paste,autolink",paste_data_images: true});</script>
+                        <script  >CKEDITOR.replace('observacion');</script>
+                        <!--<script>tinyMCE.init({selector: "textarea",branding: false,plugins: "image,paste,autolink",paste_data_images: true});</script>-->
                     </div>
                 </div>
                 <!-- Boton para enviar datos-->

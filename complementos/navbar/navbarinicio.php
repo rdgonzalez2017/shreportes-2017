@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <img  style="width: 30%" src="images/logo_shincidencias.png"></a>
+            <img  style="width: 70%" src="images/logo_shincidencias.png"></a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">

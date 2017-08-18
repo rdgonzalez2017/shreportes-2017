@@ -4,8 +4,8 @@ session_start();
     include ('../config/conexion2.php');
     include ('../config/conexion.php');
     require '../php_mailer/PHPMailerAutoload.php';
-
-    $select = "SELECT A.id as id_reporte, A.autor, A.idestatus, A.fecha as fecha_reporte, curdate() as fecha_actual, B.nombre as dominio_externo, C.domain as dominio_interno, D.id as id_cliente, D.firstname as nombre_cliente, D.lastname as apellido_cliente, D.email as correo_cliente FROM $DB.reportes as A LEFT JOIN $DB.dominios as B ON A.iddominio = B.id LEFT JOIN $DB_2.tbldomains as C ON A.id_dominio_registrado = C.id LEFT JOIN $DB_2.tblclients as D ON A.id_cliente = D.id where A.idestatus <> 1 ";
+    
+    $select = "SELECT A.id as id_reporte, A.autor, A.idestatus, A.fecha as fecha_reporte, curdate() as fecha_actual, B.nombre as dominio_externo, C.domain as dominio_interno, D.id as id_cliente, D.firstname as nombre_cliente, D.lastname as apellido_cliente, D.email as correo_cliente, E.correo as correo_autor FROM $DB.reportes as A LEFT JOIN $DB.dominios as B ON A.iddominio = B.id LEFT JOIN $DB_2.tbldomains as C ON A.id_dominio_registrado = C.id LEFT JOIN $DB_2.tblclients as D ON A.id_cliente = D.id LEFT JOIN $DB.usuarios as E ON A.idusuario = E.id where A.idestatus <> 1 ";
     $select_cliente = mysqli_query($conexion, $select)
             or die("Problemas en el select" . mysqli_error("$conexion"));
     while ($fila = mysqli_fetch_array($select_cliente)):
@@ -18,21 +18,28 @@ session_start();
         $apellido_cliente = $fila['apellido_cliente'];
         $nombre_cliente_completo = $nombre_cliente . " " . $apellido_cliente;
         $correo_cliente = $fila['correo_cliente'];
+        $correo_autor = $fila['correo_autor'];
         $dominio_externo = $fila['dominio_externo'];
         $dominio_interno = $fila['dominio_interno'];
         if(!empty($dominio_externo)){
             $dominio = $dominio_externo;
         }else{
             $dominio = $dominio_interno;
-        }
-       
+        }       
+       if ($id_estatus==2){
+          $mensaje = "Invitamos a revisar los detalles, presionando aquí:";
+       }
+       if ($id_estatus==3){
+          $mensaje = "Estamos en espera de sus comentarios:";
+       }
+     
 //Para obtener el link:
         $host = $_SERVER["HTTP_HOST"];
         $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
         $idprotegido = md5($clave . $id_reporte);
-        $url = "/reportes.php?reporte=$idprotegido";
+        $url = "/shincidencias/reportes.php?reporte=$idprotegido";
         $link = "https://" . $host . $url;
-        echo $id_reporte . "-" . $id_estatus . "-" . $dominio . "-" . $link . "<br>";
+       
    
 //Función PHP Mailer:
     $objetoCorreo = new PHPMailer;
@@ -45,7 +52,8 @@ session_start();
     $objetoCorreo->Username = 'cotizador@servicioshosting.com';
     $objetoCorreo->Password = 'Atumedida2017/';
     $objetoCorreo->setFrom('no-responder@servicioshosting.com', 'ServiciosHosting.com');
-    $objetoCorreo->addAddress($correo_cliente, 'Destinatario');
+    $objetoCorreo->addAddress($correo_cliente, $nombre_cliente_completo);
+    $objetoCorreo->AddBCC($correo_autor);//Destinatario copia oculta
     $objetoCorreo->addReplyTo('no-responder@servitepuy.com', 'Respuestas');
     $objetoCorreo->isHTML(true);
     $objetoCorreo->CharSet = 'UTF-8'; // El correo irá codificado en UTF-8, para evitar problemas con letras acentuadas y otros caracteres especiales.
@@ -192,9 +200,9 @@ session_start();
 <p><i>Este es un correo generado automáticamente. Por favor no lo responda.</i></p>
 <p>Hola $nombre_cliente_completo. </p>
 <p>Se le recuerda que existe una incidencia para la cuenta <b>$dominio.</b></p> 
-<p>Invitamos a revisar los detalles, presionando aquí:
+<p>$mensaje
 <a href='$link'>Ver incidencia.</a></p>
-<p>Monitereo y Abuso ServiciosHosting.com</p>
+<p>Monitoreo y Abuso ServiciosHosting.com</p>
 </th>
                                                             <th class='expander' style='Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0'></th>
                                                         </tr>
@@ -271,3 +279,4 @@ session_start();
     $objetoCorreo->AltBody = "Se ha reportado una nueva incidencia para su cuenta $dominio. Para ver, haga click en el siguiente link: $link";
     $objetoCorreo->send();
  endwhile;
+ 

@@ -205,7 +205,6 @@
                                                 </div>
                                             </div>
                                             	<script src="js/ckeditor/ckeditor.js"></script>
-
                                             <!-- Ingreso de la observacion-->
                                             <div class="form-group row">
                                                 <label for="observacion" class="col-md-2 control-label">Observacion:</label>

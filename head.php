@@ -13,5 +13,5 @@
     <!--<script type="text/javascript" src="js/tinymce/tinymce.min.js"></script>-->
     
     <script src="js/wow.min.js"></script>
-    <title>	SH Incidencias </title>
+    <title>Incidencias | Servicioshosting.com</title>
 </head>

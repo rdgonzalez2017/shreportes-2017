@@ -4,7 +4,7 @@
         echo "Bienvenido: " . $_SESSION['nombrecompleto'];
     }
     ?>
-</div>
+</div><br>
 <?php
 require("config/conexion.php");
 require("config/conexion2.php");
@@ -36,7 +36,7 @@ if (isset($_POST['filtroCategoria'])) {
     switch ($_POST['filtroCategoria']) {
         case $caso:
             $sql = "SELECT *, A.id as id_reporte, G.nombre as nombre_nuevo_dominio, E.domain as nombredominio, D.nombre as nombreservidor, B.nombre as nombrecategoria, C.nombre as nombrestatus FROM $DB.categorias as B RIGHT JOIN $DB.reportes as A on B.id = A.idcategoria LEFT JOIN $DB.estatus as C ON A.idestatus = C.id LEFT JOIN $DB.servidores as D on A.idservidor = D.id LEFT JOIN $DB_2.tbldomains as E on A.id_dominio_registrado = E.id LEFT JOIN $DB.usuarios as F ON A.idusuario = F.id LEFT JOIN $DB.dominios as G ON A.iddominio = G.id
-where B.id = $caso and A.idestatus <> 1" ;
+where B.id = $caso and A.idestatus <> 1";
             break;
     }
 }
@@ -93,7 +93,7 @@ where C.id= $casoEstatus";
         while ($reg = mysqli_fetch_array($registros)):
             ?>
             <option value="<?php echo $reg['id'] ?>"><?php echo $reg['nombre'] ?></option>
-<?php endwhile; ?>
+        <?php endwhile; ?>
     </select>
     <button class="btn btn-info alert-info col-md-offset-3" type="submit">Filtrar</button>
 </form>
@@ -109,7 +109,7 @@ where C.id= $casoEstatus";
         while ($reg = mysqli_fetch_array($registros)):
             ?>
             <option value="<?php echo $reg['id'] ?>"><?php echo $reg['nombre'] ?></option>
-<?php endwhile; ?>
+        <?php endwhile; ?>
     </select>
     <button class="btn btn-info alert-info col-md-offset-3" type="submit">Filtrar</button>
 </form>
@@ -123,7 +123,7 @@ where C.id= $casoEstatus";
 //die("Problemas en el select:".mysqli_error($conexion));
 //while ($reg=mysqli_fetch_array($registros)):
 ?>
-            <option value="<?php //echo $reg['iddominio'] ?>"><?php //echo $reg['nombre'] ?></option>
+            <option value="<?php //echo $reg['iddominio']  ?>"><?php //echo $reg['nombre']  ?></option>
 <?php //endwhile; ?>
     </select>
     <button class="btn btn-info alert-info col-md-offset-3" type="submit">Filtrar</button>
@@ -139,13 +139,18 @@ where C.id= $casoEstatus";
         while ($reg = mysqli_fetch_array($registros)):
             ?>
             <option value="<?php echo $reg['id'] ?>"><?php echo $reg['nombre'] ?></option>
-<?php endwhile; ?>
+        <?php endwhile; ?>
     </select>
     <button class="btn btn-info alert-info col-md-offset-3" type="submit">Filtrar</button>
 </form>
+<div class="row">
+    <form method="Post" action="controles/recordatorio_seleccionado.php">                         
+        <button  type="submit" class="btn btn-warning col-md-2 col-md-offset-8"><b>Enviar recordatorio</b></button>
+    </form>                            
+</div>
 <!-- Comienzo de la Tabla:-->
 <div class="row">
-    <div class="col-md-12 table-responsive">
+    <div class="col-md-12 ">
         <table id="example"  class="table table-bordered table-hover table-striped">
             <caption class="text-center"><h3>Listado de Incidencias</h3></caption>
             <thead>
@@ -175,10 +180,10 @@ where C.id= $casoEstatus";
                         $nombre_dominio = $columna['nombre_nuevo_dominio'];
                     }
                     ?>
-    <?php
-    $idprotegido = md5($clave . $columna['id_reporte']);
-    $id_reporte = $columna['id_reporte'];
-    ?>
+                    <?php
+                    $idprotegido = md5($clave . $columna['id_reporte']);
+                    $id_reporte = $columna['id_reporte'];
+                    ?>
 
                     <tr class="text-center">
                         <td><h4><?php echo $columna['id_reporte'] ?></h4></td>
@@ -190,7 +195,7 @@ where C.id= $casoEstatus";
                         <td><h4><?php echo $columna['ticket'] ?></h4></td>
                         <td><h4><?php echo $columna['nombrestatus'] ?></h4></td>
                         <td><h4><?php echo $columna['fecha'] ?></h4></td>
-                        <!--<td><a class="btn btn-warning alert-warning" href="?reporte=<?php //echo $idprotegido; ?>">Mostrar</a>-->
+                        <!--<td><a class="btn btn-warning alert-warning" href="?reporte=<?php //echo $idprotegido;  ?>">Mostrar</a>-->
                         <td class="text-center">
                             <div class="btn-group">
                                 <button type="button" class="btn btn-info alert-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
@@ -212,7 +217,7 @@ where C.id= $casoEstatus";
                             </div>
                         </td>
                     </tr>
-<?php endwhile; ?>
+                <?php endwhile; ?>
             </tbody>
         </table>
     </div>

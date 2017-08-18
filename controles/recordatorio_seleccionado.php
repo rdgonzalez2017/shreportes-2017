@@ -1,41 +1,65 @@
 <?php
-$id_reporte = $_POST['id_reporte'];
-$id_protegido = $_POST['id_protegido'];
-$dominio = $_POST['dominio'];
-$id_cliente = $_POST['id_cliente'];
-$correo_autor = $_POST['correo_autor'];
-$link = $_POST['link'];
-//Se realiza un select para obtener los datos del cliente:
-require ('../config/conexion2.php');
-$select_cliente = mysqli_query($conexion, "select * from tblclients where id = '$id_cliente' ")
-        or die("Problemas en el select" . mysqli_error("$conexion"));
-$fila = mysqli_fetch_array($select_cliente);
-$correo_cliente = $fila['email'];
-$nombre_cliente = $fila['firstname'];
-$apellido_cliente = $fila['lastname'];
-$nombre_cliente_completo = $nombre_cliente." ".$apellido_cliente;
+session_start();
+//Se realiza un select para obtener los datos de cada reporte:
+    include ('../config/conexion2.php');
+    include ('../config/conexion.php');
+    require '../php_mailer/PHPMailerAutoload.php';
+    
+    $select = "SELECT A.id as id_reporte, A.autor, A.idestatus, A.fecha as fecha_reporte, curdate() as fecha_actual, B.nombre as dominio_externo, C.domain as dominio_interno, D.id as id_cliente, D.firstname as nombre_cliente, D.lastname as apellido_cliente, D.email as correo_cliente, E.correo as correo_autor FROM $DB.reportes as A LEFT JOIN $DB.dominios as B ON A.iddominio = B.id LEFT JOIN $DB_2.tbldomains as C ON A.id_dominio_registrado = C.id LEFT JOIN $DB_2.tblclients as D ON A.id_cliente = D.id LEFT JOIN $DB.usuarios as E ON A.idusuario = E.id where A.idestatus <> 1 ";
+    $select_cliente = mysqli_query($conexion, $select)
+            or die("Problemas en el select" . mysqli_error("$conexion"));
+    while ($fila = mysqli_fetch_array($select_cliente)):
+        $id_reporte = $fila['id_reporte'];
+        $id_estatus = $fila['idestatus'];
+        $nombre_autor = $fila['autor'];
+        $fecha_reporte = $fila['fecha_reporte'];
+        $fecha_actual = $fila['fecha_actual'];
+        $nombre_cliente = $fila['nombre_cliente'];
+        $apellido_cliente = $fila['apellido_cliente'];
+        $nombre_cliente_completo = $nombre_cliente . " " . $apellido_cliente;
+        $correo_cliente = $fila['correo_cliente'];
+        $correo_autor = $fila['correo_autor'];
+        $dominio_externo = $fila['dominio_externo'];
+        $dominio_interno = $fila['dominio_interno'];
+        if(!empty($dominio_externo)){
+            $dominio = $dominio_externo;
+        }else{
+            $dominio = $dominio_interno;
+        }       
+       if ($id_estatus==2){
+          $mensaje = "Invitamos a revisar los detalles, presionando aquí:";
+       }
+       if ($id_estatus==3){
+          $mensaje = "Estamos en espera de sus comentarios:";
+       }
+     
+//Para obtener el link:
+        $host = $_SERVER["HTTP_HOST"];
+        $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
+        $idprotegido = md5($clave . $id_reporte);
+        $url = "/shincidencias/reportes.php?reporte=$idprotegido";
+        $link = "https://" . $host . $url;
+       
+   
 //Función PHP Mailer:
-require '../php_mailer/PHPMailerAutoload.php';
-$objetoCorreo = new PHPMailer;
-$objetoCorreo->isSMTP();
-$objetoCorreo->Host = 'mail.servicioshosting.com'; // El proveedor nos proporciona este dato.
-$objetoCorreo->SMTPAuth = true; // El proveedor nos proporciona este dato.
-$objetoCorreo->SMTPSecure = 'ssl'; // Puede ser tls o ssl. El proveedor nos proporciona este dato.
-$objetoCorreo->Port = 465; // El proveedor nos proporciona este dato.
-//$objetoCorreo->SMTPDebug = 3
-$objetoCorreo->Username = 'cotizador@servicioshosting.com';
-$objetoCorreo->Password = 'Atumedida2017/';
-$objetoCorreo->setFrom('no-responder@servicioshosting.com', 'ServiciosHosting.com');
-$objetoCorreo->addAddress($correo_cliente, $nombre_cliente_completo);
-$objetoCorreo->AddBCC($correo_autor);//Destinatario copia oculta
-$objetoCorreo->addReplyTo('no-responder@servicioshosting.com', 'Respuestas');
-$objetoCorreo->isHTML(true);
-$objetoCorreo->CharSet = 'UTF-8'; // El correo irá codificado en UTF-8, para evitar problemas con letras acentuadas y otros caracteres especiales.
-$objetoCorreo->Subject = 'ServiciosHosting.com: Incidencia.';
-//$objetoCorreo->AddEmbeddedImage('../../img/logo_mini.jpg', 'logo_mini', 'logo_mini', 'base64', 'image/png');
-$correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+    $objetoCorreo = new PHPMailer;
+    $objetoCorreo->isSMTP();
+    $objetoCorreo->Host = 'mail.servicioshosting.com'; // El proveedor nos proporciona este dato.
+    $objetoCorreo->SMTPAuth = true; // El proveedor nos proporciona este dato.
+    $objetoCorreo->SMTPSecure = 'ssl'; // Puede ser tls o ssl. El proveedor nos proporciona este dato.
+    $objetoCorreo->Port = 465; // El proveedor nos proporciona este dato.
+//$objetoCorreo->SMTPDebug = 3;
+    $objetoCorreo->Username = 'cotizador@servicioshosting.com';
+    $objetoCorreo->Password = 'Atumedida2017/';
+    $objetoCorreo->setFrom('no-responder@servicioshosting.com', 'ServiciosHosting.com');
+    $objetoCorreo->addAddress($correo_cliente, $nombre_cliente_completo);
+    $objetoCorreo->AddBCC($correo_autor);//Destinatario copia oculta
+    $objetoCorreo->addReplyTo('no-responder@servitepuy.com', 'Respuestas');
+    $objetoCorreo->isHTML(true);
+    $objetoCorreo->CharSet = 'UTF-8'; // El correo irá codificado en UTF-8, para evitar problemas con letras acentuadas y otros caracteres especiales.
+    $objetoCorreo->Subject = 'ServiciosHosting.com: Incidencia.';
+    $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml' lang='en' xml:lang='en' style='background:#f3f3f3!important'>
-
 <head>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
     <meta name='viewport' content='width=device-width'>
@@ -47,7 +71,6 @@ $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http:
                 background: #f3f3f3
             }
         }
-
         @media only screen and (max-width:596px) {
             .small-float-center {
                 margin: 0 auto!important;
@@ -55,7 +78,6 @@ $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http:
                 text-align: center!important
             }
         }
-
         @media only screen and (max-width:596px) {
             table.body img {
                 width: auto;
@@ -113,7 +135,6 @@ $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http:
         }
     </style>
 </head>
-
 <body style='-moz-box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-box-sizing:border-box;-webkit-text-size-adjust:100%;Margin:0;background:#f3f3f3!important;box-sizing:border-box;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;min-width:100%;padding:0;text-align:left;width:100%!important'><span class='preheader' style='color:#f3f3f3;display:none!important;font-size:1px;line-height:1px;max-height:0;max-width:0;mso-hide:all!important;opacity:0;overflow:hidden;visibility:hidden'></span>
     <table
         class='body' style='Margin:0;background:#f3f3f3!important;border-collapse:collapse;border-spacing:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;height:100%;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%'>
@@ -177,16 +198,11 @@ $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http:
                                                             <th style='Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left'>
 
 <p><i>Este es un correo generado automáticamente. Por favor no lo responda.</i></p>
-
 <p>Hola $nombre_cliente_completo. </p>
-
-<p>Se ha abierto una incidencia para su cuenta <b>$dominio.</b></p>
-    
-<p>Invitamos a revisar los detalles, presionando aquí:
-<a target='_blank' href='$link'>Ver incidencia.</a></p>
-
-<p>Monitereo y Abuso ServiciosHosting.com</p>
-
+<p>Se le recuerda que existe una incidencia para la cuenta <b>$dominio.</b></p> 
+<p>$mensaje
+<a href='$link'>Ver incidencia.</a></p>
+<p>Monitoreo y Abuso ServiciosHosting.com</p>
 </th>
                                                             <th class='expander' style='Margin:0;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0'></th>
                                                         </tr>
@@ -258,15 +274,10 @@ $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http:
         <div style='display:none;white-space:nowrap;font:15px courier;line-height:0'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
 </body>
-
 </html>                ";
+    $objetoCorreo->Body = $correo;
+    $objetoCorreo->AltBody = "Se ha reportado una nueva incidencia para su cuenta $dominio. Para ver, haga click en el siguiente link: $link";
+    $objetoCorreo->send();
+ endwhile;?>
+ <script>location.href = '../reportes.php'</script>
 
-//$correo .= "<img src='cid:logo_mini'  />"; // OJO con la imagen. Hablaremos de esto en el próximo apartado.
-//$objetoCorreo->Body = "Usted tiene una nueva cotizacion. Para ver, haga click en el siguiente link: $link";
-$objetoCorreo->Body = $correo;
-
-$objetoCorreo->AltBody = "Se ha reportado una nueva incidencia para su cuenta $dominio. Para ver, haga click en el siguiente link: $link";
-
-$objetoCorreo->send();
-?>
-<script>location.href = '../reportes.php?reporte=<?php echo $id_protegido;?>'</script>
