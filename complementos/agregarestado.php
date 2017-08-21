@@ -53,7 +53,7 @@ endif;
             <tbody>
             <?php
             include("../config/conexion.php");
-            $query_reportes = mysqli_query($conexion, "select * from estatus ORDER BY id DESC ")
+            $query_reportes = mysqli_query($conexion, "select * from estatus ORDER BY id ASC ")
             or die("Problemas en el insert principal" . mysqli_error($conexion));
             mysqli_close($conexion);
             while($columna = mysqli_fetch_assoc($query_reportes)):?>

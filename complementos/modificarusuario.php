@@ -30,7 +30,7 @@
                     ?>
                     <!-- Formulario para envío de modificaciones al sistema-->
                     <form class="form rotateIn animated" method = "post" action="../controles/actualizarusuario.php">
-                        <input class="hidden" name="idusuario" value="<?php echo $columna['idusuario']; ?>"/>
+                        <input class="hidden" name="idusuario" value="<?php echo $columna['id']; ?>"/>
                         <div class="col-md-12">
                             <br>
                             <div class="panel panel-primary">

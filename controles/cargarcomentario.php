@@ -18,12 +18,20 @@ $insert_comentarios = mysqli_query($conexion, "insert into comentarios(id,idrepo
         or die("Problemas al insertar los datos del comentario" . mysqli_error($conexion));
 //Si se insertó el comentario de parte del cliente:
 if ($insert_comentarios) {
+    $update_fecha_mod = mysqli_query($conexion, "UPDATE reportes SET fecha_modificacion = CURDATE() WHERE id = $id_reporte")
+            or die("Problemas en el Update al modificar el reporte" . mysqli_error($conexion)); // Ejecutamos la consulta para actualizar el registro en la base de datos
     if (empty($_SESSION['nombre'])) {
         //Cambiar estado de incidencia a respondido:
         $update_estado = mysqli_query($conexion, "UPDATE reportes SET idestatus = 4 where id = $id_reporte")
                 or die("Problemas en el Update" . mysqli_error($conexion));
     }
 }
+if (!empty($_POST['id_estatus'])){
+    $id_estatus = ($_POST['id_estatus']);
+    $update_estado = mysqli_query($conexion, "UPDATE reportes SET idestatus = $id_estatus WHERE id = $id_reporte")
+            or die("Problemas en el Update al modificar el reporte" . mysqli_error($conexion)); // Ejecutamos la consulta para actualizar el registro en la base de datos
+}
+
 
 //Función PHP Mailer:
 require '../php_mailer/PHPMailerAutoload.php';

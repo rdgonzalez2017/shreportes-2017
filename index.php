@@ -28,17 +28,7 @@
                     <div class="form-group row">
                         <label for="nombre" class="col-md-2 control-label">Usuario:</label>
                         <div class="col-md-8">
-                            <select class="form-control" name="nombre">
-                                <?php
-                                include ("config/conexion.php");
-                                $registros=mysqli_query($conexion,"select nombre from usuarios") or
-                                die("Problemas en el select:".mysqli_error($conexion));
-                                while ($reg=mysqli_fetch_array($registros))
-                                {
-                                    echo "<option value=\"$reg[nombre]\">$reg[nombre]</option>";
-                                }
-                                ?>
-                            </select>
+                            <input class="form-control" name="nombre" placeholder="Ingrese Usuario" required/>                            
                         </div>
                     </div>
 
@@ -46,7 +36,7 @@
                     <div class="form-group row">
                         <label for="clave" class="col-md-2 control-label">Clave:</label>
                         <div class="col-md-8">
-                            <input class="form-control" type="password" name="clave" id="clave" required/>
+                            <input class="form-control" type="password" name="clave" placeholder="Ingrese Contraseña" id="clave" required/>
                         </div>
                     </div>
                 </div>
