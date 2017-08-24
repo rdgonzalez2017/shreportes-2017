@@ -3,7 +3,7 @@
     <div class="container">
         <center style="color:#fff;">
             <div class="container">
-                <div id="Containerfooter" class="well well-sm main-footer">
+                <div id="Containerfooter" class="well-sm main-footer">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="row">

@@ -204,13 +204,26 @@
                                                         ?>"/>
                                                 </div>
                                             </div>
-                                            	<script src="js/ckeditor/ckeditor.js"></script>
+                                            	<script src="js/ckeditor/ckeditor.js">
+                                                
+                                                
+                                                    config.extraPlugins = 'autolink';</script>
                                             <!-- Ingreso de la observacion-->
                                             <div class="form-group row">
                                                 <label for="observacion" class="col-md-2 control-label">Observacion:</label>
                                                 <div class="col-md-12" >
-                                                    <textarea id="textarea" name="observacion" style="resize:none"  rows="10" aria-required="true"></textarea>
+                                                    <textarea id="mitxt" name="observacion" style="resize:none"  rows="10" aria-required="true"></textarea>
                                                     <script  >CKEDITOR.replace('observacion');</script>
+                                                    <!--<script type="text/javascript">
+                                                //<![CDATA[
+                                                CKEDITOR.replace( 'mitxt',
+                                                {
+                                                         //es la ruta desde public_html hasta el index del plugin
+                                                         filebrowserBrowseUrl : '/ckeditor/filemanager/index.php'
+
+                                                });
+                                                //]]>
+                                                </script>-->
                                                     <!--<script>tinyMCE.init({selector: "textarea", branding: false, plugins: "image,paste,autolink", paste_data_images: true, language: "es"});</script>-->
                                                 </div>
                                             </div>

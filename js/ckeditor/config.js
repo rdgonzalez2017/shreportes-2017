@@ -4,7 +4,10 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
+	config.extraPlugins = 'autolink','imageuploader';
+	
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
+	 //  config.filebrowserUploadUrl = '/uploader/upload.php';
 };

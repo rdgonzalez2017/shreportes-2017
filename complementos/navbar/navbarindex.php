@@ -19,7 +19,7 @@
                     <li><a href='../index.php'><span class="glyphicon glyphicon-log-in"></span> Inicio de Sesión</a></li>
                <?php endif;?>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Nosotros <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">Nosotros <span class="caret"></span></a>
                     <ul class="dropdown-menu" style="text-align: center" >
                         <li><button class="btn btn-sm btn-info navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='https://www.servicioshosting.com/sitio/contactanos-2/'">Contactos</button></li>
                         <li><button class="btn btn-sm btn-warning navbar-btn bounceInUp animated animated" data-wow-duration="500ms" onclick = "location='http://blog.servicioshosting.com/'">Blog ServiciosHosting</button></li>

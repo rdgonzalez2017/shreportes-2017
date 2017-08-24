@@ -1,65 +1,68 @@
 <?php
+include ('../config/conexion2.php');
+include ('../config/conexion.php');
+require '../php_mailer/PHPMailerAutoload.php';
 session_start();
 if (isset($_SESSION['nombre'])):
+//Selección por Checkbox
+    if (isset($_POST['enviar'])):
+        if ($_POST['reportes_seleccionados']) :
+            foreach ($_POST['reportes_seleccionados'] as $key => $id_reporte_seleccionado) :
 //Se realiza un select para obtener los datos de cada reporte:
-    include ('../config/conexion2.php');
-    include ('../config/conexion.php');
-    require '../php_mailer/PHPMailerAutoload.php';
-
-    $select = "SELECT A.id as id_reporte, A.autor, A.idestatus, A.fecha as fecha_reporte, curdate() as fecha_actual, B.nombre as dominio_externo, C.domain as dominio_interno, D.id as id_cliente, D.firstname as nombre_cliente, D.lastname as apellido_cliente, D.email as correo_cliente, E.correo as correo_autor FROM $DB.reportes as A LEFT JOIN $DB.dominios as B ON A.iddominio = B.id LEFT JOIN $DB_2.tbldomains as C ON A.id_dominio_registrado = C.id LEFT JOIN $DB_2.tblclients as D ON A.id_cliente = D.id LEFT JOIN $DB.usuarios as E ON A.idusuario = E.id where A.idestatus <> 1 ";
-    $select_cliente = mysqli_query($conexion, $select)
-            or die("Problemas en el select" . mysqli_error("$conexion"));
-    while ($fila = mysqli_fetch_array($select_cliente)):
-        $id_reporte = $fila['id_reporte'];
-        $id_estatus = $fila['idestatus'];
-        $nombre_autor = $fila['autor'];
-        $fecha_reporte = $fila['fecha_reporte'];
-        $fecha_actual = $fila['fecha_actual'];
-        $nombre_cliente = $fila['nombre_cliente'];
-        $apellido_cliente = $fila['apellido_cliente'];
-        $nombre_cliente_completo = $nombre_cliente . " " . $apellido_cliente;
-        $correo_cliente = $fila['correo_cliente'];
-        $correo_autor = $fila['correo_autor'];
-        $dominio_externo = $fila['dominio_externo'];
-        $dominio_interno = $fila['dominio_interno'];
-        if (!empty($dominio_externo)) {
-            $dominio = $dominio_externo;
-        } else {
-            $dominio = $dominio_interno;
-        }
-        if ($id_estatus == 2) {
-            $mensaje = "Invitamos a revisar los detalles, presionando aquí:";
-        }
-        if ($id_estatus == 3) {
-            $mensaje = "Estamos en espera de sus comentarios:";
-        }
-
+                $select = "SELECT A.id as id_reporte, A.autor, A.idestatus, A.fecha as fecha_reporte, curdate() as fecha_actual, B.nombre as dominio_externo, C.domain as dominio_interno, D.id as id_cliente, D.firstname as nombre_cliente, D.lastname as apellido_cliente, D.email as correo_cliente, E.correo as correo_autor FROM $DB.reportes as A LEFT JOIN $DB.dominios as B ON A.iddominio = B.id LEFT JOIN $DB_2.tbldomains as C ON A.id_dominio_registrado = C.id LEFT JOIN $DB_2.tblclients as D ON A.id_cliente = D.id LEFT JOIN $DB.usuarios as E ON A.idusuario = E.id where A.id = $id_reporte_seleccionado ";
+                $select_cliente = mysqli_query($conexion, $select)
+                        or die("Problemas en el select" . mysqli_error("$conexion"));
+                while ($fila = mysqli_fetch_array($select_cliente)):                   
+                    $id_reporte = $fila['id_reporte'];
+                    $id_estatus = $fila['idestatus'];
+                    $nombre_autor = $fila['autor'];
+                    $fecha_reporte = $fila['fecha_reporte'];
+                    $fecha_actual = $fila['fecha_actual'];
+                    $nombre_cliente = $fila['nombre_cliente'];
+                    $apellido_cliente = $fila['apellido_cliente'];
+                    $nombre_cliente_completo = $nombre_cliente . " " . $apellido_cliente;
+                    $correo_cliente = $fila['correo_cliente'];
+                    $correo_autor = $fila['correo_autor'];
+                    $dominio_externo = $fila['dominio_externo'];
+                    $dominio_interno = $fila['dominio_interno'];
+                    if (!empty($dominio_externo)) {
+                        $dominio = $dominio_externo;
+                    } else {
+                        $dominio = $dominio_interno;
+                    }
+                    // if ($id_estatus == 2) {
+                    //   $mensaje = "Invitamos a revisar los detalles, presionando aquí:";
+                    // }
+                    if ($id_estatus == 3) {
+                        $mensaje = "Estamos en espera de sus comentarios:";
+                    } else {
+                        $mensaje = "Invitamos a revisar los detalles, presionando aquí:";
+                    }
+                     //echo $id_reporte."<br>";
 //Para obtener el link:
-        $host = $_SERVER["HTTP_HOST"];
-        $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
-        $idprotegido = md5($clave . $id_reporte);
-        $url = "/shincidencias/reportes.php?reporte=$idprotegido";
-        $link = "https://" . $host . $url;
-
-
+                    $host = $_SERVER["HTTP_HOST"];
+                    $clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
+                    $idprotegido = md5($clave . $id_reporte);
+                    $url = "/shincidencias/reportes.php?reporte=$idprotegido";
+                    $link = "https://" . $host . $url;
 //Función PHP Mailer:
-        $objetoCorreo = new PHPMailer;
-        $objetoCorreo->isSMTP();
-        $objetoCorreo->Host = 'mail.servicioshosting.com'; // El proveedor nos proporciona este dato.
-        $objetoCorreo->SMTPAuth = true; // El proveedor nos proporciona este dato.
-        $objetoCorreo->SMTPSecure = 'ssl'; // Puede ser tls o ssl. El proveedor nos proporciona este dato.
-        $objetoCorreo->Port = 465; // El proveedor nos proporciona este dato.
+                    $objetoCorreo = new PHPMailer;
+                    $objetoCorreo->isSMTP();
+                    $objetoCorreo->Host = 'mail.servicioshosting.com'; // El proveedor nos proporciona este dato.
+                    $objetoCorreo->SMTPAuth = true; // El proveedor nos proporciona este dato.
+                    $objetoCorreo->SMTPSecure = 'ssl'; // Puede ser tls o ssl. El proveedor nos proporciona este dato.
+                    $objetoCorreo->Port = 465; // El proveedor nos proporciona este dato.
 //$objetoCorreo->SMTPDebug = 3;
-        $objetoCorreo->Username = 'cotizador@servicioshosting.com';
-        $objetoCorreo->Password = 'Atumedida2017/';
-        $objetoCorreo->setFrom('no-responder@servicioshosting.com', 'ServiciosHosting.com');
-        $objetoCorreo->addAddress($correo_cliente, $nombre_cliente_completo);
-        $objetoCorreo->AddBCC($correo_autor); //Destinatario copia oculta
-        $objetoCorreo->addReplyTo('no-responder@servitepuy.com', 'Respuestas');
-        $objetoCorreo->isHTML(true);
-        $objetoCorreo->CharSet = 'UTF-8'; // El correo irá codificado en UTF-8, para evitar problemas con letras acentuadas y otros caracteres especiales.
-        $objetoCorreo->Subject = 'ServiciosHosting.com: Incidencia.';
-        $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+                    $objetoCorreo->Username = 'cotizador@servicioshosting.com';
+                    $objetoCorreo->Password = 'Atumedida2017/';
+                    $objetoCorreo->setFrom('no-responder@servicioshosting.com', 'ServiciosHosting.com');
+                    $objetoCorreo->addAddress($correo_cliente, $nombre_cliente_completo);
+                    $objetoCorreo->AddBCC($correo_autor); //Destinatario copia oculta
+                    $objetoCorreo->addReplyTo('no-responder@servitepuy.com', 'Respuestas');
+                    $objetoCorreo->isHTML(true);
+                    $objetoCorreo->CharSet = 'UTF-8'; // El correo irá codificado en UTF-8, para evitar problemas con letras acentuadas y otros caracteres especiales.
+                    $objetoCorreo->Subject = 'ServiciosHosting.com: Incidencia.';
+                    $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml' lang='en' xml:lang='en' style='background:#f3f3f3!important'>
 <head>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
@@ -276,14 +279,15 @@ if (isset($_SESSION['nombre'])):
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
 </body>
 </html>                ";
-        $objetoCorreo->Body = $correo;
-        $objetoCorreo->AltBody = "Se ha reportado una nueva incidencia para su cuenta $dominio. Para ver, haga click en el siguiente link: $link";
-        $objetoCorreo->send();
-    endwhile;
-    ?>
-    <script>location.href = '../reportes.php'</script>
+                    $objetoCorreo->Body = $correo;
+                    $objetoCorreo->AltBody = "Se ha reportado una nueva incidencia para su cuenta $dominio. Para ver, haga click en el siguiente link: $link";
+                    $objetoCorreo->send();
+                endwhile;
+            endforeach;
+        endif;
+    endif;
+endif; //Fin de Selección por Checkbox   
+?>
+<script>location.href = '../reportes.php'</script>
 
-    <?php
 
- 
-endif;

@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
     <?php include ("head.php"); ?>
+    
     <header>
         <?php
         if (isset($_SESSION['nombre'])):
@@ -11,7 +12,6 @@
         endif;
         ?>
     </header>
-    
         <!-- Seccion que muestra la publicacion final del reporte-->
         <?php
         include("config/conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
@@ -42,6 +42,7 @@
                 $correo_autor = $columna['correo_autor'];
                 $idestatus = $columna['idestatus'];
                 $estatus = $columna['nombrestatus'];
+                $permitir_comentarios = $columna['permitir_comentarios'];
                 $ticket = $columna['ticket'];
                 //Con esto se obtiene el Link de la página:
                 $host = $_SERVER["HTTP_HOST"];
@@ -49,7 +50,7 @@
                 ob_start();
                 echo $host, $url;
                 $Link = ob_get_contents();
-                ob_end_clean();
+                ob_end_clean();                
                 ?>
         <body>
             
@@ -155,7 +156,7 @@
 
                 <!-- Formulario para envío de comentarios-->
                 <?php
-                if ($idestatus == 3 or $idestatus == 4):
+                if ($permitir_comentarios == 1):
                     include ("formulariocomentarios.php");
                 endif;
                 // Sección que muestra los comentarios-->
@@ -173,10 +174,7 @@
             endif;
         endif; //Fin del condicional controla si se muestra la tabla de reportes o el reporte.
         ?>
-
-  
-
-
+ 
 </body>
 <?php include("footer.php"); ?>
 </html>

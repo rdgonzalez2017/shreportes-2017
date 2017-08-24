@@ -16,9 +16,9 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Modificaciones <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">Modificaciones <span class="caret"></span></a>
                     <ul class="dropdown-menu" style="text-align: center" >
-                        <li><button class="btn btn-sm btn-info navbar-btn rotateIn animated" data-wow-duration="10ms" onclick = "location='complementos/modificarusuario.php'">Modificar mi Usuario</button></li>
+                        <li><button class="btn btn-sm btn-info navbar-btn " onclick = "location='complementos/modificarusuario.php'">Modificar mi Usuario</button></li>
                     </ul>
                 </li>
                 <!-- <li><a href="#">Page 2</a></li>-->
@@ -26,12 +26,12 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <?php if ($_SESSION['tipo']==1):?>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Agregar <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" href="#">Agregar <span class="caret"></span></a>
                     <ul class="dropdown-menu" style="text-align: center" >
-                        <li><button class="btn btn-sm btn-warning navbar-btn rotateIn animated" data-wow-duration="10ms" onclick = "location='complementos/agregarcategoria.php'">Agregar Categoria</button></li>
-                        <li><button class="btn btn-sm btn-info navbar-btn rotateIn animated" data-wow-duration="10ms" onclick = "location='complementos/agregarusuario.php'">Agregar Usuario</button></li>
-                        <li><button class="btn btn-sm btn-warning navbar-btn rotateIn animated" data-wow-duration="10ms" onclick = "location='complementos/agregarestado.php'">Agregar Estatus</button></li>
-                        <li><button class="btn btn-sm btn-info navbar-btn bounceInUp rotateIn animated" data-wow-duration="10ms" onclick = "location='complementos/agregarservidor.php'">Agregar Servidor</button></li>
+                        <li><button class="btn btn-sm btn-warning navbar-btn" onclick = "location='complementos/agregarcategoria.php'">Agregar Categoria</button></li>
+                        <li><button class="btn btn-sm btn-info navbar-btn"  onclick = "location='complementos/agregarusuario.php'">Agregar Usuario</button></li>
+                        <li><button class="btn btn-sm btn-warning navbar-btn" onclick = "location='complementos/agregarestado.php'">Agregar Estatus</button></li>
+                        <li><button class="btn btn-sm btn-info navbar-btn" onclick = "location='complementos/agregarservidor.php'">Agregar Servidor</button></li>
                         <?php endif;?>
                     </ul>
                 </li>
@@ -51,3 +51,4 @@
         </div>
     </div>
 </nav>
+ 

@@ -136,7 +136,7 @@ where C.id= $casoEstatus";
 //die("Problemas en el select:".mysqli_error($conexion));
 //while ($reg=mysqli_fetch_array($registros)):
 ?>
-            <option value="<?php //echo $reg['iddominio']   ?>"><?php //echo $reg['nombre']   ?></option>
+            <option value="<?php //echo $reg['iddominio']    ?>"><?php //echo $reg['nombre']    ?></option>
 <?php //endwhile; ?>
     </select>
     <button class="btn btn-info alert-info col-md-offset-3" type="submit">Filtrar</button>
@@ -157,19 +157,24 @@ where C.id= $casoEstatus";
     </select>
     <button class="btn btn-info alert-info col-md-offset-3" type="submit">Filtrar</button>
 </form>
-<div class="row">
+<!--<div class="row">
     <form method="Post" action="controles/recordatorio_seleccionado.php">                         
-        <button  type="submit" class="btn btn-warning col-md-2 col-md-offset-8"><b>Enviar recordatorio</b></button>
+        <button  type="submit" class="btn btn-warning col-md-2"><b>Enviar recordatorio</b></button>
     </form>                            
-</div>
+</div>-->
+
+    <form action="controles/recordatorio_seleccionado.php" method="post">
+        <input  class="btn btn-warning col-md-2 col-md-offset-1" type="submit" name="enviar" value="Enviar Recordatorio" />
+
 <!-- Comienzo de la Tabla:-->
-<div class="row">
+<div class="">
     <div class="col-md-12 ">
         <table id="example"  class="table table-bordered table-hover table-striped">
             <caption class="text-center"><h3>Listado de Incidencias</h3></caption>
             <thead>
                 <tr class="bg-primary text-center">
-                    <td><h4>ID</h4></td>
+                    <td><h4><span class="glyphicon glyphicon-check"></span></h4></td>
+                    <td><h4>ID</h5></h4></td>
                     <td><h4>Titulo</h4></td>
                     <td><h4>Autor</h4></td>
                     <td><h4>Categoria</h4></td>
@@ -179,8 +184,9 @@ where C.id= $casoEstatus";
                     <td><h4>Estado</h4></td>
                     <td><h4>Fecha</h4></td>
                     <td><h4>Inactividad</h4></td>
-                    <td><h4>Acciones</h4></td>
-                    <!--<td><h4>Eliminar</h4></td>-->
+                    <td><h4><span class="	glyphicon glyphicon-th-list"></span></h4></td>
+
+ <!--<td><h4>Eliminar</h4></td>-->
                 </tr>
             </thead>
             <tbody>
@@ -213,8 +219,11 @@ where C.id= $casoEstatus";
                     $datetime2 = date_create($hoy);
                     $inactividad = date_diff($datetime1, $datetime2);
                     ?>
+
                     <tr class="text-center">
-                        <td><h4><?php echo $id_reporte ?></h4></td>
+                        <td><input class="form-control" type="checkbox" value="<?php echo $id_reporte; ?>" name="reportes_seleccionados[]" /></td>     
+                        </form>
+                        <td><h4><?php echo $id_reporte; ?></h4></td>
                         <td><h4><?php echo $titulo; ?></h4></td>
                         <td><h4><?php echo $autor; ?></h4></td>
                         <td><h4><?php echo $nombre_categoria; ?></h4></td>
@@ -224,12 +233,12 @@ where C.id= $casoEstatus";
                         <td><h4><?php echo $nombre_estatus; ?></h4></td>
                         <td><h4><?php echo $fecha_creacion; ?></h4></td>
                         <td><h4><?php echo $inactividad->format('%a') . " Días"; ?></h4></td>
-                        <!--<td><a class="btn btn-warning alert-warning" href="?reporte=<?php //echo $idprotegido;   ?>">Mostrar</a>-->
+                        <!--<td><a class="btn btn-warning alert-warning" href="?reporte=<?php //echo $idprotegido;    ?>">Mostrar</a>-->
                         <td class="text-center">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-info alert-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Acciones <span class="caret"></span>
+                            <div class="btn-group dropdown">
+                                <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span>
                                 </button>
-                                <ul class="dropdown-menu" style="text-align: center">
+                                <ul class="dropdown-menu " style="text-align: center;">
                                     <a class="btn btn-warning alert-warning" href="?reporte=<?php echo $idprotegido; ?>">Mostrar</a>
                                     <li role="separator" class="divider"></li>
                                     <form action="modificarincidencia.php" method="post">
@@ -241,13 +250,15 @@ where C.id= $casoEstatus";
                                         <input class="hidden" name="idreporte" value="<?php echo $id_reporte; ?>">
                                         <input onclick="return confirm('Estás seguro que deseas eliminar el registro?');" class="btn btn-danger alert-danger" type="submit" name="eliminar" value="Eliminar" />
                                     </form>
-
                                 </ul>
                             </div>
                         </td>
                     </tr>
-<?php endwhile; ?>
+                <?php endwhile; ?>
             </tbody>
         </table>
     </div>
 </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+   
