@@ -12,7 +12,7 @@ $nombre_cliente_completo = $nombre_cliente . " " . $apellido_cliente;
 
 <div class="row">
     <form class="form fadeInRightBig animated" name="miFormu" method="post" action="controles/cargarcomentario.php">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h4 class="text-center"><u>Formulario de Comentarios</u></h4>                

@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="../css/animate.min.css">
      <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/estilo.css">
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    -->
     <script type="text/javascript" src="../js/tinymce/tinymce.min.js"></script>
     <script src="../js/wow.min.js"></script>
       <!-- Bootstrap Dropdown Hover JS -->

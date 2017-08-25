@@ -1,5 +1,5 @@
 <?php
-$clave = "c/+*u4/+*c0mpl3n70_m4s_/+*c0mpl3j0__/+*c0mpl3j0_m3j05";
+
 $servidor = "localhost";
 $Usuario = "root";
 $clave = "";

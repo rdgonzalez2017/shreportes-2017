@@ -11,10 +11,13 @@ body,html {
 .panel-primary .panel-heading {
     background: #2A63A2;
 }
+.panel .panel-warning .panel-heading{
+    background: orange;
+}
 /* Cabecera Del Panel */
 #panel-reporte{
     background: #2A63A2;
-    border-bottom: 5px solid #ED782C;
+    border-bottom: 5px solid rgb(255, 150, 36);
 }
 /* Menú Superior */
 .navbar-inverse {
@@ -25,7 +28,7 @@ body,html {
     min-height: 50px;
     margin-bottom: 20px;
     border: 0.5px solid white;
-    border-bottom: 5px solid #ED782C;
+    border-bottom: 7px solid rgb(255, 150, 36);
 }
 /* Footer */
 footer {
@@ -34,7 +37,7 @@ footer {
     height: 100%;
     margin-top:100px;
     border-radius: 10px;
-    border-top: 5px solid #ED782C;
+    border-top: 7px solid rgb(255, 150, 36);
 }
 #Containerfooter{
     background-color:#2A63A2;

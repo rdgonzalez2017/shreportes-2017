@@ -9,7 +9,7 @@
             <a href="https://www.servicioshosting.com/sitio/"><img class="img-responsive" id="img-logosh" src="../images/logo_desktop.png"></a>
         </div>
         <div class="col-md-4 col-md-offset-1">
-            <img class="collapse navbar-collapse"  style="width: 50%" src="../images/logo_shincidencias.png">
+            <img class="collapse navbar-collapse"  style="width: 70%" src="../images/logo_shincidencias.png">
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-right">

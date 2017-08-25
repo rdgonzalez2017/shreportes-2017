@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (isset($_SESSION['nombre'])):
     $id_reporte = $_POST['id_reporte'];
     $id_protegido = $_POST['id_protegido'];
@@ -23,7 +24,6 @@ if (isset($_SESSION['nombre'])):
     $objetoCorreo->SMTPAuth = true; // El proveedor nos proporciona este dato.
     $objetoCorreo->SMTPSecure = 'ssl'; // Puede ser tls o ssl. El proveedor nos proporciona este dato.
     $objetoCorreo->Port = 465; // El proveedor nos proporciona este dato.
-//$objetoCorreo->SMTPDebug = 3
     $objetoCorreo->Username = 'cotizador@servicioshosting.com';
     $objetoCorreo->Password = 'Atumedida2017/';
     $objetoCorreo->setFrom('no-responder@servicioshosting.com', 'ServiciosHosting.com');
@@ -33,7 +33,6 @@ if (isset($_SESSION['nombre'])):
     $objetoCorreo->isHTML(true);
     $objetoCorreo->CharSet = 'UTF-8'; // El correo irá codificado en UTF-8, para evitar problemas con letras acentuadas y otros caracteres especiales.
     $objetoCorreo->Subject = 'ServiciosHosting.com: Incidencia.';
-//$objetoCorreo->AddEmbeddedImage('../../img/logo_mini.jpg', 'logo_mini', 'logo_mini', 'base64', 'image/png');
     $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml' lang='en' xml:lang='en' style='background:#f3f3f3!important'>
 
@@ -261,16 +260,10 @@ if (isset($_SESSION['nombre'])):
 </body>
 
 </html>                ";
-
-//$correo .= "<img src='cid:logo_mini'  />"; // OJO con la imagen. Hablaremos de esto en el próximo apartado.
-//$objetoCorreo->Body = "Usted tiene una nueva cotizacion. Para ver, haga click en el siguiente link: $link";
     $objetoCorreo->Body = $correo;
-
     $objetoCorreo->AltBody = "Se ha reportado una nueva incidencia para su cuenta $dominio. Para ver, haga click en el siguiente link: $link";
-
     $objetoCorreo->send();
     ?>
     <script>location.href = '../reportes.php?reporte=<?php echo $id_protegido; ?>'</script>
     <?php
- 
 endif;

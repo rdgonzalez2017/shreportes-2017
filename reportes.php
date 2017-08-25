@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <?php include ("head.php"); ?>
-    
+
     <header>
         <?php
         if (isset($_SESSION['nombre'])):
@@ -12,6 +12,7 @@
         endif;
         ?>
     </header>
+    <body>
         <!-- Seccion que muestra la publicacion final del reporte-->
         <?php
         include("config/conexion.php"); // Incluimos nuestro archivo de conexión con la base de datos
@@ -50,15 +51,13 @@
                 ob_start();
                 echo $host, $url;
                 $Link = ob_get_contents();
-                ob_end_clean();                
+                ob_end_clean();
                 ?>
-        <body>
-            
                 <!--Panel que muestra el Reporte Final:-->
                 <div class="row col-md-12">
                     <div class="panel panel-primary container col-md-6 col-md-offset-3 rollIn animated" data-wow-duration="3000ms">
 
-                        <div style="background: #2A63A2; border-bottom: 5px solid #ED782C;"  class="panel-heading row" >
+                        <div style="background: #2A63A2; border-bottom: 7px solid rgb(255, 150, 36);"  class="panel-heading row" >
                             <div class="text-center"><h4><b>Incidencia</b></h4></div>
                         </div>
                         <div class="panel-body">
@@ -74,10 +73,12 @@
                                 <label for="dominio" class="col-md-3 col-md-offset-2 control-label">Dominio:</label>
                                 <div class="col-md-7 col-md-pull-1"><?php echo $nombre_dominio; ?></div>
                             </div>
-                            <div class="row">
-                                <label for="ticket" class="col-md-3 col-md-offset-2 control-label">Ticket:</label>
-                                <div class="col-md-7 col-md-pull-1"><?php echo $ticket; ?></div>
-                            </div>
+                            <?php if (!empty($ticket)): ?>
+                                <div class="row">
+                                    <label for="ticket" class="col-md-3 col-md-offset-2 control-label">Ticket:</label>
+                                    <div class="col-md-7 col-md-pull-1"><?php echo $ticket; ?></div>
+                                </div>
+                            <?php endif; ?>
                             <div class="row">
                                 <label for="fecha" class="col-md-3 col-md-offset-2 control-label">Fecha:</label>
                                 <div class="col-md-7 col-md-pull-1"><?php echo $fecha; ?></div>
@@ -97,7 +98,7 @@
                                         <input value="<?php echo $id_reporte; ?>" name="id_reporte" type="hidden">
                                         <input TYPE="hidden" NAME="id_protegido" VALUE="<?php echo $id_protegido; ?>">
                                         <label  for="estado" class="col-md-2 col-md-offset-2 control-label">Estado:</label>
-                                        <div class="col-md-5 "><?php //echo $estatus;     ?>
+                                        <div class="col-md-5 "><?php //echo $estatus;          ?>
 
                                             <?php
                                             include('config/conexion.php');
@@ -130,38 +131,38 @@
                                     </form>
                                 </div>
                             <?php endif; ?>
-
                         </div>
                     </div>
                 </div>
-
-
                 <?php if (isset($_SESSION['nombre'])): ?>
-                    <div class="row">
-                        <form method="Post" action="controles/enviar_correo.php">
-                            <input TYPE="hidden" NAME="link" VALUE="<?php echo $Link; ?>">
-                            <input TYPE="hidden" NAME="id_reporte" VALUE="<?php echo $id_reporte; ?>">
-                            <input TYPE="hidden" NAME="id_protegido" VALUE="<?php echo $id_protegido; ?>">
-                            <input TYPE="hidden" NAME="id_cliente" VALUE="<?php echo $id_cliente; ?>">
-                            <input TYPE="hidden" NAME="correo_autor" VALUE="<?php echo $correo_autor; ?>">
-                            <input TYPE="hidden" NAME="dominio" VALUE="<?php echo $nombre_dominio; ?>">
-                            <button  type="submit" class="btn btn-info col-md-2 col-md-offset-5"><b>Enviar correo</b></button>
-                        </form>                            
-                    </div>                        
+                    <div class="container">
+                        <div class="row">
+                            <form method="Post" action="controles/enviar_correo.php">
+                                <input TYPE="hidden" NAME="link" VALUE="<?php echo $Link; ?>">
+                                <input TYPE="hidden" NAME="id_reporte" VALUE="<?php echo $id_reporte; ?>">
+                                <input TYPE="hidden" NAME="id_protegido" VALUE="<?php echo $id_protegido; ?>">
+                                <input TYPE="hidden" NAME="id_cliente" VALUE="<?php echo $id_cliente; ?>">
+                                <input TYPE="hidden" NAME="correo_autor" VALUE="<?php echo $correo_autor; ?>">
+                                <input TYPE="hidden" NAME="dominio" VALUE="<?php echo $nombre_dominio; ?>">
+                                <button  type="submit" class="btn btn-info col-md-2 col-md-offset-5"><b>Enviar correo</b></button>
+                            </form>                            
+                        </div>        
+                    </div>
                 <?php endif; ?>
-                 <div class="row">
-                    <label for="observacion" class="col-md-10 col-md-offset-1 control-label">Observacion:</label><br>
-                    <div class="col-md-10 col-md-offset-1 well bounceIn animated animated" data-wow-duration="3000ms" style="overflow-y: auto;"><?php echo $observacion; ?></div>
-                </div><br>
-
-                <!-- Formulario para envío de comentarios-->
+                <div class="container">
+                    <div class=" row">
+                        <label for="observacion" class="col-md-10 col-md-offset-1 control-label">Observacion:</label>
+                        <div class="col-md-12 well bounceIn animated animated" data-wow-duration="3000ms" style="overflow-y: auto;"><?php echo $observacion; ?></div>
+                    </div>
+                </div>                
                 <?php
-                if ($permitir_comentarios == 1):
+                // Sección que muestra los comentarios:
+                include "muestracomentario.php";
+
+                //Formulario para envío de comentarios:
+                if ($permitir_comentarios == 1)://Se permitir comentarios es verdadero(1):
                     include ("formulariocomentarios.php");
                 endif;
-                // Sección que muestra los comentarios-->
-
-                include "muestracomentario.php";
 
             endwhile; //Fin de While que muestra el reporte de incidencia
 
@@ -174,7 +175,7 @@
             endif;
         endif; //Fin del condicional controla si se muestra la tabla de reportes o el reporte.
         ?>
- 
-</body>
-<?php include("footer.php"); ?>
+
+    </body>
+    <?php include("footer.php"); ?>
 </html>
