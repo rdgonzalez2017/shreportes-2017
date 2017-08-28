@@ -67,9 +67,7 @@
                                 <tr class="text-center" style="font-size:18px;">
                                     <form action="../controles/actualizar_categoria.php" method="Post">
                                     <td class="col-md-1"><h4><?php echo $id_categoria; ?></h4></td>
-
                                     <td class="col-md-3"><input style="font-size:18px;"  name="nombre_categoria" class="form-control text-center" value="<?php echo $nombre_categoria; ?>"/></td>
-
                                     <td class="text-center col-md-1">
                                         <div class="btn-group dropdown" > 
                                             <button type="button" class="btn btn-info btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span>

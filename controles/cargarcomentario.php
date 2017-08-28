@@ -26,7 +26,7 @@ if ($insert_comentarios) {
                 or die("Problemas en el Update" . mysqli_error($conexion));
     }
 }
-if (!empty($_POST['id_estatus'])){
+if (!empty($_POST['id_estatus'])) {
     $id_estatus = ($_POST['id_estatus']);
     $update_estado = mysqli_query($conexion, "UPDATE reportes SET idestatus = $id_estatus WHERE id = $id_reporte")
             or die("Problemas en el Update al modificar el reporte" . mysqli_error($conexion)); // Ejecutamos la consulta para actualizar el registro en la base de datos
@@ -45,16 +45,22 @@ $objetoCorreo->Port = 465; // El proveedor nos proporciona este dato.
 $objetoCorreo->Username = 'cotizador@servicioshosting.com';
 $objetoCorreo->Password = 'Atumedida2017/';
 $objetoCorreo->setFrom('no-responder@servicioshosting.com', 'ServiciosHosting.com');
-$objetoCorreo->addAddress($correo_destino, $autor_destino);
-if (isset($_SESSION['nombre'])) {
-    $objetoCorreo->AddBCC($correo_autor); //Destinatario copia oculta
+//Proceso para enviar un correo a todos los usuarios del Dpto. de Soporte Técnico, cuando el cliente responda:
+$select_usuarios = mysqli_query($conexion, "Select * from usuarios where id_departamento = 4 and correo <> '$correo_destino'")
+        or die("Probemas de conexión" . mysqli_error($conexion));
+while ($fila = mysqli_fetch_array($select_usuarios)) {
+    $correo_administrador = $fila['correo'];
+    if (empty($_SESSION['nombre'])) {
+        $objetoCorreo->AddBCC($correo_administrador); //Destinatario copia oculta
+    }
 }
-$objetoCorreo->addReplyTo('no-responder@servitepuy.com', 'Respuestas');
-$objetoCorreo->isHTML(true);
-$objetoCorreo->CharSet = 'UTF-8'; // El correo irá codificado en UTF-8, para evitar problemas con letras acentuadas y otros caracteres especiales.
-$objetoCorreo->Subject = 'ServiciosHosting.com: Incidencia.';
+    $objetoCorreo->addAddress($correo_destino, $autor_destino);
+    $objetoCorreo->addReplyTo('no-responder@servitepuy.com', 'Respuestas');
+    $objetoCorreo->isHTML(true);
+    $objetoCorreo->CharSet = 'UTF-8'; // El correo irá codificado en UTF-8, para evitar problemas con letras acentuadas y otros caracteres especiales.
+    $objetoCorreo->Subject = 'ServiciosHosting.com: Incidencia.';
 
-$correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+    $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns='http://www.w3.org/1999/xhtml' lang='en' xml:lang='en' style='background:#f3f3f3!important'>
 <head>
     <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
@@ -276,10 +282,10 @@ $correo = "<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http:
             &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
 </body>
 </html>                ";
-$objetoCorreo->Body = $correo;
+    $objetoCorreo->Body = $correo;
 
-$objetoCorreo->AltBody = "Se ha generado un nuevo comentario en el reporte de incidencia. Cuenta: $nombre_dominio. Para ver, haga click en el siguiente link: $link";
+    $objetoCorreo->AltBody = "Se ha generado un nuevo comentario en el reporte de incidencia. Cuenta: $nombre_dominio. Para ver, haga click en el siguiente link: $link";
 
-$objetoCorreo->send();
-?>
-<script>location.href = '../reportes.php?reporte=<?php echo $id_protegido; ?>'</script>
+    $objetoCorreo->send();
+    ?>
+    <script>location.href = '../reportes.php?reporte=<?php echo $id_protegido; ?>'</script>

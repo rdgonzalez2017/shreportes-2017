@@ -34,6 +34,8 @@
                         <li><button class="btn btn-sm btn-info navbar-btn" onclick = "location='agregarusuario.php'">Agregar Usuario</button></li>
                         <li><button class="btn btn-sm btn-warning navbar-btn" onclick = "location='agregarestado.php'">Agregar Estatus</button></li>
                         <li><button class="btn btn-sm btn-info navbar-btn " onclick = "location='agregarservidor.php'">Agregar Servidor</button></li>
+                        <li><button class="btn btn-sm btn-warning navbar-btn" onclick = "location='campos_personalizados.php'">Campos personalizados</button></li>
+
                         <?php endif;?>
                     </ul>
                 </li>

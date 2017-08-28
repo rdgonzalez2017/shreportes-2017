@@ -54,24 +54,24 @@
                             ?>       </div>
                         <div class="col-md-3 col-md-offset-2">Cantidad de Incidencias reportadas: <?php echo $cantidadincidencias; ?></div>
                     </div>
-<?php endwhile; ?>
-<?php if (isset($_SESSION['nombre'])): ?>
+                <?php endwhile; ?>
+                <?php if (isset($_SESSION['nombre'])): ?>
                     <!-- Conexión con base de datos-->
                     <body>
                         <!-- Formulario para envío de datos del sistema-->
                         <form class="form" method = "post" action="controles/cargar_reporte.php">
                             <!-- Envío de id de usuario (Oculto) -->
                             <input type="hidden" name="idusuario" value="<?php
-                                if (isset($_SESSION['idusuario'])) {
-                                    echo $_SESSION['idusuario'];
-                                }
-                                ?>"/>         
+                            if (isset($_SESSION['idusuario'])) {
+                                echo $_SESSION['idusuario'];
+                            }
+                            ?>"/>         
                             <!-- Envío de id de cliente (Oculto) -->
                             <input type="hidden" name="id_cliente" value="<?php
-                               if (!empty($id_cliente)) {
-                                   echo $id_cliente;
-                               }
-                               ?>"/>
+                            if (!empty($id_cliente)) {
+                                echo $id_cliente;
+                            }
+                            ?>"/>
                             <!-- Panel de Ingreso de datos -->
                             <div class="container bounceInRight animated" data-wow-duration="500ms">
                                 <div class="col-md-10 col-md-offset-1">
@@ -79,11 +79,14 @@
                                     <div class="panel panel-primary">
                                         <div class="panel-heading">
                                             <h4 class="text-center">Ingresar Datos</h4>
-    <?php if (!empty($nombre)): ?>
+                                            <?php if (!empty($nombre)): ?>
                                                 <h5 class="text-center">Cliente: <?php echo $nombre . " " . $apellido; ?>
-        <?php echo "<br> Correo: " . $correo; ?>
+                                                    <?php
+                                                    echo "<br> Correo: " . $correo;
+                                                    echo "<br> Teléfonos: " . $telefono;
+                                                    ?>
                                                 </h5>
-    <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                         <div class="panel-body">
                                             <!-- Ingreso del titulo-->
@@ -93,42 +96,42 @@
                                                     <input class="form-control" type="text" name="titulo" id="titulo"  required/>
                                                 </div>
                                             </div>
-                                            <?php if (!empty($id_cliente)): ?>
-                                            <!-- Selección de dominios registrados (en BD WHMCS)-->
-                                            <div class="form-group row">
-                                                <label for="id_dominio_registrado" class="col-md-3 col-md-offset-1 control-label">Dominios internos:</label>
-                                                <div class="col-md-6 col-md-pull-1">
-                                                    <select class="form-control" name="id_dominio_registrado" id="id_dominio_registrado">
-                                                        <option></option>
-                                                        <?php
-                                                        require ("config/conexion2.php");
-                                                        $registros = mysqli_query($conexion, "SELECT * FROM `tblclients` as A INNER JOIN tbldomains as B on A.id = B.userid where A.email = '$correo'") or
-                                                                die("Problemas en el select:" . mysqli_error($conexion));
-                                                        while ($reg = mysqli_fetch_array($registros)) {
-                                                            echo "<option value=\"$reg[id]\">$reg[domain]</option>";
-                                                        }
-                                                        ?>
-                                                    </select>
+    <?php if (!empty($id_cliente)): ?>
+                                                <!-- Selección de dominios registrados (en BD WHMCS)-->
+                                                <div class="form-group row">
+                                                    <label for="id_dominio_registrado" class="col-md-3 col-md-offset-1 control-label">Dominios internos:</label>
+                                                    <div class="col-md-6 col-md-pull-1">
+                                                        <select class="form-control" name="id_dominio_registrado" id="id_dominio_registrado">
+                                                            <option></option>
+                                                            <?php
+                                                            require ("config/conexion2.php");
+                                                            $registros = mysqli_query($conexion, "SELECT * FROM `tblclients` as A INNER JOIN tbldomains as B on A.id = B.userid where A.email = '$correo'") or
+                                                                    die("Problemas en el select:" . mysqli_error($conexion));
+                                                            while ($reg = mysqli_fetch_array($registros)) {
+                                                                echo "<option value=\"$reg[id]\">$reg[domain]</option>";
+                                                            }
+                                                            ?>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <!-- Selección de dominios No registrados-->
-                                            <div class="form-group row">
-                                                <label for="id_dominio_noregistrado" class="col-md-3 col-md-offset-1 control-label">Dominios externos:</label>
-                                                <div class="col-md-6 col-md-pull-1">
-                                                    <select class="form-control" name="id_dominio_noregistrado" id="id_dominio_noregistrado">
-                                                        <option></option>
-                                                        <?php
-                                                        require ("config/conexion.php");
-                                                        $registros = mysqli_query($conexion, "SELECT * FROM dominios where id_cliente = '$id_cliente'") or
-                                                                die("Problemas en el select:" . mysqli_error($conexion));
-                                                        while ($reg = mysqli_fetch_array($registros)) {
-                                                            echo "<option value=\"$reg[id]\">$reg[nombre]</option>";
-                                                        }
-                                                        ?>
-                                                    </select>
+                                                <!-- Selección de dominios No registrados-->
+                                                <div class="form-group row">
+                                                    <label for="id_dominio_noregistrado" class="col-md-3 col-md-offset-1 control-label">Dominios externos:</label>
+                                                    <div class="col-md-6 col-md-pull-1">
+                                                        <select class="form-control" name="id_dominio_noregistrado" id="id_dominio_noregistrado">
+                                                            <option></option>
+                                                            <?php
+                                                            require ("config/conexion.php");
+                                                            $registros = mysqli_query($conexion, "SELECT * FROM dominios where id_cliente = '$id_cliente'") or
+                                                                    die("Problemas en el select:" . mysqli_error($conexion));
+                                                            while ($reg = mysqli_fetch_array($registros)) {
+                                                                echo "<option value=\"$reg[id]\">$reg[nombre]</option>";
+                                                            }
+                                                            ?>
+                                                        </select>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <?php endif;?>
+    <?php endif; ?>
                                             <!--Ingresar nuevo dominio-->
                                             <div class="form-group row">
                                                 <label for="nuevo_dominio" class="col-md-3 col-md-offset-1 control-label">Dominio nuevo:</label>
@@ -198,16 +201,16 @@
                                                 <div class="col-md-4 col-md-pull-1">
                                                     <input class="form-control" readonly="readonly" type="text" name="autor" id="autor"
                                                            value="<?php
-                                                        if (isset($_SESSION['nombrecompleto'])) {
-                                                            echo $_SESSION['nombrecompleto'];
-                                                        }
-                                                        ?>"/>
+                                                           if (isset($_SESSION['nombrecompleto'])) {
+                                                               echo $_SESSION['nombrecompleto'];
+                                                           }
+                                                           ?>"/>
                                                 </div>
                                             </div>
-                                            	<script src="js/ckeditor/ckeditor.js">
-                                                
-                                                
-                                                    config.extraPlugins = 'autolink';</script>
+                                            <script src="js/ckeditor/ckeditor.js">
+
+
+                                                config.extraPlugins = 'autolink';</script>
                                             <!-- Ingreso de la observacion-->
                                             <div class="form-group row">
                                                 <label for="observacion" class="col-md-2 control-label">Observacion:</label>
@@ -245,7 +248,7 @@
 
                     </body>
 
-<?php else: echo'Debe iniciar sesión para ingresar a esta página.'; ?>
+                <?php else: echo'Debe iniciar sesión para ingresar a esta página.'; ?>
 <?php endif; ?>
                 </html>
 
