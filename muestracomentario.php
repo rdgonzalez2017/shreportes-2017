@@ -1,23 +1,34 @@
 <?php
 if (!empty($id_reporte)):
-    $select_Comentario = mysqli_query($conexion, "SELECT *  FROM $DB.comentarios as A WHERE A.idreporte = '$id_reporte' ORDER BY A.id ASC")
+    $select_comentario = mysqli_query($conexion, "SELECT *  FROM $DB.comentarios as A WHERE A.idreporte = '$id_reporte' ORDER BY A.id ASC")
             or die("Problemas en el select:" . mysqli_error($conexion));
-    while ($fila = mysqli_fetch_assoc($select_Comentario)):
-        $muestra_autor = $fila["autor"];
+    while ($fila = mysqli_fetch_assoc($select_comentario)):
+        $autor_comentario = $fila["autor"];
+    $select_usuario = mysqli_query($conexion, "SELECT *  FROM $DB.usuarios")
+            or die("Problemas en el select:" . mysqli_error($conexion));
+        while ($fila_usuario = mysqli_fetch_assoc($select_usuario)):
+                    $usuario = $fila_usuario['nombrecompleto'];
+        
+
+                    if($usuario==$autor_comentario){
+                        $autor_usuario = $usuario ;
+                    } 
+                   
+    endwhile;
         ?>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="alert alert-<?php
                     //Cambio de color según quien escriba el comentario:
-                    if ($autor == $muestra_autor) {
+                    if ($autor_usuario == $autor_comentario) {
                         echo 'info';
                     } else {
-                        echo 'warning';
-                    }
+                             echo 'warning';
+                         }
                     ?>
                          panel panel-<?php
-                         if ($autor == $muestra_autor) {
+                         if  ($autor_usuario == $autor_comentario) {
                              echo 'info';
                          } else {
                              echo 'warning';
@@ -26,7 +37,7 @@ if (!empty($id_reporte)):
                          ">
                         <!-- Muestra Autor del comentario-->
                         <div class="panel-heading text-center">
-                            <div>  <b>Autor: <?php echo $muestra_autor; ?></b></div>
+                            <div>  <b>Autor: <?php echo $autor_comentario; ?></b></div>
                         </div>
                         <div class="panel-body">
                             <!-- Muestra fecha del comentario-->

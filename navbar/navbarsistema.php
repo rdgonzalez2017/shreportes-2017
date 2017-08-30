@@ -32,7 +32,7 @@
                         <li><button class="btn btn-sm btn-info navbar-btn"  onclick = "location='complementos/agregarusuario.php'">Agregar Usuario</button></li>
                         <li><button class="btn btn-sm btn-warning navbar-btn" onclick = "location='complementos/agregarestado.php'">Agregar Estatus</button></li>
                         <li><button class="btn btn-sm btn-info navbar-btn" onclick = "location='complementos/agregarservidor.php'">Agregar Servidor</button></li>
-                        <li><button class="btn btn-sm btn-warning navbar-btn" onclick = "location='complementos/campos_personalizados.php'">Campos personalizados</button></li>
+                        <li><button class="btn btn-sm btn-warning navbar-btn" onclick = "location='complementos/agregar_campo.php'">Campos personalizables</button></li>
                         <?php endif;?>
                     </ul>
                 </li>
