@@ -12,6 +12,7 @@
     <?php
     if (!empty($_POST['correo'])):
         $correo = $_POST['correo'];
+    $id_categoria_seleccionada = $_POST['categoria'];
         require ('config/conexion2.php');
         $select_clientes = mysqli_query($conexion, "select * from tblclients where email = '$correo'")
                 or die("Problemas en el select" . mysqli_error("$conexion"));
@@ -37,9 +38,7 @@
                         endwhile;
                     endif;
                 endif;
-                ?>
 
-                <?php
 //Contador de Incidencias
                 include "config/conexion.php";
                 $contador = mysqli_query($conexion, "SELECT COUNT(*) as contador from reportes");
@@ -60,6 +59,9 @@
                     <body>
                         <!-- Formulario para envío de datos del sistema-->
                         <form class="form" method = "post" action="controles/cargar_reporte.php">
+                             <!-- Envío de id de autor (Oculto)-->                                          
+                             <input type="hidden" name="autor" id="autor"/>
+                                                           
                             <!-- Envío de id de usuario (Oculto) -->
                             <input type="hidden" name="idusuario" value="<?php
                             if (isset($_SESSION['idusuario'])) {
@@ -72,6 +74,7 @@
                                 echo $id_cliente;
                             }
                             ?>"/>
+
                             <!-- Panel de Ingreso de datos -->
                             <div class="container bounceInRight animated" data-wow-duration="500ms">
                                 <div class="col-md-10 col-md-offset-1">
@@ -95,8 +98,8 @@
                                                 <div class="col-md-8 col-md-pull-1">
                                                     <input class="form-control" type="text" name="titulo" id="titulo"  required/>
                                                 </div>
-                                            </div>
-    <?php if (!empty($id_cliente)): ?>
+                                            </div>                                            
+                                            <?php if (!empty($id_cliente)): ?>
                                                 <!-- Selección de dominios registrados (en BD WHMCS)-->
                                                 <div class="form-group row">
                                                     <label for="id_dominio_registrado" class="col-md-3 col-md-offset-1 control-label">Dominios internos:</label>
@@ -131,7 +134,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-    <?php endif; ?>
+                                            <?php endif; ?>
                                             <!--Ingresar nuevo dominio-->
                                             <div class="form-group row">
                                                 <label for="nuevo_dominio" class="col-md-3 col-md-offset-1 control-label">Dominio nuevo:</label>
@@ -140,21 +143,21 @@
                                                 </div>
                                             </div>
                                             <!-- Ingreso de la categoria (Tipo de caso) -->
-                                            <div class="form-group row">
-                                                <label for="categoria" class="col-md-2 col-md-offset-1 control-label">Categoria:</label>
-                                                <div class="col-md-8 col-md-pull-1">
-                                                    <select class="form-control" name="categoria" id="categoria">
-                                                        <?php
-                                                        include ("config/conexion.php");
-                                                        $registros = mysqli_query($conexion, "select id,nombre from categorias") or
-                                                                die("Problemas en el select:" . mysqli_error($conexion));
-                                                        while ($reg = mysqli_fetch_array($registros)) {
-                                                            echo "<option value=\"$reg[id]\">$reg[nombre]</option>";
-                                                        }
-                                                        ?>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                            <!--  <div class="form-group row">
+                                                 <label for="categoria" class="col-md-2 col-md-offset-1 control-label">Categoria:</label>
+                                                 <div class="col-md-8 col-md-pull-1">
+                                                     <select class="form-control" name="categoria" id="categoria">
+                                            <?php
+                                            /* include ("config/conexion.php");
+                                              $registros = mysqli_query($conexion, "select id,nombre from categorias") or
+                                              die("Problemas en el select:" . mysqli_error($conexion));
+                                              while ($reg = mysqli_fetch_array($registros)) {
+                                              echo "<option value=\"$reg[id]\">$reg[nombre]</option>";
+                                              } */
+                                            ?>
+                                                     </select>
+                                                 </div>
+                                             </div> -->
                                             <!-- Ingreso del estado -->
                                             <div class="form-group row">
                                                 <label for="estado" class="col-md-2 col-md-offset-1 control-label">Estado:</label>
@@ -195,18 +198,54 @@
 
                                                 </div>
                                             </div>
-                                            <!-- Ingreso del Autor-->
-                                            <div class="form-group row">
-                                                <label for="autor" class="col-md-2 col-md-offset-1 control-label">Autor:</label>
-                                                <div class="col-md-4 col-md-pull-1">
-                                                    <input class="form-control" readonly="readonly" type="text" name="autor" id="autor"
-                                                           value="<?php
-                                                           if (isset($_SESSION['nombrecompleto'])) {
-                                                               echo $_SESSION['nombrecompleto'];
-                                                           }
-                                                           ?>"/>
-                                                </div>
-                                            </div>
+                                            <div class="well">
+                                                <h4 class="text-center">Campos Personalizados:</h4>
+                                                <!-- Campo personalizado-->
+                                                <?php
+                                                //Select de campos personalizables asociados a la categoría:
+                                                include ('config/conexion.php');
+                                                $select_campos = mysqli_query($conexion, "SELECT A.id as id_campo,A.html, A.nombre as nombre_campo, C.nombre, A.id_tipo FROM campos_personalizables as A INNER JOIN detalle_categorias as B on A.id = B.id_campo RIGHT JOIN categorias as C on C.id = B.id_categoria where C.id = '$id_categoria_seleccionada'");
+                                                //$select_campos = mysqli_query($conexion, "SELECT A.id as id_campo,A.html, A.nombre as nombre_campo, C.nombre, A.id_tipo, D.nombre as nombre_opcion FROM campos_personalizables as A INNER JOIN detalle_categorias as B on A.id = B.id_campo RIGHT JOIN categorias as C on C.id = B.id_categoria LEFT JOIN opciones_desplegables as D on A.id = D.id_campo_personalizable ");
+                                                while ($fila_campos = mysqli_fetch_array($select_campos)) :
+                                                    $nombre_campo = $fila_campos['nombre_campo'];
+                                                    $id_campo = $fila_campos['id_campo'];
+                                                    $id_tipo_campo = $fila_campos['id_tipo'];
+                                                    //echo $nombre_campos . "<br>";
+                                                    $html_campo = $fila_campos['html'];
+                                                   
+                                                    ?>
+                                                
+                                                    <div class="form-group row">
+                                                        <label for="titulo" class="col-md-2 col-md-offset-1 control-label"> <?php echo $nombre_campo; ?>:</label>
+                                                        <div class="col-md-6 "><?php //echo $id_campo;?>
+                                                            <?php                                                            
+                                                            if ($id_tipo_campo == 1):?>
+                                                            <textarea class="form-control text-center"></textarea>  
+                                                            <?php endif;
+                                                            if ($id_tipo_campo == 2):?>
+                                                            <input type="text" class="form-control text-center"/>
+                                                            <?php endif;
+                                                             if ($id_tipo_campo == 4):?>
+                                                            <input type="password" class="form-control text-center"/>
+                                                            <?php endif; 
+                                                            if ($id_tipo_campo == 5):?>
+                                                            <select class="form-control text-center">                                                                
+                                                                    <?php                                                                     
+                                                                    include 'config/conexion.php';
+                                                                    $select_opciones = mysqli_query($conexion, "Select * from opciones_desplegables where id_campo_personalizable = '$id_campo'");
+                                                                    while ($fila = mysqli_fetch_array($select_opciones)):
+                                                                    echo $nombre_opcion = $fila['nombre'];  
+                                                                    ?>
+                                                                <option><?php echo $nombre_opcion;?></option>
+                                                                <?php endwhile;?>
+                                                            </select>    
+                                                            <?php endif;?>
+                                                            
+                                                            
+                                                        </div>
+                                                    </div>
+                                                <?php endwhile; ?>
+                                            </div>                                           
                                             <script src="js/ckeditor/ckeditor.js">
 
 
@@ -247,8 +286,7 @@
                         <!-- Formulario para envío de datos del sistema-->
 
                     </body>
-
                 <?php else: echo'Debe iniciar sesión para ingresar a esta página.'; ?>
-<?php endif; ?>
+                <?php endif; ?>
                 </html>
 

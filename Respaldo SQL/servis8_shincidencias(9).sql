@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-08-2017 a las 22:51:38
+-- Tiempo de generación: 31-08-2017 a las 22:45:44
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 5.6.30
 
@@ -43,11 +43,11 @@ CREATE TABLE `campos_personalizables` (
 --
 
 INSERT INTO `campos_personalizables` (`id`, `id_tipo`, `nombre`, `descripcion`, `validacion`, `opciones_desplegable`, `visualizacion`, `campo_obligatorio`, `html`) VALUES
-(1, 2, 'Prueba de campo 1', 'Campo de texto', 'Campo de validacion', '', 0, 1, '<textarea class=\'form-control\'style=\'resize:none\' name=\'text_area\'></textarea>'),
-(4, 5, 'Desplegable 1', 'Lista desplegable', 'Validar desplegable', 'opcion1, opcion2, opcion3', 1, 0, NULL),
-(11, 5, 'Desplegable 2', 'Lista desplegable', 'Validar 2', 'opcion1, opcion2, opcion3', 1, 1, NULL),
-(30, 0, 'nuevo', NULL, NULL, NULL, NULL, NULL, NULL),
-(35, 5, 'Campo Ramon', '', '', '', 1, 1, NULL);
+(1, 1, 'Area de texto', 'Text-Area', 'Campo de validacion', '', 0, 1, '<textarea class=\'form-control\'style=\'resize:none\' name=\'text_area\'></textarea>'),
+(4, 5, 'Desplegable 1', 'Lista desplegable', 'Validar desplegable', '', 1, 0, '<select class=\'form-control\'style=\'resize:none\' name=\'select\'></select>'),
+(30, 6, 'Casilla de VerificaciÃ³n', '', '', '', 0, 0, NULL),
+(40, 5, 'Servidores', 'Lista de servidores', '', NULL, 0, 0, NULL),
+(41, 5, 'Alimentos', 'Lista desplegable', '', NULL, 0, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -68,9 +68,9 @@ INSERT INTO `categorias` (`id`, `nombre`) VALUES
 (2, 'Spam'),
 (3, 'Phishing 2'),
 (4, 'ReputaciÃ³n'),
-(40, 'Ultima Prueba'),
-(43, 'Prueba nueva 2'),
-(44, 'Ramon');
+(46, 'Comida'),
+(47, 'Ultima Prueba'),
+(45, 'Servidores');
 
 -- --------------------------------------------------------
 
@@ -193,7 +193,17 @@ INSERT INTO `detalle_categorias` (`id`, `id_categoria`, `id_campo`) VALUES
 (21, 43, 30),
 (22, 44, 1),
 (23, 44, 11),
-(24, 44, 30);
+(24, 44, 30),
+(26, 46, 41),
+(61, 47, 1),
+(62, 47, 4),
+(63, 47, 30),
+(64, 47, 40),
+(65, 47, 41),
+(66, 45, 1),
+(67, 45, 4),
+(68, 45, 30),
+(69, 45, 40);
 
 -- --------------------------------------------------------
 
@@ -250,6 +260,40 @@ INSERT INTO `estatus` (`id`, `nombre`, `vencimiento`, `permitir_comentarios`) VA
 (3, 'En espera de comentarios', 60, 1),
 (4, 'Respondido', 30, 1),
 (5, 'Cerrado', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `opciones_desplegables`
+--
+
+CREATE TABLE `opciones_desplegables` (
+  `id` int(11) NOT NULL,
+  `id_campo_personalizable` int(11) NOT NULL,
+  `nombre` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `opciones_desplegables`
+--
+
+INSERT INTO `opciones_desplegables` (`id`, `id_campo_personalizable`, `nombre`) VALUES
+(1, 4, ' campo 3                     '),
+(2, 4, ' campo 3                     '),
+(3, 11, 'Arauca'),
+(4, 11, 'Apure'),
+(5, 38, 'opcion1 '),
+(6, 38, '  opcion2 '),
+(7, 38, '  opcion3'),
+(8, 39, 'opcion1 '),
+(9, 39, '  opcion2 '),
+(10, 39, '  opcion3'),
+(11, 40, 'Arauca'),
+(12, 40, ' Apure'),
+(13, 40, ' Orinoco'),
+(14, 41, 'Pizza'),
+(15, 41, ' hamburguesa'),
+(16, 41, ' perro caliente');
 
 -- --------------------------------------------------------
 
@@ -446,6 +490,13 @@ ALTER TABLE `estatus`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `opciones_desplegables`
+--
+ALTER TABLE `opciones_desplegables`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_campo_personalizable` (`id_campo_personalizable`);
+
+--
 -- Indices de la tabla `reportes`
 --
 ALTER TABLE `reportes`
@@ -492,12 +543,12 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `campos_personalizables`
 --
 ALTER TABLE `campos_personalizables`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 --
 -- AUTO_INCREMENT de la tabla `comentarios`
 --
@@ -512,7 +563,7 @@ ALTER TABLE `departamentos`
 -- AUTO_INCREMENT de la tabla `detalle_categorias`
 --
 ALTER TABLE `detalle_categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 --
 -- AUTO_INCREMENT de la tabla `dominios`
 --
@@ -523,6 +574,11 @@ ALTER TABLE `dominios`
 --
 ALTER TABLE `estatus`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT de la tabla `opciones_desplegables`
+--
+ALTER TABLE `opciones_desplegables`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT de la tabla `reportes`
 --

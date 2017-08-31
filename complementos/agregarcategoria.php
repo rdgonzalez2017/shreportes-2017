@@ -35,7 +35,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="campo_personalizado" class="col-md-8 col-md-offset-2 control-label text-center">Selección de campos personalizados:</label>
+                                        <label for="campos_personalizados" class="col-md-8 col-md-offset-2 control-label text-center">Selección de campos personalizados:</label>
                                         <?php
                                         include '../config/conexion.php';
                                         $select_campo = mysqli_query($conexion, "select * from campos_personalizables")
@@ -114,13 +114,13 @@
                                                endwhile;
                                                ?>
                                     </td>
-                                    <td class="text-center col-md-1">
+                                    <td class="text-center col-md-2">
                                         <div class="btn-group dropdown" > 
                                             <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" aria-haspopup="true" aria-expanded="false"><span class="caret"></span>
                                             </button>
                                             <ul class="dropdown-menu " style="text-align: center;">   
                                                 <input class="hidden" name="id_categoria" value="<?php echo $id_categoria; ?>">
-                                                <input class="btn btn-info alert-info" type="submit" name="modificar" value="Grabar cambios" />
+                                                <input class="btn btn-info alert-info" type="submit" name="modificar" value="Grabar" />
                                                 </form>
                                                 <li role="separator" class="divider"></li>
                                                 <form action="../controles/eliminacategoria.php" method="post">

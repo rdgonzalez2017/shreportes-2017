@@ -11,7 +11,7 @@
         endif;
         ?>
     </header>
-<?php if (isset($_SESSION['nombre'])): ?>
+    <?php if (isset($_SESSION['nombre'])): ?>
         <body>
             <div class="row">
                 <div class="col-md-3"><?php
@@ -22,41 +22,50 @@
                 </div>
             </div>
             <div class="container rollIn animated" data-wow-duration="1ms">
-                <div class="col-md-10 col-md-offset-1">
-                    <br>
+                <div class="col-md-8 col-md-offset-2">                    
                     <div class="panel panel-primary">
                         <div class="panel-heading">
                             <div class="text-center"><h3>Reportar Incidencia</h3></div>
                             <!--<div class="text-center"><h4>(Validar correo del cliente ó dominio afiliado)</h4></div>-->
                         </div>
                         <div class="panel-body">
-                            <div class="well text-center"> 
+                            <div class=" well text-center"> 
                                 <form method="Post" action="sistema.php">
-                                    <h4>Ingrese el correo del cliente:</h4><br>
-                                    <div class="form-horizontal text-center">                                           
+                                    <h3>Ingrese el correo del cliente:</h3>
+                                    <div class="form-group row text-center">                                           
                                         <div class="col-md-8 col-md-offset-2 text-center">
-                                            <input type="email" name="correo" class="form-control text-center" placeholder="Correo" required="required">
+                                            <input style="font-size: 18px;" type="email" name="correo" class="form-control text-center" placeholder="Ej: prueba@correo.com" required="required">
                                         </div>
-                                        <br><br><br><button type="submit" class="btn btn-info"><b>Aceptar</b></button>
                                     </div>
-                                </form>
-                            </div>                                
-                            <!--<div class="well text-center"> 
-                                <form method="Post" action="sistema.php">
-                                    <h4>Ingrese el dominio del cliente:</h4><br>
-                                    <div class="form-horizontal text-center">                                           
-                                        <div class="col-md-8 col-md-offset-2 text-center">
-                                            <input type="text" name="dominio" class="form-control text-center" placeholder="Dominio" required="required">
+                                    <div class="form-group row">
+                                        <h3>Seleccione una categoría:</h3>
+                                        <div class="col-md-8 col-md-offset-2">
+                                            <select style="font-size: 18px;" class="form-control text-center" name="categoria" id="categoria"  required>
+                                                <?php
+                                                include ("config/conexion.php");
+                                                $registros = mysqli_query($conexion, "SELECT * FROM categorias") or
+                                                        die("Problemas en el select:" . mysqli_error($conexion));
+                                                while ($reg = mysqli_fetch_array($registros)) {
+                                                    echo "<option value=\"$reg[id]\">$reg[nombre]</option>";
+                                                }
+                                                ?>
+                                            </select>
                                         </div>
-                                        <br><br><br><button type="submit" class="btn btn-info"><b>Aceptar</b></button>
                                     </div>
-                                </form>
-                            </div>--> 
+                            </div>   
                         </div>
+                        <div class="panel panel-footer">
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-warning btn-lg"><b>Aceptar</b></button>
+                            </div>
+                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </body>
     </html>
     <?php
+
+
  endif;

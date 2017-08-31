@@ -66,9 +66,9 @@
                                 </div>
                                 <!-- Opciones del desplegable-->                            
                                 <div class="form-group row" >
-                                    <label for="opciones_desplegable" class="col-md-3 control-label text-right">Opciones del desplegable:</label>
+                                    <label for="opciones_desplegables" class="col-md-3 control-label text-right">Opciones del desplegable:</label>
                                     <div class="col-md-7">   
-                                        <input class="form-control" name="opciones_desplegable" placeholder="Sólo para desplegables">
+                                        <input class="form-control" name="opciones_desplegables" placeholder="Sólo para desplegables">
                                     </div>
                                 </div>
                                 <!-- Vicualización del campo:-->
@@ -88,8 +88,6 @@
                                     <div class="col-md-4 col-md-offset-5">
                                         <label class="checkbox-inline" ><input type="checkbox" name="campo_obligatorio" id="campo_obligatorio"  value="1" checked/>Campo obligatorio</label>
                                     </div>
-
-
                                 </div>
                             </div>
                             <!-- Boton para enviar datos-->
@@ -100,7 +98,7 @@
                     </div>
                 </form>
             </div>            
-            <div class="col-md-12">
+            <div class="col-md-12 animated fadeIn">
                 <table id="example"  class="table table-bordered table-hover table-striped">
                     <caption class="text-center"><h3>Listado de campos personalizables</h3></caption>
                     <thead>
@@ -114,7 +112,6 @@
                             <td><h4>Visualización</h4></td>
                             <td><h4>Obligatorio</h4></td>
                             <td><h4>Acción</h4></td>
-
                         </tr>
                     </thead>
                     <tbody>
@@ -141,7 +138,7 @@
                                     <td class="col-md-2" >
                                 <?php 
                                 //Selecciona el valor que ya está seleccionado
-                                include '../config/conexion.php';
+                                include  '../config/conexion.php';
                                 $tipo_previo=mysqli_query($conexion,"select B.nombre from campos_personalizables as A LEFT JOIN tipo_campos as B on A.id_tipo = B.id where A.id = '".$id."'")
                                 or die("Problemas en el select:".mysqli_error($conexion));
                                 while ($fila=mysqli_fetch_array($tipo_previo)) :
@@ -166,8 +163,22 @@
                             </td>
                             <td class="col-md-2"><input  name="descripcion" class="form-control text-center" value="<?php echo $descripcion; ?>"/></td>
                             <td class="col-md-1"><input  name="validacion" class="form-control text-center" value="<?php echo $validacion; ?>"/></td>
-                            <td class="col-md-2"><input  name="opciones_desplegable" class="form-control text-center" value="<?php echo $opciones_desplegable; ?>"/></td>
-                            <td class="col-md-2"><select class="form-control text-center" name="visualizacion">
+                            
+                            <td class="col-md-2">
+                                <?php if ($id_tipo==5):?>
+                                <select readonly="readonly" class="form-control text-center">
+                                        <?php
+                                         include  '../config/conexion.php';
+                                        $select_opciones=mysqli_query($conexion,"select * from opciones_desplegables where id_campo_personalizable = '$id'")
+                                        or die("Problemas en el select:".mysqli_error($conexion));
+                                while ($fila = mysqli_fetch_array($select_opciones)):?>
+                                    <option><?php echo $opcion=$fila['nombre']; ?></option>
+                                <?php endwhile;?>                                   
+                                </select>
+                                <?php endif;?>
+                            </td>
+                            <td class="col-md-2">
+                                <select class="form-control text-center" name="visualizacion">
                                     <option value="0"<?php
                                     if ($visualizacion == 0) {
                                         echo " selected";
